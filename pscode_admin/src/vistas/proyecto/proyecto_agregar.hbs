@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="" />
+<script src="/JS/objetivos.js"></script>
+
+<form action="/proyecto/agregar/" method="post">
+    <div id="contenido">
+        <div id="nombre_pro">
+            <label>Nombre de proyecto</label>
+            <input type="text" name="nombre_pro" id="proyecto" checked aria-checked="true" />
+        </div>
+        <div id="descripcion">
+            <label>Descripcion</label>
+            <input type="text" name="descripcion" id="descripcion_css" checked aria-checked="true" />
+        </div>
+        <div id="mision">
+            <label>Mision</label>
+            <input type="text" name="mision" id="mision_css" checked aria-checked="true" />
+        </div>
+        <div id="vision">
+            <label>Vision</label>
+            <input type="text" name="vision" id="vision_css" checked aria-checked="true" />
+        </div>
+        <div id="objetivos">
+            <label>Objetivos:</label>
+            <input type="text" id="numeros">
+            <button type="button" onclick="objetivos.crear()">-></button>
+        </div>
+        <div id="guardar">
+            <button type="submit">Guardar</button>
+        </div>
+    </div>
+</form>

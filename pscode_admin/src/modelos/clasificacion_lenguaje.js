@@ -20,4 +20,4 @@ const clasificacion_lenguaje = (sequelize,type) => {
         timestamps: false,
     })
 }
-module.exports=clasificacion_lenguaje
+module.exports=clasificacion_lenguaje 

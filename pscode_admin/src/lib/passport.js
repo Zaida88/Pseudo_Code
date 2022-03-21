@@ -1,8 +1,8 @@
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 
-const orm = require('../confiduracion_bd/bd_orm')
-const sql = require('../confiduracion_bd/bd_sql')
+const orm = require('../configuracion_bd/bd_orm')
+const sql = require('../configuracion_bd/bd_sql')
 const helpers = require("./helpers");
 
 passport.use(
