@@ -1,9 +1,9 @@
-const proyectoCtl = {};
+const estructuraCtl = {};
 const orm = require("../configuracion_bd/bd_orm")
 const sql = require("../configuracion_bd/bd_sql")
 
 //mostrar
-proyectoCtl.mostrar = (req, res) => {
+estructuraCtl.mostrar = (req, res) => {
     res.render("estructura/estructura_agregar")
 };
 
