@@ -19,7 +19,7 @@ loginCtl.mostrarRegistro = (req, res) => {
 };
 
 loginCtl.registro = passport.authenticate("local.signup",{
-    successRedirect: "/cerrarSesion",
+    successRedirect: "/CerrarSecion",
     failureRedirect: "/registro",
     failureFlash: true
 })

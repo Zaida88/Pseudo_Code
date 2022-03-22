@@ -20,7 +20,7 @@ proyectoCtl.enviar = async(req,res) =>{
     }
     await orm.datos_proyecto.create(nuevoProyecto)
 
-    for(let i=0 ; i<objetivos.lengh;i++){
+    for(let i=0 ; i<objetivos.length;i++){
         await sql.query("insert into detalle_proyectos (objetivos,datosProyectoIddatosproyecto) values (?,?)",[objetivos[i], id])
     }
     req.flash("success","Exito al guardar")
@@ -38,7 +38,7 @@ proyectoCtl.listar = async(req,res) =>{
 //traer datos
 proyectoCtl.traer = async(req,res) =>{
     const id = req.params.id
-    const listaObjetivos = await sql.query("select * from detalle_proyectos where idproyecto=?",[id])
+    const listaObjetivos = await sql.query("select * from detalle_proyectos where datosProyectoIddatosproyecto=?",[id])
     const lista = await sql.query("select * from datos_proyectos where iddatosproyecto=?",[id])
     res.render("proyecto/proyecto_editar",{lista,listaObjetivos})
 }
@@ -52,15 +52,14 @@ proyectoCtl.actualizar = async(req,res) =>{
         nombre_pro, 
         descripcion, 
         mision, 
-        vision, 
-        usuarioIdusuario: id
+        vision
     }
     await orm.datos_proyecto.findOne({where:{iddatosproyecto:ids}})
     .then(actualizacion=>{
         actualizacion.update(nuevoProyecto)
     })
-    for(let i=0 ; i<objetivos.lengh;i++){
-        await sql.query("update detalle_proyectos (objetivos,datosProyectoIddatosproyecto) values (?,?)",[objetivos[i], id])
+    for(let i=0 ; i<objetivos.length;i++){
+        await sql.query("update detalle_proyectos set objetivos=? where datosProyectoIddatosproyecto=?",[objetivos[i], ids])
     }
     req.flash("success","Exito al guardar")
      res.redirect('/proyecto/listar/'+id);
