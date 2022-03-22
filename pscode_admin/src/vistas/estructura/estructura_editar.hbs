@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="" />
+<script src="/JS/objetivos.js"></script>
+{{#each lista}}
+ <form action="/proyecto/editar/{{iddatosproyecto}}" method="post">
+{{/each}}
+    <div id="contenido">
+        {{#each lista}}
+        <div id="nombre_pro">
+            <label>Nombre de proyecto</label>
+            <input value="{{nombre_pro}}" type="text" name="nombre_pro" id="proyecto" checked aria-checked="true" />
+        </div>
+        <div id="descripcion">
+            <label>Descripcion</label>
+            <input type="text" name="descripcion" id="descripcion_css" checked aria-checked="true" value="{{descripcion}}"/>
+        </div>
+        <div id="mision">
+            <label>Mision</label>
+            <input type="text" name="mision" id="mision_css" checked aria-checked="true" value="{{mision}}"/>
+        </div>
+        <div id="vision">
+            <label>Vision</label>
+            <input type="text" name="vision" id="vision_css" checked aria-checked="true" value="{{vision}}"/>
+        </div>
+        {{/each}}
+        <div id="objetivos">
+            <label>Objetivos:</label>
+            {{#each listaObjetivos}}
+             <input type="text" id="numeros" name="objetivos" checked value="{{objetivos}}"/>
+            {{/each}}
+        </div>
+        <div id="guardar">
+            <button type="submit">Guardar</button>
+        </div>
+    </div>
+</form>

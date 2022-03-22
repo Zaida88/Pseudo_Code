@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="" />
+
+<form action="/estructura/agregar/" method="post">
+    <div id="contenido">
+        <div id="nombre">
+            <label>Nombre del codigo</label>
+            <input type="text" name="nombre_pro" id="proyecto" checked aria-checked="true" />
+        </div>
+        <div id="descripcion">
+            <label>Descripcion</label>
+            <textarea type="text" name="descripcion" id="descripcion_css" checked aria-checked="true"></textarea>
+        </div>
+        <div id="codigo">
+            <label>Codigo</label>
+            <textarea type="text" name="mision" id="mision_css" checked aria-checked="true"></textarea>
+        </div>
+        <div id="comentario">
+            <label>Comentarios:</label>
+            <input type="text" id="numeros">
+            <button type="button" onclick="comentarios.crear()">-></button>
+        </div>
+        <div id="guardar">
+            <button type="submit">Guardar</button>
+        </div>
+    </div>
+</form>
+
+<script src="/JS/comentarios.js"></script> 
