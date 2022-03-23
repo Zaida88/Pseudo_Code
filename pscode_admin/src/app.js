@@ -63,4 +63,8 @@ app.use(require("./rutas/login"))
 
 app.use("/proyecto",require("./rutas/proyecto"))
 
+app.use("/codificacion",require("./rutas/codificacion"))
+
+app.use("/estructura",require("./rutas/estructura"))
+
 module.exports = app;

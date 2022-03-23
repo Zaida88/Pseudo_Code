@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="" />
+<script src="/JS/objetivos.js"></script>
+{{#each lista}}
+ <form action="/codificacion/editar/{{idcodificacion}}" method="post">
+{{/each}}
+    <div id="contenido">
+        {{#each lista}}
+        <div id="nombre">
+            <label>Nombre</label>
+            <input type="text" name="nombre" id="nombre" checked aria-checked="true" value="{{nombre}}"/>
+        </div>
+        <div id="descripcion">
+            <label>Descripcion</label>
+            <input type="text" name="descripcion" id="descripcion_css" checked aria-checked="true" value="{{descripcion}}"/>
+        </div>
+        {{/each}}
+        <div id="guardar">
+            <button type="submit">Guardar</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="" />
+
+<form action="/codificacion/listar/{{user.idusuario}}" method="get"></form>
+<div id="contenedor">
+    {{#each lista}}
+  <div id="pscode">
+    <h1>{{nombre}}</h1>
+  </div>
+  <div id="descripcion">
+    <h1>{{descripcion}}</h1>
+  </div>
+  <div id="editar">
+      <a href="/codificacion/editar/{{idcodificacion}}"><button>Editar</button></a>
+  </div>
+  {{/each}}
+</div>
+
