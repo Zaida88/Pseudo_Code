@@ -8,7 +8,7 @@ loginCtl.mostrar = (req, res) => {
 };
 
 loginCtl.login = passport.authenticate("local.signin",{
-    successRedirect: "/inicio",
+    successRedirect: "/clasificacion/agregar/",
     failureRedirect: "/login",
     failureFlash: true
 })

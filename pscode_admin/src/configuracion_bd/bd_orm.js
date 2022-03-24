@@ -22,6 +22,9 @@ const modelodatos_proyecto= require ("../modelos/datos_proyecto")
 const modelocodificacion= require ("../modelos/codificacion")
 const modelocliente= require ("../modelos/cliente")
 const modeloclasificacion_lenguaje= require ("../modelos/clasificacion_lenguaje");
+const modeloprueba= require ("../modelos/prueba");
+const modelodetalle_prueba= require ("../modelos/detalle_prueba");
+const modelorespuestas= require ("../modelos/respuestas");
 
 const sequelize = new Sequelize(
   'pscode',
@@ -60,6 +63,9 @@ const datos_proyecto = modelodatos_proyecto(sequelize,Sequelize)
 const codificacion = modelocodificacion(sequelize,Sequelize)
 const cliente = modelocliente(sequelize,Sequelize)
 const clasificacion_lenguaje = modeloclasificacion_lenguaje(sequelize,Sequelize)
+const prueba = modeloprueba(sequelize,Sequelize)
+const detalle_prueba = modelodetalle_prueba(sequelize,Sequelize)
+const respuesta = modelorespuestas(sequelize,Sequelize)
 
 usuarios.hasMany(estructura)
 estructura.belongsTo(usuarios)
@@ -82,14 +88,31 @@ detalle_estrucctura.belongsTo(estructura)
 datos_proyecto.hasMany(detalle_proyecto)
 detalle_proyecto.belongsTo(datos_proyecto)
 
-module.exports = {
+prueba.hasMany(detalle_prueba)
+detalle_prueba.belongsTo(prueba)
+
+detalle_prueba.hasMany(respuesta)
+respuesta.belongsTo(detalle_prueba)
+
+clasificacion_lenguaje.hasMany(codificacion)
+codificacion.belongsTo(clasificacion_lenguaje) 
+
+codificacion.hasMany(estructura)
+estructura.belongsTo(codificacion)
+
+usuarios.hasMany(prueba)
+prueba.belongsTo(usuarios)
+
+module.exports = { 
  usuarios,
- estructura,
+ estructura, 
  detalle_proyecto,
  detalle_estrucctura,
  datos_proyecto,
  codificacion,
  cliente,
  clasificacion_lenguaje,
-
+ prueba,
+ detalle_prueba,
+ respuesta
 }

@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="" />
+
+<form action="/clasificacion/listar/{{user.idusuario}}" method="get"></form>
+<div id="contenedor">
+    {{#each lista}}
+  <div id="nombre">
+    <h1>{{nombre_clasificacion}}</h1>
+  </div>
+  <div id="editar">
+      <a href="/clasificacion/editar/{{idclasificacion}}"><button>Editar</button></a>
+  </div>
+  <div id="codificacion">
+    <a href="/codificacion/agregar/{{idclasificacion}}"><button>Agregar</button></a>
+  </div>
+  {{/each}}
+</div>
+

@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="" />
 
-<form action="/codificacion/agregar/" method="post">
+<form action="/codificacion/agregar/{{user.idusuario}}" method="post">
     <div id="contenido">
         <div id="nombre">
             <label>Nombre de codificacion</label>
@@ -9,6 +9,13 @@
         <div id="descripcion">
             <label>Descripcion</label>
             <textarea type="text" name="descripcion" id="descripcion_css" checked aria-checked="true"></textarea>
+        </div>
+        <div id="clasificacion">
+            <select name="clasificacion" id="">
+                {{#each clasificacion}}
+                <option value="{{idclasificacion}}">{{nombre_clasificacion}}</option>
+                {{/each}}
+            </select>
         </div>
         <div id="guardar">
             <button type="submit">Guardar</button>

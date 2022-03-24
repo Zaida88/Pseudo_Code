@@ -67,4 +67,6 @@ app.use("/codificacion",require("./rutas/codificacion"))
 
 app.use("/estructura",require("./rutas/estructura"))
 
+app.use("/clasificacion",require("./rutas/clasificacion"))
+
 module.exports = app;

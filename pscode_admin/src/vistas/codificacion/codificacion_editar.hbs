@@ -1,10 +1,10 @@
 <link rel="stylesheet" href="" />
-<script src="/JS/objetivos.js"></script>
-{{#each lista}}
- <form action="/codificacion/editar/{{idcodificacion}}" method="post">
-{{/each}}
+ <form action="/codificacion/editar/{{user.idusuario}}" method="post">
     <div id="contenido">
         {{#each lista}}
+        <div>
+            <input type="text" name="idcodificacion" id="codigo" checked aria-checked="true" value="{{idcodificacion}}">
+        </div>
         <div id="nombre">
             <label>Nombre</label>
             <input type="text" name="nombre" id="nombre" checked aria-checked="true" value="{{nombre}}"/>

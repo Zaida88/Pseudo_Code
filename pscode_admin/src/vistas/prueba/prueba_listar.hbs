@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="" />
+
+<form action="/prueba/listar/{{user.idusuario}}" method="get"></form>
+<div id="contenedor">
+    {{#each lista}}
+  <div id="pscode">
+    <h1>{{nombre}}</h1>
+  </div>
+  <div id="descripcion">
+    <h1>{{descripcion}}</h1>
+  </div>
+  <div id="detalle">
+      <a href="/prueba/pregunta/{{idPruebas}}"><button>Detalle</button></a>
+  </div>
+  {{/each}}
+</div>
