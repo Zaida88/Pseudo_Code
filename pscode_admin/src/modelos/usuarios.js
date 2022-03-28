@@ -7,6 +7,8 @@ const usuarios = (sequelize,type) => {
         },
         username: type.STRING(99),
         password: type.STRING,
+        email: type.STRING,
+        nombre_completo: type.STRING,
         creacionUsuarios:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),

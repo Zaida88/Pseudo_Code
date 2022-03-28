@@ -22,9 +22,9 @@ passport.use(
           user.password
         );
         if (validPassword) {
-          done(null, user, req.flash("message", "Bienvenido" + " " + user.username));
+          done(null, user, req.flash("message", "Bienvenid@" + " " + user.username));
         } else {
-          done(null, false, req.flash("message", "Datos incorrecta"));
+          done(null, false, req.flash("message", "Datos incorrectos"));
         }
       } else {
         return done(
@@ -43,14 +43,19 @@ passport.use(
     {
       usernameField: "username",
       passwordField: "password",
+      emailField: "email",
+      nombre_completoField: "nombre_completo",
       passReqToCallback: true
     },
-    async (req, username, password, done) => {
+    async (req, username, password,done) => {
       const usuarios = await orm.usuarios.findOne({ where: { username: username } });
       if (usuarios === null) {
+        const {email,nombre_completo} = req.body
         let nuevoUsuario = {
           username,
-          password
+          password,
+          email,
+          nombre_completo
         };
         nuevoUsuario.password = await helpers.encryptPassword(password);
         const resultado = await orm.usuarios.create(nuevoUsuario);
@@ -62,9 +67,12 @@ passport.use(
           if (username == usuario.username) {
             done(null, false, req.flash("message", "El nombre de usuario ya existe."))
           } else {
+            const {email,nombre_completo} = req.body
             let nuevoUsuario = {
               username,
-              password
+              password,
+              email,
+              nombre_completo
             };
             nuevoUsuario.password = await helpers.encryptPassword(password);
             const resultado = await orm.usuarios.create(nuevoUsuario);
