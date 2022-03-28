@@ -6,7 +6,7 @@ const pruebas = (sequelize,type) => {
             autoIncrement: true, 
         },
         nombre: type.STRING(99),
-        descripcion: type.STRING,
+        descripcion: type.STRING(2500),
         calificacion: type.STRING,
         creacionPruebas:{
             type: 'TIMESTAMP',

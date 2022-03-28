@@ -69,4 +69,6 @@ app.use("/estructura",require("./rutas/estructura"))
 
 app.use("/clasificacion",require("./rutas/clasificacion"))
 
+app.use('/prueba', require('./rutas/prueba'))
+
 module.exports = app;

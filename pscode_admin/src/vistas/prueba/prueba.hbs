@@ -1,21 +1,29 @@
-<form action="/prueba/lista_completa/{{user.idusuario}}" method="post">
-<div id="contenido">
-<div>
-    <label for="">{{nombre}}</label>
-</div>
-<div>
-    <label for="">{{descripcion}}</label>
-</div>
-<div>
-    <a href=""><button>Editar</button></a>
-</div>
-<div>
-    <label for="">{{preguntas}}</label>
-    <a href=""><button>Editar</button></a>
-</div>
-<div>
-    <label for="">{{respuestas}}</label>
-    <a href=""><button>Editar</button></a>
-</div>
-</div>
+<form action="/prueba/lista_completa/{{user.idusuario}}" method="get">
+    <div id="contenido">
+        <div id="contenido">
+            {{#each lista1}}
+            <div id="Nombre">
+                <label for="">{{nombre}}</label>
+            </div>
+            <div id="Descripcion">
+                <label for="">{{descripcion}}</label>
+            </div>
+            <div id="Editar">
+                <a href=""><button>Editar</button></a>
+            </div>
+            {{/each}}
+            {{#each lista2}}
+            <div id="Preguntas">
+                <label for="">{{preguntas}}</label>
+                <a href=""><button>Editar</button></a>
+            </div>
+            {{/each}}
+            {{#each lista3}}
+            <div id="Respuestas">
+                <label for="">{{respuesta }}</label>
+                <a href=""><button>Editar</button></a>
+            </div>
+             {{/each}}
+        </div>
+    </div>
 </form>

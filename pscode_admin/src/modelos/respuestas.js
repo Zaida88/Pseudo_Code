@@ -5,7 +5,7 @@ const respuestas = (sequelize,type) => {
             primaryKey: true,
             autoIncrement: true, 
         },
-        respuesta: type.STRING,
+        respuesta: type.STRING(2500),
         creacionRespuestas:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
