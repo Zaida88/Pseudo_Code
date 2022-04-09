@@ -1,3 +1,30 @@
-h1{
-    color: red;
-}
+body{
+    margin: 0;
+    padding: 0vh;
+    background: url(/IMG/fondo_ind.png);
+    background-attachment: fixed;
+    background-color: Black;
+    font-family: sans-serif;
+  }
+  
+  nav.navbar {
+    background-color: rgba(0, 0, 0, 0.322);
+  }
+  
+  nav.navbar {
+    background-color: rgba(0, 0, 0, 0.445);
+  }
+  .container{
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.445);
+    width: 900px;
+    padding: 50px;
+  }
+  
+  ul, li {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+  }
+  
+  
