@@ -6,7 +6,7 @@
 header {
     background: #03B8F1;
     width: 100%;
-    position: fixed; /*para que se quede pegado arriba*/
+    height: 70px;
     z-index: 100;
 } 
 .navbar__navegacion {
