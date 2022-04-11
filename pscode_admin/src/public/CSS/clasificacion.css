@@ -3,17 +3,12 @@
     padding: 0;
 }
 
-body{
-    background-image: url(/img/fondo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
 .contenedor{
+    width: 100%;
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 10px;
 }
@@ -38,8 +33,7 @@ body{
     display: flex;
     justify-content: center;
     width: 100%;
-    border-bottom: 2px solid black;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .label-nombre{
     font-size: 20px;
@@ -89,3 +83,13 @@ body{
     margin-left: 10px;
     border-radius:8px;
 }
+
+@media only screen and (min-width: 900px) {
+  .contenedor{
+      margin-left: 450px;
+      width: 400px;
+  }
+  .codificacion{
+    border-bottom: 2px solid black;
+  }
+  }
