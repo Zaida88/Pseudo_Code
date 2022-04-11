@@ -12,6 +12,11 @@
   <div  class="codificacion" id="codificacion">
     <a href="/codificacion/agregar/{{idclasificacion}}"><button class="boton">Agregar</button></a>
   </div>
+  {{else}}
+  <div id="mensaje">
+    <p>No tiene ninguna clasificacion,¿Desea agregar?</p>
+  </div>
+  <a href="/clasificacion/agregar/{{user.idusuario}}"><button>Agregar</button></a>
   {{/each}}
 </div>
 
