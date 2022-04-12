@@ -94,3 +94,6 @@
     
   }
   }
+#oculto{
+    display: none; /*para ocultar el id*/
+}

@@ -3,8 +3,8 @@
     <h1>Editar clasificacion</h1>
     <div id="contenido">
         {{#each lista}}
-        <div>
-            <input class="input" type="text" name="idclasificacion" id="clasificacion" checked aria-checked="true" value="{{idclasificacion}}">
+        <div id="oculto">
+            <input class="input" type="text" name="idclasificacion" id="clasificacion" checked aria-checked="true" value="{{idclasificacion}}" readonly>
         </div>
         <div id="nombre_clasificacion">
             <label class="label-nombre">Nombre: </label>
