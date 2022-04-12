@@ -10,9 +10,40 @@ header {
     z-index: 100;
     border-bottom: 3px solid black;
 } 
+.menu{
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: flex-end;
+}
+.menu:hover > .menu__boton{
+    display: none;
+}
+.menu:hover > .navbar__navegacion{
+    margin-top: 250px;
+    background-color: black;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+}
+.menu__boton{
+    margin-right: 30px;
+    width:100px;
+    transition: 0.3s;
+}
+.menu__boton img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.menu__boton img{
+    margin-left:25px;
+    width:50%;
+    transition: 0.3s;
+}
 .navbar__navegacion {
+    display: none;
     float: right; 
-  }
+ }
 .navbar__navegacion div {
     text-decoration: none;
     overflow: hidden; 
@@ -50,3 +81,22 @@ header {
     letter-spacing: 2px;
     cursor: pointer;
 }
+@media only screen and (min-width: 900px){
+
+    .menu__boton{
+        display: none;
+    }
+    .navbar__navegacion{
+        display: block;
+    }
+    .menu:hover > .menu__boton{
+        display: none;
+    }
+    .menu:hover > .navbar__navegacion{
+      display: flex;
+      background: none;
+      flex-direction: row;
+      margin-top: 0;
+    }
+
+} 
