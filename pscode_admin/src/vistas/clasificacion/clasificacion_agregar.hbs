@@ -1,13 +1,13 @@
-<link rel="stylesheet" href="" />
+<link rel="stylesheet" href="/CSS/clasificacion.css" />
 
-<form action="/clasificacion/agregar/" method="post">
+<form action="/clasificacion/agregar/{{user.idusuario}}" method="post">
     <div id="contenido">
         <div id="nombre">
-            <label>Nombre de clasificaion</label>
-            <input type="text" name="nombre_clasificacion" id="nombre_clasificacion" checked aria-checked="true" />
+            <label class="label-nombre">Nombre de clasificacion</label>
+            <input class="input" type="text" name="nombre_clasificacion" id="nombre_clasificacion" checked aria-checked="true" />
         </div>
         <div id="guardar">
-            <button type="submit">Guardar</button>
+            <button class="boton" type="submit">Guardar</button>
         </div>
     </div>
 </form>

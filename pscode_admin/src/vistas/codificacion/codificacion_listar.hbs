@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="" />
+<link rel="stylesheet" href="/CSS/clasificacion.css" />
 
 <form action="/codificacion/listar/{{user.idusuario}}" method="get"></form>
 <div id="contenedor">
@@ -10,13 +10,13 @@
     <h1>{{descripcion}}</h1>
   </div>
   <div id="editar">
-      <a href="/codificacion/editar/{{idcodificacion}}"><button>Editar</button></a>
+      <a href="/codificacion/editar/{{idcodificacion}}"><button class="boton">Editar</button></a>
   </div>
   <div id="codigo">
-    <a href="/estructura/agregar/{{idcodificacion}}"><button>Agregar codigo</button></a>
+    <a href="/estructura/agregar/{{idcodificacion}}"><button class="boton">Agregar codigo</button></a>
   </div>
   {{/each}}
 </div>
 <div id="codificacion">
-  <a href="/clasificacion/listar/{{user.idusuario}}"><button>+</button></a>
+  <a href="/clasificacion/agregar/{{user.idusuario}}"><button>Agregar clasificacion</button></a>
 </div>

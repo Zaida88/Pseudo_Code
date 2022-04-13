@@ -1,17 +1,22 @@
-<link rel="stylesheet" href="" />
+<link rel="stylesheet" href="/CSS/clasificacion.css" />
 
 <form action="/clasificacion/listar/{{user.idusuario}}" method="get"></form>
-<div id="contenedor">
+<div class="contenedor" id="contenedor">
     {{#each lista}}
-  <div id="nombre">
+  <div  class="nombre" id="nombre">
     <h1>{{nombre_clasificacion}}</h1>
   </div>
-  <div id="editar">
-      <a href="/clasificacion/editar/{{idclasificacion}}"><button>Editar</button></a>
+  <div  id="editar">
+      <a href="/clasificacion/editar/{{idclasificacion}}"><button class="boton">Editar</button></a>
   </div>
-  <div id="codificacion">
-    <a href="/codificacion/agregar/{{idclasificacion}}"><button>Agregar</button></a>
+  <div  class="codificacion" id="codificacion">
+    <a href="/codificacion/agregar/{{idclasificacion}}"><button class="boton">Agregar</button></a>
   </div>
+  {{else}}
+  <div id="mensaje">
+    <p>No tiene ninguna clasificacion,¿Desea agregar?</p>
+  </div>
+  <a href="/clasificacion/agregar/{{user.idusuario}}"><button>Agregar</button></a>
   {{/each}}
 </div>
 

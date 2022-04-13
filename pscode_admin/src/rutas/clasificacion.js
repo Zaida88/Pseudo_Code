@@ -4,13 +4,13 @@ const rutas = express.Router()
 
 const{ mostrar, traer, listar, enviar, actualizar} = require("../controladores/clasificacion_controlador")
 
-rutas.get("/agregar/", mostrar)
+rutas.get("/agregar/:id", mostrar)
 
 rutas.get("/editar/:id", traer)
 
 rutas.get("/listar/:id", listar)
 
-rutas.post("/agregar/", enviar)
+rutas.post("/agregar/:id", enviar)
 
 rutas.post("/editar/:id", actualizar)
 

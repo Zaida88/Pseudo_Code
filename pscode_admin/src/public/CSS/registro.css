@@ -2,7 +2,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    /*background-image: linear-gradient( 135deg, #81FFEF 10%, #F067B4 100%);*/
 }
 #imagen{
     background-image: url(https://img.freepik.com/vector-gratis/fondo-procesador-microchip-realista_52683-58446.jpg);
@@ -14,11 +13,12 @@
     height: 100vh;
     z-index: -1;
 }
-.imagen__logo img{
+#imagen img{
     background-color: #000000;
     border-radius: 50%;
-    margin-left: 130px;
-    margin-top: -180px;
+    margin-left: 640px;
+    margin-right: auto;
+    margin-top: 45px;
     height: 100px;
     width: 100px;
 }
@@ -31,16 +31,13 @@
     background: #fff;
     border-radius: 30px;
 }
-#login{
+#usuario{
     font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
     color: black; 
     text-transform: uppercase;
     font-weight: bolder;
-}
-#contraseñas input{
-    margin-bottom: 20px;
 }
 input{
     width: 100%;
@@ -100,7 +97,3 @@ button:hover {
         width: 90%;
     }
 }
-
-
-
-

@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="/css/navegacion.css">
 {{#if user}}
-<nav>
+<header>
+<nav class="navbar__navegacion">
   <div id="nav1">
     <a id="nav" href="/clasificacion/listar/{{user.idusuario}}"> Clasificación</a>
   </div>
@@ -11,10 +12,11 @@
     <a href="/estructura/listar/{{user.idusuario}}"> Estructura</a>
   </div>
   <div id="nav4">
-    <a href="/prueba/listar/{{user.idusuario}}"> prueba</a>
+    <a href="/prueba/listar/{{user.idusuario}}"> Prueba</a>
   </div>
   <div id="nav5">
     <a href="/CerrarSecion">Cierre la Sesión</a>
   </div>
 </nav>
+</header>
 {{/if}}

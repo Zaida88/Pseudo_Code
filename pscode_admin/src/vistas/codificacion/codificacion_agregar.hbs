@@ -1,24 +1,25 @@
-<link rel="stylesheet" href="" />
+<link rel="stylesheet" href="/CSS/clasificacion.css"  />
 
 <form action="/codificacion/agregar/{{user.idusuario}}" method="post">
+   <h1 class="titulo-agregar">Agregar codificacion</h1>
     <div id="contenido">
         <div id="nombre">
-            <label>Nombre de codificacion</label>
-            <input type="text" name="nombre" id="codificacion" checked aria-checked="true" />
+            <label class="label-nombre">Nombre de codificacion</label>
+            <input class="input" type="text" name="nombre" id="codificacion" checked aria-checked="true" />
         </div>
-        <div id="descripcion">
-            <label>Descripcion</label>
-            <textarea type="text" name="descripcion" id="descripcion_css" checked aria-checked="true"></textarea>
+        <div class="descripcion" id="descripcion">
+            <label class="descripcion__label">Descripcion</label>
+            <textarea class="descripcion__textarea"type="text" name="descripcion" id="descripcion_css" checked aria-checked="true"></textarea>
         </div>
         <div id="clasificacion">
-            <select name="clasificacion" id="">
+            <select  class="select" name="clasificacion" id="">
                 {{#each clasificacion}}
                 <option value="{{idclasificacion}}">{{nombre_clasificacion}}</option>
                 {{/each}}
             </select>
         </div>
         <div id="guardar">
-            <button type="submit">Guardar</button>
+            <button  class="boton" type="submit">Guardar</button>
         </div>
     </div>
 </form>

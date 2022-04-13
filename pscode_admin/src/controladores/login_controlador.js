@@ -1,10 +1,14 @@
 const passport = require("passport");
 
+const sql= require('../configuracion_bd/bd_sql')
+
 const loginCtl = {};
 
 //login
-loginCtl.mostrar = (req, res) => {
-    res.render("login/login")
+loginCtl.mostrar = async(req, res) => {
+    const ids = req.params.id
+    const usuario = await sql.query("select * from usuarios where idusuario=?",[ids])
+    res.render("login/login",{usuario})
 };
 
 loginCtl.login = passport.authenticate("local.signin",{
