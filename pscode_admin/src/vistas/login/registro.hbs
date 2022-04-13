@@ -1,4 +1,5 @@
 <LINK REL=StyleSheet HREF="/css/registro.css" TYPE="text/css" MEDIA=screen>
+<LINK REL=StyleSheet HREF="/css/validaciones.css" TYPE="text/css" MEDIA=screen>
 <form action="/registro" method="POST">
   <div id="imagen">
     <img src="/img/fondo.png">
@@ -8,19 +9,21 @@
       <p id="usuario">Registro</p>
     </div>
     <div id="username">
-      <input type="text" id="Nombre" name="username" placeholder="Usuario:">
+      <input type="text" id="Nombre" name="username" placeholder="Nombre de usuario" onkeyup="validacionUsuario(Nombre.value,mensaje1)" required>
+      <p id="mensaje1">No se puede usar mayúsculas</p>
     </div>
     <div id="contraseñas">
-      <input type="password" id="password" name="password" placeholder="Contraseña:">
+      <input type="password" id="password" name="password" placeholder="Contraseña" required>
     </div>
     <div id="nombre_completo">
-      <input type="text" id="nombre_completo" name="nombre_completo" placeholder="Nombre completo:">
+      <input type="text" id="nombre_completo" name="nombre_completo" placeholder="Nombre" required>
     </div>
     <div id="email">
-      <input type="text" id="email" name="email" placeholder="Correo:">
+      <input type="text" id="email" name="email" placeholder="Correo" required>
     </div>
     <div id="boton">
       <button type="submit">Guardar</button>
     </div>
   </div>
 </form>
+<script src="/JS/validaciones.js"></script>

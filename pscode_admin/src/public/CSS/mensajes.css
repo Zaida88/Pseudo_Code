@@ -1,10 +1,10 @@
 #mensaje {
-    padding-top: 65px;
-    
+    position: absolute;
+    padding: 5% 0 0 37%;
 }
 .alert {
-    width: 30%;
-    padding: 10px 20px;
+    width: 100%;
+    padding: 10px 50px;
     display: flex;
     justify-content: center;
     backdrop-filter: blur(10px);
