@@ -33,7 +33,7 @@ function validarName(nombre, mensaje4) {
   if (name.test(nombre.value)) {
     mensaje4.style.display = "none";
     n = 1;
-    const arr = nombre.value.split(" ");
+    const arr = nombre.value.toLowerCase().split(" ");
 
     for (var i = 0; i < arr.length; i++) {
       arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
