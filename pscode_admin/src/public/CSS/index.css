@@ -12,17 +12,27 @@
 }
 
 .header__imagen {
-  margin-top: 10px;
-  margin-left: 10px;
-  width: 120px;
+  padding: 2%;
+  width: 460px;
+  
 }
 
-.imagen-header {
+header {
+  background: #ffffffc7;
   width: 100%;
+  height: 150px;
+  z-index: 100;
+  border-bottom: 3px solid black;
+} 
+
+.imagen-header {
+  max-width: 100%;
+  margin-left: 110%;
+  margin-top: 18%;
 
 }
 body {
-  background-image: url(https://us.123rf.com/450wm/monsitj/monsitj1803/monsitj180300036/97366502-c%C3%B3digo-de-programaci%C3%B3n-de-tecnolog%C3%ADa-de-fondo-abstracto-de-desarrollador-de-software-y-script-de-com.jpg);
+  background-image: url(https://cdn.pixabay.com/photo/2021/11/04/06/24/ai-6767497_960_720.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
@@ -33,8 +43,6 @@ body {
   display: flex;
   padding: 10px 40px;
   margin-top: 15px;
-  margin-left: auto;
-  margin-right: auto;
   border: none;
   font-size: 14px;
   background: #000000;
@@ -44,4 +52,12 @@ body {
   font-weight: bold; 
 }
 
+#contenido{
+ background-color: #4d3f57;
+ border: 5px solid rgb(0, 0, 0);
+ box-sizing: content-box; 
+ padding: 2%;
+ width: auto;
+ margin: 0% 40% 0% 40%;
 
+}
