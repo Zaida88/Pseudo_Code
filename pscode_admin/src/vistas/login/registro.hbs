@@ -1,6 +1,6 @@
 <LINK REL=StyleSheet HREF="/css/registro.css" TYPE="text/css" MEDIA=screen>
 <LINK REL=StyleSheet HREF="/css/validaciones.css" TYPE="text/css" MEDIA=screen>
-<form action="/registro" method="POST">
+<form action="/registro" method="POST" id="registro">
   <div id="imagen">
     <img src="/img/fondo.png">
   </div>
@@ -12,20 +12,23 @@
       <p id="usuario">Registro</p>
     </div>
     <div id="username">
-      <input type="text" id="Nombre" name="username" placeholder="Nombre de usuario" onkeyup="validacionUsuario(Nombre.value,mensaje1)" required>
-      <p id="mensaje1">No se puede usar mayúsculas</p>
+      <input type="text" id="nombre" name="username" placeholder="Nombre de usuario" onkeyup="validarUsuario(nombre.value,mensaje1)" required>
+      <p id="mensaje1">No se puede ingresar caracteres especiales</p>
     </div>
     <div id="contraseñas">
-      <input type="password" id="password" name="password" placeholder="Contraseña" required>
+      <input type="password" id="password" name="password" placeholder="Contraseña" onkeyup="validarPass(password.value,mensaje2)" required>
+      <p id="mensaje2">Mínimo 8 caracteres, al menos una letra mayúscula, una letra minúscula, un número y un carácter especial</p>
     </div>
     <div id="nombre_completo">
-      <input type="text" id="nombre_completo" name="nombre_completo" placeholder="Nombre" required>
+      <input class="mayusculas" type="text" id="nombre_completo" name="nombre_completo" placeholder="Nombre" onkeyup="validarName(nombre_completo,mensaje3)" required>
+      <p id="mensaje3">Solo se permiten letras</p>
     </div>
     <div id="email">
-      <input type="text" id="email" name="email" placeholder="Correo" required>
+      <input type="text" id="email" name="email" placeholder="Correo" onkeyup="validarCorreo(email.value,mensaje4)" required>
+      <p id="mensaje4">El correo ingresado no es valido</p>
     </div>
     <div id="boton">
-      <button type="submit">Guardar</button>
+      <button type="submit">Guardar</button >
     </div>
   </div>
 </form>
