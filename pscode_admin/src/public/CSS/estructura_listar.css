@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url('/IMG/fondo-blanco.jpeg');
+    background-position-x:50%;
+    background-position-y:-20%;
+}
+#contenedor{
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+button{
+    margin-top: 10px;
+    background-color:#424242;
+    border-radius: 10px;
+    border:none;
+    font-size: 18px;
+    width: 185px;
+    height: 45px;
+    color: white;
+    transition: 0.3s;
+    font-weight: bold;
+}
+button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    border: 1px solid #85C1E9 ;
+    color: black;
+    background-color: white;
+}
+#estructura{
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #D5D8DC;
+    margin: 80px 155px;
+    border-radius: 10px;
+    border: 1px solid black ;
+}
