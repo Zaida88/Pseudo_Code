@@ -1,12 +1,12 @@
 <link rel="stylesheet" href="/CSS/clasificacion.css" />
 
 <form action="/codificacion/listar/{{user.idusuario}}" method="get"></form>
-<div id="contenedor">
+<div class="contenido" id="contenedor">
     {{#each lista}}
-  <div id="pscode">
+  <div class="nombre" id="pscode">
     <h1>{{nombre}}</h1>
   </div>
-  <div id="descripcion">
+  <div class="descripcion" id="descripcion">
     <h1>{{descripcion}}</h1>
   </div>
   <div id="editar">
