@@ -35,9 +35,32 @@ pruebaCtl.listar1 = async(req,res) =>{
 //lista 2
 pruebaCtl.listar2 = async(req,res) =>{
     const id = req.params.id
+    const prueba = await sql.query("select * from pruebas where idPruebas=?",[id])
     const lista1 = await sql.query("select * from detalle_pruebas where pruebaIdPruebas=?",[id])
-    res.render("prueba/prueba_preguntas",{ lista1 })
+    res.render("prueba/prueba_preguntas",{ lista1,prueba })
 }
+
+//lista 3
+pruebaCtl.listar3 = async(req,res) =>{
+    const id = req.params.id
+    const prueba = await sql.query("select * from pruebas where pruebas=?",[id])
+    res.render("prueba/prueba_agregarPreguntas",{prueba})
+}
+
+//ingresar pregunta
+pruebaCtl.enviarPregunta = async(req,res) =>{
+    const id = req.params.id
+    const {preguntas} = req.body
+    const nuevaPregunta= {
+        preguntas, 
+        idDetallePruebas: id
+    }
+    await orm.detalle_prueba.create(nuevaPregunta)
+    req.flash("success","Exito al guardar")
+    res.redirect('/prueba/listar/'+id);
+}
+
+   
 
 pruebaCtl.mostrarRespuesta = async(req, res) =>{
     const id = req.params.id
