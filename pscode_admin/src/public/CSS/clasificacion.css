@@ -54,7 +54,7 @@ body{
     transition: 0.3s;
 }
 .boton--mitad{
-    margin-left: 50%;
+    margin-left:20%;
 }
 .boton:hover{
     transform: scale(1.1);
@@ -65,14 +65,15 @@ body{
 }
 .fondo{
     background-color: #D5D8DC;
-    opacity: .9;
     height: 500px;
     margin-top:40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0.95;
 }
 .contenido{
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -94,6 +95,7 @@ body{
     margin-left: 10px;
 }
 .input{
+    width: 100%;
     margin-bottom: 10px;
     text-align: center;
     height:35px;
@@ -189,5 +191,7 @@ body{
      width: 100%;
     text-align: left;
 }
-
+.boton--mitad{
+    margin-left:45%;
+}
 }
