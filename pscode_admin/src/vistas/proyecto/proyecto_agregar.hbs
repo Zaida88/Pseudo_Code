@@ -1,5 +1,11 @@
 <link rel="stylesheet" href="../../public/CSS/proyecto.css" />
 
+<header>
+  <section>
+    <img class="logo" src="../../public/IMG/logo.png" >
+  </section><br><br>
+</header>
+
 <form action="/proyecto/agregar/" method="post">
   <div id="contenido">
     <div>
@@ -8,31 +14,31 @@
       {{/each}}
     </div>
     <div id="nombre_pro">
-      <label>Nombre de proyecto</label>
+      <label>Nombre de proyecto:</label><br>
       <input type="text" name="nombre_pro" id="proyecto" checked aria-checked="true" />
     </div>
     <div id="descripcion">
-      <label>Descripcion</label>
+      <label>Descripcion:</label><br>
       <textarea type="text" name="descripcion" id="descripcion_css" checked aria-checked="true"></textarea>
     </div>
     <div id="mision">
-      <label>Mision</label>
+      <label>Mision:</label><br>
       <textarea type="text" name="mision" id="mision_css" checked aria-checked="true"></textarea>
     </div>
     <div id="vision">
-      <label>Vision</label>
+      <label>Vision:</label><br>
       <textarea type="text" name="vision" id="vision_css" checked aria-checked="true"></textarea>
     </div>
     <div id="objetivos">
-      <label>Objetivos:</label>
-      <input type="text" id="numeros" name="numeros" />
+      <label>Objetivos:</label><br>
+      <input type="text" id="numeros" name="numeros" /><br><br>
       <button type="button" onclick="objetivos.crear()">Crear objetivos</button>
     </div>
     <div id="listaObjetivos"></div>
     <div id="Unico">
       <textarea name="unico" id="unico" maxlength="2500"></textarea>
     </div>
-    <div id="guardar">
+    <br><div id="guardar">
       <button type="submit">Guardar</button>
     </div>
   </div>
@@ -43,11 +49,5 @@
     <button type="submit">Ver proyectos registrados</button>
   </form>
 </div>
-<<<<<<< HEAD
-  
-
-
-=======
 <script src="/JS/numero.js"></script>
->>>>>>> 59042a77fb327f3dbcf2c4a67275469562c26ff7
 <script src="/JS/objetivos.js"></script>
