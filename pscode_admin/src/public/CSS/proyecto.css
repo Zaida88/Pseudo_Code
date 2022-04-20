@@ -1,5 +1,7 @@
+body{
+    background-image: url('/IMG/fondo-blanco.jpeg');
+}
 form {
-    background-color: url(fondo.jpg);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     align-content: center;
     margin-left: auto;
