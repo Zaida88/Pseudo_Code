@@ -1,0 +1,45 @@
+form {
+    background-color: url(fondo.jpg);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: darkslategrey 7px;
+}
+#contenido{
+    font-size: medium;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+@media screen and (max-width: 1000px) {}
+
+div label,
+div input {
+    font-size: larger;
+}
+
+@media screen and (max-width: 800px) {
+
+    div label,
+    div input {
+        font-size: large;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    div label,
+    div input {
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 200px) {
+
+    div label,
+    div input {
+        font-size: small;
+    }
+}
