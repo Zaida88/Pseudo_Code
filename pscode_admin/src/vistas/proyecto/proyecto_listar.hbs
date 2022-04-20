@@ -2,29 +2,35 @@
 
 <form action="/proyecto/listar/{{user.idusuario}}" method="get"></form>
 <div id="contenedor">
-    {{#each lista}}
-  <div id="pscode">
-    <h1>{{nombre_pro}}</h1>
-  </div>
-  <div id="descripcion">
-    <h1>{{descripcion}}</h1>
-  </div>
-  <div id="mision">
-    <h1>{{mision}}</h1>
-  </div>
-  <div id="vision">
-    <h1>{{vision}}</h1>
-  </div>
-  <div id="editar">
+  {{#each lista}}
+    <div id="pscode">
+      <label>Nombre de proyecto</label>
+      <h1>{{nombre_pro}}</h1>
+    </div>
+    <div id="descripcion">
+      <label>Descripcion</label>
+      <h1>{{descripcion}}</h1>
+    </div>
+    <div id="mision">
+      <label>Mision</label>
+      <h1>{{mision}}</h1>
+    </div>
+    <div id="vision">
+      <label>Vision</label>
+      <h1>{{vision}}</h1>
+    </div>
+    <div id="editar">
       <a href="/proyecto/editar/{{iddatosproyecto}}"><button>Editar</button></a>
-  </div>
+    </div>
   {{/each}}
   {{#each listaObjetivos}}
     <div id="objetivos">
-    <h1>{{objetivos}}</h1>
-  </div>
+      <label>Objetivos:</label>
+      <h1>{{objetivos}}</h1>
+    </div>
   {{/each}}
   <div id="clasificacion">
-    <a href="/clasificacion/listar/{{user.idusuario}}"><button>Clasificacion</button></a>
+    <a href="/clasificacion/listar/{{user.idusuario}}"><button
+      >Clasificacion</button></a>
   </div>
 </div>

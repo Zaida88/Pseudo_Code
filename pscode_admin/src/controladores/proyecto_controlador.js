@@ -4,13 +4,14 @@ const sql = require("../configuracion_bd/bd_sql")
 
 //mostrar
 proyectoCtl.mostrar = async (req, res) => {
-    res.render("proyecto/proyecto_agregar")
+    const max = await sql.query("select max(iddatosproyecto) from datos_proyectos")
+    res.render("proyecto/proyecto_agregar", {max})
 };
 
 //ingresar
 proyectoCtl.enviar = async (req, res) => {
     const id = req.user.idusuario
-    const { nombre_pro, descripcion, mision, vision, objetivos } = req.body
+    const { nombre_pro, descripcion, mision, vision, objetivos,idproyecto,unico,numeros } = req.body
     const nuevoProyecto = {
         nombre_pro,
         descripcion,
@@ -19,8 +20,14 @@ proyectoCtl.enviar = async (req, res) => {
         usuarioIdusuario: id
     }
     await orm.datos_proyecto.create(nuevoProyecto)
-    for (let i = 0; i < objetivos.length; i++) {
-        await sql.query("insert into detalle_proyectos (objetivos,datosProyectoIddatosproyecto) values (?,?)", [objetivos[i], id])
+    if (parseInt(numeros)===1){
+        await sql.query("insert into detalle_proyectos (objetivos,datosProyectoIddatosproyecto) values (?,?)", [unico, (parseInt(idproyecto))])
+    }else{
+        if (parseInt(numeros)>1){
+            for (let i = 0; i < objetivos.length; i++) {
+                await sql.query("insert into detalle_proyectos (objetivos,datosProyectoIddatosproyecto) values (?,?)", [objetivos[i], (parseInt(idproyecto))])
+            }
+        }
     }
     req.flash("success", "Exito al guardar")
     res.redirect('/proyecto/listar/' + id);
@@ -72,9 +79,15 @@ proyectoCtl.actualizar = async (req, res) => {
         .then(actualizacion => {
             actualizacion.update(nuevoProyecto)
         })
-    for (let i = 0; i < objetivos.length; i++) {
-        await sql.query("update detalle_proyectos set objetivos=? where datosProyectoIddatosproyecto=?", [objetivos[i], ids])
-    }
+        if(objetivos.length>10){
+            await sql.query("update detalle_proyectos set objetivos=? where datosProyectoIddatosproyecto=?", [objetivos, (parseInt(ids))])
+        }
+        if(objetivos.length<10){
+            for (let i = 0; i < objetivos.length; i++) {
+                await sql.query("update detalle_proyectos set objetivos=? where datosProyectoIddatosproyecto=?", [objetivos[i], (parseInt(ids)+i)])
+            }
+        }
+
     req.flash("success", "Exito al guardar")
     res.redirect('/proyecto/listar/' + id);
 }
