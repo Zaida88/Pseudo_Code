@@ -1,12 +1,12 @@
-<link rel="stylesheet" href="/css/estructura_agregar.css" TYPE="text/css" MEDIA=screen/>
+<link rel="stylesheet" href="/css/estructura-editar.css" TYPE="text/css" MEDIA=screen/>
 <script src="/JS/comentarios.js"></script>
 {{#each lista}}
  <form action="/estructura/editar/{{idestructura}}" method="post">
 {{/each}}
-    <div id="contenido">
+    <div id="contenido" class="container">
         {{#each lista}}
-        <div id="nombre">
-            <label>Nombre</label>
+        <div id="nombre" >
+            <label class="title">Nombre</label>
             <input value="{{nombre}}" type="text" name="nombre" id="estructura" checked aria-checked="true" />
         </div>
         <div id="descripcion">
@@ -25,7 +25,7 @@
             {{/each}}
         </div>
         <div id="guardar">
-            <button type="submit">Guardar</button>
+            <button class="btn btn-primary d-block mx-auto"type="submit">Guardar</button>
         </div>
     </div>
 </form>

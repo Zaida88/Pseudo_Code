@@ -66,20 +66,15 @@ header {
     transform: translateY(15px);
     letter-spacing: 2px;
 }
-#logo{
-    float: left;
-	padding: 15px 0 0 20px;
-	text-decoration: none;
-    color: #000000;
-    display: block;
-	font-weight: 700;
-	font-size: 25px;
-    transition: ease-in 1s;
+#nav5 a:hover {
+    letter-spacing: 0px;
+
 }
-#logo:hover{
-    transform: translateZ(1px);
-    letter-spacing: 2px;
-    cursor: pointer;
+#logo img{
+    float: left;
+    height: 65px;
+    width: 250px;
+    margin-left: 25px;
 }
 @media only screen and (min-width: 900px){
 

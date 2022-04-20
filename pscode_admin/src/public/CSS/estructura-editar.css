@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url('/IMG/fondo-blanco.jpeg');
+    background-position-x:50%;
+    background-position-y:-20%;
+}
+#contenido{
+    margin-top: 50px;
+    opacity: 0.9;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size:25px;
+    background-color: #D5D8DC;
+    height: auto;
+    color: black;
+    border-radius: 10px;
+}
+.elemento__titulo{
+    color: black;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+    opacity: 1;
+}
+#descripcion textarea {
+    padding: 12px;
+    padding-right: 30px;
+    margin-left: 12px;
+
+}
+#codigo textarea {
+    padding: 12px;
+    padding-right: 30px;
+    margin-left: 90px;
+}
+#codificacion{
+    margin: 12px;
+    margin-left: 45px;
+}
