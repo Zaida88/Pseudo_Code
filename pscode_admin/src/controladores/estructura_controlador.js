@@ -28,7 +28,7 @@ estructuraCtl.enviar = async(req,res) =>{
 //listar
 estructuraCtl.listar = async(req,res) =>{
     const id = req.params.id
-    const lista = await sql.query("select * from estructuras where codificacionIdcodificacion=?",[id])
+    const lista = await sql.query("select * from estructuras")
     res.render("estructura/estructura_listar",{lista})
 }
 
