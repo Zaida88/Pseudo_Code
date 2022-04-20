@@ -54,7 +54,7 @@ body{
     transition: 0.3s;
 }
 .boton--mitad{
-    margin-left: 50%;
+    margin-left:20%;
 }
 .boton:hover{
     transform: scale(1.1);
@@ -189,5 +189,7 @@ body{
      width: 100%;
     text-align: left;
 }
-
+.boton--mitad{
+    margin-left:45%;
+}
 }
