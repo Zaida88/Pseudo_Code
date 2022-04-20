@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/CSS/prueba_agregar.css" />
+
 <link rel="stylesheet" href="" />
 
 <form action="/prueba/listar/{{user.idusuario}}" method="get"></form>
@@ -13,4 +15,7 @@
       <a href="/prueba/pregunta/{{idPruebas}}"><button>Detalle</button></a>
   </div>
   {{/each}}
+</div>
+<div>
+  <a href="/prueba/agregar/{{user.idusuario}}"><button>Agregar prueba</button></a>
 </div>

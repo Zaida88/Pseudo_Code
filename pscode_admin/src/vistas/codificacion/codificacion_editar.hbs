@@ -1,21 +1,23 @@
 <link rel="stylesheet" href="/CSS/clasificacion.css" />
  <form action="/codificacion/editar/{{user.idusuario}}" method="post">
-    <div id="contenido">
+    <div class="fondo">
+    <div class="contenido" id="contenido">
         {{#each lista}}
         <div>
-            <input type="text" name="idcodificacion" id="codigo" checked aria-checked="true" value="{{idcodificacion}}">
+            <input class="input input--small" type="text" name="idcodificacion" id="codigo" checked aria-checked="true" value="{{idcodificacion}}">
         </div>
-        <div id="nombre">
-            <label>Nombre</label>
-            <input type="text" name="nombre" id="nombre" checked aria-checked="true" value="{{nombre}}"/>
+        <div class="nombre" id="nombre">
+            <label class="label-nombre">Nombre</label><br>
+            <input class="input" type="text" name="nombre" id="nombre" checked aria-checked="true" value="{{nombre}}"/>
         </div>
-        <div id="descripcion">
-            <label>Descripcion</label>
-            <input type="text" name="descripcion" id="descripcion_css" checked aria-checked="true" value="{{descripcion}}"/>
+        <div class="descripcion" id="descripcion">
+            <label class="descripcion__label">Descripcion</label>
+            <input class="input" type="text" name="descripcion" id="descripcion_css" checked aria-checked="true" value="{{descripcion}}"/>
         </div>
         {{/each}}
         <div id="guardar">
             <button  class="boton" type="submit">Guardar</button>
         </div>
+    </div>
     </div>
 </form>

@@ -1,23 +1,26 @@
-<link rel="stylesheet" href="" />
+<link rel="stylesheet" href="/css/estructura_listar.css" TYPE="text/css" MEDIA="screen" />
 
 <form action="/estructura/listar/{{user.idusuario}}" method="get"></form>
 <div id="contenedor">
-    {{#each lista}}
+  {{#each lista}}
   <div id="pscode">
+    <label>Codificacion</label>
     <h1>{{nombre}}</h1>
   </div>
   <div id="descripcion">
+    <label>Descripcion</label>
     <h1>{{descripcion}}</h1>
   </div>
   <div id="codigo">
+    <label>Codigo</label>
     <h1>{{codigo}}</h1>
   </div>
   <div id="editar">
-      <a href="/estructura/editar/{{idestructura}}"><button>Editar</button></a>
+    <a href="/estructura/editar/{{idestructura}}"><button>Editar</button></a>
   </div>
   {{/each}}
   {{#each listaComentarios}}
-    <div id="comentarios">
+  <div id="comentarios">
     <h1>{{Comentarios}}</h1>
   </div>
   {{/each}}

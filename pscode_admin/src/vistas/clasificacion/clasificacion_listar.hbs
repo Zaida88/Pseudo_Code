@@ -3,6 +3,7 @@
 <form action="/clasificacion/listar/{{user.idusuario}}" method="get"></form>
 <div class="contenedor" id="contenedor">
     {{#each lista}}
+    <div class="contenedor__contenido">
   <div  class="nombre" id="nombre">
     <h1>{{nombre_clasificacion}}</h1>
   </div>
@@ -10,13 +11,17 @@
       <a href="/clasificacion/editar/{{idclasificacion}}"><button class="boton">Editar</button></a>
   </div>
   <div  class="codificacion" id="codificacion">
-    <a href="/codificacion/agregar/{{idclasificacion}}"><button class="boton">Agregar</button></a>
+    <a href="/codificacion/agregar/{{idclasificacion}}"><button class="boton">Agregar lenguaje</button></a>
+  </div>
   </div>
   {{else}}
-  <div id="mensaje">
-    <p>No tiene ninguna clasificacion,¿Desea agregar?</p>
-  </div>
-  <a href="/clasificacion/agregar/{{user.idusuario}}"><button>Agregar</button></a>
+      <div class="mensaje">
+      <p>No tiene ninguna clasificacion</p>
+      <p>¿Desea agregar?</p>
+      <a href="/clasificacion/agregar/{{user.idusuario}}"><button class="boton">Agregar</button></a>
+      </div>
   {{/each}}
-</div>
+ </div>
+
+
 
