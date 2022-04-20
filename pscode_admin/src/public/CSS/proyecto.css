@@ -1,59 +1,95 @@
-form{
-    background-image: url(../IMG/fondo-blanco.jpeg);
-    max-width: 1525px;
+body{
+    background-image: url('/IMG/fondo-blanco.jpeg');
+    background-position-x:50%;
+    background-position-y:-20%;
+}
+.fondo{
+    background-color: rgba(202, 207, 210,.9);
+    height: 700px;
+    margin-top:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.contenido {
+    height: 100%;
     width: 100%;
-}
-div.contenido {
-    border: 5px solid black 5px solid black 5px solid black 5px solid black;
-    align-content: center;
-    justify-content: center;
-    background-color: aqua;
-    margin: 0 auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.logo{
-    max-width: 550px;
-    max-height: 300px;
-    padding: 10px 10px 10px 10px;
- }
- section{
-    background-color: rgb(255, 255, 255);
-    border-bottom: 5px solid black;
-}
-div,label{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(15, 15, 46);
-    align-content: center;
+    flex-direction: column;
+    display: flex;
     justify-content: center;
 }
-textarea #descripcion_css{
-    resize:none;
-    
+.input{
+   width: 97%;
+   margin-left: 5px;
+   margin-bottom: 10px;
+   text-align: center;
+   height:35px;
+   border-radius: 8px;
+   transition: 0.3s;
+}
+.input:hover{
+    border: 1px solid #85C1E9 ;
+}
+.label{
+    margin-left:5px;
+    font-size: 18px;
+}
+.textarea{
+    border-radius: 10px;
+    transition: 0.3s;
+    border: 1px solid black ;
+    text-align: center;
+    width: 98%;
+}
+.textarea:hover{
+    border: 1px solid #85C1E9 ;
+}
+.boton{
+    margin-left: 5px;
+    background-color:#424242;
+    border-radius: 10px;
+    border:none;
+    font-size: 18px;
+    width: 185px;
+    height: 45px;
+    color: white;
+    transition: 0.3s;
+}
+.boton--mitad{
+    height: 60px;
+    width: 200px;
+    margin-left:20%;
+    margin-bottom: 10px;
+}
+.boton:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    border: 1px solid #85C1E9 ;
+    color: black;
+    background-color: white;
+}
+@media screen and (min-width: 900px) {
+    .fondo{
+        background-color: transparent;
+    }
+    .boton--mitad{
+        width: 250px;
+        margin-left:41%;
+    }
+    .contenido{
+        width: 600px;
+        height: 700px;
+        border-radius: 15px;
+        justify-content: center;
+        border: 1px solid black;
+        background-color: rgba(253, 254, 254,.9);
+        text-align: center;
+   }
 }
 
-
-
-@media screen and (max-width: 800px) {
-
-    div label, div input, div textarea{
-        font-size: large;
-    }
-    .logo{
-        width: 210px;
-        height: 125px;
-    }
-    
-}
-
-@media screen and (min-width: 400px) {
-
-    div label,div input, div textarea{
-        font-size: small;
-    }
-    .logo{
-        width: 110px;
-        height: 75px;
-    }
-}

@@ -1,52 +1,47 @@
-<link rel="stylesheet" href="../../public/CSS/proyecto.css" />
-<title>Pseudo Code</title>
-<header>
-  <section>
-    <img class="logo" src="../../public/IMG/logo.png" >
-  </section><br><br>
-</header>
-
+<link rel="stylesheet" href="/CSS/proyecto.css" />
 <form action="/proyecto/agregar/" method="post">
-  <div id="contenido">
+  <div class="fondo">
+  <div class="contenido" id="contenido">
     <div>
       {{#each max}}
-      <input type="text" name="idproyecto" id="idproyecto" value="{{'max(iddatosproyecto)'}}" readonly />
+      <input  class="input" type="text" name="idproyecto" id="idproyecto" value="{{'max(iddatosproyecto)'}}" readonly />
       {{/each}}
     </div>
     <div id="nombre_pro">
-      <label>Nombre de proyecto:</label><br>
-      <input type="text" name="nombre_pro" id="proyecto" checked aria-checked="true" />
+      <label class="label">Nombre de proyecto:</label><br>
+      <input class="input" type="text" name="nombre_pro" id="proyecto" checked aria-checked="true" />
     </div>
     <div id="descripcion">
-      <label>Descripcion:</label><br>
-      <textarea type="text" name="descripcion" id="descripcion_css" checked aria-checked="true"></textarea>
+      <label class="label">Descripcion:</label><br>
+      <textarea class="textarea" type="text" name="descripcion" id="descripcion_css" checked aria-checked="true"></textarea>
     </div>
     <div id="mision">
-      <label>Mision:</label><br>
-      <textarea type="text" name="mision" id="mision_css" checked aria-checked="true"></textarea>
+      <label class="label">Mision:</label><br>
+      <textarea class="textarea"  type="text" name="mision" id="mision_css" checked aria-checked="true"></textarea>
     </div>
     <div id="vision">
-      <label>Vision:</label><br>
-      <textarea type="text" name="vision" id="vision_css" checked aria-checked="true"></textarea>
+      <label class="label">Vision:</label><br>
+      <textarea class="textarea"  type="text" name="vision" id="vision_css" checked aria-checked="true"></textarea>
     </div>
     <div id="objetivos">
-      <label>Objetivos:</label><br>
-      <input type="text" id="numeros" name="numeros" /><br><br>
-      <button type="button" onclick="objetivos.crear()">Crear objetivos</button>
+      <label class="label"> Objetivos:</label><br>
+      <input class="input" type="text" id="numeros" name="numeros" /><br><br>
+      <button  class="boton" type="button" onclick="objetivos.crear()">Crear objetivos</button>
     </div>
     <div id="listaObjetivos"></div>
     <div id="Unico">
-      <textarea name="unico" id="unico" maxlength="2500"></textarea>
+      <textarea class="textarea"  name="unico" id="unico" maxlength="2500"></textarea>
     </div>
     <br><div id="guardar">
-      <button type="submit">Guardar</button>
+      <button class="boton" type="submit">Guardar</button>
     </div>
+  </div>
   </div>
 </form>
 
 <div id="Siguiente">
   <form action="/proyecto/listar/{{user.idusuario}}" method="get">
-    <button type="submit">Ver proyectos registrados</button>
+    <button class="boton boton--mitad" type="submit">Ver proyectos registrados</button>
   </form>
 </div>
 <script src="/JS/numero.js"></script>
