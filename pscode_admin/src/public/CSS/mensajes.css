@@ -10,7 +10,8 @@
     backdrop-filter: blur(10px);
     background-color:  rgba(12, 255, 4, 0.41);
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+    z-index: 99;
 }
 div .alert{
     color: rgb(0, 0, 0);
