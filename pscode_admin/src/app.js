@@ -17,8 +17,8 @@ require('./lib/passport');
 app.set('port', process.env.PORT || 4000);
 app.set('views', path.join(__dirname, 'vistas'));
 app.engine('.hbs', exphbs({
-    defaultLayout: 'main',
-    layoutsDir: path.join(app.get('views'), 'layouts'),
+    defaultLayout: 'proyecto_agregar',
+    layoutsDir: path.join(app.get('views'), 'proyecto'),
     partialsDir: path.join(app.get('views'), 'partials'),
     extname: '.hbs',
     helpres: require('./lib/handlebars')
