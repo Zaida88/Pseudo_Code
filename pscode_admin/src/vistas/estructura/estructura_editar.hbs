@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/css/estructura-editar.css" TYPE="text/css" MEDIA=screen/>
+<link rel="stylesheet" href="/css/estructura-editar.css" TYPE="text/css" MEDIA="screen"/>
 <script src="/JS/comentarios.js"></script>
 {{#each lista}}
  <form action="/estructura/editar/{{idestructura}}" method="post">
@@ -6,20 +6,20 @@
     <div id="contenido" class="container">
         {{#each lista}}
         <div id="nombre" >
-            <label class="title">Nombre</label>
+            <label class="titulo_label">Nombre:</label>
             <input value="{{nombre}}" type="text" name="nombre" id="estructura" checked aria-checked="true" />
         </div>
         <div id="descripcion">
-            <label>Descripcion</label>
+            <label class="titulo_label">Descripcion:</label>
             <input type="text" name="descripcion" id="descripcion_css" checked aria-checked="true" value="{{descripcion}}"/>
         </div>
         <div id="codigo">
-            <label>Codigo</label>
+            <label class="titulo_label">Codigo:</label>
             <input type="text" name="codigo" id="codigo_css" checked aria-checked="true" value="{{codigo}}"/>
         </div>
         {{/each}}
         <div id="comentarios">
-            <label>Comentarios:</label>
+            <label class="titulo_label">Comentarios:</label>
             {{#each listaComentarios}}
              <input type="text" id="numeros" name="comentarios" checked value="{{comentarios}}"/>
             {{/each}}

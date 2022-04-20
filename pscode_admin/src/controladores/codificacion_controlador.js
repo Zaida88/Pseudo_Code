@@ -12,7 +12,7 @@ codificacionCtl.mostrar = async(req, res) => {
 //ingresar
 codificacionCtl.enviar = async(req,res) =>{
     const id = req.user.idusuario
-    const {nombre, descripcion,clasificacion} = req.body
+    const {nombre, descripcion, clasificacion} = req.body
     const nuevaCodificacion= {
         nombre, 
         descripcion, 
@@ -29,7 +29,7 @@ codificacionCtl.enviar = async(req,res) =>{
 //listar
 codificacionCtl.listar = async(req,res) =>{
     const id = req.params.id
-    const lista = await sql.query("select * from codificacions where clasificacionLenguajeIdclasificacion=?",[id])
+    const lista = await sql.query("select * from codificacions")
     res.render("codificacion/codificacion_listar",{lista})
 }
 
