@@ -102,6 +102,9 @@ body{
     border-radius: 8px;
     transition: 0.3s;
 }
+.input--oculto{
+    display: none;
+}
 .input:hover{
     border: 1px solid #85C1E9 ;
 }
@@ -172,6 +175,9 @@ body{
         border: 1px solid black;
         background-color: rgba(253, 254, 254,.9);
         text-align: center;
+   }
+   .contenido--small{
+    height: 300px;
    }
    .fondo{
        background-color: transparent;
