@@ -27,10 +27,28 @@ body{
 }
 .contenedor{
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
 }
-
+.contenedor__contenido{
+    display: flex;
+    color: black;
+    flex-direction: column;
+    margin:30px 0 20px; 
+    width: 98%;
+    background-color: #F4F6F6 ;
+    border: 1px solid black;
+    border-radius:20px;
+    align-items: center;
+}
+.detalle__proyecto{
+    border-top: 1px solid black;
+    width: 90%;
+}
+.editar{
+    border-top: 1px solid black;
+}
 .contenido {
     width: 100%;
     flex-direction: column;
@@ -98,9 +116,17 @@ body{
     .fondo{
         background-color: transparent;
     }
+    .fondo--height{
+        height: 500px;
+    }
     .boton--mitad{
         width: 250px;
         margin-left:32%;
+    }
+    .contenedor{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-left:20px;
     }
     .contenido{
         width: 750px;
@@ -109,6 +135,7 @@ body{
         border: 1px solid black;
         background-color: rgba(253, 254, 254,.9);
         text-align: left;
+
    }
    #objetivos{
        margin:30px 5px;

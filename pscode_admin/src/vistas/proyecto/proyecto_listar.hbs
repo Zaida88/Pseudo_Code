@@ -1,29 +1,33 @@
 <link rel="stylesheet" href="/CSS/proyecto.css" />
-
 <form action="/proyecto/listar/{{user.idusuario}}" method="get"></form>
-<div id="contenedor">
+ <center><label class="titulo">Proyectos</label></center>
+<div class="contenedor" id="contenedor">
   {{#each lista}}
+   <div class="contenedor__contenido">
     <div id="pscode">
-      <label class="titulo">Proyectos</label>
       <h1 class="titulo">{{nombre_pro}}</h1>
     </div>
+    <div class="detalle__proyecto">
     <div id="descripcion">
-      <label class="label">Descripcion</label>
-      <h1 class="titulo">{{descripcion}}</h1>
+      <label class="titulo">Descripcion</label>
+      <h1 class="label">{{descripcion}}</h1>
     </div>
     <div id="mision">
-      <label class="label">Mision</label>
-      <h1 class="titulo">{{mision}}</h1>
+      <label class="titulo">Mision</label>
+      <h1 class="label">{{mision}}</h1>
     </div>
     <div id="vision">
-      <label class="label">Vision</label>
-      <h1 class="titulo">{{vision}}</h1>
+      <label class="titulo">Vision</label>
+      <h1 class="label">{{vision}}</h1>
     </div class="label">
-    <div id="editar">
-      <a href="/proyecto/editar/{{iddatosproyecto}}"><button class="boton">Editar</button></a>
+    <div class="editar" id="editar"><br>
+      <a href="/proyecto/editar/{{iddatosproyecto}}"><button class="boton boton--mitad">Editar</button></a>
     </div>
+      </div>
+      </div>
+
   {{/each}}
-  </div>
+    </div>
   {{#each listaObjetivos}}
     <div id="objetivos">
       <label class="label">Objetivos:</label>
@@ -31,7 +35,7 @@
     </div>
   {{/each}}
   <div id="clasificacion">
-    <a href="/clasificacion/listar/{{user.idusuario}}"><button class="boton boton--mitad-oculto"
+    <a href="/clasificacion/listar/{{user.idusuario}}"><button class="boton boton--mitad"
       >Clasificacion</button></a>
   </div>
 </div>
