@@ -63,9 +63,7 @@ body{
     color: white;
     transition: 0.3s;
 }
-.boton--mitad{
-    margin-left:20%;
-}
+
 .boton:hover{
     transform: scale(1.1);
     cursor: pointer;
@@ -74,7 +72,11 @@ body{
     background-color: white;
 }
 .center-block{
-    margin-left:20%;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
 }
 @media only screen and (max-width: 700px) {
     .elemento__titulo{
@@ -85,5 +87,17 @@ body{
         font-size: 0.8em;
     }
     
+}
+@media only screen and (max-width: 410px) {
+    .container{
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+    }
+    .contenedor__contenido{
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 100%;
+    }
 }
 

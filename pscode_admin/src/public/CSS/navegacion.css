@@ -62,9 +62,9 @@ header {
 .navbar__navegacion div a:hover{
     background-color: #3c0558b2;
     color: #FFF;
-    font-weight: 700;
+    font-weight: 600;
     transform: translateY(15px);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 #nav5 a:hover {
     letter-spacing: 0px;
