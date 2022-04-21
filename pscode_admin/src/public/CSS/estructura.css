@@ -9,13 +9,12 @@ body{
 }
 .container{
     margin-top: 50px;
-    opacity: 0.9;
     width: 80%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size:25px;
-    background-color: #D5D8DC;
+    background-color: #d5d8dc63;
     height: auto;
     color: black;
     border-radius: 10px;

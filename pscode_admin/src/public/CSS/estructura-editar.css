@@ -9,7 +9,6 @@ body{
 }
 .container{
     margin-top: 50px;
-    opacity: 0.9;
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -17,7 +16,7 @@ body{
     justify-content: center;
     font-size:25px;
     background-color: #D5D8DC;
-    height: auto;
+    height: auto;rgba(213, 216, 220, 0.384)
     color: black;
     border-radius: 10px;
 }
