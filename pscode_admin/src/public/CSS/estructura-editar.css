@@ -9,14 +9,13 @@ body{
 }
 .container{
     margin-top: 50px;
-    opacity: 0.9;
     width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size:25px;
-    background-color: #D5D8DC;
+    background-color: #d5d8dc8f;
     height: auto;
     color: black;
     border-radius: 10px;
@@ -76,6 +75,27 @@ body{
     .contenido{
         margin-left: 0;
         margin-right: 0;
+        width: 100%;
+    }
+    input{
+       width: 80%;
+       margin-left: 5px;
+   }
+   .titulo_label{
+    margin-left: 10px;
+    width: 100%;
+    text-align: left;
+    }
+}
+@media only screen and (max-width: 410px) {
+    .container{
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 100%;
+    }
+    .contenido{
+        margin-left: 5px;
+        margin-right: 5px;
         width: 100%;
     }
     input{
