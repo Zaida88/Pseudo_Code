@@ -8,6 +8,7 @@ body{
     display: none;
 }
 .titulo{
+    background-color: rgba(202, 207, 210,.8);
     text-align: center;
     font-size: 30px;
     font-weight: bold;
@@ -68,9 +69,11 @@ body{
     border: 1px solid #85C1E9 ;
 }
 .label{
-    font-weight: bold;
     margin-left:5px;
     font-size: 18px;
+}
+.label--negrita{
+    font-weight: bold;
 }
 .textarea{
     border-radius: 10px;
@@ -121,7 +124,7 @@ body{
     }
     .boton--mitad{
         width: 250px;
-        margin-left:32%;
+        margin-left:40%;
     }
     .contenedor{
         display: grid;
