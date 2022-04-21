@@ -3,6 +3,7 @@
 <form action="/estructura/listar/{{user.idusuario}}" method="get"></form>
 <div id="contenedor" class="container">
   {{#each lista}}
+<div class="contenedor__contenido">
   <div id="pscode" class="elemnto__container">
     <label class="elemento__titulo">Codificación:</label>
     <h1 class="elemento--contenido">{{nombre}}</h1>
@@ -16,15 +17,16 @@
     <h1 class="elemento--contenido">{{codigo}}</h1>
   </div>
   <div id="editar" class="elemnto__container">
-    <a href="/estructura/editar/{{idestructura}}"><button class="btn btn-primary d-block width mx-auto">Editar</button></a>
+    <a href="/estructura/editar/{{idestructura}}"><button class="boton">Editar</button></a>
   </div>
+</div>
   {{/each}}
   {{#each listaComentarios}}
   <div id="comentarios" class="elemnto__container">
     <h1 class="elemento--contenido">{{Comentarios}}</h1>
   </div>
   {{/each}}
-</div>
-<div id="estructura">
-  <a href="/codificacion/listar/{{user.idusuario}}"><button class="btn btn-primary d-block mx-auto">Agregar código</button></a>
+  <div id="estructura">
+  <a href="/codificacion/listar/{{user.idusuario}}"><button class="boton center-block">Agregar código</button></a>
+  </div>
 </div>
