@@ -4,9 +4,10 @@
   <div class="contenido" id="contenido">
     <div>
       {{#each max}}
-      <input  class="input" type="text" name="idproyecto" id="idproyecto" value="{{'max(iddatosproyecto)'}}" readonly />
+      <input  class="input input--oculto" type="text" name="idproyecto" id="idproyecto" value="{{'max(iddatosproyecto)'}}" readonly />
       {{/each}}
     </div>
+    <div class="titulo">Proyecto</div>
     <div id="nombre_pro">
       <label class="label">Nombre de proyecto:</label><br>
       <input class="input" type="text" name="nombre_pro" id="proyecto" checked aria-checked="true" />
@@ -32,8 +33,8 @@
     <div id="Unico">
       <textarea class="textarea"  name="unico" id="unico" maxlength="2500"></textarea>
     </div>
-    <br><div id="guardar">
-      <button class="boton" type="submit">Guardar</button>
+    <div id="guardar">
+      <button class="boton boton--mitad" type="submit">Guardar</button>
     </div>
   </div>
   </div>
@@ -41,7 +42,7 @@
 
 <div id="Siguiente">
   <form action="/proyecto/listar/{{user.idusuario}}" method="get">
-    <button class="boton boton--mitad" type="submit">Ver proyectos registrados</button>
+    <button class="boton boton--mitad-oculto" type="submit">Ver proyectos registrados</button>
   </form>
 </div>
 <script src="/JS/numero.js"></script>

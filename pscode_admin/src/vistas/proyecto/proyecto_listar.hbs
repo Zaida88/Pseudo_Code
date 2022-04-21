@@ -1,42 +1,41 @@
-<link rel="stylesheet" href="../../public/CSS/proyecto.css" />
-
-<header>
-  <section>
-    <img class="logo" src="../../public/IMG/logo.png" >
-  </section><br><br>
-</header>
-
+<link rel="stylesheet" href="/CSS/proyecto.css" />
 <form action="/proyecto/listar/{{user.idusuario}}" method="get"></form>
-<div id="contenedor">
+ <center><label class="titulo">Proyectos</label></center>
+<div class="contenedor" id="contenedor">
   {{#each lista}}
+   <div class="contenedor__contenido">
     <div id="pscode">
-      <label>Nombre de proyecto</label>
-      <h1>{{nombre_pro}}</h1>
+      <h1 class="titulo">{{nombre_pro}}</h1>
     </div>
+    <div class="detalle__proyecto">
     <div id="descripcion">
-      <label>Descripcion</label>
-      <h1>{{descripcion}}</h1>
+      <label class="titulo">Descripcion</label>
+      <h1 class="label">{{descripcion}}</h1>
     </div>
     <div id="mision">
-      <label>Mision</label>
-      <h1>{{mision}}</h1>
+      <label class="titulo">Mision</label>
+      <h1 class="label">{{mision}}</h1>
     </div>
     <div id="vision">
-      <label>Vision</label>
-      <h1>{{vision}}</h1>
+      <label class="titulo">Vision</label>
+      <h1 class="label">{{vision}}</h1>
+    </div class="label">
+    <div class="editar" id="editar"><br>
+      <a href="/proyecto/editar/{{iddatosproyecto}}"><button class="boton boton--mitad">Editar</button></a>
     </div>
-    <div id="editar">
-      <a href="/proyecto/editar/{{iddatosproyecto}}"><button>Editar</button></a>
-    </div>
+      </div>
+      </div>
+
   {{/each}}
+    </div>
   {{#each listaObjetivos}}
     <div id="objetivos">
-      <label>Objetivos:</label>
-      <h1>{{objetivos}}</h1>
+      <label class="label">Objetivos:</label>
+      <h1 class="titulo">{{objetivos}}</h1>
     </div>
   {{/each}}
   <div id="clasificacion">
-    <a href="/clasificacion/listar/{{user.idusuario}}"><button
+    <a href="/clasificacion/listar/{{user.idusuario}}"><button class="boton boton--mitad"
       >Clasificacion</button></a>
   </div>
 </div>

@@ -4,6 +4,15 @@ body{
     background-position-x:50%;
     background-position-y:-20%;
 }
+.input--oculto{
+    display: none;
+}
+.titulo{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 0;
+}
 .fondo{
     background-color: rgba(202, 207, 210,.9);
     height: 700px;
@@ -12,18 +21,39 @@ body{
     justify-content: center;
     align-items: center;
 }
+.fondo--height{
+    height: 1550px;
+    margin-bottom: 100px;
+}
 .contenedor{
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
+.contenedor__contenido{
+    display: flex;
+    color: black;
+    flex-direction: column;
+    margin:30px 0 20px; 
+    width: 98%;
+    background-color: #F4F6F6 ;
+    border: 1px solid black;
+    border-radius:20px;
+    align-items: center;
+}
+.detalle__proyecto{
+    border-top: 1px solid black;
+    width: 90%;
+}
+.editar{
+    border-top: 1px solid black;
+}
 .contenido {
-    height: 100%;
     width: 100%;
     flex-direction: column;
     display: flex;
-    justify-content: center;
+    margin-bottom: 40px;
 }
 .input{
    width: 97%;
@@ -38,6 +68,7 @@ body{
     border: 1px solid #85C1E9 ;
 }
 .label{
+    font-weight: bold;
     margin-left:5px;
     font-size: 18px;
 }
@@ -46,12 +77,14 @@ body{
     transition: 0.3s;
     border: 1px solid black ;
     text-align: center;
-    width: 98%;
+    width: 96%;
+    margin-left: 5px;
 }
 .textarea:hover{
     border: 1px solid #85C1E9 ;
 }
 .boton{
+    margin-bottom: 10px;
     margin-left: 5px;
     background-color:#424242;
     border-radius: 10px;
@@ -62,11 +95,15 @@ body{
     color: white;
     transition: 0.3s;
 }
-.boton--mitad{
+.boton--mitad-oculto{
     height: 60px;
     width: 200px;
     margin-left:20%;
     margin-bottom: 10px;
+    display: none;
+}
+.boton--mitad{
+    margin-left:20%;
 }
 .boton:hover{
     transform: scale(1.1);
@@ -79,19 +116,36 @@ body{
     .fondo{
         background-color: transparent;
     }
+    .fondo--height{
+        height: 500px;
+    }
     .boton--mitad{
         width: 250px;
-        margin-left:41%;
+        margin-left:32%;
+    }
+    .contenedor{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-left:20px;
     }
     .contenido{
-        width: 600px;
-        height: 700px;
+        width: 750px;
         border-radius: 15px;
         justify-content: center;
         border: 1px solid black;
         background-color: rgba(253, 254, 254,.9);
-        text-align: center;
+        text-align: left;
+
    }
+   #objetivos{
+       margin:30px 5px;
+       display: flex;
+       justify-content: center;
+   }
+   .textarea{
+    width: 96%;
+    margin-left: 10px;
+}
 }
 
 /*
