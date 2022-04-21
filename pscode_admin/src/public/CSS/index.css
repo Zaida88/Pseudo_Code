@@ -63,3 +63,47 @@ body {
  margin: 0% 40% 0% 40%;
 
 }
+
+@media only screen and (max-width: 940px) {
+  .container{
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+  }
+  .nav{
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  .contenido{
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+  }
+  .body{
+    width: 80%;
+    margin-left: 5px;
+  }
+  .header__imagen{
+     width: 80%;
+     margin-left: 5px;
+ }
+ .imagen-header{
+  width: 80%;
+  margin-left: 5px;
+}
+.btn{
+  width: 80%;
+  margin-left: 5px;
+}
+ .imagen-header{
+  margin-left: 10px;
+  width: 100%;
+  text-align: left;
+  }
+  
+  #contenido {
+      width: 80%;
+      margin-left: 25px;
+  }
+}
