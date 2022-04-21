@@ -1,11 +1,9 @@
 <LINK REL=StyleSheet HREF="/css/ingreso.css" TYPE="text/css" MEDIA=screen>
 {{#each usuario}}
 <form action="/login/{{idusuario}}" method="POST" id="ingresar">
-<div id="imagen">
-</div>
-  <div id="contenedor">
+  <div id="contenedor" class="container">
     <div class="imagen__logo">
-      <img src="/IMG/logo-icon.png" alt="">
+      <img class="mx-auto d-block" src="/IMG/logo-icon.png" alt="">
     </div>
     <div id="login">
       Login
