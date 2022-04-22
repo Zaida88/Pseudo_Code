@@ -1,42 +1,44 @@
 <link rel="stylesheet" href="/CSS/proyecto.css" />
-<form action="/proyecto/agregar/" method="post">
+<form action="/proyecto/agregar/{{user.idusuario}}" method="post">
   <div class="fondo">
-  <div class="contenido" id="contenido">
-    <div>
-      {{#each max}}
-      <input  class="input input--oculto" type="text" name="idproyecto" id="idproyecto" value="{{'max(iddatosproyecto)'}}" readonly />
-      {{/each}}
+    <div class="contenido" id="contenido">
+      <div>
+        {{#each max}}
+        <input class="input input--oculto" type="text" name="idproyecto" id="idproyecto"
+          value="{{'max(iddatosproyecto)'}}" readonly />
+        {{/each}}
+      </div>
+      <div class="titulo">Proyecto</div>
+      <div id="nombre_pro">
+        <label class="label">Nombre de proyecto:</label><br>
+        <input class="input" type="text" name="nombre_pro" id="proyecto" checked aria-checked="true" />
+      </div>
+      <div id="descripcion">
+        <label class="label">Descripcion:</label><br>
+        <textarea class="textarea" type="text" name="descripcion" id="descripcion_css" checked
+          aria-checked="true"></textarea>
+      </div>
+      <div id="mision">
+        <label class="label">Mision:</label><br>
+        <textarea class="textarea" type="text" name="mision" id="mision_css" checked aria-checked="true"></textarea>
+      </div>
+      <div id="vision">
+        <label class="label">Vision:</label><br>
+        <textarea class="textarea" type="text" name="vision" id="vision_css" checked aria-checked="true"></textarea>
+      </div>
+      <div id="objetivos">
+        <label class="label"> Objetivos:</label><br>
+        <input class="input" type="text" id="numeros" name="numeros" /><br><br>
+        <button class="boton" type="button" onclick="objetivos.crear()">Crear objetivos</button>
+      </div>
+      <div id="listaObjetivos"></div>
+      <div id="Unico">
+        <textarea class="textarea" name="unico" id="unico" maxlength="2500"></textarea>
+      </div>
+      <div id="guardar">
+        <button class="boton boton--mitad" type="submit">Guardar</button>
+      </div>
     </div>
-    <div class="titulo">Proyecto</div>
-    <div id="nombre_pro">
-      <label class="label">Nombre de proyecto:</label><br>
-      <input class="input" type="text" name="nombre_pro" id="proyecto" checked aria-checked="true" />
-    </div>
-    <div id="descripcion">
-      <label class="label">Descripcion:</label><br>
-      <textarea class="textarea" type="text" name="descripcion" id="descripcion_css" checked aria-checked="true"></textarea>
-    </div>
-    <div id="mision">
-      <label class="label">Mision:</label><br>
-      <textarea class="textarea"  type="text" name="mision" id="mision_css" checked aria-checked="true"></textarea>
-    </div>
-    <div id="vision">
-      <label class="label">Vision:</label><br>
-      <textarea class="textarea"  type="text" name="vision" id="vision_css" checked aria-checked="true"></textarea>
-    </div>
-    <div id="objetivos">
-      <label class="label"> Objetivos:</label><br>
-      <input class="input" type="text" id="numeros" name="numeros" /><br><br>
-      <button  class="boton" type="button" onclick="objetivos.crear()">Crear objetivos</button>
-    </div>
-    <div id="listaObjetivos"></div>
-    <div id="Unico">
-      <textarea class="textarea"  name="unico" id="unico" maxlength="2500"></textarea>
-    </div>
-    <div id="guardar">
-      <button class="boton boton--mitad" type="submit">Guardar</button>
-    </div>
-  </div>
   </div>
 </form>
 

@@ -67,6 +67,7 @@ function validarFormulario(evento) {
   evento.preventDefault();
   if (u == 1 && p == 1 && e == 1 && n == 1) {
     this.submit();
+    alert("Registro exitoso")
   } else {
     alert("Todos los campos tienen que estar validados");
   }
