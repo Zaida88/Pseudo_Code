@@ -4,24 +4,29 @@
     margin: 0;
 }
 header {
-    background: #03B8F1;
+    background:white;
     width: 100%;
     height: 70px;
-    z-index: 100;
     border-bottom: 3px solid black;
-} 
+    display: flex;
+    justify-content: space-between;
+}
 .menu{
     display: flex;
     height: 70px;
     align-items: center;
     justify-content: flex-end;
 }
-.menu:hover > .menu__boton{
-    display: none;
+.logo{
+    width:200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.menu:hover > .navbar__navegacion{
-    margin-top: 310px;
-    background-color: rgb(0, 68, 255);
+.logo-imagen{
+    width: 80%;
+}
+.navbar__navegacion{
     position: relative;
     display:flex;
     flex-direction: column;
@@ -31,6 +36,7 @@ header {
     width:100px;
     transition: 0.3s;
 }
+
 .menu__boton img:hover {
     transform: scale(1.1);
     cursor: pointer;
@@ -52,69 +58,108 @@ header {
 .navbar__navegacion div a {
     text-decoration: none;
     display: block; 
-    padding: 20px;
-    color: #fff;
+    width: 150px;
+    height: 50px;
+    color: black;
     font-family: Arial, sans-serif;
     font-size: 16px;
     font-weight: bold;
     transition: 0.5s ease all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .navbar__navegacion div a:hover{
-    background-color: #3c0558b2;
+    background-color:black;
     color: #FFF;
     font-weight: 600;
-    transform: translateY(15px);
+    transform: translateY(10px);
     letter-spacing: 1px;
 }
-#nav5 a:hover {
-    letter-spacing: 0px;
-
-}
-#logo img{
-    float: left;
-    height: 50px;
-    width: 235px;
-    margin-left: 25px;
-    margin-top: 8px;
-}
-@media only screen and (max-width: 1035px){
-
-    #logo img{
-        height: 35px;
-        width: 215px;
-        margin: 15px 8px;
-    }
-
-} 
 @media only screen and (min-width: 990px){
-
+    .boton-cerrar{
+        display: none;
+    }
     .menu__boton{
         display: none;
     }
     .navbar__navegacion{
         display: block;
+        margin-right: 10px;
     }
-    .menu:hover > .menu__boton{
-        display: none;
-    }
-    .menu:hover > .navbar__navegacion{
-      display: flex;
-      background: none;
-      flex-direction: row;
-      margin-top: 12px;
-    }
-
+    
 } 
-@media only screen and (max-width: 375px){
-
-    #logo img{
-        display: none;
+@media only screen and (max-width: 500px){
+    .boton-cerrar{
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        height: 30px;
+        margin-bottom: -50px;
     }
-    .menu__boton{
-        margin-right: auto;
-        margin-left: auto;
-       
+    .boton-cerrar p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        background-color: red;
+        margin-top: 10px;
+        margin-right: 20px;
+        border-radius: 10%;
+        cursor: pointer;
     }
-
+    .menu__boton {
+       width: 70px;
+    }
+    .logo{
+        width: 150px;
+    }
+    .navbar__navegacion{
+        align-items: center;
+        justify-content: space-around;
+        width: 300px;
+        height:550px;
+        background-color: black;
+    } 
+    .navbar__navegacion div a{
+       color: white;
+    } 
 } 
-
+@media only screen and (max-width:1100px){
+    .boton-cerrar{
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        height: 30px;
+        margin-bottom: -50px;
+    }
+    .boton-cerrar p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        background-color: red;
+        margin-top: 10px;
+        margin-right: 20px;
+        border-radius: 10%;
+        cursor: pointer;
+    }
+    .menu__boton {
+       width: 70px;
+    }
+    .logo{
+        width: 150px;
+    }
+    .navbar__navegacion{
+        align-items: center;
+        justify-content: space-around;
+        width: 300px;
+        height:550px;
+        background-color: black;
+    } 
+    .navbar__navegacion div a{
+       color: white;
+    } 
+} 

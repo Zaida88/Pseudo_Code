@@ -1,14 +1,15 @@
 <link rel="stylesheet" href="/css/navegacion.css" />
 {{#if user}}
-  <header>
-    <div id="logo">
-      <img src="/IMG/logo.png" alt="logo">
+  <header id="header">
+    <div class="logo" id="logo">
+      <img class="logo-imagen" src="/IMG/logo.png" alt="logo">
     </div>
-    <div class="menu">
-      <div class="menu__boton">
+    <div id="menu"  class="menu">
+      <div onclick="mostrarMenu()" id="menu__boton" class="menu__boton">
         <img src="/IMG/boton-menu.png" alt="" />
       </div>
-      <nav class="navbar__navegacion">
+      <nav id="nav-bar" class="navbar__navegacion">
+        <div id="cerrar" onclick="cerrarMenu()" class="boton-cerrar"><p>X</p></div>
         <div id="nav4">
           <a href="/proyecto/listar/{{user.idusuario}}"> Proyecto</a>
         </div>
@@ -32,3 +33,4 @@
 
   </header>
 {{/if}}
+<script src="/JS/navegacion.js"></script>
