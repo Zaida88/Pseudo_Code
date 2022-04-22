@@ -1,6 +1,6 @@
 class obtenerNumero{
     constructor(){
-        this.numero = document.getElementById('numero')
+        this.numero = document.getElementById('idproyecto')
         this.rol = document.getElementById('rol')
     }
     inicio(){

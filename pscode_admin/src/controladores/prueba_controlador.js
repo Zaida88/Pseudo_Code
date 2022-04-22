@@ -97,13 +97,13 @@ pruebaCtl.respuestas = async (req, res) => {
 
   if (parseInt(numeros) === 1) {
     await sql.query(
-      "insert into respuestas (respuesta,detallePruebaIdDetallePruebas) values (?,?)", [unico, parseInt(idDetallePruebas)]
+      "insert into respuestas (respuesta,detallePruebaIdDetallePruebas) values (?,?)", [unico, parseInt(id)]
     );
   } else {
     if (parseInt(numeros) > 1) {
       for (let i = 0; i < objetivos.length; i++) {
         await sql.query(
-          "insert into respuestas (respuesta,detallePruebaIdDetallePruebas) values (?,?)", [objetivos[i], parseInt(idDetallePruebas)]
+          "insert into respuestas (respuesta,detallePruebaIdDetallePruebas) values (?,?)", [objetivos[i], parseInt(id)]
         );
       }
     }
@@ -116,7 +116,7 @@ pruebaCtl.respuestas = async (req, res) => {
 pruebaCtl.listar3 = async (req, res) => { 
   const id = req.params.id;
   const lista1 = await sql.query(
-    "select distinct nombre, descripcion from prueba where usuarioIdusuario=?",
+    "select distinct idPruebas, nombre, descripcion from prueba where usuarioIdusuario=?",
     [id]
   );
   const lista2 = await sql.query(
@@ -165,7 +165,7 @@ pruebaCtl.actualizar = async (req, res) => {
     descripcion,
   };
   await orm.prueba
-    .findOne({ where: { idprueba: idprueba } })
+    .findOne({ where: { idPruebas: idprueba } })
     .then((actualizacion) => {
       actualizacion.update(nuevaPrueba);
     });

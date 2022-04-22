@@ -1,34 +1,29 @@
 <link rel="stylesheet" href="/CSS/prueba_agregar.css" />
-
-<form action="/prueba/respuestas/{{user.idusuario}}" method="post">
+{{#each preguntaid}}
+<form action="/prueba/respuestas/{{idDetallePruebas}}" method="post">
   <div id="contenido">
-      <div>
-    {{#each max}}
-    <input class="input" type="text" name="idDetallePruebas" id="idDetallePruebas" value="{{'max(idDetallePruebas)'}}" readonly />
-    {{/each}}
-  </div>
+
     <div id="Pregunta">
-      {{#each preguntaid}}
       <p>{{preguntas}}</p>
       {{/each}}
     </div>
     <div id="respuestas">
-       <div id="objetivos">
-    <label class="label">Respuestas:</label><br />
-    <input class="input" type="text" id="numeros" name="numeros" /><br /><br />
-    <button class="boton" type="button" onclick="objetivos.crear()">Crear
-      respuestas</button>
-  </div>
-  <div>
-    <div id="listaObjetivos">
-      <div id="Unico">
-        <textarea class="textarea" name="unico" id="unico" maxlength="2500"></textarea>
+      <div id="objetivos">
+        <label class="label">Respuestas:</label><br />
+        <input class="input" type="text" id="numeros" name="numeros" /><br /><br />
+        <button class="boton" type="button" onclick="objetivos.crear()">Crear
+          respuestas</button>
+      </div>
+      <div>
+        <div id="listaObjetivos">
+          <div id="Unico">
+            <textarea class="textarea" name="unico" id="unico" maxlength="2500"></textarea>
+          </div>
+        </div>
+      </div>
+      <div id="guardar">
+        <button type="submit">Guardar</button>
       </div>
     </div>
-    </div>
-    <div id="guardar">
-      <button type="submit">Guardar</button>
-    </div>
-  </div>
 </form>
 <script src="/JS/objetivos.js"></script>

@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="/CSS/prueba_agregar.css" />
-
-<form action="/prueba/editar/{{user.idusuario}}" method="post">
+{{#each lista1}}
+<form action="/prueba/editar/{{idPruebas}}" method="post">
     <div id="contenido">
         <div id="contenido">
-            {{#each lista1}}
+            
             <div id="numero">
                 <input type="text" name="idprueba" id="idprueba" value="{{idPruebas}}">
             </div>
