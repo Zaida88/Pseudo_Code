@@ -1,8 +1,13 @@
 <link rel="stylesheet" href="/CSS/prueba_agregar.css" />
 
 <form action="/prueba/agregar/{{user.idusuario}}" method="post">
+  <div>
+    {{#each max}}
+    <input class="input" type="text" name="idPruebas" id="idPruebas" value="{{'max(idPruebas)'}}" readonly />
+    {{/each}}
+  </div>
   <div id="nombre">
-    <label for="">Nombre prueba</label>
+    <label for="">Nombre</label>
     <input type="text" name="nombre" id="nombre" required />
   </div>
   <div>
@@ -10,12 +15,17 @@
     <textarea type="text" name="descripcion" id="descripcion" required maxlength="2500"></textarea>
   </div>
   <div id="objetivos">
-    <label>Preguntas:</label>
-    <input type="text" id="numeros" />
-    <button type="button" onclick="objetivos.crear()">-></button>
+    <label class="label">Preguntas:</label><br />
+    <input class="input" type="text" id="numeros" name="numeros" /><br /><br />
+    <button class="boton" type="button" onclick="objetivos.crear()">Crear preguntas</button>
   </div>
   <div>
+    <div id="listaObjetivos"></div>
+    <div id="Unico">
+      <textarea class="textarea" name="unico" id="unico" maxlength="2500"></textarea>
+    </div>
     <button type="submit">Guardar</button>
   </div>
 </form>
+<script src="/JS/numero.js"></script>
 <script src="/JS/objetivos.js"></script>

@@ -2,17 +2,29 @@
 
 <form action="/prueba/respuestas/{{user.idusuario}}" method="post">
   <div id="contenido">
+      <div>
+    {{#each max}}
+    <input class="input" type="text" name="idDetallePruebas" id="idDetallePruebas" value="{{'max(idDetallePruebas)'}}" readonly />
+    {{/each}}
+  </div>
     <div id="Pregunta">
       {{#each preguntaid}}
       <p>{{preguntas}}</p>
       {{/each}}
     </div>
     <div id="respuestas">
-      <div id="objetivos">
-        <label>Respuestas:</label>
-        <input type="text" id="numeros" />
-        <button type="button" onclick="objetivos.crear()">-></button>
+       <div id="objetivos">
+    <label class="label">Respuestas:</label><br />
+    <input class="input" type="text" id="numeros" name="numeros" /><br /><br />
+    <button class="boton" type="button" onclick="objetivos.crear()">Crear
+      respuestas</button>
+  </div>
+  <div>
+    <div id="listaObjetivos">
+      <div id="Unico">
+        <textarea class="textarea" name="unico" id="unico" maxlength="2500"></textarea>
       </div>
+    </div>
     </div>
     <div id="guardar">
       <button type="submit">Guardar</button>

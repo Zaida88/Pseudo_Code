@@ -11,13 +11,13 @@ proyectoCtl.mostrar = async (req, res) => {
 //ingresar
 proyectoCtl.enviar = async (req, res) => {
     const id = req.user.idusuario
-    const { nombre_pro, descripcion, mision, vision, objetivos,idproyecto,unico,numeros } = req.body
+    const { nombre_pro, descripcion, mision, vision, objetivos,idproyecto,unico,numeros } = req.body;
     const nuevoProyecto = {
         nombre_pro,
         descripcion,
-        mision,
+        mision, 
         vision,
-        usuarioIdusuario: id
+        usuarioIdusuario: id 
     }
     await orm.datos_proyecto.create(nuevoProyecto)
     if (parseInt(numeros)===1){

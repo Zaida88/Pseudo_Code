@@ -4,16 +4,18 @@
 
 <form action="/prueba/listar/{{user.idusuario}}" method="get"></form>
 <div id="contenedor">
-    {{#each lista}}
-  <div id="pscode">
-    <h1>{{nombre}}</h1>
-  </div>
-  <div id="descripcion">
-    <h1>{{descripcion}}</h1>
-  </div>
-  <div id="detalle">
+  {{#each lista}}
+    <div id="pscode">
+      <label for="">Nombre</label>
+      <h1>{{nombre}}</h1>
+    </div>
+    <div id="descripcion">
+      <label for="">Descripción</label>
+      <h1>{{descripcion}}</h1>
+    </div>
+    <div id="detalle">
       <a href="/prueba/pregunta/{{idPruebas}}"><button>Detalle</button></a>
-  </div>
+    </div>
   {{/each}}
 </div>
 <div>
