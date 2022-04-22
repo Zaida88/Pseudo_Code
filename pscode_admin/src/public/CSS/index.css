@@ -20,7 +20,7 @@
 }
 
 nav {
-  background: #ffffffc7;
+  background: #705d7e;
   width: 100%;
   height: 150px;
   z-index: 100;
@@ -34,10 +34,10 @@ nav {
 
 }
 body {
-  background-image: url(https://cdn.pixabay.com/photo/2021/11/04/06/24/ai-6767497_960_720.jpg);
+  background-image: url('/IMG/primera.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 50vh;
   width: 100vw;
 }
 
@@ -55,7 +55,7 @@ body {
 }
 
 #contenido{
- background-color: #4d3f57;
+ background-color: #82394b;
  border: 5px solid rgb(0, 0, 0);
  box-sizing: content-box; 
  padding: 2%;
