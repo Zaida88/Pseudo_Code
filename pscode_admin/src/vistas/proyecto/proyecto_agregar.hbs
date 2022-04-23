@@ -8,10 +8,10 @@
           value="{{'max(iddatosproyecto)'}}" readonly />
         {{/each}}
       </div>
-      <div class="titulo">Proyecto</div>
+      <div class="titulo"><b>Nuevo Proyecto</b></div><br>
       <div id="nombre_pro">
         <label class="label">Nombre de proyecto:</label><br>
-        <input class="input" type="text" name="nombre_pro" id="proyecto" checked aria-checked="true" />
+        <input class="textarea" type="text" name="nombre_pro" id="proyecto" checked aria-checked="true" />
       </div>
       <div id="descripcion">
         <label class="label">Descripcion:</label><br>
@@ -28,15 +28,15 @@
       </div>
       <div id="objetivos">
         <label class="label"> Objetivos:</label><br>
-        <input class="input" type="text" id="numeros" name="numeros" /><br><br>
-        <button class="boton" type="button" onclick="objetivos.crear()">Crear objetivos</button>
+        <textarea class="textarea" type="text" id="numeros" name="numeros" ></textarea><br><br>
+        <button class="buto" type="button" onclick="objetivos.crear()"><b>Crear objetivos</b></button>
       </div>
       <div id="listaObjetivos"></div>
       <div id="Unico">
         <textarea class="textarea" name="unico" id="unico" maxlength="2500"></textarea>
       </div>
       <div id="guardar">
-        <button class="boton boton--mitad" type="submit">Guardar</button>
+        <button class="boton boton--mitad" type="submit"><b>Guardar</b></button>
       </div>
     </div>
   </div>

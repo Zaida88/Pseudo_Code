@@ -8,4 +8,4 @@ function cerrarMenu(){
     console.log("Boton funcional");
     document.getElementById("nav-bar").style.display= "none";
     document.getElementById("menu__boton").style.display= "flex";
-}
+} 
