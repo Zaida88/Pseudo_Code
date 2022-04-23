@@ -4,7 +4,7 @@
     margin: 0;
 }
 body{
-    background-image: url(https://img.freepik.com/vector-gratis/fondo-procesador-microchip-realista_52683-58446.jpg);
+    background-image: url(/IMG/login.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -31,7 +31,7 @@ body{
     margin-top: 100px;
     width: 30%;
     padding: 50px 20px;
-    background: #fff;
+    background: #9e9e9ec0;
     border-radius: 30px;
     border: 2px solid black;
 }
@@ -60,8 +60,8 @@ button{
     margin-right: auto;
     border: none;
     font-size: 14px;
-    background: #000000;
-    color: white;
+    background: #A569BD;
+    color: black;
     cursor:  pointer;
     border-radius: 5px;
     font-weight: bold;
