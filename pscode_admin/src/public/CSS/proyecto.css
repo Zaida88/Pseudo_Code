@@ -2,7 +2,7 @@
 body{
     background-image: url('/IMG/contenidos.jpeg');
     background-position-x:50%;
-    background-position-y:-20%;
+    background-position-y:-10%;
 }
 .input--oculto{
     display: none;
@@ -10,6 +10,7 @@ body{
 .titulo{
     text-align: center;
     font-size: 40px;
+    color: white;
 }
 .fondo{
     background-color: rgba(202, 207, 210,.9);
@@ -24,6 +25,7 @@ body{
     margin-bottom: 100px;
 }
 .contenedor{
+    background-color: rgba(1, 1, 1, 0.776);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -52,6 +54,7 @@ body{
     flex-direction: column;
     display: flex;
     margin-bottom: 40px;
+    
 }
 .input{
    width: 97%;
@@ -114,7 +117,8 @@ body{
     display: none;
 }
 .boton--mitad{
-    margin-left:50%;
+    margin-left:60%;
+    width: 50px;
 }
 .boton:hover{
     transform: scale(1.1);
@@ -123,7 +127,7 @@ body{
     color: black;
     background-color: white;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 200px) {
     .fondo{
         background-color: transparent;
     }
@@ -132,7 +136,8 @@ body{
     }
     .boton--mitad{
         width: 150px;
-        margin-left:40%;
+        margin-left:45%;
+        margin-bottom: 50px;
     }
     .contenedor{
         display: grid;

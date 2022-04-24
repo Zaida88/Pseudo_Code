@@ -1,27 +1,24 @@
-<link rel="stylesheet" href="/CSS/clasificacion.css" />
+<link rel="stylesheet"  href="/CSS/clasificacion.css" />
 
 <form action="/clasificacion/listar/{{user.idusuario}}" method="get"></form>
 <div class="contenedor" id="contenedor">
-    {{#each lista}}
-    <div class="contenedor__contenido">
-  <div  class="nombre" id="nombre">
-    <h1>{{nombre_clasificacion}}</h1>
-  </div>
-  <div  id="editar">
-      <a href="/clasificacion/editar/{{idclasificacion}}"><button class="boton">Editar</button></a>
-  </div>
-  <div  class="codificacion" id="codificacion">
-    <a href="/codificacion/agregar/{{idclasificacion}}"><button class="boton">Agregar lenguaje</button></a>
-  </div>
+  {{#each lista}}
+  <div class="container">
+    <div class="nombre" id="nombre">
+      <h1>{{nombre_clasificacion}}</h1>
+    </div>
+    <div id="editar"> 
+      <a href="/clasificacion/editar/{{idclasificacion}}"><button class="boton"><b>Editar</b></button></a>
+    </div>
+    <div class="codificacion" id="codificacion">
+      <a href="/codificacion/agregar/{{idclasificacion}}"><button class="boton"><b>Agregar lenguaje</b></button></a>
+    </div>
   </div>
   {{else}}
-      <div class="mensaje">
-      <p>No tiene ninguna clasificacion</p>
-      <p>¿Desea agregar?</p>
-      <a href="/clasificacion/agregar/{{user.idusuario}}"><button class="boton">Agregar</button></a>
-      </div>
+  <div class="mensaje">
+    <p>No tiene ninguna clasificacion</p>
+    <p>¿Desea agregar?</p>
+    <a href="/clasificacion/agregar/{{user.idusuario}}"><button class="boton"><b>Agregar</b></button></a>
+  </div>
   {{/each}}
- </div>
-
-
-
+</div>
