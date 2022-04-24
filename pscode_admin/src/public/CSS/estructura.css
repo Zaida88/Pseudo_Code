@@ -14,9 +14,7 @@ body{
     align-items: center;
     justify-content: center;
     font-size:25px;
-    background-color: #d5d8dc63;
     height: auto;
-    color: black;
     border-radius: 10px;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -25,22 +23,22 @@ body{
 .contenedor__contenido{
     height: auto;
     display: flex;
-    color: black;
+    color: rgb(255, 255, 255);
     flex-direction: column;
     margin:30px;
     margin-left: auto;
     margin-right: auto; 
     width: 70%;
     padding: 15px;
-    background-color: #F4F6F6 ;
+    background-color: rgba(1, 1, 1, 0.776) ;
     border: 1px solid black;
     align-items: center;
     justify-content: center;
     border-radius:20px;
 }
+
 .elemento__titulo{
     font-weight: bolder;
-    color: black;
     font-size: 1.5em;
     width: 100%;
     text-align: center;
@@ -54,13 +52,13 @@ body{
 }
 .boton{
     margin-top: 10px;
-    background-color:#424242;
+    background-color:#A569BD;
     border-radius: 10px;
     border:none;
     font-size: 18px;
     width: 185px;
     height: 45px;
-    color: white;
+    color: black;
     transition: 0.3s;
 }
 

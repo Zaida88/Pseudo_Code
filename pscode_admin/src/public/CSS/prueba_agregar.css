@@ -8,14 +8,14 @@ body {
 .contenedor__contenido{
     height: auto;
     display: flex;
-    color: black;
+    color: rgb(255, 255, 255);
     flex-direction: column;
     margin:30px;
     margin-left: auto;
     margin-right: auto; 
     width: 50%;
     padding: 15px;
-    background-color: #F4F6F6 ;
+    background-color: rgba(1, 1, 1, 0.776) ;
     border: 1px solid black;
     align-items: center;
     justify-content: center;
@@ -23,13 +23,13 @@ body {
 }
 .boton{
     margin-top: 10px;
-    background-color:#424242;
+    background-color:#A569BD;
     border-radius: 10px;
     border:none;
     font-size: 18px;
     width: 185px;
     height: 45px;
-    color: white;
+    color: black;
     transition: 0.3s;
 }
 
@@ -42,7 +42,6 @@ body {
 }
 .elemento__titulo{
     font-weight: bolder;
-    color: black;
     font-size: 1.5em;
     width: 100%;
     text-align: center;
@@ -50,4 +49,56 @@ body {
 
 .elemento--contenido{
     align-items: center;
+}
+
+
+input {
+    width: 97%;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    height: 35px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.input:hover {
+    border: 1px solid #85C1E9;
+}
+
+label {
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: 100;
+    color: white;
+}
+
+textarea {
+    border-radius: 10px;
+    transition: 0.3s;
+    border: 1px solid black;
+    text-align: center;
+    width: 96%;
+    margin-left: 5px;
+}
+
+.textarea:hover {
+    border: 1px solid #85C1E9;
+}
+@media only screen and (max-width: 700px) {
+    .elemento__titulo{
+        font-size: 1em;
+    }
+    
+    .elemento--contenido{
+        font-size: 0.8em;
+    }
+    
+}
+@media only screen and (max-width: 410px) {
+    .contenedor__contenido{
+        margin-left: 0px;
+        margin-right: 10px;
+        width: 100%;
+    }
 }
