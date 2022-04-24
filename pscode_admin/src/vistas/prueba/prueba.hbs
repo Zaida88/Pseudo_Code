@@ -1,8 +1,7 @@
 <link rel="stylesheet" href="/CSS/prueba_agregar.css" />
 
 <form action="/prueba/lista_completa/{{user.idusuario}}" method="get">
-    <div id="contenido">
-        <div id="contenido">
+    <div id="contenido" class="contenedor__contenido">
             {{#each lista1}}
             <div id="Nombre">
                 <label for="">{{nombre}}</label>
@@ -24,6 +23,5 @@
                 <label for="">{{respuesta }}</label>
             </div>
              {{/each}}
-        </div>
     </div>
 </form>

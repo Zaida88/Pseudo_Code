@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/CSS/prueba_agregar.css" />
 {{#each preguntaid}}
 <form action="/prueba/respuestas/{{idDetallePruebas}}" method="post">
-  <div id="contenido">
+  <div id="contenido" class="contenedor__contenido">
 
     <div id="Pregunta">
       <p>{{preguntas}}</p>
@@ -25,5 +25,6 @@
         <button type="submit" class="boton mx-auto">Guardar</button>
       </div>
     </div>
+  </div>
 </form>
 <script src="/JS/objetivos.js"></script>

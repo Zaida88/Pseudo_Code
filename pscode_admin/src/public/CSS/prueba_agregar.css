@@ -20,6 +20,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius:20px;
+    text-align: center;
 }
 .boton{
     margin-top: 10px;
@@ -62,7 +63,7 @@ input {
     transition: 0.3s;
 }
 
-.input:hover {
+input:hover {
     border: 1px solid #85C1E9;
 }
 

@@ -3,21 +3,21 @@
 <link rel="stylesheet" href="" />
 
 <form action="/prueba/listar/{{user.idusuario}}" method="get"></form>
-<div id="contenedor">
+<div id="contenedor" class="contenedor__contenido">
   {{#each lista}}
     <div id="pscode">
-      <label for="">Nombre</label>
+      <label for="" class="elemento__titulo">Nombre</label>
       <h1>{{nombre}}</h1>
     </div>
     <div id="descripcion">
-      <label for="">Descripción</label>
+      <label for="" class="elemento__titulo">Descripción</label>
       <h1>{{descripcion}}</h1>
     </div>
     <div id="detalle">
       <a href="/prueba/pregunta/{{idPruebas}}"><button class="boton mx-auto">Detalle</button></a>
     </div>
   {{/each}}
-</div>
-<div>
+  <div>
   <a href="/prueba/agregar/{{user.idusuario}}"><button class="boton mx-auto" >Agregar prueba</button></a>
+</div>
 </div>

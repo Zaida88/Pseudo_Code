@@ -4,7 +4,7 @@
 {{#each lista1}}
 <form action="/prueba/pregunta/{{idDetallePruebas}}" method="get"></form>
 {{/each}}
-<div id="contenedor">
+<div id="contenedor" class="contenedor__contenido">
   <div class="row">
     {{#each lista1}}
     <div id="targeta">
@@ -20,8 +20,7 @@
     </div>
     {{/each}}
   </div>
-</div>
-<div>
+
   {{#each prueba}}
   <a href="/prueba/pregunta_agregar/{{idPruebas}}"><button class="boton mx-auto"> Agregar preguntas</button></a>
   {{/each}}
