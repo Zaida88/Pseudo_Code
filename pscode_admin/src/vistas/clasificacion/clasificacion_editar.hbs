@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="/CSS/clasificacion.css" />
 <form action="/clasificacion/editar/{{user.idusuario}}" method="post">
     <div class="fondo">
-        <div class="container contenido--small" id="contenido">
+        <div class="contenido contenido--small" id="contenido">
             {{#each lista}}
-            <h1>Editar clasificacion</h1>
+            <h1 class="titulo">Editar clasificacion</h1>
             <div id="oculto">
                 <input class="input" type="text" name="idclasificacion" id="clasificacion" checked aria-checked="true"
                     value="{{idclasificacion}}" readonly>
