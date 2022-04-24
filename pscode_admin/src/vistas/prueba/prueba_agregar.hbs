@@ -1,30 +1,32 @@
 <link rel="stylesheet" href="/CSS/prueba_agregar.css" />
 
 <form action="/prueba/agregar/{{user.idusuario}}" method="post">
+  <div class="contenedor__contenido container">
   <div>
     {{#each max}}
     <input class="input" type="text" name="idPruebas" id="idproyecto" value="{{'max(idPruebas)'}}" readonly />
     {{/each}}
   </div>
   <div id="nombre">
-    <label for="">Nombre</label>
-    <input type="text" name="nombre" id="nombre" required />
+    <label for="" class="elemento__titulo">Nombre</label>
+    <input class="elemento--contenido mx-auto" type="text" name="nombre" id="nombre" required />
   </div>
   <div>
-    <label for="">Descripcion</label>
-    <textarea type="text" name="descripcion" id="descripcion" required maxlength="2500"></textarea>
+    <label for="" class="elemento__titulo">Descripcion</label>
+    <textarea class="elemento--contenido mx-auto" type="text" name="descripcion" id="descripcion" required maxlength="2500"></textarea>
   </div>
   <div id="objetivos">
-    <label class="label">Preguntas:</label><br />
-    <input class="input" type="text" id="numeros" name="numeros" /><br /><br />
-    <button class="boton" type="button" onclick="objetivos.crear()">Crear preguntas</button>
+    <label class="label elemento__titulo">Preguntas:</label><br />
+    <input class="input mx-auto" type="text" id="numeros" name="numeros" /><br /><br />
+    <button class="boton mx-auto" type="button" onclick="objetivos.crear()">Crear preguntas</button>
   </div>
   <div>
     <div id="listaObjetivos"></div>
     <div id="Unico">
       <textarea class="textarea" name="unico" id="unico" maxlength="2500"></textarea>
     </div>
-    <button type="submit">Guardar</button>
+    <button class="boton mx-auto" type="submit">Guardar</button>
+  </div>
   </div>
 </form>
 <script src="/JS/numero.js"></script>
