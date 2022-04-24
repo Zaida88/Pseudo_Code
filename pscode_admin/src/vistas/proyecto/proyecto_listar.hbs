@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="/CSS/proyecto.css" />
 <form action="/proyecto/listar/{{user.idusuario}}" method="get"></form>
- <center><label class="titulo">Proyectos</label></center>
+ <center><label class="titulo--titulo">Proyectos</label></center>
 <div class="contenedor" id="contenedor">
   {{#each lista}}
    <div class="contenedor__contenido">
     <div id="pscode">
-      <h1 class="titulo">{{nombre_pro}}</h1>
+      <h1 class=" titulo--titulo">{{nombre_pro}}</h1>
     </div>
     <div class="detalle__proyecto">
     <div id="descripcion">
@@ -21,7 +21,7 @@
       <h1 class="label">{{vision}}</h1>
     </div class="label">
     <div class="editar" id="editar"><br>
-      <a href="/proyecto/editar/{{iddatosproyecto}}"><button class="boton boton--mitad">Editar</button></a>
+      <a href="/proyecto/editar/{{iddatosproyecto}}"><button class="boton">Editar</button></a>
     </div>
       </div>
       </div>

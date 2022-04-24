@@ -7,13 +7,20 @@ body{
 .input--oculto{
     display: none;
 }
+.titulo--titulo{
+    color: white;
+    font-weight:bold;
+    font-size: 45px;
+}
 .titulo{
+
+    font-weight: 100;
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     color: white;
 }
 .fondo{
-    background-color: rgba(202, 207, 210,.9);
+    background-color: rgba(1, 1, 1, 0.776) ;
     height: 700px;
     margin-top:40px;
     display: flex;
@@ -25,7 +32,6 @@ body{
     margin-bottom: 100px;
 }
 .contenedor{
-    background-color: rgba(1, 1, 1, 0.776);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -37,17 +43,17 @@ body{
     flex-direction: column;
     margin:30px 0 20px; 
     width: 98%;
-    background-color: #F4F6F6 ;
+    background-color: rgba(1, 1, 1, 0.776) ;
     border: 1px solid black;
     border-radius:20px;
     align-items: center;
 }
 .detalle__proyecto{
-    border-top: 1px solid black;
+    border-top: 1px solid white;
     width: 90%;
 }
 .editar{
-    border-top: 1px solid black;
+    border-top: 1px solid white;
 }
 .contenido {
     width: 100%;
@@ -71,6 +77,8 @@ body{
 .label{
     margin-left:5px;
     font-size: 18px;
+    font-weight: 100;
+    color: white;
 }
 .label--negrita{
     font-weight: bold;
@@ -93,20 +101,9 @@ body{
     border-radius: 10px;
     border:none;
     font-size: 18px;
-    width: 40px;
+    width: 150px;
     height: 40px;
     color: black;
-    transition: 0.3s;
-}
-.buto{
-    margin-bottom: 5px;
-    background-color: #BB8FCE;
-    border-radius: 10px;
-    border:none;
-    font-size: 15px;
-    width: 160px;
-    height: 35px;
-    color: rgb(10, 9, 9);
     transition: 0.3s;
 }
 .boton--mitad-oculto{
@@ -117,8 +114,8 @@ body{
     display: none;
 }
 .boton--mitad{
-    margin-left:60%;
-    width: 50px;
+    margin-left:30%;
+    width: 160px;
 }
 .boton:hover{
     transform: scale(1.1);
@@ -127,7 +124,7 @@ body{
     color: black;
     background-color: white;
 }
-@media screen and (min-width: 200px) {
+@media screen and (min-width: 600px) {
     .fondo{
         background-color: transparent;
     }
@@ -135,8 +132,8 @@ body{
         height: 500px;
     }
     .boton--mitad{
-        width: 150px;
-        margin-left:45%;
+        width: 180px;
+        margin-left:43%;
         margin-bottom: 50px;
     }
     .contenedor{
