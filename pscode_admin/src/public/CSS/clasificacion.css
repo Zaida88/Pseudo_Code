@@ -62,6 +62,10 @@ body{
     color: black;
     transition: 0.3s;
 }
+.justify-content{
+    margin-left:45%;
+    margin-top: 200px;
+}
 .boton--mitad{
     margin-left:20%;
 }
@@ -96,7 +100,7 @@ body{
 .titulo-agregar{
     font-size:32px;
     margin-left: 10px;
-}
+} 
 .input{
     width: 100%;
     margin-bottom: 10px;
@@ -166,7 +170,7 @@ body{
     color: white;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 200px) {
     .mensaje{
         border-radius:15px;
         height: 300px;

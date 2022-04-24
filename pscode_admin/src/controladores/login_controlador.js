@@ -13,7 +13,7 @@ loginCtl.mostrar = async(req, res) => {
 
 loginCtl.login = passport.authenticate("local.signin",{
     successRedirect: "/proyecto/agregar/",
-    failureRedirect: "/login",
+    failureRedirect: "/",
     failureFlash: true
 })
 
