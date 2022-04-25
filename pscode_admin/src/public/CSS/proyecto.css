@@ -2,6 +2,8 @@ body {
     background-image: url('/IMG/contenidos.jpeg');
     background-position-x: 50%;
     background-position-y: 80%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .input--oculto {
@@ -12,7 +14,7 @@ body {
     color: white;
     font-weight: bold;
     font-size: 50px;
-    margin: 12%;
+    margin: 20px 0;
 }
 .titulo {
     font-weight: 100;
@@ -30,10 +32,7 @@ body {
     align-items: center;
 }
 
-.fondo--height {
-    height: 1550px;
-    margin-bottom: 100px;
-}
+
 
 .contenedor {
     display: flex;
@@ -42,11 +41,11 @@ body {
     align-items: center;
 }
 
-#contenedor__contenido {
+.contenedor__contenido {
     display: flex;
     color: black;
     flex-direction: column;
-    margin: 30px 0 20px;
+    margin: 0px 0 20px -2px;
     width: 98%;
     background-color: rgba(1, 1, 1, 0.776);
     border: 1px solid black;
@@ -68,7 +67,6 @@ body {
     flex-direction: column;
     display: flex;
     margin-bottom: 40px;
-
 }
 
 .input {
@@ -155,14 +153,17 @@ body {
     background-color: white;
 }
 
+.objetivos {
+    margin: 30px 5px;
+}
 
-@media screen and (min-width: 200px) {
+@media screen and (min-width: 600px) {
     .fondo {
         background-color: transparent;
     }
 
     .fondo--height {
-        height: 500px;
+        margin-top: 300px;
     }
 
     .boton--mitad {
@@ -171,31 +172,10 @@ body {
         margin-bottom: 50px;
     }
 
-    .boton--mita {
+    .boton--mitad {
         width: 180px;
-        margin-left: 3%;
-        margin-bottom: 20px;
-        
-    }
-
-    .boton--mit {
-        width: 95px;
-        margin-left: 43%;
-        margin-bottom: 20px;
-        
-    }
-
-    #proyecto
-    {
-        width: 450px;
-        border-radius: 15px;
-        justify-content: center;
-        border: 1px solid #9E9E9E;
-        background-color: rgba(1, 1, 1, 0.776);
-        text-align: center;
-        color: white;
-        margin-top: 80px ;
-        margin:80px 0px 300px 400px; 
+        height: 60px;
+        margin-left: 40%;
     }
 
     .contenedor {
@@ -205,12 +185,12 @@ body {
     }
 
     .contenido {
-        width: 350px;
+        width: 500px;
         border-radius: 15px;
         justify-content: center;
         border: 1px solid #9E9E9E;
         background-color: rgba(1, 1, 1, 0.776);
-        text-align: center;
+        text-align: left;
         color: white;
         margin-top: -250px;
     }
@@ -223,11 +203,6 @@ body {
         background-color: rgba(1, 1, 1, 0.776);
         text-align: left;
         color: white;
-    }
-
-    #objetivos {
-        margin: 30px 5px;
-        justify-content: center;
     }
 
     .textarea {
