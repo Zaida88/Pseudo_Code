@@ -1,7 +1,7 @@
 body {
     background-image: url('/IMG/contenidos.jpeg');
     background-position-x: 50%;
-    background-position-y: 95%;
+    background-position-y: -10%;
 }
 
 .input--oculto {
