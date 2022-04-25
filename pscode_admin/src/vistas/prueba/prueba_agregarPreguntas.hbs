@@ -1,8 +1,10 @@
 <link rel="stylesheet" href="/CSS/prueba_agregar.css" />
 {{#each prueba}}
 <form action="/prueba/pregunta_agregar/{{idPruebas}}" method="post">
-    {{/each}}
-    <label>Agregar pregunta</label>
-    <input type="text" name="preguntas" id="idpreguntas">
-    <button class="boton mx-auto" type="submit">Guardar</button>
+    <div class="pregu">
+        {{/each}}
+        <label><b>Agregar pregunta</b></label>
+        <input type="text" name="preguntas" id="idpreguntas">
+        <button class="boton mx-auto" type="submit"><b>Guardar</b></button>
+    </div>
 </form>
