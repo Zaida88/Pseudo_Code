@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/CSS/prueba_agregar.css" />
+
+<link rel="stylesheet" href="" />
+{{#each lista1}}
+<form action="/prueba/pregunta/{{idDetallePruebas}}" method="get"></form>
+{{/each}}
+<div id="contenedor" class="contenedor__contenido">
+  <div class="row">
+    {{#each lista1}}
+    <div id="targeta">
+      <div id="idDetallePruebas">
+        <h1 class="input--oculto">{{idDetallePruebas}}</h1>
+      </div>
+      <div id="preguntas">
+        <h1>{{preguntas}}</h1>
+      </div>
+      <div id="respuestas">
+        <a href="/prueba/respuestas/{{idDetallePruebas}}"><button class="boton mx-auto"><b>Respuestas</b></button></a>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
+  {{#each prueba}}
+  <a href="/prueba/pregunta_agregar/{{idPruebas}}"><button class="boton mx-auto"><b>Agregar preguntas</b> </button></a>
+  {{/each}}
+</div>

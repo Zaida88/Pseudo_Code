@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/CSS/prueba_agregar.css" />
+
+<link rel="stylesheet" href="" />
+
+<form action="/prueba/listar/{{user.idusuario}}" method="get"></form>
+<div id="container" class="container">
+  {{#each lista}}
+  <div class="contenedor__contenido">
+    <div id="pscode">
+      <label for="" class="elemento__titulo">Nombre</label>
+      <h1>{{nombre}}</h1>
+    </div>
+    <div id="descripcion">
+      <label for="" class="elemento__titulo">Descripción</label>
+      <h1>{{descripcion}}</h1>
+    </div>
+    <div id="detalle">
+      <a href="/prueba/pregunta/{{idPruebas}}"><button class="boton ">Detalle</button></a>
+    </div>
+  </div>
+  {{/each}}
+  <div>
+    <a href="/prueba/agregar/{{user.idusuario}}"><button class="boton mx-auto"><b>Agregar prueba</b></button></a>
+  </div>
+</div>

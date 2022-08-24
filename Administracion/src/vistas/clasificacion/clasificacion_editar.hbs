@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/CSS/clasificacion.css" />
+<form action="/clasificacion/editar/{{user.idusuario}}" method="post">
+    <div class="fondo">
+        <div class="contenido contenido--small" id="contenido">
+            {{#each lista}}
+            <h1 class="titulo">Editar clasificacion</h1>
+            <div id="oculto">
+                <input class="input" type="text" name="idclasificacion" id="clasificacion" checked aria-checked="true"
+                    value="{{idclasificacion}}" readonly>
+            </div>
+            <div class="nombre-clasificacion" id="nombre_clasificacion">
+                <label class="label-nombre">Nombre: </label>
+                <input class="input" type="text" name="nombre_clasificacion" id="nombre" checked aria-checked="true"
+                    value="{{nombre_clasificacion}}" />
+            </div>
+            {{/each}}
+            <div id="guardar">
+                <button type="submit" class="boton"><b>Guardar</b></button>
+            </div>
+        </div>
+    </div>
+</form>

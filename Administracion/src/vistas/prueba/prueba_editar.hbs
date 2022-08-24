@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/CSS/prueba_agregar.css" />
+{{#each lista1}}
+<form action="/prueba/editar/{{idPruebas}}" method="post">
+    <div id="contenido">
+        <div id="contenido contenedor__contenido">
+            
+            <div id="numero">
+                <input type="text" name="idprueba" id="idprueba" value="{{idPruebas}}">
+            </div>
+            <div id="Nombre">
+                <input type="text" name="nombre" id="nombre" value="{{nombre}}">
+            </div>
+            <div id="Descripcion">
+                <textarea name="descripcion" id="descripcion">{{descripcion}}</textarea>
+            </div>
+            {{/each}}
+            <div id="Preguntas">
+                {{#each lista2}}
+                <input type="text" name="idDetallePruebas" id="idDetallePruebas" value="{{idDetallePruebas}}">
+                <input type="text" name="preguntas" id="preguntas" value="{{preguntas}}">
+                {{/each}}
+            </div>
+            <div id="Respuestas">
+                {{#each lista3}}
+                <input type="text" name="idRespuestas" id="idRespuestas" value="{{idRespuestas}}">
+                <textarea name="respuesta" id="respuesta">{{respuesta}}</textarea>
+                {{/each}}
+            </div>
+            <div id="boton">
+                <button class="boton mx-auto" type="submit">Guardar</button>
+            </div>
+        </div>
+    </div>
+</form>

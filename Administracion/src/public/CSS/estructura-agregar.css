@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url('/IMG/contenidos.jpeg');
+    background-position-x:50%;
+    background-position-y:-20%;
+}
+.contenido{
+    height: auto;
+    display: flex;
+    color: rgb(255, 255, 255);
+    flex-direction: column;
+    margin:30px;
+    margin-left: auto;
+    margin-right: auto; 
+    width: 70%;
+    padding: 15px;
+    background-color: rgba(1, 1, 1, 0.776) ;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    border-radius:20px;
+}
+.elemento__titulo{
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+    opacity: 1;
+}
+.boton{
+    margin-top: 10px;
+    background-color:#7b498f;
+    border-radius: 10px;
+    border:none;
+    font-size: 18px;
+    width: 185px;
+    height: 45px;
+    color: black;
+    transition: 0.3s;
+}
+.boton:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    border: 1px solid #977ba2 ;
+    color: black;
+    background-color: #946aa4;
+}
+#descripcion textarea {
+    padding: 12px;
+    padding-right: 30px;
+    margin-left: 12px;
+
+}
+#codigo textarea {
+    padding: 12px;
+    padding-right: 30px;
+    margin-left: 90px;
+}
+#codificacion{
+    margin: 12px;
+    margin-left: 45px;
+}
+
+@media only screen and (max-width: 680px) {
+    .container{
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    .contenido{
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    input{
+       width: 80%;
+       margin-left: 5px;
+   }
+   .elemento__titulo{
+    margin-left: 10px;
+    width: 100%;
+    text-align: left;
+    }
+    #codigo textarea {
+        width: 80%;
+        margin-left: 0px;
+    }
+    #descripcion textarea {
+        width: 80%;
+        margin-left: 0px;
+    
+    }
+}

@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/CSS/prueba_agregar.css" />
+{{#each preguntaid}}
+<form action="/prueba/respuestas/{{idDetallePruebas}}" method="post">
+  <div id="contenido" class="contenedor__contenido">
+
+    <div id="Pregunta">
+      <p>{{preguntas}}</p>
+      {{/each}}
+    </div>
+    <div id="respuestas">
+      <div id="objetivos">
+        <label class="label"><b>Respuestas:</b></label><br />
+        <input class="input" type="text" id="numeros" name="numeros" /><br /><br />
+        <button class="boton" type="button" onclick="objetivos.crear()"><b>Crear
+          respuestas</b></button>
+      </div>
+      <div>
+        <div id="listaObjetivos">
+          <div id="Unico">
+            <textarea class="textarea" name="unico" id="unico" maxlength="2500"></textarea>
+          </div>
+        </div>
+      </div>
+      <div id="guardar">
+        <button type="submit" class="boton mx-auto"><b>Guardar</b></button>
+      </div>
+    </div>
+  </div>
+</form>
+<script src="/JS/objetivos.js"></script>

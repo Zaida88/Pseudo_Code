@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /*background-image: linear-gradient( 135deg, #81FFEF 10%, #F067B4 100%);*/
+}
+body{
+    background-image: url(/IMG/login.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    overflow-x:scroll;
+    overflow-y:hidden;
+    overflow-x:hidden;
+}
+
+.imagen__logo img{
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-top: -100px;
+    height: 110px;
+    width: 110px;
+}
+.imagen__logo img{
+    border: 2px solid black;
+    height: 111px;
+    width: 111px;
+}
+
+#contenedor{
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    padding: 50px 20px;
+    background: #fff;
+    border-radius: 30px;
+    border: 2px solid black;
+}
+#login{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: black; 
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+#contraseñas input{
+    margin-bottom: 20px;
+}
+input{
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    border:none;
+    background: #f2f2f2 ;
+    font-size: 16px;
+    outline: none;
+}
+button{
+    display: flex;
+    padding: 10px 40px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    font-size: 14px;
+    background: #000000;
+    color: white;
+    cursor:  pointer;
+    border-radius: 5px;
+    font-weight: bold; 
+}
+button:hover {
+    transition: ease-in-out;
+    background: #02B9EF;
+    color: #000000;
+}
+
+@media only screen and (max-width: 1000px) {
+    #contenedor{
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 850px) {
+    #contenedor{
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #contenedor{
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #contenedor{
+        width: 55%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    #contenedor{
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 350px) {
+    #contenedor{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 160px) {
+    #contenedor{
+        width: 100%;
+    }
+    button{
+        padding: 5px 20px;
+    }
+}
+
+
+
+
