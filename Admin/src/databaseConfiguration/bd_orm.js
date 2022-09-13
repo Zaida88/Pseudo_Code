@@ -16,6 +16,12 @@ mysql.createConnection({
 
 //
 
+
+
+const projects= require("../models/projects")
+const objectives= require("../models/objectives")
+const users= require("../models/users")
+
 const sequelize = new Sequelize(
   'pscode',
   'root',
