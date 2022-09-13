@@ -19,6 +19,12 @@ const testsModels= require("../models/testsModels")
 const questionsModels= require("../models/questionsModels")
 const answersModels= require("../models/answersModels")
 
+
+
+const projects= require("../models/projects")
+const objectives= require("../models/objectives")
+const users= require("../models/users")
+
 const sequelize = new Sequelize(
   'pscode',
   'root',
