@@ -1,6 +1,16 @@
-const classification_languages = (sequelize,type) => {
-    return sequelize.define("classification_languages",{
-        idclassification_languages: {
+const languages = (sequelize,type) => {
+    return sequelize.define("languages",{
+        idlanguages: {
+            type: type.INTEGER,
+            primaryKey: true,
+            autoIncrement: true, 
+        },
+        iduser: {
+            type: type.INTEGER,
+            primaryKey: true,
+            autoIncrement: true, 
+        },
+        idclassification: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true, 
@@ -8,12 +18,12 @@ const classification_languages = (sequelize,type) => {
         name: type.STRING(100),
         description: type.STRING,
         image: type.STRING,
-        creationclassification_languages:{
+        creationlanguages:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updateclassification_languages:{
+        updatelanguages:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
@@ -22,4 +32,4 @@ const classification_languages = (sequelize,type) => {
         timestamps: false,
     })
 }
-module.exports=classification_languages
+module.exports=languages

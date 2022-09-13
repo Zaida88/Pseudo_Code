@@ -1,6 +1,6 @@
-const encodings = (sequelize,type) => {
-    return sequelize.define("encodings",{
-        idencodings: {
+const classification = (sequelize,type) => {
+    return sequelize.define("classification",{
+        idclassification: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true, 
@@ -10,20 +10,15 @@ const encodings = (sequelize,type) => {
             primaryKey: true,
             autoIncrement: true, 
         },
-        idlenguages: {
-            type: type.INTEGER,
-            primaryKey: true,
-            autoIncrement: true, 
-        },
         name: type.STRING(100),
         description: type.STRING,
         image: type.STRING,
-        creationencodings:{
+        creationclassification:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updateencodings:{
+        updateclassification:{
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
@@ -32,4 +27,4 @@ const encodings = (sequelize,type) => {
         timestamps: false,
     })
 }
-module.exports=encodings
+module.exports=classification
