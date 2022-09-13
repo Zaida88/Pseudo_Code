@@ -36,7 +36,7 @@ passport.use(
 						)
 					);
 				} else {
-					done(null, false, req.flash("message", "Datos incorrecta"));
+					done(null, false, req.flash("message", "Datos incorrectos"));
 				}
 			} else {
 				return done(

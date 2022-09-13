@@ -1,6 +1,6 @@
 const scores = (sequelize, type) => {
     return sequelize.define("scores", {
-        id_score: {
+        idScore: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,

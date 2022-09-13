@@ -1,24 +1,23 @@
-const permissions = (sequelize,type) => {
-    return sequelize.define("permissions", {
-        id_permission: {
+const objectives = (sequelize, type) => {
+    return sequelize.define("objectives", {
+        idObjective: {
             type: type.INTEGER,
             primaryKey: true,
-            autoIncrement: true, 
+            autoIncrement: true,
         },
-        name: type.STRING,
-        creted_at: {
+        objective: type.STRING,
+        createdObjective: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updated_at: {
+        updatedObjective: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
-    },
-    {
-        timesTamps: false,
+    }, {
+        timestamps: false,
     })
 }
-module.exports= permissions
+module.exports = objectives

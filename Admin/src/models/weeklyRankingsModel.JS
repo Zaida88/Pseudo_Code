@@ -1,12 +1,12 @@
 const weekly_rankings = (sequelize, type) => {
     return sequelize.define("weekly_rankings", {
-        id_weekly_ranking: {
+        idWeeklyRanking: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        end_date: type.STRING,
-        start_date: type.STRING,
+        endDate: type.STRING,
+        startDate: type.STRING,
     }, {
         timestamps: false,
     })

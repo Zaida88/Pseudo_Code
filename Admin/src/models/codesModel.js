@@ -1,26 +1,26 @@
-const objectives = (sequelize,type) => {
-    return sequelize.define("objectives",{
-        id_objective: {
+const codes = (sequelize, type) => {
+    return sequelize.define("codes", {
+        idCode: {
             type: type.INTEGER,
             primaryKey: true,
-            autoIncrement: true, 
+            autoIncrement: true,
         },
-        id_project: {
-            type: type.INTEGER,
-        },
-        objective: type.STRING,
-        created_at:{
+        nameCode: type.STRING(100),
+        descriptionCode: type.STRING,
+        code: type.STRING,
+        video: type.STRING,
+        createdCode: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updated_at:{
+        updatedCode: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
-    },{
+    }, {
         timestamps: false,
     })
 }
-module.exports=objectives
+module.exports = codes

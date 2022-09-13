@@ -1,15 +1,15 @@
 const recover_passwords = (sequelize, type) => {
     return sequelize.define("recover_passwords", {
-        id_recover_password: {
+        idRecoverPassword: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        end_time: type.STRING,
-        new_password: type.STRING,
-        start_time: type.STRING,
+        endTime: type.STRING,
+        newPassword: type.STRING,
+        startTime: type.STRING,
         state: type.BOOLEAN,
-        temporary_code: type.STRING,
+        temporaryCode: type.STRING,
     }, {
         timestamps: false,
     })

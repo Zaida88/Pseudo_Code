@@ -1,30 +1,27 @@
-const projects = (sequelize,type) => {
-    return sequelize.define("projects",{
-        id_project: {
+const projects = (sequelize, type) => {
+    return sequelize.define("projects", {
+        idProject: {
             type: type.INTEGER,
             primaryKey: true,
-            autoIncrement: true, 
+            autoIncrement: true,
         },
-        id_user: {
-            type: type.INTEGER,
-        },
-        name: type.STRING,
-        description: type.STRING(1500),
-        logo: type.STRING(),
+        nameProject: type.STRING,
+        descriptionProject: type.STRING(1500),
+        logoProject: type.STRING(),
         mission: type.STRING(1500),
         vision: type.STRING(1500),
-        created_at:{
+        createdProject: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updated_at:{
+        updatedProject: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
-    },{
+    }, {
         timestamps: false,
     })
 }
-module.exports=projects
+module.exports = projects

@@ -1,23 +1,24 @@
-const user_roles = (sequelize,type) => {
-    return sequelize.define("user_roles", {
-        id_user_roles: {
+const roles = (sequelize, type) => {
+    return sequelize.define("roles", {
+        idRol: {
             type: type.INTEGER,
             primaryKey: true,
-            autoIncrement: true, 
+            autoIncrement: true,
         },
-        creted_at: {
+        nameRol: type.STRING,
+        createdRol: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
-        updated_at: {
+        updatedRol: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
     },
-    {
-        timesTamps: false,
-    })
+        {
+            timesTamps: false,
+        })
 }
-module.exports= user_roles
+module.exports = roles
