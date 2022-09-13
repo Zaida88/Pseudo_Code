@@ -14,7 +14,10 @@ mysql.createConnection({
   })
 })
 
-//
+//models
+const testsModels= require("../models/testsModels")
+const questionsModels= require("../models/questionsModels")
+const answersModels= require("../models/answersModels")
 
 const sequelize = new Sequelize(
   'pscode',
@@ -45,8 +48,22 @@ sequelize.sync({ force: false })
     console.log("Tablas sincronizadas")
   })
 
-//
+//asyng
+const tests= testsModels(sequelize,Sequelize)
+const questions= questionsModels(sequelize,Sequelize)
+const answers= answersModels(sequelize,Sequelize)
+
+//relation
+tests.hasMany(questions)
+questions.belongsTo(tests)
+
+questions.hasMany(answers)
+answers.belongsTo(questions)
+
 
 module.exports = {
+  tests,
+  questions,
+  answers
   //
 }
