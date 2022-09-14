@@ -1,10 +1,11 @@
+
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
-const path = require("path");
-var CryptoJS = require("crypto-js");
+const path = require('path')
+let CryptoJS = require("crypto-js");
 
-const orm = require("../databaseConfiguration/bd_orm");
-const sql = require("../databaseConfiguration/bd_sql");
+const orm = require('../databaseConfiguration/db_orm')
+const sql = require('../databaseConfiguration/db_sql')
 const helpers = require("./helpers");
 
 passport.use(
@@ -13,28 +14,16 @@ passport.use(
 		{
 			usernameField: "username",
 			passwordField: "password",
-			passReqToCallback: true,
+			passReqToCallback: true
 		},
 		async (req, username, password, done) => {
-			const rows = await orm.dueñoTienda.findOne({
-				where: { usernameDueñoTienda: username },
-			});
+			const rows = await orm.users.findOne({ where: { username: username } });
 			if (rows) {
 				const user = rows;
-				const contraseña = await CryptoJS.AES.decrypt(
-					user.passwordDueñoTienda,
-					"secret"
-				);
-				const validPassword = contraseña.toString(CryptoJS.enc.Utf8);
+				const pass = await CryptoJS.AES.decrypt(user.password, 'secret');
+				const validPassword = pass.toString(CryptoJS.enc.Utf8);
 				if (validPassword == password) {
-					done(
-						null,
-						user,
-						req.flash(
-							"message",
-							"Bienvenido" + " " + user.usernameDueñoTienda
-						)
-					);
+					done(null, user, req.flash("message", "Bienvenid@ " + user.username));
 				} else {
 					done(null, false, req.flash("message", "Datos incorrectos"));
 				}
@@ -55,146 +44,57 @@ passport.use(
 		{
 			usernameField: "username",
 			passwordField: "password",
-			passReqToCallback: true,
+			passReqToCallback: true
 		},
 		async (req, username, password, done) => {
-			const usuarios = await orm.dueñoTienda.findOne({
-				where: { usernameDueñoTienda: username },
-			});
-			if (usuarios === null) {
-				const { idDueñoTienda } = req.body;
-				let nuevoUsuario = {
-					idDueñoTienda: idDueñoTienda,
-					usernameDueñoTienda: username,
-					passwordDueñoTienda: password,
+			const users = await orm.users.findOne({ where: { username: username } });
+			if (users === null) {
+				const { idUser, fisrtName, lastName, email } = req.body
+				let newUser = {
+					idUser: idUser,
+					fisrtName,
+					lastName,
+					email,
+					username: username,
+					password: password
 				};
-				nuevoUsuario.passwordDueñoTienda =
-					await helpers.encryptPassword(password);
-				const resultado = await orm.dueñoTienda.create(nuevoUsuario);
-				nuevoUsuario.id = resultado.insertId;
+				newUser.fisrtName = await helpers.encryptPassword(fisrtName);
+				newUser.lastName = await helpers.encryptPassword(lastName);
+				newUser.email = await helpers.encryptPassword(email);
+				newUser.password = await helpers.encryptPassword(password);
+				const result = await orm.users.create(newUser);
 
-				const nuevoPermiso = {
-					nombrePermisosTienda: "manipulaciónTotal",
-					dueñoTiendaIdDueñoTienda: idDueñoTienda,
-				};
-				await orm.permisosTineda.create(nuevoPermiso);
+				if (idUser === '1') {
+					await sql.query('INSERT INTO roles(idRol, nameRol) VALUE ("1", "ADMIN")')
+					await sql.query('INSERT INTO permissions(idPermission, namePermission) Values ("1","COMPLETE")')
+					await sql.query('INSERT INTO user_roles(idUserRol, userIdUser, roleIdRol, permissionIdPermission) VALUE("1",?,"1","1")', [idUser])
+				}
 
-				const nuevoDetallesubroltiendas = {
-					dueñoTiendaIdDueñoTienda: idDueñoTienda,
-					permisosTiendaIdPermisosTienda: "1",
-				};
-				await orm.detalleSubRolTienda.create(nuevoDetallesubroltiendas);
+				newUser.id = result.insertId;
 
-				//imagen
-				const imagenDueñoTienda = req.files.imagenDuenoTienda;
-				const validacion = path.extname(imagenDueñoTienda.name);
+				const photo = req.files.photo
+				const validation = path.extname(photo.name)
 
-				const extencion = [
-					".PNG",
-					".JPG",
-					".JPEG",
-					".GIF",
-					".TIF",
-					".png",
-					".jpg",
-					".jpeg",
-					".gif",
-					".tif",
-				];
+				const extension = [".PNG", ".JPG", ".JPEG", ".GIF", ".TIF", ".png", ".jpg", ".jpeg", ".gif", ".tif"];
 
-				if (!extencion.includes(validacion)) {
-					req.flash("success", "Imagen no compatible.");
+				if (!extension.includes(validation)) {
+					req.flash("success", "Imagen no compatible.")
 				}
 
 				if (!req.files) {
-					req.flash("success", "Imagen no insertada.");
+					req.flash("success", "Imagen no ingresada.")
 				}
 
-				const ubicacion =
-					__dirname +
-					"/../public/img/Tienda/usuario/" +
-					imagenDueñoTienda.name;
+				const location = __dirname + "/../public/img/user/" + photo.name;
 
-				imagenDueñoTienda.mv(ubicacion, function (err) {
+				photo.mv(location, function (err) {
 					if (err) {
-						return res.status(500).send(err);
+						return req.flash("message", err)
 					}
-					sql.query(
-						"UPDATE dueñoTiendas SET imagenDueñoTienda = ? WHERE idDueñoTienda = ?",
-						[imagenDueñoTienda.name, idDueñoTienda]
-					);
-					console.log("Imagen de usuario ingresada");
-				});
-
-				return done(null, nuevoUsuario);
-			} else {
-				if (usuarios) {
-					const usuario = usuarios;
-					if (username == usuario.usernameDueñoTienda) {
-						done(
-							null,
-							false,
-							req.flash(
-								"message",
-								"El nombre de usuario ya existe."
-							)
-						);
-					} else {
-						const { idDueñoTienda } = req.body;
-						let nuevoUsuario = {
-							idDueñoTienda: idDueñoTienda,
-							usernameDueñoTienda: username,
-							passwordDueñoTienda: password,
-						};
-						nuevoUsuario.passwordDueñoTienda =
-							await helpers.encryptPassword(password);
-						const resultado = await orm.dueñoTienda.create(
-							nuevoUsuario
-						);
-						nuevoUsuario.id = resultado.insertId;
-
-						const imagenDueñoTienda = req.files.imagenDuenoTienda;
-						const validacion = path.extname(imagenDueñoTienda.name);
-
-						const extencion = [
-							".PNG",
-							".JPG",
-							".JPEG",
-							".GIF",
-							".TIF",
-							".png",
-							".jpg",
-							".jpeg",
-							".gif",
-							".tif",
-						];
-
-						if (!extencion.includes(validacion)) {
-							req.flash("success", "Imagen no compatible.");
-						}
-
-						if (!req.files) {
-							req.flash("success", "Imagen no insertada.");
-						}
-
-						const ubicacion =
-							__dirname +
-							"/../public/img/Tienda/usuario/" +
-							imagenDueñoTienda.name;
-
-						imagenDueñoTienda.mv(ubicacion, function (err) {
-							if (err) {
-								return res.status(500).send(err);
-							}
-							sql.query(
-								"UPDATE dueñoTiendas SET imagenDueñoTienda = ? WHERE idDueñoTienda = ?",
-								[imagenDueñoTienda.name, idDueñoTienda]
-							);
-							console.log("Imagen de usuario ingresada");
-						});
-						return done(null, nuevoUsuario);
-					}
-				}
+					sql.query("UPDATE users SET photo = ? WHERE idUser = ?", [photo.name, idUser])
+					console.log("Imagen ingresada")
+				})
+				return done(null, newUser);
 			}
 		}
 	)
@@ -206,4 +106,4 @@ passport.serializeUser(function (user, done) {
 
 passport.deserializeUser(function (user, done) {
 	done(null, user);
-});
+}); 
