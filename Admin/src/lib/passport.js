@@ -66,7 +66,7 @@ passport.use(
 
 				if (idUser === '1') {
 					await sql.query('INSERT INTO roles(idRol, nameRol) VALUE ("1", "ADMIN")')
-					await sql.query('INSERT INTO permissions(idPermission, namePermission) Values ("1","COMPLETE")')
+					await sql.query('INSERT INTO permissions(idPermission, namePermission) Values ("1","TOTAL")')
 					await sql.query('INSERT INTO user_roles(idUserRol, userIdUser, roleIdRol, permissionIdPermission) VALUE("1",?,"1","1")', [idUser])
 				}
 
