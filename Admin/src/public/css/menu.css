@@ -24,7 +24,7 @@ body{
  
     
 }
-.ajustes{
+.settings{
     background-color: rgb(39, 39, 39);
     height: 70px;
    font-size: 25px;
@@ -33,7 +33,7 @@ body{
   bottom: -42%;
    
 }
-.ajustes div{
+.settings div{
     padding-top: 20%;
     padding-left: 35%;
 }
@@ -41,12 +41,12 @@ body{
     transition: 0.2s;
   
   }
-.desplegar{
+.deploy{
     transform: translateX(-100%);
     
 }
 
-.desplegar img{
+.deploy img{
     transform: translate(150px);
 }
 .OPO{
