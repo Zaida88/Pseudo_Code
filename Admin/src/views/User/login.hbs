@@ -1,4 +1,4 @@
-<LINK REL=StyleSheet HREF="" TYPE="text/css" MEDIA=screen>
+<link rel="stylesheet" href="">
 <div id="container">
     {{#each User}}
     <form action="/login/{{idUser}}" method="POST" id="login">
@@ -11,11 +11,13 @@
         {{/each}}
         {{#each User}}
         <div id="data">
-            <input type="text" id="name" name="username" placeholder="Usuario" value="{{username}}" readonly>
+            <label>Nombre de usuario:</label>
+            <input type="text" id="name" name="username" value="{{username}}" readonly>
         </div>
         {{/each}}
         <div id="password">
-            <input type="password" id="contraseña" name="password" placeholder="Contraseña">
+            <label>Contraseña:</label>
+            <input type="password" id="password" name="password" required>
         </div>
         <div id="button">
             <button type="submit">Ingresar</button>

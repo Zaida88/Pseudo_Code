@@ -1,6 +1,6 @@
 const indexCtrl = {};
-const pool = require('../configuracionBaseDatos/baseDatos.sql')
-const orm = require('../configuracionBaseDatos/baseDatos.orm')
+const pool = require('../databaseConfiguration/db_sql')
+const orm = require('../databaseConfiguration/db_orm')
 const CryptoJS = require('crypto-js')
 
 indexCtrl.show = (req, res) => {
@@ -8,7 +8,7 @@ indexCtrl.show = (req, res) => {
 };
 
 indexCtrl.send = async (req, res) => {
-    await pool.query('CREATE VIEW IF NOT EXISTS maxuser AS SELECT MAX(idUser) AS max FROM users')
+    await pool.query('CREATE VIEW IF NOT EXISTS maxUser  AS SELECT MAX(idUser) AS max FROM users')
 
     const { validate } = req.body
     const validation = await orm.users.findOne({ where: { username: validate } })

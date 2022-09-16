@@ -2,7 +2,7 @@
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const path = require('path')
-let CryptoJS = require("crypto-js");
+var CryptoJS = require("crypto-js");
 
 const orm = require('../databaseConfiguration/db_orm')
 const sql = require('../databaseConfiguration/db_sql')
@@ -49,16 +49,16 @@ passport.use(
 		async (req, username, password, done) => {
 			const users = await orm.users.findOne({ where: { username: username } });
 			if (users === null) {
-				const { idUser, fisrtName, lastName, email } = req.body
+				const { idUser, firstName, lastName, email } = req.body
 				let newUser = {
 					idUser: idUser,
-					fisrtName,
+					firstName,
 					lastName,
 					email,
 					username: username,
 					password: password
 				};
-				newUser.fisrtName = await helpers.encryptPassword(fisrtName);
+				newUser.firstName = await helpers.encryptPassword(firstName);
 				newUser.lastName = await helpers.encryptPassword(lastName);
 				newUser.email = await helpers.encryptPassword(email);
 				newUser.password = await helpers.encryptPassword(password);

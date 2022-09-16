@@ -1,0 +1,47 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: url('/img/logo-index.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #FFF;
+    text-align: center;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 50%;
+    max-height: 80%;
+    top: 10%;
+    left: 25%;
+    background-color: rgba(0, 0, 0, 0.75);
+    text-align: center;
+    display: block;
+}
+
+.container #title {
+    color: white;
+    font-size: 25px;
+    margin: 28% 0% 2% 0%;
+}
+
+.container #validation{
+    width: 100%;
+    max-width: 70%;
+}
+
+.container #btValidation{
+    width: 100%;
+    max-width: 50%;
+    top: 70%;
+    left: 25%;
+}

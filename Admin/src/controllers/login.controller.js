@@ -3,12 +3,12 @@ const login = {};
 const passport = require('passport');
 const sequelize = require('sequelize')
 
-const sql = require('../databaseConfiguration/db_orm')
+const sql = require('../databaseConfiguration/db_sql')
 const orm = require('../databaseConfiguration/db_orm')
 
 login.showRegistration = async (req, res) => {
-    const user = await sql.query('select max(idUser) AS maxuser from users')
-    if (user === undefined) {
+    const user = await sql.query('select max(idUser) AS max from users')
+    if (user.max === undefined) {
         res.render('User/registration', { user });
     } else {
         res.redirect('/')
@@ -28,7 +28,7 @@ login.showLogin = async (req, res, next) => {
 };
 
 login.login = passport.authenticate('local.signin', {
-    successRedirect: '/dashboard/',
+    successRedirect: '/User/dashboard/',
     failureRedirect: '/',
     failureFlash: true
 })
