@@ -43,7 +43,7 @@ projectCtl.list = async (req, res) => {
 }
 
 //traer datos
-projectCtl.traer = async (req, res) => {
+projectCtl.bring = async (req, res) => {
     const id = req.params.id
     const listObjective = await sql.query("select * from objectives where dataProjectidProject=?", [id])
     const list = await sql.query("select * from projects where idProject=?", [id])
@@ -51,7 +51,7 @@ projectCtl.traer = async (req, res) => {
 }
 
 //actualizar
-projectCtl.actualizar = async (req, res) => {
+projectCtl.update = async (req, res) => {
     const id = req.user.idUser
     const ids = req.params.id
     const { nameProject, descriptionProject, logoProject, mission, vision, objective } = req.body;
