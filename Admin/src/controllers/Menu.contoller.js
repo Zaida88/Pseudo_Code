@@ -1,6 +1,6 @@
 const photoUser = require("photo");
 
-const sql= require('../configuracion_bd/bd_sql')
+
 
 const menu = {};
 
