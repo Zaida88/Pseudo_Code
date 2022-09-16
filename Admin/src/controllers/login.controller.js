@@ -8,7 +8,8 @@ const orm = require('../databaseConfiguration/db_orm')
 
 login.showRegistration = async (req, res) => {
     const user = await sql.query('select max(idUser) AS max from users')
-    if (user.max === undefined) {
+    console.log("variable"+user.max)
+    if (user.max) {
         res.render('User/registration', { user });
     } else {
         res.redirect('/')
