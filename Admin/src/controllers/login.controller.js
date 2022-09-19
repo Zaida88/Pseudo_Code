@@ -7,9 +7,9 @@ const sql = require('../databaseConfiguration/db_sql')
 const orm = require('../databaseConfiguration/db_orm')
 
 login.showRegistration = async (req, res) => {
-    const user = await sql.query('select max(idUser) AS max from users')
-    console.log("variable"+user.max)
-    if (user.max) {
+    const user = await sql.query('SELECT COUNT(*) AS total FROM users')
+    console.log(user[0].total)
+    if (user[0].total === 0) {
         res.render('User/registration', { user });
     } else {
         res.redirect('/')
@@ -29,7 +29,7 @@ login.showLogin = async (req, res, next) => {
 };
 
 login.login = passport.authenticate('local.signin', {
-    successRedirect: '/User/dashboard/',
+    successRedirect: '/Dashboard/dashboard/',
     failureRedirect: '/',
     failureFlash: true
 })

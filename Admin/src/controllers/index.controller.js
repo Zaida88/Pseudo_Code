@@ -8,7 +8,7 @@ indexCtrl.show = (req, res) => {
 };
 
 indexCtrl.send = async (req, res) => {
-    await pool.query('CREATE VIEW IF NOT EXISTS maxUser  AS SELECT MAX(idUser) AS max FROM users')
+    await pool.query('CREATE VIEW IF NOT EXISTS max AS SELECT MAX(idUser) AS max FROM users')
 
     const { validate } = req.body
     const validation = await orm.users.findOne({ where: { username: validate } })
