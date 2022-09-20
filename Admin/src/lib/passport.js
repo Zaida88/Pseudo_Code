@@ -23,9 +23,9 @@ passport.use(
 				const pass = await CryptoJS.AES.decrypt(user.password, 'secret');
 				const validPassword = pass.toString(CryptoJS.enc.Utf8);
 				if (validPassword == password) {
-					done(null, user, req.flash("message", "Bienvenid@ " + user.username));
+					done(null, user, req.flash("message", "Bienvenid@ "+ user.firstName));
 				} else {
-					done(null, false, req.flash("message", "Datos incorrectos"));
+					done(null, false, req.flash("message", "Contraseña incorrecta"));
 				}
 			} else {
 				return done(
