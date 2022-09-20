@@ -2,7 +2,7 @@
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const path = require('path')
-let CryptoJS = require("crypto-js");
+var CryptoJS = require("crypto-js");
 
 const orm = require('../databaseConfiguration/db_orm')
 const sql = require('../databaseConfiguration/db_sql')
@@ -23,9 +23,9 @@ passport.use(
 				const pass = await CryptoJS.AES.decrypt(user.password, 'secret');
 				const validPassword = pass.toString(CryptoJS.enc.Utf8);
 				if (validPassword == password) {
-					done(null, user, req.flash("message", "Bienvenid@ " + user.username));
+					done(null, user, req.flash("message", "Bienvenid@ "+ user.firstName));
 				} else {
-					done(null, false, req.flash("message", "Datos incorrectos"));
+					done(null, false, req.flash("message", "Contraseña incorrecta"));
 				}
 			} else {
 				return done(
@@ -49,16 +49,16 @@ passport.use(
 		async (req, username, password, done) => {
 			const users = await orm.users.findOne({ where: { username: username } });
 			if (users === null) {
-				const { idUser, fisrtName, lastName, email } = req.body
+				const { idUser, firstName, lastName, email } = req.body
 				let newUser = {
 					idUser: idUser,
-					fisrtName,
+					firstName,
 					lastName,
 					email,
 					username: username,
 					password: password
 				};
-				newUser.fisrtName = await helpers.encryptPassword(fisrtName);
+				newUser.firstName = await helpers.encryptPassword(firstName);
 				newUser.lastName = await helpers.encryptPassword(lastName);
 				newUser.email = await helpers.encryptPassword(email);
 				newUser.password = await helpers.encryptPassword(password);
@@ -66,7 +66,7 @@ passport.use(
 
 				if (idUser === '1') {
 					await sql.query('INSERT INTO roles(idRol, nameRol) VALUE ("1", "ADMIN")')
-					await sql.query('INSERT INTO permissions(idPermission, namePermission) Values ("1","COMPLETE")')
+					await sql.query('INSERT INTO permissions(idPermission, namePermission) Values ("1","TOTAL")')
 					await sql.query('INSERT INTO user_roles(idUserRol, userIdUser, roleIdRol, permissionIdPermission) VALUE("1",?,"1","1")', [idUser])
 				}
 

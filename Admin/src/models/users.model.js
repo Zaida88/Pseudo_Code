@@ -5,7 +5,7 @@ const users = (sequelize, type) => {
             primaryKey: true,
             autoIncrement: true,
         },
-        fisrtName: type.STRING,
+        firstName: type.STRING,
         lastName: type.STRING,
         username: type.STRING,
         password: type.STRING,

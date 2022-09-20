@@ -62,7 +62,7 @@ sequelize.sync({ force: false })
     console.log("Tablas sincronizadas")
   })
 
-//asyng
+//async
 const users= usersModel(sequelize,Sequelize)
 const tests= testsModel(sequelize,Sequelize)
 const questions= questionsModel(sequelize,Sequelize)
