@@ -15,10 +15,10 @@ user.Regg = passport.authenticate('local.signup', {
     failureFlash: true
 });
 /*
-registro.view_user = async (req, res, next) => {
+Regg.view_user = async (req, res, next) => {
     const ids = req.params.id
     const User = await sql.query('select  idUser, fisrtName,  photo from usuarios where idUsuarios = ?', [ids])
-   // res.render('Usuario/Login', { user });
+   // 
 };*/
 
 
