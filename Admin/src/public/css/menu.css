@@ -7,6 +7,7 @@
 
 }
 
+@media (min-width: 900px){
 body{
     background-color: rgb(255, 255, 255);
 }
@@ -26,7 +27,7 @@ body{
 }
 .settings{
     background-color: rgb(39, 39, 39);
-    height: 70px;
+    height: 80px;
    font-size: 25px;
     position: relative;
   
@@ -37,16 +38,19 @@ body{
     padding-top: 20%;
     padding-left: 35%;
 }
+.settings:hover{
+    background-color: black;
+}
 .Menu_slider img{
     transition: 0.2s;
   
   }
-.deploy{
+.desplegar{
     transform: translateX(-100%);
     
 }
 
-.deploy img{
+.desplegar img{
     transform: translate(150px);
 }
 .OPO{
@@ -114,4 +118,121 @@ body{
 color: black;
 height: 50px;
 width: 120px;
+}
+
+
+/*---------------------------------------------------------------------------------------------------*/
+}
+@media (max-width: 900px){
+    body{
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .menu{
+        
+        transition: 0.3s;
+    }
+    .menu{
+        background-color: rgb(0, 5, 58);
+        position: absolute;
+        width: 150px;
+        height: 80%;
+       font-family:Georgia, 'Times New Roman', Times, serif ;
+     
+        
+    }
+    .settings{
+        background-color: rgb(39, 39, 39);
+        height: 70px;
+       font-size: 25px;
+        position: relative;
+      
+      bottom: -15%;
+       
+    }
+    .settings div{
+        
+        padding-left: 30%;
+    }
+    .settings:hover{
+        background-color: black;
+    }
+    .Menu_slider img{
+        transition: 0.2s;
+      
+      }
+    .desplegar{
+        transform: translateX(-100%);
+        
+    }
+    
+    .desplegar img{
+        transform: translate(150px);
+    }
+    .OPO{
+        
+       height: 60px;
+    }
+    .OPO:hover{
+        background-color: rgb(33, 38, 79);
+    }
+    .Menu_slider p{
+        display: inline-block;
+        position: relative;
+        font-size: 25px;
+    
+    }
+    
+    .Menu_slider img:hover{
+        width: 41px;
+    }
+    .menu_close{
+        display: contents;
+        position: relative;
+    }
+    
+    /* user*/
+    .user_interfaz{
+        background-color: rgb(255, 250, 243);
+        height: 50px;
+        border-style: solid;
+        border-top: 5px;
+        border-color: rgba(0, 0, 0, 0.37);
+        display: inline-flex;
+        width: 100%;
+    }
+    
+    .user_interfaz p {
+     padding-left: 70%;
+        color: black;
+        text-align: right;
+        display: block;
+        margin: auto;
+    }
+    .user_image{
+        padding-right: 20px;
+        border-radius: 20px;
+        
+    }
+    .user_image button{
+        border: none;
+    }
+    .user_image button:hover{
+        background-color: rgb(154, 154, 154);
+        border-radius: 25px;
+    }
+    
+    
+    .close_secion{
+        padding-left: 75%;
+        visibility: hidden;
+    }
+    .close{
+        visibility: visible;
+    }
+    .close_secion button{
+    color: black;
+    height: 50px;
+    width: 120px;
+    }
 }
