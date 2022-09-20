@@ -62,6 +62,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //routes
-
+app.use('/project', require('./routes/project.route'))
 
 module.exports = app;
