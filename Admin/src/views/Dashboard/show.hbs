@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/CSS/proyecto.css" />
+
+<form action="/dashboard/show" method="get"></form>
+<label class="">Tablero</label>
+<div class="container">
+    {{#each list}}
+    <div class="">
+        <div class="">
+            <div id="">
+                <label>Proyectos</label>
+                <p>{{project}}</p>
+            </div>
+            <div id="">
+                <label>Lenguajes</label>
+                <p>{{language}}</p>
+            </div>
+            <div id="">
+                <label>Pruebas</label>
+                <p>{{test}}</p>
+            </div>
+            <div id="">
+                <label>Ejercicios</label>
+                <p>{{exercise}}</p>
+            </div>
+            <div id="">
+                <label>Usuarios</label>
+                <p>{{user}}</p>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+    <a href="/logout">Cerrar sesion</a>
+</div>
