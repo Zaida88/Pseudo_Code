@@ -3,8 +3,9 @@ const user = {};
 const passport = require('passport');
 const sequelize = require('sequelize')
 
-const sql = require('../configuracionBaseDatos/baseDatos.sql')
-const orm = require('../configuracionBaseDatos/baseDatos.orm')
+
+const orm = require('../databaseConfiguration/db_orm')
+const sql = require('../databaseConfiguration/db_sql')
 
 
 
