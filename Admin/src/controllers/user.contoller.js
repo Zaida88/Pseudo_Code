@@ -8,7 +8,7 @@ const orm = require('../configuracionBaseDatos/baseDatos.orm')
 
 
 
-user.Registro = passport.authenticate('local.signup', {
+user.Regg = passport.authenticate('local.signup', {
     successRedirect: '/CloseSecsion',
     failureRedirect: '/Reggister',
     failureFlash: true
@@ -22,7 +22,7 @@ registro.view_user = async (req, res, next) => {
 
 
 
-registro.close_secsion = (req, res, next) => {
+Regg.close_secsion = (req, res, next) => {
     req.logout(function (err) {
         if (err) {
             return next(err);
@@ -32,4 +32,4 @@ registro.close_secsion = (req, res, next) => {
     });
 };
 
-module.exports = registro;
+module.exports = Regg;
