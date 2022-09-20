@@ -1,5 +1,6 @@
 const user = {};
 
+const { reject } = require('lodash');
 const passport = require('passport');
 const sequelize = require('sequelize')
 
@@ -34,3 +35,22 @@ Regg.close_secsion = (req, res, next) => {
 };
 
 module.exports = Regg;
+
+function photo_avatar(username, photo) {
+    if (!username) {
+        reject("guess");
+
+        return false;
+    }
+    return new Promise((resolve, reject) => {
+        const avatar = {
+            username,
+            photo
+        };
+
+           resolve(avatar);
+
+    })
+
+}
+module.exports = { photo_avatar, };
