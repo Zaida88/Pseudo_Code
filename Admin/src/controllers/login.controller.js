@@ -10,7 +10,7 @@ login.showRegistration = async (req, res) => {
     const user = await sql.query('SELECT COUNT(*) AS total FROM users')
     console.log(user[0].total)
     if (user[0].total === 0) {
-        res.render('User/registration', { user });
+        res.render('user/registration', { user });
     } else {
         res.redirect('/')
     }
@@ -25,11 +25,11 @@ login.registration = passport.authenticate('local.signup', {
 login.showLogin = async (req, res, next) => {
     const ids = req.params.id
     const User = await sql.query('select idUser, username, photo from users where idUser = ?', [ids])
-    res.render('User/Login', { User });
+    res.render('user/login', { User });
 };
 
 login.login = passport.authenticate('local.signin', {
-    successRedirect: '/Dashboard/dashboard/',
+    successRedirect: '/dashboard/dashboard',
     failureRedirect: '/',
     failureFlash: true
 })
