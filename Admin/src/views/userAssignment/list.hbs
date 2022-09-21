@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="">
+
+<form action="/userAssignment/list" method="POST" enctype="multipart/form-data">
+<div class="container">
+    <center>
+      <p>Usuarios</p>
+    </center> 
+    <div>
+      {{#each list}}
+
+      <div id="descripcion">
+            <label class="titulo">Nombre</label>
+            <h1 class="label">{{firstName}}</h1>
+          </div>
+        
+          <div id="descripcion">
+            <label class="titulo">Rol</label>
+            <h1 class="label">{{nameRol}}</h1>
+          </div>
+
+          <div id="mision">
+            <label class="titulo">Permiso</label>
+            <h1 class="label">{{namePermission}}</h1>
+          </div>
+
+          <div><br>
+            <a href="/exercise/update"><button class="button">Editar</button></a>
+            <a href="/exercise/update"><button class="button">Eliminar</button></a>
+          </div>
+        
+      {{/each}}
+    </div>
+    <a href="/create"><button class="button"><b>Agregar usuario</b></button></a>
+     <a href="/create"><button class="button"><b>Agregar asignacion</b></button></a>
+  </div>
+</form>

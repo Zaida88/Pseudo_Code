@@ -1,9 +1,42 @@
-
 <link rel="stylesheet" href="">
 
 <form action="/exercise/create" method="POST" enctype="multipart/form-data">
-  <div id="container">
-    <div id="title">
-      <h1>crear ejercicio</h1>
+  <div class="container">
+
+    <center>
+      <p>Nuevo Ejercicio</p>
+    </center> 
+
+    <div>
+      {{#each max}}
+      <input type="text" name="idExercise" id="idExercise" value="{{'max(idExercise)'}}"
+        readonly />
+      {{/each}}
     </div>
+
+    <div id="nameExercise">
+      <label> Nombre del ejercicio</label>
+      <input  type="text" name="nameExercise" id="nameExercise" required />
+    </div>
+
+    <div id="descriptionExercise">
+      <label>Descripción del ejercicio</label>
+      <textarea type="text" name="descriptionExercise" id="descriptionExercise" required
+        maxlength="2500"></textarea>
+    </div>
+
+    <div id="punctuationExercise">
+      <label>Puntos por el ejercicio</label>
+      <textarea type="text" name="punctuationExercise" id="punctuationExercise" required
+        maxlength="5"></textarea>
+    </div>
+    
+    <div id="submit">
+      <div id="button">
+        <button type="submit">Guardar</button>
+      </div>
+    </div>
+    
+  </div>
 </form>
+<script src="/js/exercise.js"></script>

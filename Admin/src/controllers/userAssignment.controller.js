@@ -4,7 +4,7 @@ const orm = require('../databaseConfiguration/db_orm')
 const sql = require('../databaseConfiguration/db_sql')
 
 userAssignmentCtl.show = (req, res) => {
-    res.render('users/add')
+    res.render('userAssignment/create')
 }
 
 userAssignmentCtl.send = async (req, res) => {
@@ -20,12 +20,12 @@ userAssignmentCtl.send = async (req, res) => {
     }
     await orm.user.create(newUserAssignment)
     req.flash('success', 'Successfully saved')
-     res.redirect('user/list' + id);
+     res.redirect('userAssignment/list' + id);
 }
 
 userAssignmentCtl.list = async (req, res) => {
     const list = await sql.query('select * from users')
-    res.render('user/list', {list})
+    res.render('userAssignment/list', {list})
 }
 
 userAssignmentCtl.remove = async (req, res) => {
@@ -33,14 +33,14 @@ userAssignmentCtl.remove = async (req, res) => {
     await orm.user.destroy({where: {idUser: id}})
     .then(() => {
         req.flash('success', 'successful removal')
-        res.redirect('user/list' + id);
+        res.redirect('userAssignment/list' + id);
     })
 }
 
 userAssignmentCtl.get = async (req, res) => {
     const id = req.params.id
     const list = await sql.query('select * from users where iduser = ?', [id])
-    res.render('user/edit', {list})
+    res.render('userAssignment/edit', {list})
 }
 
 userAssignmentCtl.edit = async (req, res) => {
@@ -59,7 +59,7 @@ userAssignmentCtl.edit = async (req, res) => {
     .then(actualize => {
         actualize.update(updatedUser)
         req.flash('success', 'successfully upgraded')
-        res.redirect('user/list' + id)
+        res.redirect('userAssignment/list' + id)
     })
 }
 
