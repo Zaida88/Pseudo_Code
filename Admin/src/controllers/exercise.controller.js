@@ -4,7 +4,7 @@ const orm = require('../databaseConfiguration/db_orm')
 const sql = require('../databaseConfiguration/db_sql')
 
 exerciseCtl.show = (req, res) => {
-    res.render('exercises/add')
+    res.render('exercise/create')
 }
 
 exerciseCtl.send = async (req, res) => {
@@ -16,7 +16,7 @@ exerciseCtl.send = async (req, res) => {
         punctuationExercise,
     }
     await orm.exercise.create(newExercise)
-    req.flash('success', 'Successfully saved')
+    req.flash('Exitoso', 'Se creo exitosamente')
      res.redirect('exercise/list' + id);
 }
 
@@ -29,7 +29,7 @@ exerciseCtl.remove = async (req, res) => {
     const id =  req.params.id
     await orm.exercise.destroy({where: {idExercise: id}})
     .then(() => {
-        req.flash('success', 'successful removal')
+        req.flash('Exitoso', 'Se elimino exitosamente')
         res.redirect('exercise/list' + id);
     })
 }
@@ -52,7 +52,7 @@ exerciseCtl.edit = async (req, res) => {
     await orm.exercise.findOne({where: {idExercise: ids}})
     .then(actualize => {
         actualize.update(updatedExercise)
-        req.flash('success', 'successfully upgraded')
+        req.flash('Exitoso', 'Se actualizo exitosamente')
         res.redirect('exercise/list' + id)
     })
 }

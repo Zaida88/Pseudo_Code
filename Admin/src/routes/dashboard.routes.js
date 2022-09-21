@@ -6,6 +6,6 @@ const { show } = require('../controllers/dashboard.controller');
 
 const { isLoggedIn } = require('../lib/auth')
 
-routes.get('/dashboard/', isLoggedIn, show)
+routes.get('/dashboard/', show)
 
 module.exports = routes
