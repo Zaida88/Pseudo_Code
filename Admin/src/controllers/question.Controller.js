@@ -17,7 +17,7 @@ question.send=async(req,res)=>{
 }
 
 question.list=async(req,res)=>{
-    const list=await sql.query("select*from question")
+    const list=await sql.query("select*from questions")
     res.render("question", {list})
 }
 question.bring=async(req,res)=>{
