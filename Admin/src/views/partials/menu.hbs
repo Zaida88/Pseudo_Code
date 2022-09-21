@@ -3,7 +3,7 @@
 
 <link rel="stylesheet" href="../../public/css/menu.css">
    
-{{#if user}}   
+ 
 
 
 <div class="menu" id="menu">
@@ -42,6 +42,7 @@
     </div>
     
 </div>
+{{#each User}}
 <div class="user_primari_interfaz">
 
 <div class="user_interfaz">
@@ -57,6 +58,8 @@
     <button  >Cerrar Seción</button>
 </div>
 </div>
-{{/if}}
+ {{/each}}
+
 <script src="../../public/js/menu.js"></script>
+
 </body>
