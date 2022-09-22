@@ -27,7 +27,7 @@ project.send = async (req, res) => {
         }
     }
     req.flash("success", "Save success")
-    res.redirect('/project/list/' + id);
+    res.redirect('/project/send/' + id);
 }
 
 project.list = async (req, res) => {
@@ -68,14 +68,14 @@ project.update = async (req, res) => {
             }
         }
 
-    req.flash("success", "Save upgraded")
+    req.flash("success", "Guardado")
     res.redirect('/project/list/' + id);
 }
 project.remove = async (req, res) => {
     const id =  req.params.id
     await orm.projects.destroy({where: {idProject: ids}})
     .then(() => {
-        req.flash('success', 'successful remove')
+        req.flash('success', 'Guardado')
         res.redirect('project/list' + id);
     })
 }
