@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="../../public/css/classification.css" />
+
+<form action="/classification/list/{{user.iduser}}" method="get"></form>
+<div class="container" id="container">
+  {{#each list}}
+  <div class="container__contents">
+    <div class="name" id="name">
+      <h1>{{name_classification}}</h1>
+    </div>
+    <div id="edit"> 
+      <a href="/classification/edit/{{idclassification}}"><button class="button"><b>Edit</b></button></a>
+    </div>
+    <div class="coding" id="coding">
+      <a href="/coding/add/{{idclassification}}"><button class="button"><b>Add language</b></button></a>
+    </div>
+  </div>
+  {{else}}
+  <div class="message">
+    <h2>It does not have any classification</h2>
+    <h3>¿want add?</h3>
+    <a href="/classification/add/{{user.iduser}}"><button class="button"><b>Add</b></button></a>
+  </div>
+  {{/each}}
+</div>

@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="../../public/css/classification.css" />
+<form action="/classification/edit/{{user.iduser}}" method="post">
+    <div class="fond">
+        <div class="contents contents--small" id="contents">
+            {{#each list}}
+            <h1 class="title">edit classification</h1>
+            <div id="hidden">
+                <input class="input" type="text" name="idclassification" id="classification" checked aria-checked="true"
+                    value="{{idclassification}}" readonly>
+            </div>
+            <div class="name-classification" id="name_classification">
+                <label class="label-name">name: </label>
+                <input class="input" type="text" name="name_classification" id="name" checked aria-checked="true"
+                    value="{{name_classification}}" />
+            </div>
+            {{/each}}
+            <div id="save">
+                <button type="submit" class="boton"><b>Save</b></button>
+            </div>
+        </div>
+    </div>
+</form>
