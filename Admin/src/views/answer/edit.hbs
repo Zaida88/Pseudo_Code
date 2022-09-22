@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="style.css">
+{{#each list}} 
+<form action="/answer/edit/{{idTests}}" method="post">
+ <div id="container">
+    <div id="title">
+        <p>Agregar Prueba</p>
+    </div>
+    <div id="Nameanswers">
+        <label>Nombre:</label>
+        <input type="text" name="nameAnswers" id="" required aria-checked="true" value="{{nameAnswers}}">
+    </div>
+    <div id="Descriptionanswers">
+        <label>Descripcion</label>
+        <textarea name="descriptionAnswers" id="" required aria-checked="true">{{descriptionAnswers}}</textarea>
+    </div>
+    <div id="button">
+        <button type="submit">Guardar</button>
+    </div>
+ </div>
+ 
+</form>
+{{/each}}

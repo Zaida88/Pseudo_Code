@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="style.css">
+<form action="/answer/list" method="get"></form>
+
+<div id="container">
+    <div class="row">
+        {{#each list}}
+        <div id="card">
+            <div id="id">
+                <p>{{idAnswers}}</p>
+            </div>
+            <div id="name">
+                <p>{{Nameanswers}}</p>
+            </div>
+            <div id="description">
+                <p>{{descriptionAnswers}}</p>
+            </div>
+            <div id="edit">
+                <a href="/answers/edit/{{idAnswers}}">
+                <button type="button">Editar</button>
+                </a>
+            </div>
+            <div id="addanswers">
+                <a href="/answers/add">
+                <button type="button">Agregar</button>
+                </a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
