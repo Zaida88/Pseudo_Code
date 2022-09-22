@@ -3,7 +3,7 @@ const orm = require("../databaseConfiguration/bd_orm")
 const sql = require("../databaseConfiguration/bd_sql")
 
 project.show = (req, res) => {
-    res.render("project/projectadd", {max})
+    res.render("project/create", {max})
 };
 
 project.send = async (req, res) => {
@@ -34,14 +34,14 @@ project.list = async (req, res) => {
     const id = req.params.id
     const listObjective = await sql.query("select * from objectives where idObjective = ?", [id])
     const list = await sql.query("select * from projects where idProject = ? ", [id])
-    res.render("project/projectlist", { list, listObjective })
+    res.render("project/list", { list, listObjective })
 }
 
 project.bring = async (req, res) => {
     const id = req.params.id
-    const listObjective = await sql.query("select * from objectives where idObective", [id])
+    const listObjective = await sql.query("select * from objectives where idObjective", [id])
     const list = await sql.query("select * from projects where idProject=?", [id])
-    res.render("project/projectedit", { list, listObjective })
+    res.render("project/create", { list, listObjective })
 }
 
 project.update = async (req, res) => {
