@@ -1,57 +1,66 @@
- <div class="ajustes">
-        <h1>Ajustes</h1>
-    </div>
-   
-     <div class="profile_user">
-        <div class="profile">
-        <div class="user_image">
-           <form action="/" method="post" enctype="multipart/form-data">
-<input type="file" name="sampleFlie" accept="image/*"/>
-<input type="submit" name="upload" id="btn btn prymary">
+<link rel="stylesheet" href="/src/public/css/profile.css">
+<div class="ajustes">
+  <h1>Ajustes</h1>
+</div>
 
-
-           </form>
-        
+<div class="profile_user">
+  <div class="profile">
+    <div class="user_image">
+      <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="sampleFlie" accept="image/*" />
+        <div class="to_edit1">
+          <button id="editar" type="submit">subir archivo</button>
         </div>
-        
-            <table class="user_data" >
-      
-        
-
-                <tr>
-              
-                  <td>nombre</td>
-              
-                  <td>{{username}}  </td>
-              
-                  <td>boton de editar</td>
-              
-                </tr>
-              
-              
-                <tr>
-              
-                  <td>Correo</td>
-              
-                  <td>{{email}}</td>
-              
-                  <td> aqui boton de editar 
-              
-                </tr>
-                     <tr>
-              
-                  <td>contraseña</td>
-              
-                  <td>{{password}}  </td>
-              
-                  <td>boton de editar</td>
-              
-                </tr>
-              
-              </table>
-       
-     </div>
-     <div class="to_edit">
-        <a href="/edit_profile.html"><button id="editar">Editar</button ></a> 
-     </div>
+      </form>
     </div>
+  </div>
+
+  <table class="user_data">
+    <form action="/" method="post">
+      <tr>
+
+        <td>Nombre</td>
+
+        <td><input type="text" class="texting" value="{{username}}"> </td>
+
+        <td><img src="/edit.png" alt="" width="40px"></td>
+
+      </tr>
+
+      <tr>
+
+        <td>Correo</td>
+
+        <td><input type="text" class="texting" value="{{email}}"></td>
+
+        <td> <img src="/edit.png" alt="" width="40px">
+
+      </tr>
+      <tr>
+
+        <td>contraseña</td>
+
+        <td><input type="text" class="texting" value="{{password}}"></td>
+
+        <td> <img src="/edit.png" alt="" width="40px">
+
+      </tr>
+       <tr>
+
+        <td>Rol</td>
+
+        <td><input type="text" class="texting" value="{{ idUserRol}}"></td>
+
+        <td> <img src="/edit.png" alt="" width="40px">
+
+      </tr>
+
+      <div class="to_edit">
+        <a href="/"><button id="editar" type="submit">Editar</button></a>
+      </div>
+    </form>
+  </table>
+
+</div>
+
+</div>

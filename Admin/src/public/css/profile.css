@@ -1,0 +1,68 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    outline: none;
+    text-decoration: none;
+
+
+
+}
+
+.profile_user{
+    
+    display: block;
+position: absolute;
+   top: 250px;
+    left: 35%;
+    width: 600px;
+    height: 400px;
+}
+.user_image{
+    display: inline;
+}
+.user_data{
+    padding-left: 30px;
+    display: inline-block;
+}
+.ajustes{
+   position: absolute;
+   top: 120px;
+   left: 50%;
+}
+.ajustes h1{
+    text-align: center;
+    color: black;
+}
+.to_edit{
+    position: relative;
+    top: 200px;
+    left: 30%;
+}
+.to_edit1 button{
+    position: relative;
+    top: -40px;
+    left: 50%;
+    color: black;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(80, 135, 255);
+    border-radius: 10px;
+    border: none;
+}
+.to_edit button{
+    color: black;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(80, 135, 255);
+    border-radius: 10px;
+    border: none;
+}
+td{
+    color: black;
+}
+
+.texting{
+    color: black;
+}

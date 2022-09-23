@@ -15,7 +15,7 @@ routes.get ('/', function(req,res,next){
 })
 
 
-routes.post("",(req,res)=>{
+routes.post("/add",(req,res)=>{
 
     
     let samplefile;
