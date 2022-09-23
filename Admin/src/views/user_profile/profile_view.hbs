@@ -2,15 +2,15 @@
  <div class="ajustes">
         <h1>Ajustes</h1>
     </div>
-   
+    {{#each User}}
      <div class="profile_user">
         <div class="profile">
         <div class="user_image">
             <img src="/img/user/{{photo}}"
             height="250px" alt="user profile">
-           
+          {{/each}} 
         </div>
-        
+         {{#each User}}
             <table class="user_data" >
 
                 <tr>
@@ -27,23 +27,27 @@
               
                   <td>Correo</td>
               
-                  <td>{{Correo}}</td>
+                  <td>{{email}}</td>
               
                   
+              
+                </tr>
+
+                  <tr>
+              
+                  <td>contraseña</td>
+              
+                  <td>{{password}}</td>
+              
+                 
               
                 </tr>
                 <tr>
               
-                  <td>Rol</td>
-              
-                  <td>{{ idUserRol}}</td>
-              
-                  
-              
-                </tr>
+                
               
               </table>
-       
+       {{/each}}
      </div>
      <div class="to_edit">
         <a href="/edit_profile.html"><button id="editar">Editar</button ></a> 
