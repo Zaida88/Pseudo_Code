@@ -1,5 +1,5 @@
 const express = require("express")
-const routes = express.Router();
+const router = express.Router();
 const user = require("../models/users.model");
  const fileup = require("express-fileupload");
 
@@ -8,10 +8,10 @@ const sql = require('../databaseConfiguration/db_sql')
 const orm = require('../databaseConfiguration/db_orm');
 const { raw } = require("body-parser");
 
-routes.get ('/', function(req,res,next){
+routes.get ('/ad', function(req,res,next){
 
- res.render("profile_edit")
- res.render("profile_view")
+ res.render("user_profile/profile_edit")
+ res.render("user_profile/profile_view")
 })
 
 
@@ -33,14 +33,14 @@ routes.post("/add",(req,res)=>{
     })
 })
 
-user.query('select idUser, username, photo from users where idUser = ?', (err,rows) =>{
+user.query('select photo from users ', (err,rows) =>{
 if(!err){
     res.render("profile_edit",{rows})
 }
    
 })
 
-module.exports = routes;
+module.exports = router;
 
 
 
