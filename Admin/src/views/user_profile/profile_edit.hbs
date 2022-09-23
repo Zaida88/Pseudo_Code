@@ -5,9 +5,13 @@
      <div class="profile_user">
         <div class="profile">
         <div class="user_image">
-            <img src="/img/user/{{photo}}"
-            height="250px" alt="">
-         <button>editar foto</button>
+           <form action="/" method="post" enctype="multipart/form-data">
+<input type="file" name="sampleFlie" accept="image/*"/>
+<input type="submit" name="upload" id="btn btn prymary">
+
+
+           </form>
+        
         </div>
         
             <table class="user_data" >

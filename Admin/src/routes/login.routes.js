@@ -1,7 +1,7 @@
 const express = require('express');
 const routes = express.Router();
 
-const { showLogin, showRegistration, registration, login, logout } = require('../controllers/login.controller')
+const { showLogin, showRegistration, registration, login, logout ,} = require('../controllers/login.controller')
 
 routes.get('/registration', showRegistration);
 routes.post('/registration', registration);
