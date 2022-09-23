@@ -1,34 +1,34 @@
-class objetivo {
-    constructor() {
-        this.contenedor = document.getElementById('listaObjetivos')
-        this.numero = document.getElementById('numeros')
-        this.unico = document.getElementById('Unico')
+class objective {
+    builder() {
+        this.container = document.getElementById('listaobjectives')
+        this.number = document.getElementById('numbers')
+        this.unique = document.getElementById('unique')
     }
-    crear() {
-        if (parseInt(this.numero.value) === 1) {
-            this.unico.style.display = 'block'
+    create() {
+        if (parseInt(this.number.value) === 1) {
+            this.unique.style.display = 'block'
         } else {
-            if (parseInt(this.numero.value) > 1) {
-                if (parseInt(this.numero.value) <= 4) {
-                    for (let i = 0; i < parseInt(this.numero.value); i++) {
+            if (parseInt(this.number.value) > 1) {
+                if (parseInt(this.number.value) <= 4) {
+                    for (let i = 0; i < parseInt(this.number.value); i++) {
                         let input = document.createElement('textarea')
                         input.setAttribute('type', 'text')
-                        input.name = 'objetivos'
+                        input.name = 'objectives'
                         input.id = 'extras'
-                        this.contenedor.appendChild(input)
+                        this.container.appendChild(input)
                     }
                 } else {
-                    alert('Este campo permite desde 1 a 4 objetivos')
+                    alert('This field allows from 1 to 4 objectives')
                 }
             }
         } 
     }
 
     inicio() {
-        this.unico.style.display = 'none' 
+        this.unique.style.display = 'none' 
     }
 }
 
-let objetivos = new objetivo
+let objectives = new objective
 
-window.onload = objetivos.inicio()
+window.onload = objectives.beginning()
