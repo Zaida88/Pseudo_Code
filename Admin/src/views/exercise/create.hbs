@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="#" />
+
+<form action="/exercise/create" method="post">
+  <div class="container">
+    <div class="title">Nuevo ejercicio</div>
+    <div class="contents">
+      <label>Nombre</label>
+      <input class="input" type="text" name="nameExercise" aria-checked="true" required />
+      <label>Descripción</label>
+      <input class="input" type="text" name="descriptionExercise" aria-checked="true" required />
+      <label>Puntaje</label>
+      <input type="number" name="punctuationExercise" id="">
+      <div>
+        <button class="button" type="submit">Crear</button>
+      </div>
+    </div>
+  </div>
+</form>
+<div>
+  <a href="/exercise/list"><button>Cancelar</button></a>
+</div>

@@ -66,4 +66,6 @@ app.use(require('./routes/index.routes'))
 app.use(require('./routes/login.routes'))
 app.use('/dashboard',require('./routes/dashboard.routes'))
 
+app.use('/exercise',require('./routes/exercise.routes'))
+
 module.exports = app;

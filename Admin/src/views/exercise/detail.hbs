@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="#" />
+
+<form action="/exercise/detail/" method="get"></form>
+<label class="">Ejercicio</label>
+<div class="container">
+    {{#each exercise}}
+    <div class="">
+        <div class="">
+            <div>
+                <input name="idExercise" checked aria-checked="true" value="{{idExercise}}" readonly>
+            </div>
+            <div>
+                <label>Nombre</label>
+                <p>{{nameExercise}}</p>
+            </div>
+            <div>
+                <label>Dercripcion</label>
+                <p>{{descriptionExercise}}</p>
+            </div>
+            <div>
+                <label>Puntaje</label>
+                <p>{{punctuationExercise}}</p>
+            </div>
+            <div>
+                <label>Lenguaje</label>
+                <p>{{languageIdLanguage}}</p>
+            </div>
+            <div>
+                <label>Código</label>
+                <p>{{codeIdCode}}</p>
+            </div>
+        </div>
+        <a href="/exercise/remove/{{idExercise}}"><button>Eliminar</button></a>
+    </div>
+    {{/each}}
+    <a href="/exercise/list"><button>Regresar</button></a>
+</div>

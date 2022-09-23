@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="">
+
+<form action="/userAssignment/edit/" method="POST" enctype="multipart/form-data">
+  <div class="container">
+
+    <center>
+      <p>Editar Ejercicio</p>
+    </center> 
+
+      {{#each max}}
+      <input type="text" name="idExercise" id="idExercise" value="{{'max(idExercise)'}}"
+        readonly />
+      {{/each}}
+    </div>
+
+    <div id="nameExercise">
+      <label> Nombre del ejercicio</label>
+      <input  type="text" name="nameExercise" id="nameExercise" required />
+    </div>
+
+    <div id="descriptionExercise">
+      <label>Descripción del ejercicio</label>
+      <textarea type="text" name="descriptionExercise" id="descriptionExercise" required
+        maxlength="2500"></textarea>
+    </div>
+
+    <div id="punctuationExercise">
+      <label>Puntos por el ejercicio</label>
+      <textarea type="text" name="punctuationExercise" id="punctuationExercise" required
+        maxlength="5"></textarea>
+    </div>
+</form>

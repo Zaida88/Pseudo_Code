@@ -1,0 +1,63 @@
+
+<link rel="stylesheet" href="">
+
+<form action="/userAssignment/create" method="POST" enctype="multipart/form-data">
+  <div class="container">
+
+    <div id="title">
+      <p>Nuevo Usuario
+        {{#each user}}
+        <input type="text" name="idUser" id="number" value="{{max}}" readonly>
+        {{/each}}
+      </p> 
+    </div>
+
+    <div id="firstName">
+      <label> Nombre</label>
+      <input  type="text" name="firstName" id="firstName" required />
+    </div>
+
+    <div id="lastName">
+      <label>Apellido</label>
+      <textarea type="text" name="lastName" id="lastName" required
+      ></textarea>
+    </div>
+
+    <div id="username">
+      <label>Nombre de usuario</label>
+      <textarea type="text" name="username" id="username" required
+        ></textarea>
+    </div>
+
+    <div id="email">
+      <label>Correo electrónico:</label>
+      <input type="text" name="email" id="email" required>
+    </div>
+
+    <div id="password">
+      <label>Contraseña:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+
+    <div id="photo">
+      <label>Foto:</label>
+      <div id="changeImage">
+        <img src="/img/NoImage.jpg" id="imagePreview">
+      </div>
+      <input type="file" name="photo" id="filePicker" accept="image/*" required>
+    </div>
+    
+    <div id="button">
+      <button>Cancelar</button>
+    </div>
+
+    <div id="submit">
+      <div id="button">
+        <button type="submit">Crear</button>
+      </div>
+    </div>
+    
+  </div>
+</form>
+<script src="/js/number.js"></script>
+<script src="/js/preview.js"></script>
