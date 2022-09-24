@@ -1,9 +1,10 @@
 <link rel="stylesheet" href="#" />
-
-<form action="/exercise/detail/" method="get"></form>
-<label class="">Ejercicio</label>
+<div id="title">
+    <label class="">Ejercicio</label>
+</div>
+{{#each exercise}}
+<form action="/exercise/detail/{{idExercise}}" method="get"></form>
 <div class="container">
-    {{#each exercise}}
     <div class="">
         <div class="">
             <div>
@@ -23,15 +24,15 @@
             </div>
             <div>
                 <label>Lenguaje</label>
-                <p>{{languageIdLanguage}}</p>
+                <p>{{nameLanguage}}</p>
             </div>
             <div>
                 <label>Código</label>
-                <p>{{codeIdCode}}</p>
+                <p>{{nameCode}}</p>
             </div>
         </div>
-        <a href="/exercise/remove/{{idExercise}}"><button>Eliminar</button></a>
+        <a href="/exercise/update/{{idExercise}}"><button type="button">Editar</button></a>
+        <a href="/exercise/remove/{{idExercise}}"><button type="button">Eliminar</button></a>
     </div>
     {{/each}}
-    <a href="/exercise/list"><button>Regresar</button></a>
 </div>

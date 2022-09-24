@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="#" />
+<div id="title">
+    <label>Lenguajes</label>
+</div>
+<form action="/exercise/listLanguages" method="get"></form>
+<div class="container" id="container">
+    {{#each listLanguages}}
+    <div class="contents">
+        <div id="detail">
+            <img src="/img/user/{{imageLanguage}}">
+            <label>{{nameLanguage}}</label>
+            <a href="/exercise/create/{{idLanguage}}"><button class="button">Agregar Ejercico</button></a>
+        </div>
+        <div id="exercise">
+            <a href="/exercise/listExercises/{{idLanguage}}"><button type="button">Listar Ejercicios</button></a>
+        </div>
+    </div>
+    {{/each}}
+    {{else}}
+    <div class="mensaje">
+        <h2>No tiene Lenguajes registrados</h2>
+        <h3>¿Desea agregar?</h3>
+        <a href="#"><button class="boton"><b>Agregar</b></button></a>
+    </div>
+    {{/each}}
+</div>

@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="#" />
+<div id="title">
+  <label>Ejercicios</label>
+</div>
+{{#each listExercises}}
+<form action="/exercise/listExercises/{{idLanguage}}" method="get"></form>
+<div class="container" id="container">
+  <div class="contents">
+    <div id="detail">
+      <a href="/exercise/detail/{{idExercise}}"><button class="button">{{nameExercise}}</button></a>
+    </div>
+  </div>
+  {{else}}
+  <div class="message">
+    <p>No tiene ejercicios registrados actualmente</p>
+  </div>
+  {{/each}}
+  <div>
+    <a href="/exercise/listLanguages">
+      <button class="button">Lista de Lenguajes</button>
+    </a>
+  </div>
+</div>

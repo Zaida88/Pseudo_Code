@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="#" />
+<div id="title">
+  <label class="">Editar</label>
+</div>
+{{#each exercise}}
+<form action="/exercise/update/{{idExercise}}" method="post">
+  <div class="container">
+    <div class="">
+      <label>Nombre</label>
+      <input class="input" type="text" name="nameExercise" aria-checked="true" value="{{nameExercise}}" />
+      <label>Descripción</label>
+      <input class="input" type="text" name="descriptionExercise" aria-checked="true" value="{{descriptionExercise}}" />
+      <label>Puntaje</label>
+      <input type="number" name="punctuationExercise" aria-checked="true" value="{{punctuationExercise}}">
+      <div>
+        <label>Lenguaje</label>
+        <input class="input" type="text" name="nameLanguage" aria-checked="true" value="{{nameLanguage}}" readonly />
+      </div>
+      <div>
+        <label>Codigo</label>
+        <input class="input" type="text" name="nameLanguage" aria-checked="true" value="{{nameCode}}" readonly />
+      </div>
+    </div>
+    {{/each}}
+    <div id="save">
+      <button class="button" type="submit">Guardar</button>
+    </div>
+</form>
+</div>
+</div>
+</div>

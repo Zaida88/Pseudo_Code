@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="#" />
-
-<form action="/exercise/create" method="post">
+{{#each language}}
+<form action="/exercise/create/{{idLanguage}}" method="post">
+  {{/each}}
   <div class="container">
     <div class="title">Nuevo ejercicio</div>
     <div class="contents">
@@ -9,7 +10,21 @@
       <label>Descripción</label>
       <input class="input" type="text" name="descriptionExercise" aria-checked="true" required />
       <label>Puntaje</label>
-      <input type="number" name="punctuationExercise" id="">
+      <input type="number" name="punctuationExercise">
+      <div>
+        <label>Lenguaje</label>
+        {{#each language}}
+        <input class="input" type="text" name="nameLanguage" aria-checked="true" value="{{nameLanguage}}" readonly />
+        {{/each}}
+      </div>
+      <div>
+        <label>Codigo</label>
+        <select name="codeIdCode">
+          {{#each codes}}
+          <option value="{{idCode}}">{{nameCode}}</option>
+          {{/each}}
+        </select>
+      </div>
       <div>
         <button class="button" type="submit">Crear</button>
       </div>
@@ -17,5 +32,5 @@
   </div>
 </form>
 <div>
-  <a href="/exercise/list"><button>Cancelar</button></a>
+  <a href="/exercise/listLanguages"><button>Cancelar</button></a>
 </div>

@@ -109,8 +109,8 @@ languages.belongsTo(classifications)
 users.hasMany(codes)
 codes.belongsTo(users)
 
-languages.hasMany(exercises)
-exercises.belongsTo(languages)
+languages.hasMany(codes)
+codes.belongsTo(languages)
 
 codes.hasMany(exercises)
 exercises.belongsTo(codes)
