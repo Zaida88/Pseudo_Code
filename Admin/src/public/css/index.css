@@ -1,0 +1,52 @@
+body {
+    background-image: url(/img/backgound-index.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    text-align:center;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: 30%;
+    max-height: 50%;
+    top: 22%;
+    left: 35%;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 10%;
+}
+
+.container #title {
+    color: white;
+    margin: 17% 0 13% 0;
+    width: auto;
+    height: auto;
+    word-wrap: break-word;
+}
+
+.validation input {
+    width: 70%;
+    height: auto;
+    word-wrap: break-word;
+}
+
+.validation p {
+    text-align: left;
+    margin-left: 15%;
+    color: white;
+    margin-bottom: 1%;
+    word-wrap: break-word;
+}
+
+.btnValidation #button{
+    margin-top: 3%;
+    width: auto;
+    height: auto;
+    word-wrap: break-word;
+}
