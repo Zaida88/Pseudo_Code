@@ -1,44 +1,47 @@
-<link rel="stylesheet" href="">
+<link rel="stylesheet" href="/css/registration.css">
 
-<form action="/registration" method="POST" enctype="multipart/form-data">
-  <div id="container">
+<form action="/registration" method="post" enctype="multipart/form-data">
+  <div class="container">
     <div id="title">
-      <p>Registro
-        {{#each user}}
-        <input type="text" name="idUser" id="number" value="{{max}}" readonly>
-        {{/each}}
-      </p>
+      <h2>Registro</h2>
     </div>
-    <div id="username">
-      <label>Nombre de usuario:</label>
-      <input type="text" id="username" name="username" required>
+    <div id="hidden">
+      {{#each user}}
+      <input type="text" name="idUser" id="number" value="{{max}}" readonly>
+      {{/each}}
     </div>
-    <div id="password">
-      <label>Contraseña:</label>
-      <input type="password" id="password" name="password" required>
-    </div>
-    <div id="firstName">
-      <label>Nombre:</label>
-      <input type="text" name="firstName" id="firstName" required>
-    </div>
-    <div id="lastName">
-      <label>Apellido:</label>
-      <input type="text" name="lastName" id="lastName" required>
-    </div>
-    <div id="email">
-      <label>Correo electrónico:</label>
-      <input type="text" name="email" id="email" required>
-    </div>
-    <div id="photo">
-      <label>Foto:</label>
-      <div id="changeImage">
-        <img src="/img/NoImage.jpg" id="imagePreview">
+    <div class="contents">
+      <div class="data">
+        <label>Nombre de usuario:</label>
+        <input type="text" id="username" name="username" required>
       </div>
-      <input type="file" name="photo" id="filePicker" accept="image/*" required>
+      <div class="data">
+        <label>Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="data">
+        <label>Nombre:</label>
+        <input type="text" name="firstName" id="firstName" required>
+      </div>
+      <div class="data">
+        <label>Apellido:</label>
+        <input type="text" name="lastName" id="lastName" required>
+      </div>
+      <div class="data">
+        <label>Correo electrónico:</label>
+        <input type="email" name="email" id="email">
+      </div>
+      <div class="data">
+        <label>Foto:</label>
+        <div class="changeImage">
+          <img src="/img/NoImage.jpg" id="imagePreview">
+        </div>
+        <input type="file" name="photo" id="filePicker" accept="image/*" required>
+      </div>
     </div>
-    <div id="submit">
-      <div id="button">
-        <button type="submit">Guardar</button>
+    <div class="submit">
+      <div>
+        <button type="submit">Registrar</button>
       </div>
     </div>
   </div>

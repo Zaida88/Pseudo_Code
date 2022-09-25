@@ -1,0 +1,89 @@
+body {
+    background-image: url(/img/backgound-index.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#hidden {
+    display: none;
+}
+
+.container {
+    padding: 1%;
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    max-width: 30%;
+    max-height: fit-content;
+    top: 8%;
+    left: 37%;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 10%;
+}
+
+.container #title {
+    margin: 1% 0 3% 0;
+    color: white;
+    width: auto;
+    height: auto;
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+.contents {
+    text-align: left;
+    display: flex;
+    max-height: fit-content;
+    max-width: fit-content;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.data {
+    margin: 0.5%;
+    max-height: fit-content;
+    max-width: fit-content;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.data input {
+    width: auto;
+    height: auto;
+    word-wrap: break-word;
+}
+
+.data label{
+    color: white;
+}
+
+#filePicker {
+    color: white;
+    max-width: fit-content;
+    height: auto;
+    word-wrap: break-word;
+}
+
+.changeImage {
+    padding-bottom: 2%;
+    max-height: fit-content;
+    max-width: fit-content;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.changeImage #imagePreview {
+    width: 30%;
+    height: 30%;
+    word-wrap: break-word;
+}
+
+.submit {
+    margin: 6% 0 1% 0;
+}
