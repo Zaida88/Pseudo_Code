@@ -1,36 +1,47 @@
 <link rel="stylesheet" href="">
 
 <form action="/userAssignment/list" method="POST" enctype="multipart/form-data">
-<div class="container">
+  <table class="container">
     <center>
       <p>Usuarios</p>
-    </center> 
-    <div>
-      {{#each list}}
+    </center>
+    <div align="right">
+      <a href="/userAssignment/create"><button>Agregar usuario</button></a>
+      <a href="/userAssignment/createAssignment"><button class="button"><b>Agregar asignacion</b></button></a>
+    </div> <br><br>
+    {{#each list}}
 
-      <div id="descripcion">
-            <label class="titulo">Nombre</label>
-            <h1 class="label">{{firstName}}</h1>
-          </div>
-        
-          <div id="descripcion">
-            <label class="titulo">Rol</label>
-            <h1 class="label">{{nameRol}}</h1>
-          </div>
+    <div class="center">
+      <td>
+        <div id="firstName">
+          <label>Nombre</label>
+          <p>{{firstName}}</p>
+        </div>
+      </td>
 
-          <div id="mision">
-            <label class="titulo">Permiso</label>
-            <h1 class="label">{{namePermission}}</h1>
-          </div>
+      <td>
+        <div id="nameRol">
+          <label>Rol</label>
+          <p>{{nameRol}}</p>
+        </div>
+      </td>
 
-          <div><br>
-            <a href="/exercise/update"><button class="button">Editar</button></a>
-            <a href="/exercise/update"><button class="button">Eliminar</button></a>
-          </div>
-        
+      <td>
+        <div id="namePermission">
+          <label>Permiso</label>
+          <p>{{namePermission}}</p>
+        </div>
+      </td>
+
+      <td>
+        <button pButton type="button" class="p-button-warning p-button-rounded mr-2" icon="pi pi-pencil"
+          href="/exercise/update" [loading]="(loaded$|async)!"> Editar
+        </button>
+        <button pButton type="button" class="p-button-danger p-button-rounded" icon="pi pi-trash"
+          pTooltip="Delete Teacher" href="/exercise/update" [loading]="(loaded$|async)!"> Eliminar
+        </button>
+      </td>
       {{/each}}
     </div>
-    <a href="/create"><button class="button"><b>Agregar usuario</b></button></a>
-     <a href="/create"><button class="button"><b>Agregar asignacion</b></button></a>
-  </div>
+  </table>
 </form>

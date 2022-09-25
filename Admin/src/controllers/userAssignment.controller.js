@@ -4,27 +4,28 @@ const orm = require('../databaseConfiguration/db_orm')
 const sql = require('../databaseConfiguration/db_sql')
 
 userAssignmentCtl.show = (req, res) => {
+    const id = req.params.id
     res.render('userAssignment/create')
 }
 
-userAssignmentCtl.send = async (req, res) => {
-    const id = req.users.idUser
-    const {fisrtName, lastName, username, password, photo, email} = req.body
+userAssignmentCtl.create = async (req, res) => {
+    const id = req.params.id
+    const {firstName, lastName, username, password, photo, email} = req.body
     const newUserAssignment = {
-        fisrtName, 
+        firstName, 
         lastName, 
         username, 
         password, 
         photo, 
         email,
     }
-    await orm.user.create(newUserAssignment)
-    req.flash('success', 'Successfully saved')
-     res.redirect('userAssignment/list' + id);
+    await orm.users.create(newUserAssignment)
+    req.flash('success', 'Se creó exitosamente')
+    res.redirect('/userAssignment/list/' + id);
 }
 
 userAssignmentCtl.list = async (req, res) => {
-    const list = await sql.query('select * from users')
+    const list = await sql.query('SELECT firstName, nameRol, namePermission FROM users u JOIN roles r ON u.idUser = r.idRol JOIN permissions p ON u.idUser = p.idPermission')
     res.render('userAssignment/list', {list})
 }
 
@@ -39,16 +40,16 @@ userAssignmentCtl.remove = async (req, res) => {
 
 userAssignmentCtl.get = async (req, res) => {
     const id = req.params.id
-    const list = await sql.query('select * from users where iduser = ?', [id])
+    const list = await sql.query('select * from users where idUser = ?', [id])
     res.render('userAssignment/edit', {list})
 }
 
 userAssignmentCtl.edit = async (req, res) => {
     const id = req.users.idUser
     const ids = req.params.id
-    const {fisrtName, lastName, username, password, photo, email} = req.body
+    const {firstName, lastName, username, password, photo, email} = req.body
     const updatedUser = { 
-        fisrtName, 
+        firstName, 
         lastName, 
         username, 
         password, 
