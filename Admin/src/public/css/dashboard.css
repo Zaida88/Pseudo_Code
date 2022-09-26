@@ -18,7 +18,7 @@ body {
     height: auto;
     word-wrap: break-word;
     overflow: auto;
-    margin: 2%;
+    margin: 5% 0 0 0;
 }
 
 .contents {
