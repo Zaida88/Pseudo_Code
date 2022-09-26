@@ -1,21 +1,19 @@
-<link rel="stylesheet" href="">
-<div id="container">
+<link rel="stylesheet" href="/css/login.css">
+<div class="container">
     {{#each User}}
     <form action="/login/{{idUser}}" method="POST" id="login">
         <div id="title">
-            Bienvenido
+            <h2>Inicio de sesión</h2>
         </div>
-        <div id="photo">
-            <img src="/img/user/{{photo}}">
+        <div class="photo">
+            <img src="/img/user/{{photo}}" id="image">
         </div>
         {{/each}}
         {{#each User}}
-        <div id="data">
+        <div class="data">
             <label>Nombre de usuario:</label>
             <input type="text" id="name" name="username" value="{{username}}" readonly>
-        </div>
-        {{/each}}
-        <div id="password">
+            {{/each}}
             <label>Contraseña:</label>
             <input type="password" id="password" name="password" required>
         </div>

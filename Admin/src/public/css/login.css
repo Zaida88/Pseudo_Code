@@ -1,0 +1,60 @@
+body {
+    background-image: url(/img/backgound-index.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    padding: 1%;
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    max-width: 25%;
+    max-height: fit-content;
+    top: 20%;
+    left: 38%;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 10%;
+}
+
+.container #title {
+    margin: 1% 0 3% 0;
+    color: white;
+    width: auto;
+    height: auto;
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+.photo {
+    margin-bottom: 4%;
+}
+
+.photo #image {
+    width: 40%;
+    word-wrap: break-word;
+}
+
+.data {
+    margin-bottom: 5%;
+    text-align: left;
+    display: block;
+}
+
+.data label {
+    margin-top: 4%;
+    margin-bottom: 0;
+    color: white;
+}
+
+.data input {
+    width: 90%;
+    height: auto;
+    word-wrap: break-word;
+}
