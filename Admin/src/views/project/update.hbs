@@ -1,44 +1,37 @@
-<link rel="stylesheet" href="/CSS/project.css" />
-<script src=""></script>
-
-
-{{#each list}}
- <form action="/proyecto/editar/{{idProject}}" method="post">
-{{/each}}
-<div class="fondo fondo--height">
-    <div class="container" id="container">
-        {{#each list}}
-            <label class="title">Editar proyecto</label>
-        <div id="nameProject">
-            <label class="label">Nombre de proyecto</label>
-            <input class="input" value="{{nameProject}}" type="text" name="nameProject" id="project" checked aria-checked="true" />
-        </div>
-        <div id="description">
-            <label class="label">Descripcion</label>
-            <input class="input" type="text" name="description" id="descriptionProject" checked aria-checked="true" value="{{descriptionProject}}"/>
-        </div>
-        <div id="Logo">
-            <label class="label">Logo</label>
-            <input class="input" type="text" name="logo" id="logoProject" checked aria-checked="true" value="{{logoProject}}"/>
-        </div>
-        <div id="mission">
-            <label class="label">Mision</label>
-            <input class="input" type="text" name="mission" id="missionProject" checked aria-checked="true" value="{{mission}}"/>
-        </div>
-        <div id="vision">
-            <label class="label">Vision</label>
-            <input  class="input" type="text" name="vision" id="vision_css" checked aria-checked="true" value="{{vision}}"/>
-        </div>
-        {{/each}}
-        <div class="objectives" id="objectives">
-            <label class="label"><b>Objetivos:</b></label>
-            {{#each listObjective}}
-             <input class="input" type="text" id="numObjective" name="objectives" checked value="{{objectives}}"/>
-            {{/each}}
-        </div>
-        <div id="saves">
-            <button class="" type="submit"><b>Guardar</b></button>
-        </div>
+<link rel="stylesheet" href="/src/public/css/project.css">
+{{#each list}} 
+<form action="/project/edit/{{idProject}}" method="post">
+    <div id="title">
+        <h1>Editar Proyecto</h1>
     </div>
-</div>
+ <div id="container" class="card">
+    <div id="name">
+        <label>Nombre:</label>
+        <input type="text" name="nameProject" id="nameProject" required aria-checked="true" value="{{nameProject}}">
+    </div>
+    <div id="description">
+        <label>Descripcion</label>
+        <textarea name="descriptionProject" id="descriptionProject" required aria-checked="true">{{descriptionProject}}</textarea>
+    </div>
+    <div id="logo">
+        <label>logo</label>
+        <textarea name="logoProject" id="logoProject" required aria-checked="true">{{logoProject}}</textarea>
+    </div>
+    <div id="missionProject">
+        <label>Mision:</label>
+        <textarea name="mission" id="mission" required aria-checked="true">{{mission}}</textarea>
+    </div>
+    <div id="visionProject">
+        <label>Vision:</label>
+        <textarea name="vision" id="vision" required aria-checked="true">{{vision}}</textarea>
+    </div>
+    <div id="canceled">
+        <button type="submit" class="button">Cancelar</button>
+    </div>
+    <div id="save">
+        <button type="submit" class="button">Guardar</button>
+    </div>
+ </div>
+ 
 </form>
+{{/each}}

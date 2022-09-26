@@ -1,51 +1,43 @@
-<link rel="stylesheet" href="/CSS/project.css" />
-<form action="project/create" method="post">
-  <div>
-    <div>
-      <div>
-        {{#each max}}
-        <input type="text" name="project" id="idProject"
-          value="{{'max(idProject)'}}" readonly />
-        {{/each}}
-      </div>
-      <div class="title"><b>Nuevo Proyecto</b></div><br>
-      <div id="name">
-        <label class="label">Nombre de proyecto:</label><br>
-        <input class="textarea" type="text" name="name" id="name" checked aria-checked="true" />
-      </div>
-      <div id="description">
-        <label class="label">Descripcion:</label><br>
-        <textarea class="textarea" type="text" name="description" id="description" checked
-          aria-checked="true"></textarea>
-      </div>
-      <div id="logoProject">
-        <label class="label">Logo:</label><br>
-        <textarea class="textarea" type="text" name="logo" id="logo" checked
-          aria-checked="true"></textarea>
-      </div>
-      <div id="mission">
-        <label class="label">Mision:</label><br>
-        <textarea class="textarea" type="text" name="mission" id="mission" checked aria-checked="true"></textarea>
-      </div>
-      <div id="vision">
-        <label class="label">Vision:</label><br>
-        <textarea class="textarea" type="text" name="vision" id="vision" checked aria-checked="true"></textarea>
-      </div>
-      <div id="objective">
-        <label class="label"> Objetivos:</label><br>
-        <textarea class="textarea" type="text" id="numbers" name="numbers" ></textarea><br><br>
-        <button class="" type="button" onclick="objectives.create()"><b>Crear objetivos</b></button>
-      </div>
-      <div id="list"></div>
-      <div id="save">
-        <button class="" type="submit"><b>Guardar</b></button>
-      </div>
-    </div>
-  </div>
+<link rel="stylesheet" href="/src/public/css/project.css">
+
+<form action="/project/add" method="post">
+    <div class="container">
+        <div id="title">
+            <h1>NUEVO PROYECTO</h1>
+        </div>
+        <div id="card" class="card">
+            <div id="name">
+                <label>Nombre proyecto:</label>
+                <input type="text" name="nameProject" id="nameProject" required aria-checked="true">
+            </div>
+            <div id="description">
+                <label>Descripcion:</label>
+                <textarea name="descriptionProject" id="descriptionProject" required aria-checked="true"></textarea>
+            </div>
+            <div id="logo">
+                <label>Logo:</label>
+                <textarea name="logoProject" id="logoProject" required aria-checked="true"></textarea>
+            </div>
+            <div id="missionProject">
+                <label>Mision:</label>
+                <textarea name="mission" id="mission" required aria-checked="true"></textarea>
+            </div>
+            <div id="visionProject">
+                <label>Logo:</label>
+                <textarea name="vision" id="vision" required aria-checked="true"></textarea>
+            </div>
+            <div id="canceled">
+                <button type="submit" class="button">Cancelar</button>
+            </div>
+            <div id="save">
+                <button type="submit" class="button">Guardar</button>
+            </div>
+        </div>
 </form>
 
 <div id="next">
-  <form action="/project/list/{{user.idUser}}" method="get">
-    <button class="" type="submit">Ver proyectos registrados</button>
-  </form>
+    <form action="/project/list/{{user.id}}" method="get">
+        <button class="button" type="submit">Ver proyectos registrados</button>
+    </form>
+</div>
 </div>

@@ -1,0 +1,119 @@
+.new{
+    border: 1px solid black;
+    margin: 15 435;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+}
+input {
+    width: 97%;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    height: 35px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+textarea{
+    width: 97%;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    height: 35px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+label {
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: 100;
+}
+.card{
+    border: 1px solid black;
+    margin: 15 435;
+    padding: 60 40;
+    padding-bottom: auto;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+}
+.card p{
+    border-radius: 15px;
+    background-color: #bdbaba;
+    padding: 9px;
+}
+.card input{
+    border-radius: 15px;
+    background-color: #bdbaba;
+    padding: 9px;
+}
+.card textarea{
+    border-radius: 15px;
+    background-color: #bdbaba;
+    padding: 9px;
+}
+#id{
+    display: none;
+}
+
+#edit{
+    float: right;
+    margin-top: -15px;
+}
+#add{
+    float: left;
+    overflow: hidden;
+    margin-top: -15px;
+}
+#edit .button:hover{
+    background-color: #7ED856;
+    color: black;
+}
+#save{
+    float: right;
+}
+#canceled{
+    float: left;
+    overflow: hidden;
+}
+.button {
+    background: #fff; /* color de fondo */
+    color: #004AAD; /* color de fuente */
+    border: 2px solid #004AAD; /* tamaño y color de borde */
+    padding: 13px 15px;
+    border-radius: 8px; 
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+  }
+  .button:before, .button:after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: -50%;
+    background-color: #004AAD; /* color de fondo hover */
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .button:after {
+    left: 100%;
+  }
+  .button:hover {
+    color: #fff; /* color de fuente hover */
+  }
+  .button:hover:before {
+    left: 0;
+  }
+  .button:hover:after {
+    left: 50%;
+  }

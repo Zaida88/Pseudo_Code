@@ -1,44 +1,52 @@
-<link rel="stylesheet" href="/CSS/project.css" />
-<form action="/project/list/{{user.idUser}}" method="get"></form>
-<center><label class="">Proyectos</label></center>
-<div class="container" id="container">
-  {{#each lista}}
-  <div class="">
-    <div id="pscode">
-      <h1 class="">{{nameProject}}</h1>
-    </div>
-    <div class="">
-      <div id="description">
-        <label class="title">Descripcion</label>
-        <h1 class="label">{{descriptionProject}}</h1>
-      </div>
-      <div id="logo">
-        <label class="title">logo</label>
-        <h1 class="label">{{logoProject}}</h1>
-      </div>
-      <div id="mission">
-        <label class="title">Mision</label>
-        <h1 class="label">{{mission}}</h1>
-      </div>
-      <div id="vision">
-        <label class="title">Vision</label>
-        <h1 class="label">{{vision}}</h1>
-      </div class="label">
-      <div class="edit" id="edit"><br>
-        <a href="/project/create/{{idProject}}"><button class="">Editar</button></a>
-      </div>
-    </div>
-  </div>
+<link rel="stylesheet" href="/src/public/css/project.css">
+<form action="/project/list" method="get"></form>
 
-  {{/each}}
-</div>
-{{#each listObjectives}}
-<div id="objectives">
-  <label class="label">Objetivos:</label>
-  <h1 class="title">{{objective}}</h1>
-</div>
-{{/each}}
-
-  <a href="/proyecto/agregar/{{idProject}}"><button class=""><b>Agregar
+<div id="container">
+    <div class="row">
+        {{#each list}}
+        <div id="card" class="card">
+            <div id="id">
+                <p>{{idProject}}</p>
+            </div>
+            <div id="name">
+                <label class="title">Nombre Proyecto:</label>
+                <p>{{nameProject}}</p>
+            </div>
+            <div id="description">
+                <label class="title">Descripcion:</label>
+                <p>{{descriptionProject}}</p>
+            </div>
+        
+            <div id="mission">
+                <label class="title">Mision:</label>
+                <p>{{mission}}</p>
+            </div>
+            <div id="vision">
+                <label class="title">Vision:</label>
+                <p>{{vision}}</p>
+            </div>
+            <div id="logo">
+                <label class="title">Logo:</label>
+                <p>{{logoProject}}</p>
+            </div>
+            <div id="edit">
+                <a href="/project/edit/{{idProject}}">
+                <button type="button" class="button">Editar</button>
+                </a>
+            </div>
+            <div id="add">
+                <a href="/project/add">
+                <button type="button" class="button">Agregar</button>
+                </a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    <div class="new">
+        <p> No tienes proyectos registrados actualmente</p>
+        <h3>Desea agregar uno</h3>
+        <a href="/project/add/{{idProject}}"><button class="button"><b>Agregar
         proyecto</b></button></a>
+    </div>
+    
 </div>
