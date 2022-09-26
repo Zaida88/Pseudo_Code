@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="">
+
+<form action="/userAssignment/createAssignment" method="post" enctype="multipart/form-data"></form>
+<div class="container">
+  <div class="title">Nueva asignacion</div><br><br>
+
+  <div>
+    
+    <label>Usuarios<br><br>
+      <input type="checkbox" id="cbox1" value="first_checkbox">{{firstName}}</label><br>
+  </div>
+
+<td>
+        <div id="firstName">
+          <label>Nombre</label>
+          <p>{{firstName}}</p>
+        </div>
+      </td>
+
+      <td>
+        <div id="nameRol">
+          <label>Rol</label>
+          <p>{{nameRol}}</p>
+        </div>
+      </td>
+
+      <td>
+        <div id="namePermission">
+          <label>Permiso</label>
+          <p>{{namePermission}}</p>
+        </div>
+      </td>
+
+</div>
+<div>
+  <a href="/userAssignment/list"><button>Cancelar</button></a>
+</div>

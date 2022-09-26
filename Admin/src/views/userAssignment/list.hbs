@@ -38,7 +38,7 @@
           href="/exercise/update" [loading]="(loaded$|async)!"> Editar
         </button>
         <button pButton type="button" class="p-button-danger p-button-rounded" icon="pi pi-trash"
-          pTooltip="Delete Teacher" href="/exercise/update" [loading]="(loaded$|async)!"> Eliminar
+          pTooltip="Delete user" href="/userAssignment/remove/{{idUser}}" [loading]="(loaded$|async)!"> Eliminar
         </button>
       </td>
       {{/each}}
