@@ -26,22 +26,22 @@ userAssignmentCtl.createUser = async (req, res) => {
 
 userAssignmentCtl.showAssignment = async (req, res) => {
     const id = req.params.id
-    const list = await sql.query('SELECT firstName, nameRol, namePermission FROM users u JOIN roles r ON u.idUser JOIN permissions p ON u.idUser')
-    res.render('userAssignment/createAssignment')
+    const roles = await sql.query('select * from roles')
+    const permission = await sql.query('select * from permissions')
+    res.render('userAssignment/createAssignment', {roles, permission})
 }
 
 userAssignmentCtl.createAssignment = async (req, res) => {
     const id = req.params.id
-    const { nameExercise, descriptionExercise, punctuationExercise, codeIdCode } = req.body
-    const newExercise = {
-        nameExercise,
-        descriptionExercise,
-        punctuationExercise,
-        codeIdCode: codeIdCode,
+    const {userIdUser, rolIdRol, permissionIdPermission} = req.body
+    const newAssignment = {
+        userIdUser: userIdUser,
+        rolIdRol: rolIdRol,
+        permissionIdPermission: permissionIdPermission,
     }
-    await orm.exercises.create(newExercise)
+    await orm.exercises.create(newAssignment)
     req.flash('success', 'Se creó exitosamente')
-    res.redirect('/exercise/listExercises/' + id);
+    res.redirect('/exercise/list/');
 }
 
 userAssignmentCtl.list = async (req, res) => {
