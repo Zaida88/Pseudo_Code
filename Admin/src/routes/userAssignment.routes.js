@@ -1,14 +1,14 @@
 const express = require('express');
 const routes = express.Router();
 
-const { showUser, list, get, createUser, createAssignment, edit, showAssignment } = require('../controllers/userAssignment.controller')
+const { showUser, list, get, createUser, createAssignment, update, showAssignment } = require('../controllers/userAssignment.controller')
 
-routes.get("/userAssignment/list", list)
-routes.post("/userAssignment/createUser", createUser)
-routes.get("/userAssignment/createUser", showUser)
-routes.post("/userAssignment/createAssignment", createAssignment)
-routes.get("/userAssignment/createAssignment", showAssignment)
-routes.get("/userAssignment/edit/:id", get) 
-routes.get("/userAssignment/update/:id", edit) 
+routes.get("/list", list)
+routes.post("/createUser", createUser)
+routes.get("/createUser", showUser)
+routes.post("/createAssignment", createAssignment)
+routes.get("/createAssignment", showAssignment)
+routes.get("/update/:id", get) 
+routes.get("/update/:id", update) 
 
 module.exports = routes; 

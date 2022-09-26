@@ -4,7 +4,6 @@ const orm = require('../databaseConfiguration/db_orm')
 const sql = require('../databaseConfiguration/db_sql')
 
 userAssignmentCtl.showUser = (req, res) => {
-    const id = req.params.id
     res.render('userAssignment/createUser')
 }
 
@@ -62,7 +61,7 @@ userAssignmentCtl.get = async (req, res) => {
     res.render('userAssignment/edit', { list })
 }
 
-userAssignmentCtl.edit = async (req, res) => {
+userAssignmentCtl.update = async (req, res) => {
     const id = req.params.id
     const { firstName, lastName, username, password, photo, email } = req.body
     const updatedUser = {
