@@ -58,9 +58,9 @@ passport.use(
 					username: username,
 					password: password
 				};
-				newUser.firstName = await helpers.encryptPassword(firstName);
-				newUser.lastName = await helpers.encryptPassword(lastName);
-				newUser.email = await helpers.encryptPassword(email);
+				newUser.firstName = await firstName;
+				newUser.lastName = await lastName;
+				newUser.email = await email;
 				newUser.password = await helpers.encryptPassword(password);
 				const result = await orm.users.create(newUser);
 

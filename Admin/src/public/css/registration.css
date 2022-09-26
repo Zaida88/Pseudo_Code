@@ -15,20 +15,20 @@ body {
 }
 
 .container {
-    padding: 1%;
+    padding: 2% 3% 3% 3%;
     position: absolute;
     width: 100%;
     height: fit-content;
-    max-width: 30%;
+    max-width: 35%;
     max-height: fit-content;
-    top: 8%;
-    left: 37%;
+    top: 4%;
+    left: 34%;
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 10%;
 }
 
 .container #title {
-    margin: 1% 0 3% 0;
+    margin-bottom: 3%;
     color: white;
     width: auto;
     height: auto;
@@ -86,7 +86,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 3px;
-    content: 'Seleccionar Archivo';
+    content: 'Seleccionar archivo';
     position: absolute;
     left: 0;
     right: 0;
@@ -103,5 +103,5 @@ body {
 }
 
 #src-file1::before {
-    content: 'Seleccionar Archivo';
+    content: 'Seleccionar archivo';
 }
