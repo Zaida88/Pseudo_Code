@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="/src/public/css/profile.css">
  <div class="ajustes">
+  <form action="/user_profile/profile_view" method="get"></form>
         <h1>Ajustes</h1>
     </div>
     {{#each User}}
@@ -17,7 +18,7 @@
               
                   <td>Nombre</td>
               
-                  <td>{{username}}</td>
+                  <td><p>{{username}}</p></td>
               
                  
               
@@ -27,7 +28,7 @@
               
                   <td>Correo</td>
               
-                  <td>{{email}}</td>
+                  <td><p>{{email}}</p></td>
               
                   
               
@@ -37,7 +38,7 @@
               
                   <td>contraseña</td>
               
-                  <td>{{password}}</td>
+                  <td><p>{{password}}</p></td>
               
                  
               

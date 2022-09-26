@@ -13,14 +13,16 @@ const user = {}
 
 
 user.show  = (req, res) => {
-    res.render("user_profile/profile_view", {user})
+    res.render("/user_profile/profile_view")
 };
 
 user.get_user = async (req, res, ) => {
-    const ids = req.params.id
-    const User = await sql.query('select idUser, username, photo, password from users where idUser = ?', [ids])
-    res.render('user_profile/profile_view', { User });
+    const id =req.user.idUser; 
+    const User = await sql.query('select idUser, username, photo, password from users where idUser = ?', [id])
+    res.render("/user_profile/profile_view");
+  
 };
+
 
 
 
