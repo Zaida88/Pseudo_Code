@@ -16,6 +16,7 @@
   </div>
 
   <table class="user_data">
+    {{#each User}}
     <form action="/asd" method="post">
       <tr>
 
@@ -59,6 +60,7 @@
         <a href="/"><button id="editar" type="submit">Guardar</button></a>
       </div>
     </form>
+    {{/each}}
   </table>
 
 </div>

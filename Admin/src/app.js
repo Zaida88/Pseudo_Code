@@ -9,6 +9,7 @@ const mysqlstore = require('express-mysql-session')(session);
 const bodyparser = require('body-parser');
 const fileUpload = require("express-fileupload");
 
+
 const { database } = require('./keys');
 
 const app = express();
@@ -65,7 +66,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('./routes/index.routes'))
 app.use(require('./routes/login.routes'))
 app.use('/dashboard',require('./routes/dashboard.routes'))
-app.use(require('./routes/profile.routes'))
+
+
 
 
 module.exports = app;
