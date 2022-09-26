@@ -39,13 +39,13 @@ app.post('', (req, res) => {
     return res.status(400).send('No files were uploaded.');
   }
 
-  // name of the input is sampleFile
+
   sampleFile = req.files.sampleFile;
   uploadPath = __dirname + '/upload/' + sampleFile.name;
 
   console.log(sampleFile);
 
-  // Use mv() to place file on the server
+
   sampleFile.mv(uploadPath, function (err) {
     if (err) return res.status(500).send(err);
 
