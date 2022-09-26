@@ -1,4 +1,4 @@
-var CryptoJS = require("crypto-js");
+let CryptoJS = require("crypto-js");
 
 const helpers = {};
 
