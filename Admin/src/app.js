@@ -66,7 +66,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('./routes/index.routes'))
 app.use(require('./routes/login.routes'))
 app.use('/dashboard',require('./routes/dashboard.routes'))
-
+app.use(require('./routes/profile.routes'))
+app.use(require('./routes/profileEdit.routes'))
 
 
 

@@ -36,5 +36,6 @@ req.flash("success","guardado");
 res.redirect("/user_profile/profile_view"+id)
 }
 
+module.exports = userEdit;
 
 
