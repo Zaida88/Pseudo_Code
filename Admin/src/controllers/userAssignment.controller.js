@@ -7,6 +7,13 @@ userAssignmentCtl.showUser = (req, res) => {
     res.render('userAssignment/createUser')
 }
 
+userAssignmentCtl.showUpdate = async (req, res) => {
+    const id = req.params.id
+    const assignment = await sql.query('SELECT * FROM user_roles us JOIN users u ON u.idUser = us.userIdUser JOIN roles r ON us.roleIdRol = r.idRol JOIN permissions p ON us.permissionIdPermission = p.idPermission where userIdUser = ?', [id])
+    const permission = await sql.query('select * from permissions')
+    res.render('userAssignment/update', { assignment, permission })
+}
+
 userAssignmentCtl.createUser = async (req, res) => {
     const id = req.params.id
     const { firstName, lastName, username, password, photo, email } = req.body
@@ -24,59 +31,47 @@ userAssignmentCtl.createUser = async (req, res) => {
 }
 
 userAssignmentCtl.showAssignment = async (req, res) => {
-    const id = req.params.id
+    const users = await sql.query('Select * from users where not exists (select * from user_roles WHERE userIdUser = idUser )')
     const roles = await sql.query('select * from roles')
-    const permission = await sql.query('select * from permissions')
-    res.render('userAssignment/createAssignment', {roles, permission})
+    const permissions = await sql.query('select * from permissions')
+    res.render('userAssignment/createAssignment', {users, roles, permissions})
 }
 
 userAssignmentCtl.createAssignment = async (req, res) => {
-    const id = req.params.id
-    const {userIdUser, rolIdRol, permissionIdPermission} = req.body
+    const {userIdUser, roleIdRol, permissionIdPermission} = req.body
     const newAssignment = {
         userIdUser: userIdUser,
-        rolIdRol: rolIdRol,
+        roleIdRol: roleIdRol,
         permissionIdPermission: permissionIdPermission,
     }
-    await orm.exercises.create(newAssignment)
+    await orm.userRoles.create(newAssignment)
     req.flash('success', 'Se creó exitosamente')
-    res.redirect('/exercise/list/');
+    res.redirect('/userAssignment/list');
 }
 
 userAssignmentCtl.list = async (req, res) => {
-    const list = await sql.query('SELECT firstName, nameRol, namePermission FROM users u JOIN roles r ON u.idUser JOIN permissions p ON u.idUser')
+    const list = await sql.query('SELECT * FROM user_roles us JOIN users u ON u.idUser = us.userIdUser JOIN roles r ON us.roleIdRol = r.idRol JOIN permissions p ON us.permissionIdPermission = p.idPermission')
     res.render('userAssignment/list', { list })
 }
 
 userAssignmentCtl.remove = async (req, res) => {
     const id = req.params.id
-    await sql.query('DELETE FROM users WHERE idUser = ?', [id])
+    await sql.query('DELETE FROM user_roles WHERE userIdUser = ?', [id])
     req.flash('success', 'Se eliminó exitosamente')
-    res.redirect('userAssignment/list' + id);
-}
-
-userAssignmentCtl.get = async (req, res) => {
-    const id = req.params.id
-    const list = await sql.query('select * from users where idUser = ?', [id])
-    res.render('userAssignment/edit', { list })
+    res.redirect('/userAssignment/list');
 }
 
 userAssignmentCtl.update = async (req, res) => {
     const id = req.params.id
-    const { firstName, lastName, username, password, photo, email } = req.body
-    const updatedUser = {
-        firstName,
-        lastName,
-        username,
-        password,
-        photo,
-        email,
+    const { permissionIdPermission } = req.body
+    const updatedAssignment = {
+        permissionIdPermission
     }
-    await orm.users.findOne({ where: { idUser: id } })
-        .then(actualize => {
-            actualize.update(updatedUser)
+    await orm.userRoles.findOne({ where: { userIdUser: id } })
+        .then(update => {
+            update.update(updatedAssignment)
             req.flash('success', 'successfully upgraded')
-            res.redirect('userAssignment/list')
+            res.redirect('/userAssignment/list')
         })
 }
 

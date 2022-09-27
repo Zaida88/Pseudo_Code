@@ -1,21 +1,30 @@
 <link rel="stylesheet" href="">
 
-<form action="/userAssignment/createAssignment" method="post" enctype="multipart/form-data"></form>
-<div class="container">
-  <div class="title">Nueva asignacion</div><br><br>
-
-  <div>
-    
-    <label>Usuarios<br><br>
-      <input type="checkbox" id="cbox1" value="first_checkbox">{{firstName}}</label><br>
+<form action="/userAssignment/createAssignment" method="post" enctype="multipart/form-data">
+  <div class="container">
+    <div class="title">Nueva asignacion</div><br><br>
+    <div>
+      <label>Usuarios<br><br>
+        {{#each users}}
+        <input type="checkbox" id="cbox1" name="userIdUser" value="{{idUser}}">{{firstName}}</label><br>
+      {{/each}}
 
       <label>Roles<br><br>
-      <input type="checkbox" id="cbox1" value="first_checkbox">{{firstName}}</label><br>
+        {{#each roles}}
+        <input type="checkbox" id="cbox1" name="roleIdRol" value="{{idRol}}">{{nameRol}}</label><br>
+      {{/each}}
 
       <label>Permisos<br><br>
-      <input type="checkbox" id="cbox1" value="first_checkbox">{{firstName}}</label><br>
+        {{#each permissions}}
+        <input type="checkbox" id="cbox1" name="permissionIdPermission"
+          value="{{idPermission}}">{{namePermission}}</label><br>
+      {{/each}}
+    </div>
   </div>
-</div>
+  <div>
+    <button class="button" type="submit">Crear</button>
+  </div>
+</form>
 <div>
   <a href="/userAssignment/list"><button>Cancelar</button></a>
 </div>

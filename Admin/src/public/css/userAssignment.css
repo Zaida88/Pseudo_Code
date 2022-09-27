@@ -1,28 +1,39 @@
-/* spacing */
+*.content-table {
+  border-collapse: collapse;
+  margin: 50px 0px 0px 150px;
+  font-size: 1em;
+  font-family: sans-serif;
+  min-width: 750px;
+  text-align: center;
+}
+thead{
+  border: 2px solid black;
 
-table {
-    table-layout: fixed;
-    width: 100%;
-    border-collapse: collapse;
-    border: 3px solid purple;
-  }
-  
-  thead th:nth-child(1) {
-    width: 30%;
-  }
-  
-  thead th:nth-child(2) {
-    width: 20%;
-  }
-  
-  thead th:nth-child(3) {
-    width: 15%;
-  }
-  
-  thead th:nth-child(4) {
-    width: 35%;
-  }
-  
-  th, td {
-    padding: 20px;
-  }
+}
+
+.butt{
+  background-color: #093faa;
+  text-align: center;
+  color: white;
+  width: 15%;
+}
+
+.container{
+  height: 20%;
+}
+
+.butto{
+  background-color: white;
+  border:none;
+  font-size: 22px;
+  transition: 0.3s;
+}
+.tr{
+  border-collapse: collapse;
+  margin: 3px 0px 0px 150px;
+  font-size: 1em;
+  font-family: sans-serif;
+  min-width: 750px;
+  text-align: center;
+  border: 2px solid black;
+}
