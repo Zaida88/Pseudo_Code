@@ -5,7 +5,7 @@ const orm = require('../databaseConfiguration/db_orm')  //eliminar actualisar
 
 
 userEditCtl.showUserProfileEdit  = (req, res) => {
-    res.render("./user_profile/profileEdit")
+    res.render("./userProfile/profileEdit")
 };
 
 
@@ -25,7 +25,7 @@ await orm.clients.findOne({where:{idUser: ids}})
   toUpdate.update(newShipmentv)
 })
 req.flash("success","guardado");
-res.redirect("/user_profile/profile"+id)
+res.redirect("./userProfile/profile"+id)
 }
 
 module.exports = userEditCtl;
