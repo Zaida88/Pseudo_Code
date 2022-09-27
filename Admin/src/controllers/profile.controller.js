@@ -8,7 +8,7 @@ const orm = require('../databaseConfiguration/db_orm')
 
 
 userProfileViewCtl.showUserProfile  = (req, res) => {
-    res.render("/user_profile/profileView")
+    res.render("./user_profile/profileView")
 };
 
 userProfileViewCtl.fetchData = async (req, res, ) => {
