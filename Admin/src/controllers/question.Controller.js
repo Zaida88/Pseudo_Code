@@ -24,7 +24,7 @@ question.list=async(req,res)=>{
 question.bring=async(req,res)=>{
     const id=req.params.id
     const list=await sql.query("select*from questions where idQuestion=?", [id])
-    res.render("question/edit",{list})
+    res.render("question/update",{list})
 }
 question.update=async(req,res)=>{
     const id=req.params.id

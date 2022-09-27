@@ -17,7 +17,6 @@ answer.send=async(req,res)=>{
     req.flash("success","guardado exitosamente")
     res.redirect("/answer/list/"+ids)
 }
-
 answer.list=async(req,res)=>{
     const list=await sql.query("select*from answers")
     res.render("answer/list", {list})
