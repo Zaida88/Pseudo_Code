@@ -25,7 +25,7 @@ await orm.clients.findOne({where:{idUser: ids}})
   toUpdate.update(newShipmentv)
 })
 req.flash("success","guardado");
-res.redirect("/user_profile/profileView"+id)
+res.redirect("/user_profile/profileEdit"+id)
 }
 
 module.exports = userEditCtl;
