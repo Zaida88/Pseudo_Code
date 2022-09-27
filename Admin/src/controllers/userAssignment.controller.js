@@ -6,7 +6,7 @@ const sql = require('../databaseConfiguration/db_sql')
 userAssignmentCtl.showUser = (req, res) => {
     res.render('userAssignment/createUser')
 }
-
+     
 userAssignmentCtl.showUpdate = async (req, res) => {
     const id = req.params.id
     const assignment = await sql.query('SELECT * FROM user_roles us JOIN users u ON u.idUser = us.userIdUser JOIN roles r ON us.roleIdRol = r.idRol JOIN permissions p ON us.permissionIdPermission = p.idPermission where userIdUser = ?', [id])
