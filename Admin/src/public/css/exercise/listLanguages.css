@@ -13,8 +13,9 @@ body {
     max-height: fit-content;
 }
 
-.container #title {
-    text-align: center;
+.container #title,
+#description {
+    text-align: justify;
     width: auto;
     height: auto;
     word-wrap: break-word;
@@ -23,26 +24,21 @@ body {
 
 .contents {
     display: flex;
-    justify-content: center;
-    max-width: auto;
+    justify-content: left;
     display: flex;
     height: fit-content;
     flex-wrap: wrap;
     word-wrap: break-word;
 }
 
-.contents #data {
+#data {
     background-color: rgb(224, 230, 239);
     margin: 1%;
-    padding: 2%;
+    padding: 1%;
     border: solid black 1px;
     border-radius: 10%;
 }
 
-.contents label {
-    font-size: 20px;
-}
-
-.contents p {
-    text-align: center;
+#option{
+    padding-top: 7%;
 }

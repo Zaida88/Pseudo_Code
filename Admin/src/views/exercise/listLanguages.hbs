@@ -1,25 +1,30 @@
-<link rel="stylesheet" href="#" />
-<div id="title">
-    <label>Ejercicios</label>
-</div>
-<form action="/exercise/listLanguages" method="get"></form>
-<div class="container" id="container">
-    {{#each listLanguages}}
+<link rel="stylesheet" href="/css/exercise/listLanguages.css" />
+<div class="container">
+    <form action="/exercise/listLanguages" method="get"></form>
+    <div id="title">
+        <h2>Lenguajes</h2>
+    </div>
+    <div id="description">
+        <p>Lenguajes disponibles para asignar ejercicios</p>
+    </div>
     <div class="contents">
-        <div id="detail">
-            <img src="/img/user/{{imageLanguage}}">
-            <label>{{nameLanguage}}</label>
-            <a href="/exercise/create/{{idLanguage}}"><button class="button">Agregar Ejercico</button></a>
+        {{#each listLanguages}}
+        <div id="data">
+            <h3>{{nameLanguage}}</h3>
+            <div id="option">
+                <a href="/exercise/create/{{idLanguage}}"><button class="button">Agregar ejercico</button></a>
+            </div>
+            <div id="option">
+                <a href="/exercise/listExercises/{{idLanguage}}"><button type="button">Visualizar
+                        ejercicios</button></a>
+            </div>
         </div>
-        <div id="exercise">
-            <a href="/exercise/listExercises/{{idLanguage}}"><button type="button">Visualizar Ejercicios</button></a>
+        {{else}}
+        <div class="message">
+            <h2>No tiene Lenguajes registrados</h2>
+            <h3>¿Desea agregar?</h3>
+            <a href="#"><button class="button"><b>Agregar</b></button></a>
         </div>
+        {{/each}}
     </div>
-    {{else}}
-    <div class="mensaje">
-        <h2>No tiene Lenguajes registrados</h2>
-        <h3>¿Desea agregar?</h3>
-        <a href="#"><button class="boton"><b>Agregar</b></button></a>
-    </div>
-    {{/each}}
 </div>
