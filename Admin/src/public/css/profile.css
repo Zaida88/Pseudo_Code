@@ -10,7 +10,7 @@
 
 }
 
-.profile_user{
+.profileUser{
     
     display: block;
 position: absolute;
@@ -19,10 +19,10 @@ position: absolute;
     width: 600px;
     height: 400px;
 }
-.user_image{
+.userImage{
     display: inline;
 }
-.user_data{
+.userData{
     padding-left: 30px;
     display: inline-block;
 }
@@ -35,12 +35,12 @@ position: absolute;
     text-align: center;
     color: black;
 }
-.to_edit{
+.toEdit{
     position: relative;
     top: 200px;
     left: 30%;
 }
-.to_edit1 button{
+.toEdit1 button{
     position: relative;
     top: -40px;
     left: 50%;
@@ -51,7 +51,7 @@ position: absolute;
     border-radius: 10px;
     border: none;
 }
-.to_edit button{
+.toEdit button{
     color: black;
     width: 100px;
     height: 40px;

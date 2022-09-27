@@ -1,10 +1,10 @@
 const express = require('express');
 const routes = express.Router();
 
-const {show , get_user} = require('../controllers/profile.controller')
+const {showUserProfile , fetchData } = require('../controllers/profile.controller')
 
-routes.get('/profile_view', show);
-routes.post('profile_view', get_user);
+routes.get('/profileView', showUserProfile);
+routes.post('/profileView', fetchData );
 
 
 module.exports = routes;

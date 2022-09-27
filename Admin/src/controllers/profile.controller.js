@@ -1,29 +1,24 @@
 
+const userProfileViewCtl = {}
 const sql = require('../databaseConfiguration/db_sql')
 const orm = require('../databaseConfiguration/db_orm')
 
 
-
-
-
-const userProfileView = {}
-
 //modulo de mostar 
 
 
-
-userProfileView.show  = (req, res) => {
-    res.render("/user_profile/profile_view")
+userProfileViewCtl.showUserProfile  = (req, res) => {
+    res.render("/user_profile/profileView")
 };
 
-userProfileView.get_user = async (req, res, ) => {
+userProfileViewCtl.fetchData = async (req, res, ) => {
     const id =req.user.idUser; 
     const User = await sql.query('select idUser, username, photo, password from users where idUser = ?', [id])
-    res.render("/user_profile/profile_view");
+    res.render("/user_profile/profileView");
   
 };
 
-module.exports = userProfileView;
+module.exports = userProfileViewCtl;
 
 
 
