@@ -4,17 +4,18 @@ const orm = require("../databaseConfiguration/db_orm")
 const sql = require("../databaseConfiguration/db_sql")
 
 test.show=(req,res)=>{
-    res.render("test/add")
+    res.render("test/create")
 }
 test.send=async(req,res)=>{
+    const ids=req.user.idUser
     const{nameTests, descriptionTests}=req.body
-    const newtest={
+    const newTest={
         nameTests,
         descriptionTests
     }
-    await  orm.tests.create(newtest)
+    await  orm.tests.create(newTest)
     req.flash("success","guardado exitosamente")
-    res.redirect("/test/list")
+    res.redirect("/tests/list/"+ids)
 }
 
 test.list=async(req,res)=>{
@@ -23,22 +24,24 @@ test.list=async(req,res)=>{
 }
 test.bring=async(req,res)=>{
     const id=req.params.id
-    const list=await sql.query("select*from tests where idTest=?", {id})
-    res.render("test/edit",{list})
+    const list=await sql.query("select*from tests where idTests=?", [id])
+    res.render("test/update",{list})
+    
 }
 test.update=async(req,res)=>{
     const id=req.params.id
+    const ids=req.user.idUser
     const {nameTests,descriptionTests}=req.body
-    const newtest={
+    const newTest={
         nameTests,
         descriptionTests
     }
     await  orm.tests.findOne({where: {idTests: id}})
-    .then(updatetest=>{
-        updatetest.update(newtest)
+    .then(updateTest=>{
+        updateTest.update(newTest)
     })
         
     req.flash("success","guardado exitosamente")
-    res.redirect("/test/list")
+    res.redirect("/tests/list/"+ids)
 }
 module.exports= test

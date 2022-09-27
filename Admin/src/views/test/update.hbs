@@ -1,15 +1,15 @@
 <link rel="stylesheet" href="style.css">
 {{#each list}} 
-<form action="/test/edit/{{idTests}}" method="post">
+<form action="/tests/update/{{idTests}}" method="post">
  <div id="container">
     <div id="title">
         <p>Agregar Prueba</p>
     </div>
-    <div id="Nametests">
+    <div id="nameTests">
         <label>Nombre:</label>
         <input type="text" name="nameTests" id="" required aria-checked="true" value="{{nameTests}}">
     </div>
-    <div id="Descriptiontests">
+    <div id="descriptionTests">
         <label>Descripcion</label>
         <textarea name="descriptionTests" id="" required aria-checked="true">{{descriptionTests}}</textarea>
     </div>

@@ -4,17 +4,18 @@ const orm = require("../databaseConfiguration/db_orm")
 const sql = require("../databaseConfiguration/db_sql")
 
 answer.show=(req,res)=>{
-    res.render("answer/add")
+    res.render("answer/create")
 }
 answer.send=async(req,res)=>{
+    const ids=req.user.idUser
     const{nameAnswer, descriptionAnswer}=req.body
-    const newanswer={
+    const newAnswer={
         nameAnswer, 
         descriptionAnswer
     }
-    await  orm.answers.create(newanswer)
+    await  orm.answers.create(newAnswer)
     req.flash("success","guardado exitosamente")
-    res.redirect("/answer/list")
+    res.redirect("/answer/list/"+ids)
 }
 
 answer.list=async(req,res)=>{
@@ -23,22 +24,23 @@ answer.list=async(req,res)=>{
 }
 answer.bring=async(req,res)=>{
     const id=req.params.id
-    const list=await sql.query("select*from answers where idAnswer=?", {id})
-    res.render("answer/edit",{list})
+    const list=await sql.query("select*from answers where idAnswer=?", [id])
+    res.render("answer/update",{list})
 }
 answer.update=async(req,res)=>{
     const id=req.params.id
+    const ids=req.user.idUser
     const {nameAnswer, descriptionAnswer}=req.body
-    const newanswer={
+    const newAnswer={
         nameAnswer,
          descriptionAnswer
     }
     await  orm.answers.findOne({where: {idAnswer: id}})
-    .then(updateanswer=>{
-        updateanswer.update(newanswer)
+    .then(updateAnswer=>{
+        updateAnswer.update(newAnswer)
     })
         
     req.flash("success","guardado exitosamente")
-    res.redirect("/answer/list")
+    res.redirect("/answer/list/"+ids)
 }
 module.exports= answer

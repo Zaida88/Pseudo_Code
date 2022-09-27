@@ -19,7 +19,7 @@ const tests = (sequelize, type) => {
             allowNull: false
         }
     }, {
-        timestamps: false,
+        timesTamps: false,
     })
 }
 module.exports = tests

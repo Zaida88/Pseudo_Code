@@ -3,10 +3,10 @@ const router = express.Router();
 
 const { show, send, list, bring, update }=require("../controllers/answer.Controller")
 
-router.get("/add", show)
-router.post("/add",send)
-router.get("/list",list)
-router.get("/edit",bring)
-router.post("/edit",update)
+router.get("/create/:id", show)
+router.post("/create/",send)
+router.get("/list/:id",list)
+router.get("/update/:id",bring)
+router.post("/update/:id",update)
 
 module.exports=router

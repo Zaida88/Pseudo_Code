@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="style.css">
-<form action="/test/list" method="get"></form>
+<form action="/tests/list/{{user.idUser}}" method="get"></form>
 
 <div id="container">
     <div class="row">
@@ -15,12 +15,12 @@
                 <p>{{descriptionTests}}</p>
             </div>
             <div id="edit">
-                <a href="/tests/edit/{{idTests}}">
+                <a href="/tests/update/{{idTests}}">
                 <button type="button">Editar</button>
                 </a>
             </div>
-            <div id="addtests">
-                <a href="/tests/add">
+            <div id="createTests">
+                <a href="/answer/create/{{idTests}}">
                 <button type="button">Agregar</button>
                 </a>
             </div>
