@@ -1,30 +1,52 @@
-<link rel="stylesheet" href="">
+<link rel="stylesheet" href="/css/userAssignment.css">
 
 <form action="/userAssignment/createAssignment" method="post" enctype="multipart/form-data">
-  <div class="container">
-    <div class="title">Nueva asignacion</div><br><br>
+  <div class="tit">
+    <center>
+      <h2>Nueva asignacion</h2>
+    </center>
+  </div><br><br>
+  <div class="conten">
+    <table class="content-table1 content--small" id="content-table1">
+      <thead>
+        <tr>
+          <th><label><button class="bot">Usuarios</button></label></th>
+          <th><label><button class="bot">Roles</button></label></th>
+          <th><label><button class="bot">Permisos</button></label></th>
+        </tr>
+      </thead>
+    </table>
     <div>
-      <label>Usuarios<br><br>
-        {{#each users}}
-        <input type="checkbox" id="cbox1" name="userIdUser" value="{{idUser}}">{{firstName}}</label><br>
-      {{/each}}
+      <table>
+        <tbody class="fields">
+          <tr>
+            <td class="t">
+              {{#each users}}
+              <input type="checkbox" id="cbox1" name="userIdUser" value="{{idUser}}"> {{firstName}}</label><br>
+              {{/each}}
+            </td>
 
-      <label>Roles<br><br>
-        {{#each roles}}
-        <input type="checkbox" id="cbox1" name="roleIdRol" value="{{idRol}}">{{nameRol}}</label><br>
-      {{/each}}
+            <td class="t">
+                {{#each roles}}
+                <input type="checkbox" id="cbox1" name="roleIdRol" value="{{idRol}}"> {{nameRol}}</label><br>
+              {{/each}}
+            </td>
 
-      <label>Permisos<br><br>
-        {{#each permissions}}
-        <input type="checkbox" id="cbox1" name="permissionIdPermission"
-          value="{{idPermission}}">{{namePermission}}</label><br>
-      {{/each}}
+            <td class="t">
+                {{#each permissions}}
+                <input type="checkbox" id="cbox1" name="permissionIdPermission"
+                  value="{{idPermission}}"> {{namePermission}}</label><br>
+              {{/each}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
   <div>
-    <button class="button" type="submit">Crear</button>
+    <button class="butt1" type="submit">Guardar</button>
   </div>
 </form>
 <div>
-  <a href="/userAssignment/list"><button>Cancelar</button></a>
+  <a href="/userAssignment/list"><button class="but">Cancelar</button></a>
 </div>

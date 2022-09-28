@@ -1,39 +1,166 @@
-*.content-table {
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.conten{
+  height: 200px;
+  display: flex;
+  color: black;
+  flex-direction: column;
+  margin: 10px 0 20px;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.containerCre {
+  padding: 2%;
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  max-width: 50%;
+  max-height: fit-content;
+  top: 20%;
+  left: 28%;
+  background-color: #D0D3D4;
+  border-radius: 13px;
+  text-align: justify;
+}
+
+
+.container {
+  max-width: 90%;
+  max-height: fit-content;
+  width: 100%;
+  height: fit-content;
+}
+
+.containe {
+  max-width: 5%;
+  max-height: fit-content;
+  width: 100%;
+  height: fit-content;
+}
+
+.content-table {
   border-collapse: collapse;
-  margin: 50px 0px 0px 150px;
+  margin: 50px 0px 0px 250px;
   font-size: 1em;
   font-family: sans-serif;
   min-width: 750px;
   text-align: center;
+  border: 3px solid black;
+  width: auto;
+  height: auto;
 }
-thead{
-  border: 2px solid black;
 
-}
-
-.butt{
-  background-color: #093faa;
+.content-table1 {
+  border-collapse: collapse;
+  margin: 50px 0px 0px 750px;
+  font-size: 1em;
+  font-family: sans-serif;
+  min-width: 750px;
   text-align: center;
-  color: white;
-  width: 15%;
+  width: auto;
+  height: auto;
 }
 
-.container{
+.container {
   height: 20%;
 }
 
-.butto{
+.edit{
+  
+}
+
+.title {
+  margin: 3% 0 50% 0;
+  color: black;
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+  overflow: auto;
+}
+
+.butt {
+  background-color: #093faa;
+  text-align: center;
+  color: white;
+  width: auto;
+}
+
+.butt1 {
+  background-color: #093faa;
+  text-align: center;
+  color: white;
+  width: auto;
+  position: absolute;
+  top: 56%;
+  left: 70%;
+}
+
+.bot {
+  background-color: #b8b9bb;
+  text-align: center;
+  color: black;
+  width: auto;
+  border: none;
+  border-radius: 8px;
+  width: 150px;
+}
+
+.but {
+  background-color: #6f6f6f;
+  text-align: center;
+  color: white;
+  width: auto;
+  position: absolute;
+  top: 57%;
+  left: 30%;
+}
+
+.butto {
   background-color: white;
-  border:none;
-  font-size: 22px;
+  border: none;
   transition: 0.3s;
 }
-.tr{
+
+.tr {
   border-collapse: collapse;
-  margin: 3px 0px 0px 150px;
+  margin: 3px 0px 0px 250px;
   font-size: 1em;
   font-family: sans-serif;
   min-width: 750px;
   text-align: center;
-  border: 2px solid black;
+  border: 3px solid black;
+}
+
+.t {
+  border-collapse: collapse;
+  font-size: 1em;
+  font-family: sans-serif;
+  min-width: 250px;
+  text-align: center;
+}
+
+.fields {
+  padding-top: 10px;
+  padding-bottom: 40px;
+  float: left;
+  width: auto;
+  margin: 45px;
+  margin: 6px 0px 0px 750px;
+  font-size: 1em;
+  font-family: sans-serif;
+}
+
+@media only screen and (min-width: 500px) {
+
+  .conten{
+
+  }
+
 }

@@ -1,10 +1,15 @@
-<link rel="stylesheet" href="">
+<link rel="stylesheet" href="/css/userAssignment.css">
 {{#each assignment}}
 <form action="/userAssignment/update/{{userIdUser}}" method="post" enctype="multipart/form-data">
 
-  <div class="container">
-    <div class="title">Editar</div><br><br>
-    <div>
+<div class="tit">
+    <center>
+      <h2>Editar</h2>
+    </center>
+  </div><br><br
+  
+  <div class="containe">
+    <div class="edit"
       <label>Usuario<br><br>
         <input type="text" name="userIdUser" value="{{firstName}}" readonly>
         <label>Rol<br><br>
