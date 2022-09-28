@@ -1,43 +1,70 @@
-<link rel="stylesheet" href="/src/public/css/project.css">
+<link rel="stylesheet" href="/CSS/project.css">
+<div class="container">
+    <form action="/project/create/" method="post">
+        {{#each max}}
+        <input class="none" type="text" name="idProject" id="idProject" value="{{'max(iProject)'}}" readonly />
+        {{/each}}
 
-<form action="/project/add" method="post">
-    <div class="container">
-        <div id="title">
+        <div id="title" class="title text-center">
             <h1>NUEVO PROYECTO</h1>
         </div>
-        <div id="card" class="card">
-            <div id="name">
-                <label>Nombre proyecto:</label>
-                <input type="text" name="nameProject" id="nameProject" required aria-checked="true">
+        <div id="create" class="forms form-row">
+            <div id="name" class="form-group col-md-6">
+                <div class="">
+                    <label>Nombre proyecto:</label>
+                    <input type="text" name="nameProject" id="nameProject" required aria-checked="true">
+                </div>
             </div>
-            <div id="description">
-                <label>Descripcion:</label>
-                <textarea name="descriptionProject" id="descriptionProject" required aria-checked="true"></textarea>
+
+            <div id="description" class="form-group col-md-6">
+                <div class="">
+                    <label>Descripcion:</label>
+                    <textarea name="descriptionProject" id="descriptionProject" required aria-checked="true"></textarea>
+                </div>
             </div>
-            <div id="logo">
-                <label>Logo:</label>
-                <textarea name="logoProject" id="logoProject" required aria-checked="true"></textarea>
+            <div id="mission" class="form-group col-md-6">
+                <div class="">
+                    <label>Mision:</label>
+                    <textarea name="mission" id="mission" required aria-checked="true"></textarea>
+                </div>
             </div>
-            <div id="missionProject">
-                <label>Mision:</label>
-                <textarea name="mission" id="mission" required aria-checked="true"></textarea>
+            <div id="vision" class="form-group col-md-6">
+                <div class="">
+                    <label>Vision:</label>
+                    <textarea name="vision" id="vision" required aria-checked="true"></textarea>
+                </div>
             </div>
-            <div id="visionProject">
-                <label>Logo:</label>
-                <textarea name="vision" id="vision" required aria-checked="true"></textarea>
+            {{#each listO}}
+            <div id="Objetives">
+                <label class="title">Objetivos:</label>
+                <p>{{Objectives}}</p>
             </div>
-            <div id="canceled">
-                <button type="submit" class="button">Cancelar</button>
+            {{/each}}
+            <div id="logo" class="form-group col-md-6">
+                    <label>Logo:</label>
+                    <br>
+                <div class="file-select">
+                    <input type="file" name="photo" id="filePicker" accept="image/*" required>
+                    
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg>
             </div>
-            <div id="save">
-                <button type="submit" class="button">Guardar</button>
+
+            <div class="form-group col-md-6">
+                <div>
+                </div>
+            </div>
+
+            
+            <div id="save" class="form-group col">
+                <button type="submit" class="btn btn-primary button ">Guardar</button>
+            </div>
+        
+    </form>
+            <div id="next">
+                <form action="/project/list/{{user.idUser}}" method="get">
+                    <button class="btn btn-primary button" type="submit">Cancelar</button>
+                </form>
             </div>
         </div>
-</form>
-
-<div id="next">
-    <form action="/project/list/{{user.id}}" method="get">
-        <button class="button" type="submit">Ver proyectos registrados</button>
-    </form>
-</div>
 </div>
