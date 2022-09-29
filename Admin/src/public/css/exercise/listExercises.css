@@ -44,7 +44,8 @@ body {
 
 .optionDetail #detail {
     border: 1px black solid;
-    background-color: #b2bff8;
+    background-color: #093faa;
+    color: white;
 }
 
 .optionDelete #delete {

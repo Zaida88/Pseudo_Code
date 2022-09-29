@@ -91,7 +91,7 @@ body {
 .options #back {
     border: 1px black solid;
     padding: 0 6%;
-    background-color: #919191;
+    background-color: #6f6f6f;
     color: white;
 }
 
@@ -103,6 +103,6 @@ body {
 .options #save {
     border: 1px black solid;
     padding: 0 6%;
-    background-color: #5271FF;
+    background-color: #093faa;
     color: white;
 }

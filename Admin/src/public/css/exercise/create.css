@@ -83,7 +83,7 @@ body {
 .submit button {
     border: 1px black solid;
     padding: 0 6%;
-    background-color: #1338be;
+    background-color: #093faa;
     color: white;
 }
 
@@ -96,6 +96,6 @@ body {
 
 .cancel button {
     border: 1px black solid;
-    background-color: #919191;
+    background-color: #6f6f6f;
     color: white;
 }
