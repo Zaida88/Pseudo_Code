@@ -15,7 +15,7 @@ answer.send=async(req,res)=>{
     }
     await  orm.answers.create(newAnswer)
     req.flash("success","guardado exitosamente")
-    res.redirect("/answer/list/"+ids)
+    res.redirect("/answers/list/"+ids)
 }
 answer.list=async(req,res)=>{
     const list=await sql.query("select*from answers")
@@ -40,6 +40,6 @@ answer.update=async(req,res)=>{
     })
         
     req.flash("success","guardado exitosamente")
-    res.redirect("/answer/list/"+ids)
+    res.redirect("/answers/list/"+ids)
 }
 module.exports= answer

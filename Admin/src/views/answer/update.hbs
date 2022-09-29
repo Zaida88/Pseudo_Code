@@ -1,17 +1,13 @@
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/css/answer/update.css">
 {{#each list}} 
-<form action="/answer/update/{{idTests}}" method="post">
+<form action="/answers/update/{{idAnswer}}" method="post">
  <div id="container">
     <div id="title">
         <p>Agregar Prueba</p>
     </div>
     <div id="nameAnswers">
         <label>Nombre:</label>
-        <input type="text" name="nameAnswers" id="" required aria-checked="true" value="{{nameAnswers}}">
-    </div>
-    <div id="descriptionAnswers">
-        <label>Descripcion</label>
-        <textarea name="descriptionAnswers" id="" required aria-checked="true">{{descriptionAnswers}}</textarea>
+        <input type="text" name="answer" id="" required aria-checked="true" value="{{nameAnswers}}">
     </div>
     <div id="button">
         <button type="submit">Guardar</button>

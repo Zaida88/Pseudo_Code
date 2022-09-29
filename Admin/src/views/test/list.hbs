@@ -25,6 +25,16 @@
                 </a>
             </div>
         </div>
+        {{else}}
+        <div id="messaje">
+            <div id="notAdded">
+                <p></p>
+            </div>
+            <div id="buttonMessaje"><a href="/tests/create/{{user.idUser}}">
+                <button type="button">crear</button>
+                </a>
+            </div>
+        </div>
         {{/each}}
     </div>
 </div>

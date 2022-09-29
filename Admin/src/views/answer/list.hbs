@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="/css/answer/list.css">
 <form action="/answers/list/{{user.idUser}}" method="get"></form>
 
 <div id="container">
@@ -6,16 +6,13 @@
         {{#each list}}
         <div id="card">
             <div id="id">
-                <p>{{idAnswers}}</p>
+                <p>{{idAnswer}}</p>
             </div>
             <div id="name">
-                <p>{{nameAnswers}}</p>
-            </div>
-            <div id="description">
-                <p>{{descriptionAnswers}}</p>
+                <p>{{answer}}</p>
             </div>
             <div id="edit">
-                <a href="/answers/update/{{idAnswers}}">
+                <a href="/answers/update/{{idAnswer}}">
                 <button type="button">Editar</button>
                 </a>
             </div>

@@ -1,3 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    outline: none;
+    text-decoration: none;
+
+}
+
+body{
+    background-color: rgb(249, 242, 242);
+}
 #container{
     position: absolute;
     width: 100%;
@@ -7,7 +19,19 @@
     top: 20%;
     left: 25%;
     text-align: center;
-    background-color: aqua;
+    background-color: rgb(200, 204, 208);
+    display: flex;
+    color: rgb(255, 255, 255);
+    flex-direction: column;
+    margin:30px;
+    margin-left: auto;
+    margin-right: auto; 
+    width: 70%;
+    padding: 15px;
+    
+    align-items: center;
+    justify-content: center;
+    border-radius:20px;
 }
 #title{
    position: absolute; 
@@ -27,6 +51,12 @@
 #button{
     position: absolute;
     top: 65%;
+    width: 100%;
+    background-color: #004AAD;
+}
+#button_cancel{
+    position: absolute;
+    top: 80%;
     width: 100%;
 }
 #container label{
@@ -48,4 +78,12 @@
     position: absolute;
     width: 40%;
     left: 30%;
+    background-color: #004AAD;
+
+}
+#button button_cancel{
+    position: absolute;
+    width: 50%;
+    left: 25%;
+   
 }
