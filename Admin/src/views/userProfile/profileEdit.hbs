@@ -1,28 +1,31 @@
-<link rel="stylesheet" href="/src/public/css/profile.css">
+<link rel="stylesheet" href="profile.css">
 <div class="ajustes">
   <h1>Ajustes</h1>
 </div>
 
-<div class="profileUser">
-  <div class="profile">
-    <div class="userImage">
-       {{#each User}}
-      <form action="/user_profile/profile_edit{{user.idUser}}" method="post" enctype="multipart/form-data">
-        <input type="file" name="sampleFlie" accept="image/*"  value="{{photo}}"/>
-         {{/each}}
-        <div class="toEdit1">
-          <button id="editar" type="submit">Editar foto</button>
-        </div>
-      </form>
-    </div>
-  </div>
+<form action="/user_profile/profile_edit{{user.idUser}}" method="post">
+  <div class="profileUser">
+    <div class="profile">
+      <div class="changeImage">
+       
 
-  <table class="userData">
-    {{#each User}}
-    <form action="/user_profile/profile_edit{{user.idUser}}" method="post">
+        <div id="changeImage">
+          <img src="{{photo}}" id="imagePreview" alt="default img">
+
+        </div>
+        <div>
+          <input type="file" name="photo" id="filePicker" accept="image/*" required>
+        </div>
+
+      </div>
+    </div>
+
+    <table class="userData">
+
+
       <tr>
 
-        <td>Nombre</td>
+        <td><label>Nombre de usuario:</label></td>
 
         <td><input type="text" name="userName" class="texting" value="{{username}}"> </td>
 
@@ -48,7 +51,7 @@
         <td> <img src="/edit.png" alt="" width="40px">
 
       </tr>
-       <tr>
+      <tr>
 
         <td>Rol</td>
 
@@ -61,10 +64,118 @@
       <div class="toEdit">
         <a href="/"><button id="editar" type="submit">Guardar</button></a>
       </div>
-    </form>
-    {{/each}}
-  </table>
+</form>
+
+</table>
 
 </div>
 
 </div>
+
+<style>
+ *{
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    outline: none;
+    text-decoration: none;
+
+
+
+}
+.toEdit button:hover {
+ background-color: #002a61;
+}
+
+
+.profileUser{
+    
+    display: block;
+position: absolute;
+   top: 200px;
+    left: 35%;
+    width: 600px;
+    height: 400px;
+}
+.userImage{
+    display: inline;
+}
+.userData{
+    padding-left: 30px;
+    display: inline-block;
+}
+.ajustes{
+   position: absolute;
+   top: 120px;
+   left: 50%;
+}
+.ajustes h1{
+    text-align: center;
+    color: black;
+}
+.toEdit{
+    position: relative;
+    top: 250px;
+    left: 30%;
+}
+.toEdit1 button{
+    position: relative;
+    top: -40px;
+    left: 50%;
+    color: black;
+    width: 100px;
+    height: 40px;
+    background-color: #004AAD ;
+    border-radius: 10px;
+    border: none;
+}
+.toEdit button{
+    color: black;
+    width: 100px;
+    height: 40px;
+    background-color: #004AAD;
+    border-radius: 10px;
+    border: none;
+}
+td{
+    color: black;
+}
+
+.texting{
+    color: black;
+}
+td{
+    background-color: #D0D3D4;
+    border-radius: 10px;
+    border: 2px;
+    border-color: black;
+    border-style: outset;
+}
+td p {
+    border-radius: 10px;
+    color: black;
+    background-color: rgb(253, 253, 253);
+}
+#imagePreview{
+    height: 200px;
+    width: 200px;
+    border-radius: 120px;
+}
+</style>
+
+<script>
+  const $filePicker = document.querySelector("#filePicker"),
+    $imagePreview = document.querySelector("#imagePreview");
+
+$filePicker.addEventListener("change", () => {
+    const files = $filePicker.files;
+    if (!files || !files.length) {
+        $imagePreview.src = "";
+        return;
+    }
+    const firstFile = files[0];
+    const objectURL = URL.createObjectURL(firstFile);
+
+    $imagePreview.src = objectURL;
+});
+</script>

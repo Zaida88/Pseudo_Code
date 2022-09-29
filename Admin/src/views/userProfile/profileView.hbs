@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="/src/public/css/profile.css">
  <div class="ajustes">
   <form action="/user_profile/profile_view" method="get"></form>
+  <link rel="stylesheet" href="../../public/css/profile.css">
         <h1>Ajustes</h1>
     </div>
     {{#each User}}
@@ -11,7 +12,7 @@
             height="250px" alt="user profile">
           {{/each}} 
         </div>
-         {{#each User}}
+       
             <table class="userData" >
 
                 <tr>
@@ -48,7 +49,7 @@
                 
               
               </table>
-       {{/each}}
+      
      </div>
      <div class="toEdit">
         <a href="/"><button id="editar">Editar</button ></a> 
