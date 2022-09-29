@@ -10,7 +10,7 @@
         <div class="userImage">
             <img src="/img/user/{{photo}}"
             height="250px" alt="user profile">
-          {{/each}} 
+         
         </div>
        
             <table class="userData" >
@@ -55,3 +55,96 @@
         <a href="/"><button id="editar">Editar</button ></a> 
      </div>
     </div>
+     {{/each}} 
+
+
+     <style>
+      *{
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+    outline: none;
+    text-decoration: none;
+
+
+
+}
+.toEdit button:hover {
+ background-color: #002a61;
+}
+
+
+.profileUser{
+    
+    display: block;
+position: absolute;
+   top: 200px;
+    left: 35%;
+    width: 600px;
+    height: 400px;
+}
+.userImage{
+    display: inline;
+}
+.userData{
+    padding-left: 30px;
+    display: inline-block;
+}
+.ajustes{
+   position: absolute;
+   top: 120px;
+   left: 50%;
+}
+.ajustes h1{
+    text-align: center;
+    color: black;
+}
+.toEdit{
+    position: relative;
+    top: 250px;
+    left: 30%;
+}
+.toEdit1 button{
+    position: relative;
+    top: -40px;
+    left: 50%;
+    color: black;
+    width: 100px;
+    height: 40px;
+    background-color: #004AAD ;
+    border-radius: 10px;
+    border: none;
+}
+.toEdit button{
+    color: black;
+    width: 100px;
+    height: 40px;
+    background-color: #004AAD;
+    border-radius: 10px;
+    border: none;
+}
+td{
+    color: black;
+}
+
+.texting{
+    color: black;
+}
+td{
+    background-color: #D0D3D4;
+    border-radius: 10px;
+    border: 2px;
+    border-color: black;
+    border-style: outset;
+}
+td p {
+    border-radius: 10px;
+    color: black;
+    background-color: rgb(253, 253, 253);
+}
+#imagePreview{
+    height: 200px;
+    width: 200px;
+    border-radius: 120px;
+}
+     </style>
