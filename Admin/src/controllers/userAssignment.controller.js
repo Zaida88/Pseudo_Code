@@ -70,7 +70,7 @@ userAssignmentCtl.update = async (req, res) => {
     await orm.userRoles.findOne({ where: { userIdUser: id } })
         .then(update => {
             update.update(updatedAssignment)
-            req.flash('success', 'successfully upgraded')
+            req.flash('success', 'Se actualizo exitosamente')
             res.redirect('/userAssignment/list')
         })
 }

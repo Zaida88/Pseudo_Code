@@ -30,6 +30,27 @@ body {
   text-align: justify;
 }
 
+.res{
+  padding: 2%;
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  max-width: 50%;
+  max-height: fit-content;
+  top: 20%;
+  left: 28%;
+}
+
+.center{
+  padding: 7%;
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  max-width: 100%;
+  max-height: fit-content;
+  top: 20%;
+  left: 1px;
+}
 
 .container {
   max-width: 90%;
@@ -46,34 +67,41 @@ body {
 }
 
 .content-table {
-  border-collapse: collapse;
-  margin: 50px 0px 0px 250px;
-  font-size: 1em;
-  font-family: sans-serif;
-  min-width: 750px;
-  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  max-width: 100%;
+  max-height: fit-content;
+  top: 20%;
+  left: 0px;
   border: 3px solid black;
-  width: auto;
-  height: auto;
+  text-align: center;
 }
 
 .content-table1 {
-  border-collapse: collapse;
-  margin: 50px 0px 0px 750px;
-  font-size: 1em;
-  font-family: sans-serif;
-  min-width: 750px;
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  max-width: 50%;
+  max-height: fit-content;
+  top: 20%;
+  left: 220px;
   text-align: center;
-  width: auto;
-  height: auto;
 }
 
 .container {
   height: 20%;
 }
 
-.edit{
-  
+.update{
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  max-width: 40%;
+  max-height: fit-content;
+  top: 19%;
+  left: 30%;
+  text-align: center;
 }
 
 .title {
@@ -129,13 +157,27 @@ body {
 }
 
 .tr {
-  border-collapse: collapse;
-  margin: 3px 0px 0px 250px;
-  font-size: 1em;
-  font-family: sans-serif;
-  min-width: 750px;
-  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  max-width: 50%;
+  max-height: fit-content;
+  top: 28%;
+  left: 28%;
   border: 3px solid black;
+  text-align: center;
+}
+
+.updatetr {
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  max-width: 20%;
+  max-height: fit-content;
+  top: 28%;
+  left: 33%;
+  text-align: center;
+  background-color: white;
 }
 
 .t {
@@ -146,8 +188,16 @@ body {
   text-align: center;
 }
 
+.ta {
+  border-collapse: collapse;
+  font-size: 1em;
+  font-family: sans-serif;
+  min-width: 250px;
+  text-align: center;
+}
+
 .fields {
-  padding-top: 10px;
+  padding-top: 30px;
   padding-bottom: 40px;
   float: left;
   width: auto;
@@ -157,10 +207,13 @@ body {
   font-family: sans-serif;
 }
 
-@media only screen and (min-width: 500px) {
-
-  .conten{
-
-  }
-
+.field {
+  padding-top: 10px;
+  padding-bottom: 40px;
+  float: left;
+  width: auto;
+  margin: 45px;
+  margin: 6px 0px 0px 500px;
+  font-size: 1em;
+  font-family: sans-serif;
 }
