@@ -1,30 +1,43 @@
-<link rel="stylesheet" href="#" />
-<div id="title">
-  <label class="">Editar ejercicio</label>
-</div>
-{{#each exercise}}
-<form action="/exercise/update/{{idExercise}}" method="post">
-  <div class="container">
-    <div class="">
-      <label>Nombre</label>
-      <input class="input" type="text" name="nameExercise" aria-checked="true" value="{{nameExercise}}" />
-      <label>Descripción</label>
-      <input class="input" type="text" name="descriptionExercise" aria-checked="true" value="{{descriptionExercise}}" />
-      <label>Puntaje</label>
-      <input type="number" name="punctuationExercise" aria-checked="true" value="{{punctuationExercise}}">
-      <div>
-        <label>Lenguaje</label>
-        <input class="input" type="text" name="nameLanguage" aria-checked="true" value="{{nameLanguage}}" readonly />
+<link rel="stylesheet" href="/css/exercise/update.css" />
+
+<div class="container">
+  {{#each exercise}}
+  <form action="/exercise/update/{{idExercise}}" method="post">
+    <div id="title">
+      <h3>Editar ejercicio</h3>
+    </div>
+    <div id="hidden">
+      <input type="text" name="idLanguage" value="{{idLanguage}}" readonly>
+    </div>
+    <div class="contents">
+      <div class="block">
+        <div class="data">
+          <label>Nombre</label>
+          <input class="input" id="edit" type="text" name="nameExercise" aria-checked="true" value="{{nameExercise}}" />
+        </div>
+        <div class="data">
+          <label>Puntaje</label>
+          <input type="number" id="edit" name="punctuationExercise" aria-checked="true" value="{{punctuationExercise}}">
+        </div>
+        <div class="data">
+          <label>Lenguaje</label>
+          <input class="input" type="text" name="nameLanguage" aria-checked="true" placeholder="{{nameLanguage}}" readonly/>
+        </div>
       </div>
-      <div>
-        <label>Codigo</label>
-        <input class="input" type="text" name="nameLanguage" aria-checked="true" value="{{nameCode}}" readonly />
+      <div class="block">
+        <div class="data">
+          <label>Descripción</label>
+          <textarea name="descriptionExercise" id="" aria-checked="true">{{descriptionExercise}}</textarea>
+        </div>
+        <div class="data">
+          <label>Código</label>
+          <input class="input" type="text" name="nameLanguage" aria-checked="true" placeholder="{{nameCode}}" readonly/>
+        </div>
       </div>
+    </div>
+    <div class="options">
+      <button type="submit" id="save">Guardar</button>
+      <a href="/exercise/detail/{{idExercise}}"><button type="button" id="back">Cancelar</button></a>
     </div>
     {{/each}}
-    <div id="save">
-      <button class="button" type="submit">Guardar</button>
-    </div>
-  </div>
-</form>
-</div>
+  </form>

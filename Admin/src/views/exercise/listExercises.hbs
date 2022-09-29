@@ -1,23 +1,31 @@
-<link rel="stylesheet" href="#" />
-<div id="title">
-  <label>Ejercicios</label>
-</div>
-{{#each listExercises}}
-<form action="/exercise/listExercises/{{idLanguage}}" method="get"></form>
-<div class="container" id="container">
+<link rel="stylesheet" href="/css/exercise/listExercises.css" />
+
+<div class="container">
+  <div class="back">
+    <a href="/exercise/listLanguages"><button class="button">Lista de lenguajes</button></a>
+  </div>
+  <div id="title"><br>
+    <h2>Ejercicios</h2>
+  </div>
+  <div id="description">
+    <p>Lista de ejercicios</p>
+  </div>
+  <form action="/exercise/listExercises/{{idLanguage}}" method="get"></form>
   <div class="contents">
-    <div id="detail">
-      <a href="/exercise/detail/{{idExercise}}"><button class="button">{{nameExercise}}</button></a>
+    {{#each listExercises}}
+    <div id="data">
+      <h3>{{nameExercise}}</h3>
+      <div class="optionDetail">
+        <a href="/exercise/detail/{{idExercise}}"><button id="detail" class="button">Detalle</button></a>
+      </div>
+      <div class="optionDelete">
+        <a href="/exercise/remove/{{idExercise}}"><button id="delete" type="button">Eliminar</button></a>
+      </div>
     </div>
-  </div>
-  {{else}}
-  <div class="message">
-    <p>No tiene ejercicios registrados actualmente</p>
-  </div>
-  {{/each}}
-  <div>
-    <a href="/exercise/listLanguages">
-      <button class="button">Lista de Lenguajes</button>
-    </a>
+    {{else}}
+    <div class="message">
+      <h2>No tiene ejercicios registrados</h2>
+    </div>
+    {{/each}}
   </div>
 </div>

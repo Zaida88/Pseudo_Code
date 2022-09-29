@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#hidden {
+    display: none;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    max-width: 35%;
+    max-height: fit-content;
+    top: 10%;
+    left: 33%;
+    background-color: #d0d0d0;
+    border-radius: 10%;
+    padding: 0;
+}
+
+.container #title {
+    margin-top: 2%;
+    width: auto;
+    height: auto;
+    word-wrap: break-word;
+}
+
+.contents {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.block {
+    margin: 1%;
+    max-height: fit-content;
+    max-width: fit-content;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.data {
+    margin-top: 7%;
+    max-height: max-content;
+    max-width: fit-content;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.data input {
+    width: auto;
+    height: auto;
+    word-wrap: break-word;
+}
+
+.data label {
+    margin: 0;
+    display: flex;
+    justify-content: left;
+}
+
+#edit{
+    border-color:steelblue;
+}
+
+.data textarea {
+    border-width: 2px;
+    border-color:steelblue;
+    font-size: small;
+    width: 187px;
+    height: 90px;
+    word-wrap: break-word;
+    resize: none;
+}
+
+.data select {
+    width: 100%;
+}
+
+.options{
+    margin: 3%;
+}
+
+.options #back{
+    float: left;
+    margin-left: 7%;
+    margin-bottom: 3%;
+}
+
+.options #back {
+    border: 1px black solid;
+    padding: 0 6%;
+    background-color: #919191;
+    color: white;
+}
+
+.options #save{
+    margin-right: 7%;
+    float: right;
+}
+
+.options #save {
+    border: 1px black solid;
+    padding: 0 6%;
+    background-color: #5271FF;
+    color: white;
+}

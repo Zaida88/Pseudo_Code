@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    max-width: 35%;
+    max-height: fit-content;
+    top: 10%;
+    left: 33%;
+    background-color: #d0d0d0;
+    border-radius: 10%;
+    padding: 0;
+}
+
+.container #title {
+    margin-top: 2%;
+    width: auto;
+    height: auto;
+    word-wrap: break-word;
+}
+
+.contents {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.block {
+    margin: 1%;
+    max-height: fit-content;
+    max-width: fit-content;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.data {
+    margin-top: 7%;
+    max-height: max-content;
+    max-width: fit-content;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.data input {
+    width: auto;
+    height: auto;
+    word-wrap: break-word;
+}
+
+.data label {
+    margin: 0;
+    display: flex;
+    justify-content: left;
+}
+
+.data textarea {
+    font-size: small;
+    width: 187px;
+    height: 95px;
+    word-wrap: break-word;
+    resize: none;
+}
+
+.data select {
+    width: 100%;
+}
+
+.submit {
+    margin: 4% 9.5% 4% 0;
+    display: flex;
+    justify-content: right;
+}
+
+.submit button {
+    border: 1px black solid;
+    padding: 0 6%;
+    background-color: #1338be;
+    color: white;
+}
+
+.cancel {
+    position: absolute;
+    margin: -10% 0 2% 9.5%;
+    display: flex;
+    justify-content: left;
+}
+
+.cancel button {
+    border: 1px black solid;
+    background-color: #919191;
+    color: white;
+}

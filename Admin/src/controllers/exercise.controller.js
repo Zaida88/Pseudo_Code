@@ -49,12 +49,15 @@ exerciseCtl.detail = async (req, res) => {
 
 exerciseCtl.remove = async (req, res) => {
     const id = req.params.id
-    await sql.query('DELETE FROM exercises WHERE idExercise = ?', [id])
-    req.flash('success', 'Se eliminó exitosamente')
-    res.redirect('/exercise/listLanguages');
+    await orm.exercises.destroy({ where: { idExercise: id } })
+        .then(() => {
+            req.flash('success', 'Eliminado con éxito')
+            res.redirect('/exercise/listLanguages');
+        })
 }
 
 exerciseCtl.update = async (req, res) => {
+    const language = req.body.idLanguage
     const id = req.params.id
     const { nameExercise, descriptionExercise, punctuationExercise } = req.body
     const updatedExercise = {
@@ -66,7 +69,7 @@ exerciseCtl.update = async (req, res) => {
         .then(update => {
             update.update(updatedExercise)
             req.flash('success', 'Se actualizó exitosamente')
-            res.redirect('/exercise/listLanguages')
+            res.redirect('/exercise/listExercises/' + language)
         })
 }
 

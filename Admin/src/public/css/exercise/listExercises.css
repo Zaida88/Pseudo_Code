@@ -38,25 +38,35 @@ body {
     border-radius: 10%;
 }
 
-.optionCreate {
+.optionDelete {
     margin-top: 5px;
 }
 
-.optionList #list {
+.optionDetail #detail {
     border: 1px black solid;
-    background-color: #3554c6;
+    background-color: #b2bff8;
+}
+
+.optionDelete #delete {
+    border: 1px black solid;
+    background-color: #f92b2b;
     color: white;
 }
 
-.optionCreate #create {
-    border: 1px black solid;
-    background-color: #FFBD59;
-}
-
 .message {
-    margin: 0 20% 20% 20%;
-    background-color: rgb(224, 230, 239);
+    margin: 9% 25%;
+    background-color: rgb(240, 249, 253);
     padding: 10%;
     border: solid black 1px;
     border-radius: 11%;
+}
+
+.back {
+    margin-top: 0.5%;
+    float: right;
+}
+
+.back button {
+    color: white;
+    background-color: #3b8eed;
 }
