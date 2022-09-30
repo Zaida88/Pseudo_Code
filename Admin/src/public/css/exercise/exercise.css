@@ -4,7 +4,7 @@ body {
     text-align: center;
 }
 
-#hidden {
+#hidden { 
     display: none;
 }
 
@@ -66,7 +66,21 @@ body {
     justify-content: left;
 }
 
+#edit{
+    border-color:steelblue;
+}
+
 .data textarea {
+    font-size: small;
+    width: 187px;
+    height: 90px;
+    word-wrap: break-word;
+    resize: none;
+}
+
+#textEdit{
+    border-width: 2px;
+    border-color:steelblue;
     font-size: small;
     width: 187px;
     height: 90px;
@@ -78,11 +92,11 @@ body {
     width: 100%;
 }
 
-.options{
+.options {
     margin: 3%;
 }
 
-.options #back{
+.options #back {
     float: left;
     margin-left: 7%;
     margin-bottom: 3%;
@@ -95,7 +109,7 @@ body {
     color: white;
 }
 
-.options #save{
+.options #save {
     margin-right: 7%;
     float: right;
 }
@@ -104,5 +118,31 @@ body {
     border: 1px black solid;
     padding: 0 6%;
     background-color: #093faa;
+    color: white;
+}
+
+.submit {
+    margin: 4% 9.5% 4% 0;
+    display: flex;
+    justify-content: right;
+}
+
+.submit button {
+    border: 1px black solid;
+    padding: 0 6%;
+    background-color: #093faa;
+    color: white;
+}
+
+.cancel {
+    position: absolute;
+    margin: -10% 0 2% 9.5%;
+    display: flex;
+    justify-content: left;
+}
+
+.cancel button {
+    border: 1px black solid;
+    background-color: #6f6f6f;
     color: white;
 }

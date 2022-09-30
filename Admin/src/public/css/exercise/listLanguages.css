@@ -1,5 +1,4 @@
 body {
-    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -44,7 +43,8 @@ body {
 
 .optionList #list {
     border: 1px black solid;
-    background-color: #FFBD59;
+    background-color: #d39539;
+    color: white;
 }
 
 .optionCreate #create {
