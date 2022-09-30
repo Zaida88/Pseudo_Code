@@ -2,22 +2,22 @@
 <div class="ajustes">
   <h1>Ajustes</h1>
 </div>
-
-<form action="/user_profile/profile_edit{{user.idUser}}" method="post">
+ {{#each User}} 
+<form action="/userProfile/profileEdit/{{idUser}}" method="post">
   <div class="profileUser">
     <div class="profile">
-      <div class="changeImage">
-       
+       <div class="changeImage">
+    
 
         <div id="changeImage">
-          <img src="{{photo}}" id="imagePreview" alt="default img">
+          <img src="/img/user/{{photo}}" id="imagePreview" alt="default img"   >
 
         </div>
         <div>
-          <input type="file" name="photo" id="filePicker" accept="image/*" required>
+          <input type="file" name="photo" id="filePicker" accept="image/*"  >
         </div>
 
-      </div>
+      </div> 
     </div>
 
     <table class="userData">
@@ -27,7 +27,7 @@
 
         <td><label>Nombre de usuario:</label></td>
 
-        <td><input type="text" name="userName" class="texting" value="{{username}}"> </td>
+        <td><input type="text" name="username" class="texting" value="{{username}}"> </td>
 
         <td><img src="/edit.png" alt="" width="40px"></td>
 
@@ -37,7 +37,7 @@
 
         <td>Correo</td>
 
-        <td><input type="text" name="userEmail" class="texting" value="{{email}}"></td>
+        <td><input type="text" name="email" class="texting" value="{{email}}"></td>
 
         <td> <img src="/edit.png" alt="" width="40px">
 
@@ -51,27 +51,19 @@
         <td> <img src="/edit.png" alt="" width="40px">
 
       </tr>
-      <tr>
-
-        <td>Rol</td>
-
-        <td><input type="text" name="userRol" class="texting" value="{{ idUserRol}}"></td>
-
-        <td> <img src="/edit.png" alt="" width="40px">
-
-      </tr>
+      
 
       <div class="toEdit">
-        <a href="./profileView.hbs"><button id="editar" type="submit">Guardar</button></a>
+       <button id="editar" type="submit">Guardar</button>
       </div>
 </form>
-
+{{/each}} 
 </table>
 
 </div>
 
 </div>
-
+<script src="/js/preview.js"></script>
 <style>
  *{
     margin: 0;
@@ -162,20 +154,3 @@ td p {
     border-radius: 120px;
 }
 </style>
-
-<script>
-  const $filePicker = document.querySelector("#filePicker"),
-    $imagePreview = document.querySelector("#imagePreview");
-
-$filePicker.addEventListener("change", () => {
-    const files = $filePicker.files;
-    if (!files || !files.length) {
-        $imagePreview.src = "";
-        return;
-    }
-    const firstFile = files[0];
-    const objectURL = URL.createObjectURL(firstFile);
-
-    $imagePreview.src = objectURL;
-});
-</script>

@@ -1,14 +1,14 @@
-
-
+{{#each User}}
+<link rel="stylesheet" href="/css/menuUser.css">
 
 <div class="menu" id="menu">
 
-    <g class="Menu_slider">
+    <g class="MenuSlider">
         <p>Menu</p>
-        <div class="menu_close">
+        <div class="menuClose">
             <button type="" class="btn-cerrar-popup" id="open-close"> <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2MgbOmjW5XamxCqhYpYU4cUJBoR5tCErAnA&usqp=CAU"
-                    alt="" width="40px"></button>
+                    alt="user" height="40px" width="40px"></button>
         </div>
     </g>
     <hr>
@@ -31,29 +31,30 @@
     </div>
     <div class="settings">
         <div>
-             <a href="#">Ajustes</a>
+             <a href="/userProfile/profileView/{{user.idUser}}">Perfil</a>
         </div>
 
     </div>
-    
+    <script src="/js/menu.js"></script>
 </div>
-{{#each User}}
-<div class="user_primari_interfaz">
 
-<div class="user_interfaz">
+<div class="user_primariInterfaz">
+
+<div class="userInterfaz">
     <p>{{username}}</p>
-    <div class="user_image">
+    <div class="userIImage">
      <button type="" class="btn-cerrar-popup"  id="Close-open">  <img src="/img/user/{{photo}}"
-            width="45px" alt="">
+            width="45px" height="45px" alt="">
         </button> 
     </div>
     
 </div>
-<div class="close_secion"id="close_secion" >
+<div class="closeSecion"id="closeSecion" >
     <button  >Cerrar Seción</button>
 </div>
+
 </div>
  {{/each}}
 
-<script src="../../public/js/menu.js"></script>
+
 

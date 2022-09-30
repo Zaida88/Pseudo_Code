@@ -8,6 +8,11 @@
 
 
 }
+
+
+
+
+
 .toEdit button:hover {
  background-color: #002a61;
 }
@@ -25,10 +30,18 @@ position: absolute;
 .userImage{
     display: inline;
 }
+
+.userImage img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 2px 2px rgb(0, 0, 0);
+}
 .userData{
     padding-left: 30px;
     display: inline-block;
 }
+
 .ajustes{
    position: absolute;
    top: 120px;
@@ -62,25 +75,13 @@ position: absolute;
     border-radius: 10px;
     border: none;
 }
-td{
-    color: black;
-}
+
+
 
 .texting{
     color: black;
 }
-td{
-    background-color: #D0D3D4;
-    border-radius: 10px;
-    border: 2px;
-    border-color: black;
-    border-style: outset;
-}
-td p {
-    border-radius: 10px;
-    color: black;
-    background-color: rgb(253, 253, 253);
-}
+
 #imagePreview{
     height: 200px;
     width: 200px;

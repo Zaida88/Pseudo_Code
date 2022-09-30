@@ -13,3 +13,5 @@ $filePicker.addEventListener("change", () => {
 
     $imagePreview.src = objectURL;
 });
+
+

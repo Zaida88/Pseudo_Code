@@ -41,7 +41,7 @@ body{
 .settings:hover{
     background-color: black;
 }
-.Menu_slider img{
+.MenuSlider img{
     transition: 0.2s;
   
   }
@@ -60,23 +60,23 @@ body{
 .OPO:hover{
     background-color: rgb(33, 38, 79);
 }
-.Menu_slider p{
+.MenuSlider p{
     display: inline-block;
     position: relative;
     font-size: 25px;
 
 }
 
-.Menu_slider img:hover{
+.MenuSlider img:hover{
     width: 41px;
 }
-.menu_close{
+.menuClose{
     display: contents;
     position: relative;
 }
 
 /* user*/
-.user_interfaz{
+.userInterfaz{
     background-color: rgb(255, 250, 243);
     height: 50px;
     border-style: solid;
@@ -86,38 +86,42 @@ body{
     width: 100%;
 }
 
-.user_interfaz p {
+.userInterfaz p {
  padding-left: 90%;
     color: black;
     text-align: right;
     display: block;
     margin: auto;
 }
-.user_image{
+.userIImage{
     padding-right: 20px;
     border-radius: 20px;
     
 }
-.user_image button{
+.userIImage button{
     border: none;
 }
-.user_image button:hover{
+.userIImage button:hover{
     background-color: rgb(154, 154, 154);
     border-radius: 25px;
 }
 
 
-.close_secion{
+.closeSecion{
     padding-left: 90%;
     visibility: hidden;
 }
 .close{
     visibility: visible;
 }
-.close_secion button{
+.closeSecion button{
 color: black;
 height: 50px;
 width: 120px;
+}
+
+.btn-cerrar-popup img{
+    border-radius: 50%;
 }
 
 
@@ -157,7 +161,7 @@ width: 120px;
     .settings:hover{
         background-color: black;
     }
-    .Menu_slider img{
+    .MenuSlider img{
         transition: 0.2s;
       
       }
@@ -176,23 +180,23 @@ width: 120px;
     .OPO:hover{
         background-color: rgb(33, 38, 79);
     }
-    .Menu_slider p{
+    .MenuSlider p{
         display: inline-block;
         position: relative;
         font-size: 25px;
     
     }
     
-    .Menu_slider img:hover{
+    .MenuSlider img:hover{
         width: 41px;
     }
-    .menu_close{
+    .menuClose{
         display: contents;
         position: relative;
     }
     
     /* user*/
-    .user_interfaz{
+    .userInterfaz{
         background-color: rgb(255, 250, 243);
         height: 50px;
         border-style: solid;
@@ -202,35 +206,35 @@ width: 120px;
         width: 100%;
     }
     
-    .user_interfaz p {
+    .userInterfaz p {
      padding-left: 70%;
         color: black;
         text-align: right;
         display: block;
         margin: auto;
     }
-    .user_image{
+    .userIImage{
         padding-right: 20px;
         border-radius: 20px;
         
     }
-    .user_image button{
+    .userIImage button{
         border: none;
     }
-    .user_image button:hover{
+    .userIImage button:hover{
         background-color: rgb(154, 154, 154);
         border-radius: 25px;
     }
     
     
-    .close_secion{
+    .closeSecion{
         padding-left: 75%;
         visibility: hidden;
     }
     .close{
         visibility: visible;
     }
-    .close_secion button{
+    .closeSecion button{
     color: black;
     height: 50px;
     width: 120px;

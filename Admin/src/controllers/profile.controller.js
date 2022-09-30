@@ -7,16 +7,42 @@ const orm = require('../databaseConfiguration/db_orm')
 //modulo de mostar 
 
 
-userProfileViewCtl.showUserProfile  = (req, res) => {
-    res.render("./userProfile/profileView")
+userProfileViewCtl.showUserProfile  = async (req, res) => {
+    const id =req.params.id; 
+    const User = await sql.query('select * from users where idUser = ?', [id])
+    res.render("./userProfile/profileView",{User}) 
 };
 
-userProfileViewCtl.fetchData = async (req, res, ) => {
-    const id =req.user.idUser; 
-    const User = await sql.query('select idUser, username, photo, password from users where idUser = ?', [id])
-    res.render("/userProfile/profileView");
-  
+
+userProfileViewCtl.showUserProfileEdit  = async (req, res) => {
+    const id =req.params.id; 
+    const User = await sql.query('select * from users where idUser = ?', [id])
+    res.render("./userProfile/profileEdit",{User}) 
 };
+
+userProfileViewCtl.toUpdate = async (req ,res )=>{
+  const id =req.params.id; 
+  
+const {username,photo, email,password, } =req.body
+const newShipmentv= {
+  username,
+  email,
+photo,
+
+  password
+}
+await orm.users.findOne({where:{idUser: id}})
+.then(toUpdate =>{
+  toUpdate.update(newShipmentv)
+})
+
+req.flash("success","guardado");
+res.redirect("/userProfile/profileView/"+id)
+
+
+}
+
+
 
 module.exports = userProfileViewCtl;
 
