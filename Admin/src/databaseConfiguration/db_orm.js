@@ -13,7 +13,6 @@ mysql.createConnection({
     console.info("Base de datos creada o comprobada correctamente");
   })
 })
-
 //models
 const testsModel= require("../models/tests.model")
 const questionsModel= require("../models/questions.model")

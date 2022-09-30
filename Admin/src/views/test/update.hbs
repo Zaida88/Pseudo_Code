@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/test/update.css">
+{{#each list}} 
+<form action="/tests/update/{{idTests}}" method="post">
+<div id="title">
+    <p>Prueba</p>
+</div>
+<div id="button">
+    <button type="submit" id="btnSee">Ver Todo</button>
+</div>
+ <div id="container">
+    <div id="elementGroup">
+        <div id="nameTests">
+            <label>Nombre:</label>
+            <input type="text" name="nameTests" id="textBox" required aria-checked="true" value="{{nameTests}}">
+        </div>
+        <div id="descriptionTests">
+            <label>Descripcion:</label>
+            <input type="text" name="descriptionTests" id="textBox" required aria-checked="true" value="{{descriptionTests}}" />
+        </div>
+    </div>
+    <div id="buttonGroup1">
+        <div id="button">
+            <button type="submit" id="btnSave">Preguntas</button>
+        </div>
+     </div>
+    <div id="buttonGroup2">
+        <div id="button">
+            <button type="submit" id="btnCancel">Regresar</button>
+        </div>
+        <div id="button">
+            <button type="submit" id="btnEdit">Editar</button>
+        </div>
+    </div>
+ </div>
+
+</form>
+{{/each}}

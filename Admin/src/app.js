@@ -61,13 +61,15 @@ app.use((req, res, next) => {
 app.use(express.static(path.join(__dirname, 'public')));
 //public 
 
-
 //routes
 
 app.use(require('./routes/index.routes'))
 app.use(require('./routes/login.routes'))
-app.use('/dashboard',require('./routes/dashboard.routes'))
-app.use('/exercise',require('./routes/exercise.routes'))
-app.use('/userProfile',require('./routes/profile.routes'))
-app.use('/userAssignment',require('./routes/userAssignment.routes'))
+app.use('/dashboard', require('./routes/dashboard.routes'))
+app.use('/exercise', require('./routes/exercise.routes'))
+app.use('/userProfile', require('./routes/profile.routes'))
+app.use('/userAssignment', require('./routes/userAssignment.routes'))
+app.use('/tests', require('./routes/test.routes'))
+app.use('/answers', require('./routes/answer.routes'))
+app.use('/question', require('./routes/question.routes'))
 module.exports = app;
