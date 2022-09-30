@@ -23,12 +23,13 @@ userProfileViewCtl.showUserProfileEdit  = async (req, res) => {
 userProfileViewCtl.toUpdate = async (req ,res )=>{
   const id =req.params.id; 
   
-const {username,photo, email,password, } =req.body
+const {username,photo, email,password,lastName,firstName } =req.body
 const newShipmentv= {
   username,
   email,
 photo,
-
+lastName,
+firstName,
   password
 }
 await orm.users.findOne({where:{idUser: id}})
@@ -36,7 +37,7 @@ await orm.users.findOne({where:{idUser: id}})
   toUpdate.update(newShipmentv)
 })
 
-req.flash("success","guardado");
+
 res.redirect("/userProfile/profileView/"+id)
 
 

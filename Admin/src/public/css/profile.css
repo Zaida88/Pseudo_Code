@@ -15,21 +15,22 @@
 position: absolute;
    top: 200px;
     left: 35%;
-    width: 600px;
-    height: 400px;
+   
+   
 }
 .userImage{
-    display: inline;
+    display:inline-flex
+    
 }
 
 .userImage img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    box-shadow: 2px 2px rgb(0, 0, 0);
+    box-shadow: 2px 3px rgba(0, 0, 0, 0.299);
 }
 .userData{
-    padding-left: 30px;
+    padding-left: 50px;
     display: inline-block;
 }
 
@@ -44,17 +45,19 @@ position: absolute;
 }
 .toEdit{
     position: relative;
+    top: 150px;
+    left: 30%;
+}
+.toEditOne{
+    position: relative;
     top: 250px;
     left: 30%;
 }
-.toEdit1 button{
-    position: relative;
-    top: -40px;
-    left: 50%;
+.toEditOne button{
     color: black;
     width: 100px;
     height: 40px;
-    background-color: #004AAD ;
+    background-color: #093faa;
     border-radius: 10px;
     border: none;
 }
@@ -77,4 +80,36 @@ position: absolute;
     height: 200px;
     width: 200px;
     border-radius: 120px;
+}
+.borderTable p {
+    border: 2px solid transparent;
+    border-radius: 15px;
+    color: black;
+    border-color: black;
+    width: 110%;
+    padding-left: 5px;
+   
+}
+.borderTableTitle p{
+    
+    border: 2px solid transparent;
+    width: 110%;
+    border-radius: 11px;
+    color: black;
+    border-color: black;
+    background-color: #D0D3D4;
+    padding-left: 5px;
+   
+}   
+td{
+    padding: 5px;
+}
+.texting{
+    border: 2px solid transparent;
+    width: 110%;
+    border-radius: 11px;
+    color: black;
+    border-color: black;
+   
+    padding-left: 5px;
 }

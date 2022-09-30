@@ -1,23 +1,23 @@
-<link rel="stylesheet" href="profile.css">
+<link rel="stylesheet" href="/css/profile.css">
 <div class="ajustes">
   <h1>Ajustes</h1>
 </div>
- {{#each User}} 
+{{#each User}}
 <form action="/userProfile/profileEdit/{{idUser}}" method="post">
   <div class="profileUser">
     <div class="profile">
-       <div class="changeImage">
-    
+      <div class="changeImage">
+
 
         <div id="changeImage">
-          <img src="/img/user/{{photo}}" id="imagePreview" alt="default img"   >
+          <img src="/img/user/{{photo}}" id="imagePreview" alt="default img">
 
         </div>
         <div>
-          <input type="file" name="photo" id="filePicker" accept="image/*"  >
+          <input type="file" name="photo" id="filePicker"  accept="image/*">
         </div>
 
-      </div> 
+      </div>
     </div>
 
     <table class="userData">
@@ -25,7 +25,9 @@
 
       <tr>
 
-        <td><label>Nombre de usuario:</label></td>
+        <td class="borderTableTitle">
+          <p>Usuario</p>
+        </td>
 
         <td><input type="text" name="username" class="texting" value="{{username}}"> </td>
 
@@ -34,8 +36,27 @@
       </tr>
 
       <tr>
+        <td class="borderTableTitle">
+          <p>Nombre</p>
+        </td>
 
-        <td>Correo</td>
+        <td><input type="text" name="firstName" class="texting" value="{{firstName}}"></td>
+
+        <td> <img src="/edit.png" alt="" width="40px">
+      </tr>
+        <tr>
+        <td class="borderTableTitle">
+          <p>Apellido</p>
+        </td>
+
+        <td><input type="text" name="lastName" class="texting" value="{{lastName}}"></td>
+
+        <td> <img src="/edit.png" alt="" width="40px">
+      </tr>
+      <tr>
+        <td class="borderTableTitle">
+          <p>Correo</p>
+        </td>
 
         <td><input type="text" name="email" class="texting" value="{{email}}"></td>
 
@@ -44,113 +65,17 @@
       </tr>
       <tr>
 
-        <td>contraseña</td>
 
-        <td><input type="password" name="password" class="texting" value="{{password}}"></td>
 
-        <td> <img src="/edit.png" alt="" width="40px">
 
-      </tr>
-      
-
-      <div class="toEdit">
-       <button id="editar" type="submit">Guardar</button>
-      </div>
+        <div class="toEditOne">
+          <button id="editar" type="submit">Guardar</button>
+        </div>
 </form>
-{{/each}} 
+{{/each}}
 </table>
 
 </div>
 
 </div>
 <script src="/js/preview.js"></script>
-<style>
- *{
-    margin: 0;
-    padding: 0;
-    color: rgb(0, 0, 0);
-    outline: none;
-    text-decoration: none;
-
-
-
-}
-.toEdit button:hover {
- background-color: #002a61;
-}
-
-
-.profileUser{
-    
-    display: block;
-position: absolute;
-   top: 200px;
-    left: 35%;
-    width: 600px;
-    height: 400px;
-}
-.userImage{
-    display: inline;
-}
-.userData{
-    padding-left: 30px;
-    display: inline-block;
-}
-.ajustes{
-   position: absolute;
-   top: 120px;
-   left: 50%;
-}
-.ajustes h1{
-    text-align: center;
-    color: black;
-}
-.toEdit{
-    position: relative;
-    top: 250px;
-    left: 30%;
-}
-.toEdit1 button{
-    position: relative;
-    top: -40px;
-    left: 50%;
-    color: black;
-    width: 100px;
-    height: 40px;
-    background-color: #004AAD ;
-    border-radius: 10px;
-    border: none;
-}
-.toEdit button{
-    color: black;
-    width: 100px;
-    height: 40px;
-    background-color: #004AAD;
-    border-radius: 10px;
-    border: none;
-}
-td{
-    color: black;
-}
-
-.texting{
-    color: black;
-}
-td{
-    background-color: #D0D3D4;
-    border-radius: 10px;
-    border: 2px;
-    border-color: black;
-    border-style: outset;
-}
-td p {
-    border-radius: 10px;
-    color: black;
-    background-color: rgb(253, 253, 253);
-}
-#imagePreview{
-    height: 200px;
-    width: 200px;
-    border-radius: 120px;
-}
-</style>

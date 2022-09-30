@@ -2,7 +2,7 @@
  <div class="ajustes">
   <form action="/userProfile/profileView/{{user.idUser}}" method="get"></form>
   
-        <h1>Ajustes</h1>
+        <h1>Perfil</h1>
     </div>
     {{#each User}}
      <div class="profileUser">
@@ -17,19 +17,37 @@
 
                 <tr>
               
-                  <td>Nombre</td>
+                  <td class="borderTableTitle"><p>Usuario</p></td>
               
-                  <td><p >{{username}}</p></td>
+                  <td class="borderTable"><p  >{{username}}</p></td>
               
                  
               
                 </tr>
               
                 <tr>
+   <td class="borderTableTitle"><p>Nombre</p></td>
               
-                  <td>Correo</td>
+                  <td class="borderTable"><p>{{firstName}}</p></td>
               
-                  <td><p>{{email}}</p></td>
+                  
+              
+                </tr>
+                   <td class="borderTableTitle"><p>Apellido</p> </td>
+              
+                  <td class="borderTable"><p>{{lastName}}</p></td>
+              
+                  
+              
+                </tr>
+
+
+
+
+              
+                  <td class="borderTableTitle"><p>Correo</p> </td>
+              
+                  <td class="borderTable"><p>{{email}}</p></td>
               
                   
               
