@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="/css/userAssignment.css">
+
+<form action="/userAssignment/createUser" method="post" enctype="multipart/form-data">
+  <div class="title">
+    <center>
+      <h2>Nuevo usuario</h2>
+    </center>
+  </div>
+  <div class="containerCre">
+    <div class="contents">
+      <label>Nombre</label>
+      <input class="input" type="text" name="firstName" aria-checked="true" required />
+      <label>Apellido</label>
+      <input class="input" type="text" name="lastName" aria-checked="true" required />
+      <label>Nombre de usuario</label>
+      <input class="input" type="text" name="username" aria-checked="true" required />
+      <label>Correo</label>
+      <input class="input" type="text" name="email" aria-checked="true" required />
+      <div class="data">
+        <label>Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+
+      <div class="data">
+        <label>Foto:</label>
+        <div class="changeImage">
+          <img src="/img/NoImage.jpg" id="imagePreview">
+        </div>
+        <div class="file-select" id="src-file2">
+          <input type="file" name="photo" id="filePicker" accept="image/*" aria-label="Archivo" required>
+        </div>
+      </div><br>
+
+      <div align="right">
+        <button class="butt" type="submit">Crear</button>
+      </div>
+    </div>
+  </div>
+</form>
+<div>
+  <a href="/userAssignment/list"><button class="but">Cancelar</button></a>
+</div>
