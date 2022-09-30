@@ -49,10 +49,11 @@ exerciseCtl.detail = async (req, res) => {
 
 exerciseCtl.remove = async (req, res) => {
     const id = req.params.id
+    const language = await sql.query('SELECT idLanguage FROM exercise WHERE idExercise = ?', [id])
     await orm.exercises.destroy({ where: { idExercise: id } })
         .then(() => {
             req.flash('success', 'Eliminado con éxito')
-            res.redirect('/exercise/listLanguages');
+            res.redirect('/exercise/listExercises/'+Object.values(language[0]));
         })
 }
 
