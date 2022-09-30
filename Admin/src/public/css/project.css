@@ -4,6 +4,10 @@
 .none {
     display: none;
 }
+.div_hide {
+  opacity: 0;
+  display: none;
+}
 .title{
   margin-top: 15px;
 }
@@ -139,9 +143,121 @@ label {
   }
   
   #src-file1::before {
-    content: 'Seleccionar Archivo 1';
+    content: 'Seleccionar';
   }
   
   #src-file2::before {
-    content: 'Seleccionar Archivo 2';
+    content: 'Seleccionar';
   }
+
+
+#changeImage img{
+    margin-bottom: 4%;
+}
+
+#changeImage img{
+    width: 30%;
+    word-wrap: break-word;
+    height: 50px;
+    width: 50px;
+}
+@media only screen and (max-width: 1199px) {
+
+  .frame{
+    width: 85%;
+    margin-left: 45px; 
+  }
+  .forms{
+    width: 85%;
+    margin-left: 45px; 
+    padding: 35px;
+  }
+  input {
+    width: 97%;
+    margin: 0px 0px 10px 5px;
+    height: 50px;
+    border-radius: 8px;
+    transition: 0.3s;
+    background-color: #B8B9BB;
+  }
+  textarea{
+    width: 87%;
+    margin: 0px 0px 10px 5px;
+    height: 50px;
+  }
+  .icon{
+   display: none;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .container{
+    width: 90%;
+    align-items: center;
+  }
+  .frame{
+    width: 85%;
+    margin-left: 45px; 
+  }
+  .forms{
+    width: 85%;
+    margin-left: 45px; 
+    padding: 35px;
+  }
+  #update input {
+    width: 97%;
+    margin: 0px 0px 10px 5px;
+    height: 50px;
+    border-radius: 8px;
+    transition: 0.3s;
+    background-color: #B8B9BB;
+  }
+  #update textarea{
+    width: 87%;
+    margin: 0px 0px 10px 5px;
+    height: 50px;
+  }
+  .icon{
+   display: none;
+  }
+}
+@media only screen and (max-width: 570px) {
+  .container{
+    width: 95%;
+    align-items: center;
+  }
+  .frame{
+    width: 85%;
+    margin-left: 35px; 
+  }
+  .forms{
+    width: 85%;
+    margin-left: 35px; 
+    padding: 35px;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .container{
+    width: 100%;
+    align-items: center;
+  }
+  input {
+    width: 99%;
+  }
+  textarea{
+    width: 99%;
+  }
+  label {
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: 100;
+  }
+  .frame{
+    width: 95%;
+    margin-left: 13px; 
+  }
+  .forms{
+    width: 95%;
+    margin-left: 13px; 
+    padding: 35px;
+  }
+}

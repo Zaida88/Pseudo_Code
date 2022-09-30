@@ -35,15 +35,17 @@
                     <textarea>{{vision}}</textarea>
                 </div>
             </div>
-            {{#each listO}}
+            {{#each listObjetive}}
             <div id="Objetives">
                 <label class="title">Objetivos:</label>
-                <p>{{Objectives}}</p>
+                <p>{{objective}}</p>
             </div>
             {{/each}}
             <div id="logo" class="form-group col-md-6">
                 <label>Logo:</label> <br>
-                <img src="/img/logo/{{logoProject}}" />
+                <div id="changeImage">
+                    <img src="/img/user/{{logoProject}}" id="image"/>
+                </div>
             </div>
             <div class="form-group col-md-6">
                 <div>
@@ -61,7 +63,7 @@
         
         {{/each}}
 
-    <div class='center-block frame text-center'>
+    <div class='center-block frame text-center' id="content">
         <div class='card-body'>
             <h5 class='card-title'>
                 No tienes proyectos registrados actualmente.
@@ -69,13 +71,12 @@
             <p class='card-text'>
                 Desea agregar uno.
             </p>
-            <a href="/project/create/{{idProject}}">
-                <button class='btn btn-primary button'>
-                    <b>
-                        Agregar proyecto
-                    </b>
+            <a href="/project/create/{{idProject}}" class="hiden">
+                <button class='btn btn-primary button hiden'>
+                    <b>Agregar proyecto</b>
                 </button>
             </a>
         </div>
     </div>
 </div>
+<script src="/js/project/hidden.project.js"></script>

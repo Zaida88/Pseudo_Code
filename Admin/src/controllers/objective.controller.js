@@ -3,8 +3,8 @@ const orm = require("../databaseConfiguration/db_orm")
 const sql = require("../databaseConfiguration/db_sql")
 
 objetiveCtl.showO = async (req, res) => {
-    const max = await sql.query("select max(idObjetive) from objetives")
-    res.render("project/create", {max})
+    const max = await sql.query("select max(idObjective) from objectives")
+    res.render("project/createObjetive", {max})
 };
 
 objetiveCtl.sendO = async (req, res) => {
@@ -22,14 +22,14 @@ objetiveCtl.sendO = async (req, res) => {
 
 objetiveCtl.listO = async (req, res) => {
     const id = req.params.id
-    const list = await sql.query("select * from objetives where userIdUser=?", [id])
-    res.render("project/list", { list})
+    const listObjetive = await sql.query("select * from objetives where userIdUser=?", [id])
+    res.render("project/list", { listObjetive})
 }
 
 objetiveCtl.bringO = async (req, res) => {
     const id = req.params.id
-    const list = await sql.query("select * from objetives where idProject=?", [id])
-    res.render("project/update", { list,})
+    const listObjetive = await sql.query("select * from objetives where idObjective=?", [id])
+    res.render("project/update", { listObjetive})
 }
 
 objetiveCtl.updateO = async (req, res) => {
@@ -39,7 +39,7 @@ objetiveCtl.updateO = async (req, res) => {
     const newObjective = {
         objective,
     }
-    await orm.objectives.findOne({ where: { idProject: ids } })
+    await orm.objectives.findOne({ where: { idObjective: ids } })
         .then(actualize => {
             actualize.update(newObjective)
         })
@@ -49,7 +49,7 @@ objetiveCtl.updateO = async (req, res) => {
 }
 objetiveCtl.remove = async (req, res) => {
     const id =  req.params.id
-    await orm.objectives.destroy({where: {idProject: ids}})
+    await orm.objectives.destroy({where: {idObjective: ids}})
     .then(() => {
         req.flash('success', 'Guardado')
         res.redirect('/project/list' + id);

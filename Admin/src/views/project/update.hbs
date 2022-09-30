@@ -43,14 +43,17 @@
             {{#each listO}}
             <div id="Objetives">
                 <label class="title">Objetivos:</label>
-                <p>{{Objectives}}</p>
+                <p>{{objectives}}</p>
             </div>
             {{/each}}
             <div id="logo" class="form-group col-md-6">
                 <label>Logo:</label>
                 <br>
-                <div class="file-select">
-                    <input type="file" name="photo" id="filePicker" accept="image/*" required>
+                <div id="changeImage">
+                    <img src="/img/NoImage.jpg" id="imagePreview">
+                </div>
+                <div class="file-select" id="src-file2">
+                    <input type="file" name="logoProject" id="filePicker" accept="image/*" required>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17"
                     viewBox="0 0 20 17">
@@ -77,3 +80,4 @@
     </div>
 
 </div>
+<script src="/js/project/logo.project.js"></script>
