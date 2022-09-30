@@ -1,15 +1,20 @@
 {{#each User}}
 <link rel="stylesheet" href="/css/menuUser.css">
 
-<div class="menu" id="menu">
+<div class="menu " id="menu">
 
     <g class="MenuSlider">
         <p>Menu</p>
         <div class="menuClose">
             <button type="" class="btn-cerrar-popup" id="open-close"> <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2MgbOmjW5XamxCqhYpYU4cUJBoR5tCErAnA&usqp=CAU"
-                    alt="user" height="40px" width="40px"></button>
+                    alt="user"  width="40px"></button>
+
+
+
+                    
         </div>
+
     </g>
     <hr>
 
@@ -35,7 +40,7 @@
         </div>
 
     </div>
-    <script src="/js/menu.js"></script>
+    
 </div>
 
 <div class="user_primariInterfaz">
@@ -44,7 +49,7 @@
     <p>{{username}}</p>
     <div class="userIImage">
      <button type="" class="btn-cerrar-popup"  id="Close-open">  <img src="/img/user/{{photo}}"
-            width="45px" height="45px" alt="">
+            width="45px" height="45px"   alt="">
         </button> 
     </div>
     
@@ -55,6 +60,20 @@
 
 </div>
  {{/each}}
+<script>
+    const $openclos = document.getElementById("Close-open"),
+$user_close = document.getElementById("closeSecion")
+$openclos.addEventListener("click",()=>{
+  $user_close.classList.toggle("close")
+})
 
+const $openclose = document.getElementById("open-close"),
+$asaid = document.getElementById("menu")
+$openclose.addEventListener("click",()=>{
+$asaid.classList.toggle("desplegar")
+})
+
+
+</script>
 
 
