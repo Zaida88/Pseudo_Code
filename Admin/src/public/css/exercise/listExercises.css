@@ -58,7 +58,7 @@ body {
     background-color: rgb(240, 249, 253);
     padding: 10%;
     border: solid black 1px;
-    border-radius: 11%;
+    border-radius: 20px;
 }
 
 .back {

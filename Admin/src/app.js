@@ -72,4 +72,6 @@ app.use('/userAssignment', require('./routes/userAssignment.routes'))
 app.use('/tests', require('./routes/test.routes'))
 app.use('/answers', require('./routes/answer.routes'))
 app.use('/question', require('./routes/question.routes'))
+app.use('/project', require('./routes/project.route'))
+
 module.exports = app;
