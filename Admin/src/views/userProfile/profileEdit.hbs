@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="/css/profile.css">
+<div class="ajustes">
+  <h1 class="title" >Ajustes</h1  >
+</div>
+{{#each User}}
+<form action="/userProfile/profileEdit/{{idUser}}" method="post" >
+  <div class="profileUser">
+    <div class="profile">
+      <div class="changeImage">
+
+
+        <div id="changeImage">
+          <img src="/img/user/{{photo}}" id="imagePreview" alt="default img" >
+
+        </div>
+        <div>
+          <input type="file" name="photo" id="filePicker"  accept="image/*">
+        </div>
+
+      </div>
+    </div>
+
+    <table class="userData">
+
+
+      <tr>
+
+        <td class="borderTableTitle">
+          <p>Usuario</p>
+        </td>
+
+        <td><input type="text" name="username" class="texting" value="{{username}}"> </td>
+
+      
+
+      </tr>
+
+      <tr>
+        <td class="borderTableTitle">
+          <p>Nombre</p>
+        </td>
+
+        <td><input type="text" name="firstName" class="texting" value="{{firstName}}"></td>
+
+    
+      </tr>
+        <tr>
+        <td class="borderTableTitle">
+          <p>Apellido</p>
+        </td>
+
+        <td><input type="text" name="lastName" class="texting" value="{{lastName}}"></td>
+
+       
+      </tr>
+      <tr>
+        <td class="borderTableTitle">
+          <p>Correo</p>
+        </td>
+
+        <td><input type="text" name="email" class="texting" value="{{email}}"></td>
+
+       
+
+      </tr>
+      <tr>
+
+
+
+
+        <div class="toEditOne">
+          <button id="editar" type="submit">Guardar</button>
+        </div>
+</form>
+{{/each}}
+</table>
+
+</div>
+
+</div>
+<script src="/js/preview.js"></script>

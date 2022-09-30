@@ -53,7 +53,7 @@ passport.use(
 				let newUser = {
 					idUser: idUser,
 					firstName,
-					lastName,
+					lastName, 
 					email,
 					username: username,
 					password: password

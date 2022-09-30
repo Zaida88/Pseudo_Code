@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+    outline: none;
+    text-decoration: none;
+
+}
+.btn-cerrar-popup img{
+border-radius: 50%;
+}
+
+@media (min-width: 900px){
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+.menu{
+    
+    transition: 0.3s;
+}
+.menu{
+    background-color: rgb(0, 5, 58);
+    position: absolute;
+    width: 150px;
+    height: 750px;
+   font-family:Georgia, 'Times New Roman', Times, serif ;
+ 
+    
+}
+.settings{
+    background-color: rgb(39, 39, 39);
+    height: 80px;
+   font-size: 25px;
+    position: relative;
+  
+  bottom: -37%;
+   
+}
+.settings div{
+    padding-top: 20%;
+    padding-left: 35%;
+}
+.settings:hover{
+    background-color: black;
+}
+.MenuSlider img{
+    transition: 0.2s;
+  
+  }
+.desplegar{
+    transform: translateX(-100%);
+    
+}
+
+.desplegar img{
+    transform: translate(150px);
+}
+.OPO{
+    
+   height: 60px;
+   text-align: center;
+}
+.OPO:hover{
+    background-color: rgb(33, 38, 79);
+}
+.MenuSlider p{
+    display: inline-block;
+    position: relative;
+    font-size: 25px;
+
+}
+
+
+.menuClose{
+    display: contents;
+    position: relative;
+}
+
+/* user*/
+.userInterfaz{
+    background-color: rgb(255, 250, 243);
+    height: 50px;
+    border-style: solid;
+    border-top: 5px;
+    border-color: rgba(0, 0, 0, 0.37);
+    display: inline-flex;
+    width: 100%;
+}
+
+.userInterfaz p {
+ padding-left: 90%;
+    color: black;
+    text-align: right;
+    display: block;
+    margin: auto;
+}
+.userIImage{
+    padding-right: 20px;
+    border-radius: 20px;
+    
+}
+.userIImage button{
+    border: none;
+}
+.userIImage button:hover{
+    background-color: rgb(154, 154, 154);
+    border-radius: 50%;
+}
+
+
+.closeSecion{
+    padding-left: 90%;
+    visibility: hidden;
+}
+.close{
+    visibility: visible;
+}
+.closeSecion button{
+color: black;
+height: 50px;
+width: 120px;
+}
+
+
+/*---------------------------------------------------------------------------------------------------*/
+}
+@media (max-width: 900px){
+    body{
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .menu{
+        
+        transition: 0.3s;
+    }
+    .menu{
+        background-color: rgb(0, 5, 58);
+        position: absolute;
+        width: 150px;
+        height: 600px;
+       font-family:Georgia, 'Times New Roman', Times, serif ;
+     
+        
+    }
+    .settings{
+        background-color: rgb(39, 39, 39);
+        height: 70px;
+       font-size: 25px;
+        position: relative;
+      
+      bottom: -25%;
+       
+    }
+    .settings div{
+        
+        padding-left: 30%;
+    }
+    .settings:hover{
+        background-color: black;
+    }
+    .MenuSlider img{
+        transition: 0.2s;
+      
+      }
+    .desplegar{
+        transform: translateX(-100%);
+        
+    }
+    
+    .desplegar img{
+        transform: translate(150px);
+    }
+    .OPO{
+        
+       height: 60px;
+    }
+    .OPO:hover{
+        background-color: rgb(33, 38, 79);
+    }
+    .MenuSlider p{
+        display: inline-block;
+        position: relative;
+        font-size: 25px;
+    
+    }
+    
+   
+    .menuClose{
+        display: contents;
+        position: relative;
+    }
+    
+    /* user*/
+    .userInterfaz{
+        background-color: rgb(255, 250, 243);
+        height: 50px;
+        border-style: solid;
+        border-top: 5px;
+        border-color: rgba(0, 0, 0, 0.37);
+        display: inline-flex;
+        width: 100%;
+    }
+    
+    .userInterfaz p {
+     padding-left: 70%;
+        color: black;
+        text-align: right;
+        display: block;
+        margin: auto;
+    }
+    .userIImage{
+        padding-right: 20px;
+        border-radius: 20px;
+        
+    }
+    .userIImage button{
+        border: none;
+    }
+    .userIImage button:hover{
+        background-color: rgb(154, 154, 154);
+        border-radius: 25px;
+    }
+    
+    
+    .closeSecion{
+        padding-left: 75%;
+        visibility: hidden;
+    }
+    .close{
+        visibility: visible;
+    }
+    .closeSecion button{
+    color: black;
+    height: 50px;
+    width: 120px;
+    }
+
+   
+}
