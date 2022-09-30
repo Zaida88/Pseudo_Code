@@ -1,17 +1,21 @@
 <link rel="stylesheet" href="/css/answer/create.css">
 
 <form action="/answers/create/{{user.idUser}}" method="post">
- <div id="container">
-    <div id="title">
-        <p>Respuesta</p>
+  <div id="title">
+        <p>Nueva Respuesta</p>
     </div>
-    <div id="answers">
+ <div id="container">
+    <div id="nameAnswers" style="display: block;">
         <label>Respuesta</label>
         <input type="text" name="answer" id="" required aria-checked="true">
     </div>
-   
-    <div id="button">
-        <button type="submit">Guardar</button>
+     <div id="buttonGroup1">  
+         <div id="button-cancel">
+            <button type="submit" id="btnCancel">Cancelar</button>
+        </div>
+        <div id="button">
+            <button type="submit" id="btnCreate">Crear</button>
+        </div>
     </div>
  </div>
 </form>

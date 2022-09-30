@@ -1,16 +1,21 @@
 <link rel="stylesheet" href="/css/question/create.css">
 
 <form action="/question/create/{{user.idUser}}" method="post">
+  <div id="title">
+        <p>Nueva Pregunta</p>
+    </div>
  <div id="container">
-    <div id="title">
-        <p> Ingresar Pregunta</p>
+    <div id="nameQuestions" style="display:block;">
+        <label>Pregunta:</label>
+        <input type="text" name="nameQuestions" id="t" id="" required aria-checked="true">
     </div>
-    <div id="nameQuestions">
-        <label>Pregunta</label>
-        <input type="text" name="nameQuestions" id="" required aria-checked="true">
-    </div>
-    <div id="button">
-        <button type="submit">Guardar</button>
+     <div id="buttonGroup1">  
+         <div id="button-cancel">
+            <button type="submit" id="btnCancel">Cancelar</button>
+        </div>
+        <div id="button">
+            <button type="submit" id="btnCreate">Crear</button>
+        </div>
     </div>
  </div>
 </form>
