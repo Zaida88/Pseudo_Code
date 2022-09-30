@@ -5,13 +5,13 @@
             <h1>PROYECTO</h1>
         </div>
 
-    <div class=''>
+    <div class='data'>
         {{#each list}}
         <div id="list-form" class="forms form-row">
             <div id="name" class="form-group col-md-6">
                 <div>
                     <label>Nombre proyecto:</label>
-                    <p>{{nameProject}}</p>
+                    <p class="dataText">{{nameProject}}</p>
                 </div>
             </div>
 
@@ -61,7 +61,7 @@
         </div>    
     </div>
         
-        {{/each}}
+        {{else}}
 
     <div class='center-block frame text-center' id="content">
         <div class='card-body'>
@@ -71,12 +71,18 @@
             <p class='card-text'>
                 Desea agregar uno.
             </p>
-            <a href="/project/create/{{idProject}}" class="hiden">
-                <button class='btn btn-primary button hiden'>
-                    <b>Agregar proyecto</b>
-                </button>
-            </a>
+
+        {{/each}}
+            <div class="text-center">
+                <a href="/project/create/{{idProject}}">
+                    <button class='btn btn-primary button' id="button">
+                        <b>Agregar proyecto</b>
+                    </button>
+                </a>
+            </div>
         </div>
     </div>
 </div>
 <script src="/js/project/hidden.project.js"></script>
+        
+        

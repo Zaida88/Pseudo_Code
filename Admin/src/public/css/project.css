@@ -47,6 +47,7 @@ label {
     margin-top: 160px;
     margin-left: 250px;
     margin-right: 250px; 
+    margin-bottom: 15px;
 }
 .forms{
     border-radius: 20px;
@@ -260,4 +261,9 @@ label {
     margin-left: 13px; 
     padding: 35px;
   }
+}
+#button{
+  margin-top: 35px;
+  margin-bottom: 35px;
+
 }
