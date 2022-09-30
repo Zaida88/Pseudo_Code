@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="/CSS/project.css">
+<div class="container">
+    {{#each list}}
+    <form action="/project/update/{{idProject}}" method="post">
+        {{/each}}
+        {{#each list}}
+        <div id="title" class="title text-center">
+            <h1>EDITAR PROYECTO</h1>
+        </div>
+        <div id="update" class="forms form-row">
+            <div id="name" class="form-group col-md-6">
+                <div class="">
+                    <label>Nombre proyecto:</label>
+                    <input value="{{nameProject}}" type="text" name="nameProject" id="nameProject" required
+                        aria-checked="true">
+                    <img class="icon" src="https://cdn-icons-png.flaticon.com/512/3597/3597075.png" alt="edit">
+                </div>
+                
+            </div>
+
+            <div id="description" class="form-group col-md-6">
+                <div class="icon-top">
+                    <label>Descripcion:</label>
+                    <textarea name="descriptionProject" id="descriptionProject" required
+                        aria-checked="true">{{descriptionProject}}</textarea>
+                    <img class="icon" src="https://cdn-icons-png.flaticon.com/512/3597/3597075.png" alt="edit">
+                </div>
+            </div>
+            <div id="mission" class="form-group col-md-6">
+                <div class="">
+                    <label>Mision:</label>
+                    <textarea name="mission" id="mission" required aria-checked="true">{{mission}}</textarea>
+                    <img class="icon" src="https://cdn-icons-png.flaticon.com/512/3597/3597075.png" alt="edit">
+                </div>
+            </div>
+            <div id="vision" class="form-group col-md-6">
+                <div class="">
+                    <label>Vision:</label>
+                    <textarea name="vision" id="vision" required aria-checked="true">{{vision}}</textarea>
+                    <img class="icon" src="https://cdn-icons-png.flaticon.com/512/3597/3597075.png" alt="edit">
+                </div>
+            </div>
+            {{#each listO}}
+            <div id="Objetives">
+                <label class="title">Objetivos:</label>
+                <p>{{objectives}}</p>
+            </div>
+            {{/each}}
+            <div id="logo" class="form-group col-md-6">
+                <label>Logo:</label>
+                <br>
+                <div id="changeImage">
+                    <img src="/img/NoImage.jpg" id="imagePreview">
+                </div>
+                <div class="file-select" id="src-file2">
+                    <input type="file" name="logoProject" id="filePicker" accept="image/*" required>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17"
+                    viewBox="0 0 20 17">
+                    <path
+                        d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z">
+                    </path>
+                </svg>
+            </div>
+            <div class="form-group col-md-6">
+                <div>
+                </div>
+            </div>
+
+            <div id="save" class="form-group col">
+                <button type="submit" class="btn btn-primary button ">Guardar</button>
+            </div>
+
+    </form>
+    {{/each}}
+    <div id="next">
+        <form action="/project/list/{{user.idUser}}" method="get">
+            <button class="btn btn-primary button" type="submit">Cancelar</button>
+        </form>
+    </div>
+
+</div>
+<script src="/js/project/logo.project.js"></script>

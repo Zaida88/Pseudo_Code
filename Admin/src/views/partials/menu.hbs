@@ -1,0 +1,79 @@
+{{#each User}}
+<link rel="stylesheet" href="/css/menuUser.css">
+
+<div class="menu desplegar " id="menu">
+
+    <g class="MenuSlider">
+        <p>Menú</p>
+        <div class="menuClose">
+            <button type="" class="btn-cerrar-popup" id="open-close"> <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2MgbOmjW5XamxCqhYpYU4cUJBoR5tCErAnA&usqp=CAU"
+                    alt="user"  width="40px"></button>
+
+
+
+                    
+        </div>
+
+    </g>
+    <hr>
+
+    <div class="OPO">
+        <a href="#">Proyecto</a>
+    </div>
+
+    <div class="OPO">
+        <a href="#">Clasificaciones</a>
+    </div>
+    <div class="OPO">
+        <a href="#">Pruebas</a>
+    </div>
+    <div class="OPO">
+        <a href="#">Usuarios</a>
+    </div>
+    <div class="OPO">
+        <a href="#">Ejercicios</a>
+    </div>
+    <div class="settings">
+        <div>
+             <a href="/userProfile/profileView/{{idUser}}">Perfil</a>
+        </div>
+
+    </div>
+    
+</div>
+
+<div class="user_primariInterfaz">
+
+<div class="userInterfaz">
+    <p>{{username}}</p>
+    <div class="userIImage">
+     <button type="" class="btn-cerrar-popup"  id="Close-open">  <img src="/img/user/{{photo}}"
+            width="45px" height="45px"   alt="">
+        </button> 
+    </div>
+    
+</div>
+<div class="closeSecion"id="closeSecion" >
+  <a href="/logout">  <button  >Cerrar Seción</button></a>
+</div>
+
+</div>
+ {{/each}}
+<script>
+    const $openclos = document.getElementById("Close-open"),
+$user_close = document.getElementById("closeSecion")
+$openclos.addEventListener("click",()=>{
+  $user_close.classList.toggle("close")
+})
+
+const $openclose = document.getElementById("open-close"),
+$asaid = document.getElementById("menu")
+$openclose.addEventListener("click",()=>{
+$asaid.classList.toggle("desplegar")
+})
+
+
+</script>
+
+

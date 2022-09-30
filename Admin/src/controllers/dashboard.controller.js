@@ -5,7 +5,7 @@ const CryptoJS = require('crypto-js')
 
 dashboardCtrl.show = async (req, res) => {
     const list = await sql.query('SELECT * FROM dashboard')
-    res.render('dashboard/dashboard', { list })
+    res.render('dashboard/show', { list })
 };
 
 module.exports = dashboardCtrl;

@@ -29,7 +29,7 @@ login.showLogin = async (req, res, next) => {
 };
 
 login.login = passport.authenticate('local.signin', {
-    successRedirect: '/dashboard/dashboard',
+    successRedirect: '/dashboard/show',
     failureRedirect: '/',
     failureFlash: true
 })

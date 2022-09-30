@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/css/test/list.css">
+<form action="/tests/list/{{user.idUser}}" method="get"></form>
+<div id="title">
+    <h3>Prueba</h3>
+</div>
+<div id="createTests">
+    <a href="/answers/create/{{idTests}}">
+    <button id="btnAdd" type="button">Agregar Prueba</button>
+    </a>
+</div>
+<div id="container">
+    <div class="row">
+        {{#each list}}
+            <div id="card">
+                <div id="id">
+                    <p>{{idTests}}</p>
+                </div>
+                <div id="name">
+                    <p>{{nameTests}}</p>
+                </div>
+                <div id="description">
+                    <p>{{descriptionTests}}</p>
+                </div>
+        
+                    <div id="edit">
+                    <a href="/tests/update/{{idTests}}">
+                    <button type="button" id="btnEditar">Editar Prueba</button>
+                    </a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

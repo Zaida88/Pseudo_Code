@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/answer/list.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<form action="/answers/list/{{user.idUser}}" method="get"></form>
+<div id="createAnswer">
+    <a href="/answers/create/{{idTests}}">
+    <button id="btnAdd" type="button">Agregar Respuesta</button>
+    </a>
+</div>
+<div id="miniContainer">
+    <div id="elementsTitle">
+        <div id="sideOne">
+            <p id="blacked">Pregunta</p>
+        </div>
+        <div id="sideTwo">
+            <p id="blacked">Ver</p>
+            <p id="blacked">Eliminar</p>
+        </div>
+    </div>
+</div>
+<div id="containerIterador">
+{{#each list}}
+    <div id="elementContainer">
+        <div id="description">
+            <p>Respuesta 1</p>
+        </div>
+        <div id="actions">
+            <div id="edit">
+                <button class="btn" id="icon" onclick="location.href='/answers/update/{{idAnswer}}'" ><i class="fa fa-eye"></i></button>
+            </div>
+         <div id="edit">
+                <button class="btn" id="icon" onclick="location.href='/answers/create/{{idAnswer}}'" ><i class="fa fa-trash"></i></button>
+            </div>
+        </div>
+    </div>
+{{/each}}
+</div>

@@ -26,3 +26,4 @@ const users = (sequelize, type) => {
     })
 }
 module.exports = users
+

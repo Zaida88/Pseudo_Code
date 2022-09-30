@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="/css/dashboard.css" />
+<div class="container">
+    <form action="/dashboard/show" method="get"></form>
+    <div id="title">
+        <h2>Inicio</h2>
+    </div>
+    {{#each list}}
+    <div class="contents">
+        <div id="data">
+            <label>Proyectos</label>
+            <p>{{project}}</p>
+        </div>
+        <div id="data">
+            <label>Lenguajes</label>
+            <p>{{language}}</p>
+        </div>
+        <div id="data">
+            <label>Pruebas</label>
+            <p>{{test}}</p>
+        </div>
+        <div id="data">
+            <label>Ejercicios</label>
+            <p>{{exercise}}</p>
+        </div>
+        <div id="data">
+            <label>Usuarios</label>
+            <p>{{user}}</p>
+        </div>
+    </div>
+</div>
+{{/each}}
+</div>

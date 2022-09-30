@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="/css/profile.css">
+ <div class="ajustes">
+  <form action="/userProfile/profileView/{{user.idUser}}" method="get"></form>
+  
+     <center>
+<h1 class="title">Perfil</h1>
+     </center>   
+    </div>
+    {{#each User}}
+     <div class="profileUser">
+        <div class="profile">
+        <div class="userImage">
+            <img src="/img/user/{{photo}}"
+            height="250px" alt="user profile">
+         
+        </div>
+       
+            <table class="userData" >
+
+                <tr>
+              
+                  <td class="borderTableTitle"><p>Usuario</p></td>
+              
+                  <td class="borderTable"><p  >{{username}}</p></td>
+              
+                 
+              
+                </tr>
+              
+                <tr>
+   <td class="borderTableTitle"><p>Nombre</p></td>
+              
+                  <td class="borderTable"><p>{{firstName}}</p></td>
+              
+                  
+              
+                </tr>
+                   <td class="borderTableTitle"><p>Apellido</p> </td>
+              
+                  <td class="borderTable"><p>{{lastName}}</p></td>
+              
+                  
+              
+                </tr>
+
+
+
+
+              
+                  <td class="borderTableTitle"><p>Correo</p> </td>
+              
+                  <td class="borderTable"><p>{{email}}</p></td>
+              
+                  
+              
+                </tr>
+
+              
+                
+              
+                
+              
+              </table>
+      
+     </div>
+     <div class="toEdit">
+        <a href="/userProfile/profileEdit/{{idUser}}"><button id="editar">Editar</button ></a> 
+     </div>
+    </div>
+
+    
+     {{/each}} 
+
+
