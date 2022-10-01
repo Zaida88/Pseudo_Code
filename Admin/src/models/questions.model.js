@@ -1,5 +1,5 @@
-const question = (Sequelize, type) => {
-    return Sequelize.define("question", {
+const questions = (Sequelize, type) => {
+    return Sequelize.define("questions", {
         idQuestion: {
             type: type.INTEGER,
             primaryKey: true,
@@ -20,4 +20,4 @@ const question = (Sequelize, type) => {
         timesTamps: false,
     })
 }
-module.exports = question
+module.exports = questions

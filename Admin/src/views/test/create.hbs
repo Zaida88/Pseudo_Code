@@ -1,20 +1,22 @@
 <link rel="stylesheet" href="/css/test/create.css">
 
 <form action="/test/create/{{user.idUser}}" method="post">
+    <div id="title">
+        <p>Nueva Prueba</p>
+    </div>
     <div id="container">
-        <div id="title">
-            <p>Nueva Prueba</p>
-        </div>
         <div id="nameTest">
             <label>Nombre:</label>
             <input type="text" name="nameTest" id="textElement" required aria-checked="true">
         </div>
         <div id="descriptionTest">
             <label>Descripcion</label>
-            <textarea name="descriptionTest" id="textElement" required aria-checked="true"></textarea>
+            <textarea name="descriptionTest" id="textElement" required aria-checked="true">
+
+            </textarea>
         </div>
         <div id="buttonGroup">
-            <div id="button_cancel">
+            <div id="buttonCancel">
                 <button id="btnCancel" type="submit">Cancelar</button>
             </div>
             <div id="button">

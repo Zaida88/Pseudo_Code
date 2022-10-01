@@ -27,14 +27,14 @@ body{
     color: #FFFFFF;
 }
 
-#btnEditar {
+#btnEdit {
     border-radius: 5px;
     padding-left: 10px;
     padding-right: 10px;
     border: none;
 }
 
-#createTests {
+#createTest {
     position: absolute;
     top: 10%;
     right: 5%;

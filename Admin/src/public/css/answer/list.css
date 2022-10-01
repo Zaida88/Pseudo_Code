@@ -11,7 +11,7 @@ body{
     background-color: rgb(249, 242, 242);
 }
 
-#containerIterador {
+#containerIterator {
     position: absolute;
     display: flex;
     flex-direction: column;

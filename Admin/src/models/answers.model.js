@@ -1,5 +1,5 @@
 const answer = (sequelize, type) => {
-    return sequelize.define("answer", {
+    return sequelize.define("answers", {
         idAnswer: {
             type: type.INTEGER,
             primaryKey: true,

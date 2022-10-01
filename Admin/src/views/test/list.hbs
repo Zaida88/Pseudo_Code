@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="/css/test/list.css">
+
 <form action="/test/list/{{user.idUser}}" method="get"></form>
 <div id="title">
     <h3>Prueba</h3>
@@ -31,23 +32,25 @@
         {{/each}}
     </div>
 </div>
-{{else}}
 
-<div class="center-block frame text-center" id="content">
-    <div class="card-body">
-        <h5 class="card-title">
-            No tienes pruebas registradas actualmente.
-        </h5>
-        <p class="card-text">
-            Deseas agregar una.
-        </p>
+<div class='center-block frame text-center' id="content">
+        <div class='card-body'>
+            <h5 class='card-title'>
+                No tienes pruebas registradas actualmente.
+            </h5>
+            <p class='card-text'>
+                Desea agregar una.
+            </p>
+
         {{/each}}
-        <div class="text-center">
-            <a href="answer/create/{{idAnswer}}">
-                <button class="btn btn-primary button" id="button">
-                    <b>Agregar Prueba</b>
-                </button>
-            </a>
+            <div class="text-center">
+                <a href="/project/create/{{idProject}}">
+                    <button class='btn btn-primary button' id="button">
+                        <b>Agregar Prueba</b>
+                    </button>
+                </a>
+            </div>
         </div>
     </div>
 </div>
+<script src="/src/views/test/hidden.test.js"></script>

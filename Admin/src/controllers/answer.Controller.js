@@ -1,32 +1,32 @@
-const answer ={}
+const answerCtl ={}
 
 const orm = require("../databaseConfiguration/db_orm")
 const sql = require("../databaseConfiguration/db_sql")
 
-answer.show=(req,res)=>{
+answerCtl.show=(req,res)=>{
     res.render("answer/create")
 }
-answer.send=async(req,res)=>{
+answerCtl.send=async(req,res)=>{
     const ids=req.user.idUser
     const{nameAnswer, descriptionAnswer}=req.body
     const newAnswer={
         nameAnswer, 
         descriptionAnswer
     }
-    await  orm.answer.create(newAnswer)
-    req.flash("success","Guardado exitosamente")
-    res.redirect("/answer/list/"+ids)
+    await  orm.answers.create(newAnswer)
+    req.flash("success","guardado exitosamente")
+    res.redirect("/answers/list/"+ids)
 }
-answer.list=async(req,res)=>{
-    const list=await sql.query("select*from answer")
+answerCtl.list=async(req,res)=>{
+    const list=await sql.query("select*from answers")
     res.render("answer/list", {list})
 }
-answer.bring=async(req,res)=>{
+answerCtl.bring=async(req,res)=>{
     const id=req.params.id
-    const list=await sql.query("select*from answer where idAnswer=?", [id])
+    const list=await sql.query("select*from answers where idAnswer=?", [id])
     res.render("answer/update",{list})
 }
-answer.update=async(req,res)=>{
+answerCtl.update=async(req,res)=>{
     const id=req.params.id
     const ids=req.user.idUser
     const {nameAnswer, descriptionAnswer}=req.body
@@ -39,7 +39,7 @@ answer.update=async(req,res)=>{
         updateAnswer.update(newAnswer)
     })
         
-    req.flash("success","Guardado exitosamente")
-    res.redirect("/answer/list/"+ids)
+    req.flash("success","guardado exitosamente")
+    res.redirect("/answers/list/"+ids)
 }
-module.exports= answer
+module.exports= answerCtl
