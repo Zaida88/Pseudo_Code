@@ -1,25 +1,25 @@
 const tests = (sequelize, type) => {
     return sequelize.define("tests", {
-        idTest: {
+        idTests: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        nameTest: type.STRING,
-        descriptionTest: type.STRING,
-        qualificationTest: type.STRING,
-        createdTest: {
+        nameTests: type.STRING,
+        descriptionTests: type.STRING,
+        qualificationTests: type.STRING,
+        createdTests: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         },
-        updatedTest: {
+        updatedTests: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
     }, {
-        timestamps: false,
+        timesTamps: false,
     })
 }
 module.exports = tests

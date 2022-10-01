@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/CSS/project.css">
+<div class="container">
+    <form action="/project/createObjetive/" method="post">
+        {{#each max}}
+        <input class="none" type="text" name="idObjetive" id="idObjetive" value="{{'max(iObjetive)'}}" readonly />
+        {{/each}}
+
+        <div id="title" class="title text-center">
+            <h1>Agrega Objetivos</h1>
+        </div>
+        <div id="create" class="forms form-row">
+            <div id="Objetives">
+                <label class="title">Objetivos:</label>
+                <textarea name="objetive" id="objetive" required aria-checked="true"></textarea>
+            </div>
+            
+            <div id="save" class="form-group col">
+                <button type="submit" class="btn btn-primary button ">Guardar <a href="/project/list/{{user.idUser}}"></a> </button>
+            </div>
+        
+    </form>
+            <div id="next">
+                <form action="/project/list/{{user.idUser}}" method="get">
+                    <button class="btn btn-primary button" type="submit">Cancelar</button>
+                </form>
+            </div>
+        </div>
+</div>

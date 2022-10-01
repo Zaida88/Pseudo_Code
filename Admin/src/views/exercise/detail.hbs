@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/css/exercise/exercise.css" />
+
+<div class="container">
+    {{#each exercise}}
+    <form action="/exercise/detail/{{idExercise}}" method="get"></form>
+    <div id="title">
+        <h3>Detalle del ejercicio</h3>
+    </div>
+    <div class="contents">
+        <div id="hidden">
+            <input name="idExercise" checked aria-checked="true" placeholder="{{idExercise}}" readonly>
+        </div>
+        <div class="block">
+            <div class="data">
+                <label>Nombre</label>
+                <input class="input" type="text" name="nameExercise" aria-checked="true" placeholder="{{nameExercise}}"
+                    readonly />
+            </div>
+            <div class="data">
+                <label>Puntaje</label>
+                <input type="number" name="punctuationExercise" aria-checked="true" placeholder="{{punctuationExercise}}"
+                    readonly>
+            </div>
+            <div class="data">
+                <label>Lenguaje</label>
+                <input class="input" type="text" name="nameLanguage" aria-checked="true" placeholder="{{nameLanguage}}"
+                    readonly />
+            </div>
+        </div>
+        <div class="block">
+            <div class="data">
+                <label>Descripción</label>
+                <textarea name="descriptionExercise" id="" aria-checked="true" placeholder="{{descriptionExercise}}" readonly></textarea>
+            </div>
+            <div class="data">
+                <label>Código</label>
+                <input class="input" type="text" name="nameLanguage" aria-checked="true" placeholder="{{nameCode}}"
+                    readonly />
+            </div>
+        </div>
+    </div>
+    <div class="options">
+        <a href="/exercise/listExercises/{{idLanguage}}"><button type="button" id="back">Regresar</button></a>
+        <a href="/exercise/update/{{idExercise}}"><button type="button" id="save">Editar</button></a>
+    </div>
+    {{/each}}
+</div>

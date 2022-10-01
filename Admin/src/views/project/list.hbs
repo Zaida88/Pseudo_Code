@@ -1,0 +1,88 @@
+<link rel='stylesheet' href='/CSS/project.css' />
+<div class='container'>
+    <form action="/project/list/{{user.idUser}}" method='get'></form>
+        <div id="title" class="title text-center">
+            <h1>PROYECTO</h1>
+        </div>
+
+    <div class='data'>
+        {{#each list}}
+        <div id="list-form" class="forms form-row">
+            <div id="name" class="form-group col-md-6">
+                <div>
+                    <label>Nombre proyecto:</label>
+                    <p class="dataText">{{nameProject}}</p>
+                </div>
+            </div>
+
+            <div id="description" class="form-group col-md-6">
+                <div>
+                    <label>Descripcion:</label>
+                    <p>{{descriptionProject}}</p>
+                </div>
+            </div>
+
+            <div id="mission" class="form-group col-md-6">
+                <div class="">
+                    <label>Mision:</label>
+                    <textarea>{{mission}}</textarea>
+                </div>
+            </div>
+
+            <div id="vision" class="form-group col-md-6">
+                <div>
+                    <label>Vision:</label>
+                    <textarea>{{vision}}</textarea>
+                </div>
+            </div>
+            {{#each listObjetive}}
+            <div id="Objetives">
+                <label class="title">Objetivos:</label>
+                <p>{{objective}}</p>
+            </div>
+            {{/each}}
+            <div id="logo" class="form-group col-md-6">
+                <label>Logo:</label> <br>
+                <div id="changeImage">
+                    <img src="/img/user/{{logoProject}}" id="image"/>
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <div>
+                </div>
+            </div>
+            <div id='edit' class="form-group col">
+                <a href="/project/update/{{idProject}}">
+                    <button type='button' class='btn btn-primary button'>
+                        Editar
+                    </button>
+                </a>
+            </div>
+        </div>    
+    </div>
+        
+        {{else}}
+
+    <div class='center-block frame text-center' id="content">
+        <div class='card-body'>
+            <h5 class='card-title'>
+                No tienes proyectos registrados actualmente.
+            </h5>
+            <p class='card-text'>
+                Desea agregar uno.
+            </p>
+
+        {{/each}}
+            <div class="text-center">
+                <a href="/project/create/{{idProject}}">
+                    <button class='btn btn-primary button' id="button">
+                        <b>Agregar proyecto</b>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/js/project/hidden.project.js"></script>
+        
+        

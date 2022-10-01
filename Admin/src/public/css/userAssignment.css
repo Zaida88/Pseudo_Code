@@ -1,0 +1,219 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.conten{
+  height: 200px;
+  display: flex;
+  color: black;
+  flex-direction: column;
+  margin: 10px 0 20px;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.containerCre {
+  padding: 2%;
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  max-width: 50%;
+  max-height: fit-content;
+  top: 20%;
+  left: 28%;
+  background-color: #D0D3D4;
+  border-radius: 13px;
+  text-align: justify;
+}
+
+.res{
+  padding: 2%;
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  max-width: 50%;
+  max-height: fit-content;
+  top: 20%;
+  left: 28%;
+}
+
+.center{
+  padding: 7%;
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  max-width: 100%;
+  max-height: fit-content;
+  top: 20%;
+  left: 1px;
+}
+
+.container {
+  max-width: 90%;
+  max-height: fit-content;
+  width: 100%;
+  height: fit-content;
+}
+
+.containe {
+  max-width: 5%;
+  max-height: fit-content;
+  width: 100%;
+  height: fit-content;
+}
+
+.content-table {
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  max-width: 100%;
+  max-height: fit-content;
+  top: 20%;
+  left: 0px;
+  border: 3px solid black;
+  text-align: center;
+}
+
+.content-table1 {
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  max-width: 50%;
+  max-height: fit-content;
+  top: 20%;
+  left: 220px;
+  text-align: center;
+}
+
+.container {
+  height: 20%;
+}
+
+.update{
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  max-width: 40%;
+  max-height: fit-content;
+  top: 19%;
+  left: 30%;
+  text-align: center;
+}
+
+.title {
+  margin: 3% 0 50% 0;
+  color: black;
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+  overflow: auto;
+}
+
+.butt {
+  background-color: #093faa;
+  text-align: center;
+  color: white;
+  width: auto;
+}
+
+.butt1 {
+  background-color: #093faa;
+  text-align: center;
+  color: white;
+  width: auto;
+  position: absolute;
+  top: 56%;
+  left: 70%;
+}
+
+.bot {
+  background-color: #b8b9bb;
+  text-align: center;
+  color: black;
+  width: auto;
+  border: none;
+  border-radius: 8px;
+  width: 150px;
+}
+
+.but {
+  background-color: #6f6f6f;
+  text-align: center;
+  color: white;
+  width: auto;
+  position: absolute;
+  top: 57%;
+  left: 30%;
+}
+
+.butto {
+  background-color: white;
+  border: none;
+  transition: 0.3s;
+}
+
+.tr {
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  max-width: 50%;
+  max-height: fit-content;
+  top: 28%;
+  left: 28%;
+  border: 3px solid black;
+  text-align: center;
+}
+
+.updatetr {
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  max-width: 20%;
+  max-height: fit-content;
+  top: 28%;
+  left: 33%;
+  text-align: center;
+  background-color: white;
+}
+
+.t {
+  border-collapse: collapse;
+  font-size: 1em;
+  font-family: sans-serif;
+  min-width: 250px;
+  text-align: center;
+}
+
+.ta {
+  border-collapse: collapse;
+  font-size: 1em;
+  font-family: sans-serif;
+  min-width: 250px;
+  text-align: center;
+}
+
+.fields {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  float: left;
+  width: auto;
+  margin: 45px;
+  margin: 6px 0px 0px 750px;
+  font-size: 1em;
+  font-family: sans-serif;
+}
+
+.field {
+  padding-top: 10px;
+  padding-bottom: 40px;
+  float: left;
+  width: auto;
+  margin: 45px;
+  margin: 6px 0px 0px 500px;
+  font-size: 1em;
+  font-family: sans-serif;
+}

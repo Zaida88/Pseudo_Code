@@ -1,37 +1,32 @@
-<link rel="stylesheet" href="/css/question/list.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet"  href="/CSS/clasificacion.css" />
 
-<form action="/classification/list" method="get"></form>
-<div id="createQuestion">
-    <a href="/classifications/create/{{idClassification}}">
-    <button id="btnAdd" type="button">Agregar Pregunta</button>
-    </a>
-</div>
-<div id="miniContainer">
-    <div id="elementsTitle">
-        <div id="sideOne">
-            <p id="blacked">Pregunta</p>
-        </div>
-        <div id="sideTwo">
-            <p id="blacked">Ver</p>
-            <p id="blacked">Eliminar</p>
-        </div>
+<form action="/classification/list/{{user.iduser}}" method="get"></form>
+<div class="contenedor" id="contenedor">
+  {{#each list}}
+  <div class="contenedor__contenido">
+    <div class="nombre" id="nombre">
+      <h1>{{nameClassification}}</h1>
     </div>
-</div>
-<div id="containerIterador">
-{{#each list}}
-    <div id="elementContainer">
-        <div id="description">
-            <p>Pregunta 1</p>
-        </div>
-        <div id="actions">
-            <div id="edit">
-                <button class="btn" id="icon" onclick="location.href='/question/update/{{idClassification}}'" ><i class="fa fa-eye"></i></button>
-            </div>
-         <div id="edit">
-                <button class="btn" id="icon" onclick="location.href='/question/update/{{idClassification}}'" ><i class="fa fa-trash"></i></button>
-            </div>
-        </div>
+    <div class="contenedor__contenido">
+    <div class="nombre" id="nombre">
+      <h1>{{descriptionClassification}}</h1>
     </div>
-{{/each}}
+    <div class="contenedor__contenido">
+    <div class="nombre" id="nombre">
+      <h1>{{imageClassification}}</h1>
+    </div>
+    <div id="editar"> 
+      <a href="/classification/edit/{{idClassification}}"><button class="boton"><b>Editar</b></button></a>
+    </div>
+    <div class="codificacion" id="codificacion">
+      <a href="/classification/add/{{idClassification}}"><button class="boton"><b>Agregar lenguaje</b></button></a>
+    </div>
+  </div>
+  {{else}}
+  <div class="mensaje">
+    <h2>No tiene ninguna clasificacion</h2>
+    <h3>¿Desea agregar?</h3>
+    <a href="/classification/add/{{user.iduser}}"><button class="boton"><b>Agregar</b></button></a>
+  </div>
+  {{/each}}
 </div>

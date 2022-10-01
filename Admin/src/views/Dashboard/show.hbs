@@ -1,33 +1,32 @@
-<link rel="stylesheet" href="/CSS/proyecto.css" />
-
-<form action="/dashboard/show" method="get"></form>
-<label class="">Tablero</label>
+<link rel="stylesheet" href="/css/dashboard.css" />
 <div class="container">
+    <form action="/dashboard/show" method="get"></form>
+    <div id="title">
+        <h2>Inicio</h2>
+    </div>
     {{#each list}}
-    <div class="">
-        <div class="">
-            <div id="">
-                <label>Proyectos</label>
-                <p>{{project}}</p>
-            </div>
-            <div id="">
-                <label>Lenguajes</label>
-                <p>{{language}}</p>
-            </div>
-            <div id="">
-                <label>Pruebas</label>
-                <p>{{test}}</p>
-            </div>
-            <div id="">
-                <label>Ejercicios</label>
-                <p>{{exercise}}</p>
-            </div>
-            <div id="">
-                <label>Usuarios</label>
-                <p>{{user}}</p>
-            </div>
+    <div class="contents">
+        <div id="data">
+            <label>Proyectos</label>
+            <p>{{project}}</p>
+        </div>
+        <div id="data">
+            <label>Lenguajes</label>
+            <p>{{language}}</p>
+        </div>
+        <div id="data">
+            <label>Pruebas</label>
+            <p>{{test}}</p>
+        </div>
+        <div id="data">
+            <label>Ejercicios</label>
+            <p>{{exercise}}</p>
+        </div>
+        <div id="data">
+            <label>Usuarios</label>
+            <p>{{user}}</p>
         </div>
     </div>
-    {{/each}}
-    <a href="/logout">Cerrar sesion</a>
+</div>
+{{/each}}
 </div>

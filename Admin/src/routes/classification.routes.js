@@ -1,7 +1,8 @@
 const express = require('express');
-const router = express.Router();
 
-const { show,bring, send, list, update, delet }=require("../controllers/classificationcontroller")
+const router = express.Router()
+
+const{ show, bring, list, send, update, remove} = require("../controllers/classificationcontroller")
 const { isLoggedIn } = require('../lib/auth')
 
 router.get("/add/:id", isLoggedIn, show)
@@ -14,7 +15,6 @@ router.post("/add/:id", isLoggedIn, send)
 
 router.post("/edit/:id", isLoggedIn, update)
 
-router.get("/delete/:id", isLoggedIn, delet)
+router.get("/remove/:id", isLoggedIn, remove)
 
-
-module.exports=router
+module.exports = router

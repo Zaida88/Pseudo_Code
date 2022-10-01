@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    max-width: auto;
+    width: 100%;
+    height: fit-content;
+    max-width: auto;
+    max-height: fit-content;
+}
+
+.container #title,
+#description {
+    text-align: justify;
+    width: auto;
+    height: auto;
+    word-wrap: break-word;
+    margin: 1% 0 0 0;
+}
+
+.contents {
+    display: flex;
+    justify-content: left;
+    height: fit-content;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+#data {
+    background-color: rgb(240, 249, 253);
+    margin: 1%;
+    padding: 2% 2% 1% 2%;
+    border: solid black 1px;
+    border-radius: 10%;
+}
+
+.optionDelete {
+    margin-top: 5px;
+}
+
+.optionDetail #detail {
+    border: 1px black solid;
+    background-color: #093faa;
+    color: white;
+}
+
+.optionDelete #delete {
+    border: 1px black solid;
+    background-color: #f92b2b;
+    color: white;
+}
+
+.message {
+    margin: 9% 25%;
+    background-color: rgb(240, 249, 253);
+    padding: 10%;
+    border: solid black 1px;
+    border-radius: 20px;
+}
+
+.back {
+    margin-top: 0.5%;
+    float: right;
+}
+
+.back button {
+    color: white;
+    background-color: #3b8eed;
+}
+

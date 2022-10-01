@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="/css/exercise/exercise.css" />
+
+<div class="container">
+  {{#each exercise}}
+  <form action="/exercise/update/{{idExercise}}" method="post">
+    <div id="title">
+      <h3>Editar ejercicio</h3>
+    </div>
+    <div id="hidden">
+      <input type="text" name="idLanguage" value="{{idLanguage}}" readonly>
+    </div>
+    <div class="contents">
+      <div class="block">
+        <div class="data">
+          <label>Nombre</label>
+          <input class="input" id="edit" type="text" name="nameExercise" aria-checked="true" value="{{nameExercise}}" />
+        </div>
+        <div class="data">
+          <label>Puntaje</label>
+          <input type="number" id="edit" name="punctuationExercise" aria-checked="true" value="{{punctuationExercise}}">
+        </div>
+        <div class="data">
+          <label>Lenguaje</label>
+          <input class="input" type="text" name="nameLanguage" aria-checked="true" placeholder="{{nameLanguage}}" readonly/>
+        </div>
+      </div>
+      <div class="block">
+        <div class="data">
+          <label>Descripción</label>
+          <textarea name="descriptionExercise" id="textEdit" aria-checked="true">{{descriptionExercise}}</textarea>
+        </div>
+        <div class="data">
+          <label>Código</label>
+          <input class="input" type="text" name="nameLanguage" aria-checked="true" placeholder="{{nameCode}}" readonly/>
+        </div>
+      </div>
+    </div>
+    <div class="options">
+      <button type="submit" id="save">Guardar</button>
+      <a href="/exercise/detail/{{idExercise}}"><button type="button" id="back">Cancelar</button></a>
+    </div>
+    {{/each}}
+  </form>

@@ -7,6 +7,6 @@ routes.get('/registration', showRegistration);
 routes.post('/registration', registration);
 routes.get('/login/:id', showLogin);
 routes.post('/login/:id', login);
-routes.get('/logout', logout);
+routes.get('/logout', logout); 
 
 module.exports = routes;
