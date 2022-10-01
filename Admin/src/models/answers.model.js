@@ -1,5 +1,5 @@
-const answers = (sequelize, type) => {
-    return sequelize.define("answers", {
+const answer = (sequelize, type) => {
+    return sequelize.define("answer", {
         idAnswer: {
             type: type.INTEGER,
             primaryKey: true,
@@ -20,4 +20,4 @@ const answers = (sequelize, type) => {
         timestamps: false,
     })
 }
-module.exports = answers
+module.exports = answer

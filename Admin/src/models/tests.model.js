@@ -1,25 +1,25 @@
-const tests = (sequelize, type) => {
-    return sequelize.define("tests", {
-        idTests: {
+const test = (sequelize, type) => {
+    return sequelize.define("test", {
+        idTest: {
             type: type.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
-        nameTests: type.STRING,
-        descriptionTests: type.STRING,
-        qualificationTests: type.STRING,
-        createdTests: {
+        nameTest: type.STRING,
+        descriptionTest: type.STRING,
+        qualificationTest: type.STRING,
+        createdTest: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         },
-        updatedTests: {
+        updatedTest: {
             type: 'TIMESTAMP',
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
     }, {
-        timesTamps: false,
+        timestamps: false,
     })
 }
-module.exports = tests
+module.exports = test

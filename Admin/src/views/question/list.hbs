@@ -3,8 +3,8 @@
 
 <form action="/question/list" method="get"></form>
 <div id="createQuestion">
-    <a href="/answers/create/{{idTests}}">
-    <button id="btnAdd" type="button">Agregar Pregunta</button>
+    <a href="/answer/create/{{idTests}}">
+        <button id="btnAdd" type="button">Agregar Pregunta</button>
     </a>
 </div>
 <div id="miniContainer">
@@ -18,20 +18,42 @@
         </div>
     </div>
 </div>
-<div id="containerIterador">
-{{#each list}}
+<div id="containerIterator">
+    {{#each list}}
     <div id="elementContainer">
         <div id="description">
             <p>Pregunta 1</p>
         </div>
         <div id="actions">
             <div id="edit">
-                <button class="btn" id="icon" onclick="location.href='/question/update/{{idQuestions}}'" ><i class="fa fa-eye"></i></button>
+                <button class="btn" id="icon" onclick="location.href='/question/update/{{idQuestions}}'"><i
+                        class="fa fa-eye"></i></button>
             </div>
-         <div id="edit">
-                <button class="btn" id="icon" onclick="location.href='/question/update/{{idQuestions}}'" ><i class="fa fa-trash"></i></button>
+            <div id="edit">
+                <button class="btn" id="icon" onclick="location.href='/question/update/{{idQuestions}}'"><i
+                        class="fa fa-trash"></i></button>
             </div>
         </div>
     </div>
-{{/each}}
+    {{/each}}
+</div>
+{{else}}
+
+<div class="center-block frame text-center" id="content">
+    <div class="card-body">
+        <h5 class="card-title">
+            No tienes preguntas registradas actualmente.
+        </h5>
+        <p class="card-text">
+            Deseas agregar una.
+        </p>
+        {{/each}}
+        <div class="text-center">
+            <a href="answer/create/{{idAnswer}}">
+                <button class="btn btn-primary button" id="button">
+                    <b>Agregar Pregunta</b>
+                </button>
+            </a>
+        </div>
+    </div>
 </div>

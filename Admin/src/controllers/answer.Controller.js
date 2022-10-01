@@ -13,17 +13,17 @@ answer.send=async(req,res)=>{
         nameAnswer, 
         descriptionAnswer
     }
-    await  orm.answers.create(newAnswer)
-    req.flash("success","guardado exitosamente")
-    res.redirect("/answers/list/"+ids)
+    await  orm.answer.create(newAnswer)
+    req.flash("success","Guardado exitosamente")
+    res.redirect("/answer/list/"+ids)
 }
 answer.list=async(req,res)=>{
-    const list=await sql.query("select*from answers")
+    const list=await sql.query("select*from answer")
     res.render("answer/list", {list})
 }
 answer.bring=async(req,res)=>{
     const id=req.params.id
-    const list=await sql.query("select*from answers where idAnswer=?", [id])
+    const list=await sql.query("select*from answer where idAnswer=?", [id])
     res.render("answer/update",{list})
 }
 answer.update=async(req,res)=>{
@@ -39,7 +39,7 @@ answer.update=async(req,res)=>{
         updateAnswer.update(newAnswer)
     })
         
-    req.flash("success","guardado exitosamente")
-    res.redirect("/answers/list/"+ids)
+    req.flash("success","Guardado exitosamente")
+    res.redirect("/answer/list/"+ids)
 }
 module.exports= answer
