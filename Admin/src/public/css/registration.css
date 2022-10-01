@@ -19,16 +19,15 @@ body {
     position: absolute;
     width: 100%;
     height: fit-content;
-    max-width: 35%;
+    max-width: 25%;
     max-height: fit-content;
-    top: 4%;
-    left: 34%;
+    top: 12%;
+    left: 36%;
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 10%;
 }
 
 .container #title {
-    margin-bottom: 3%;
     color: white;
     width: auto;
     height: auto;
@@ -46,14 +45,16 @@ body {
 }
 
 .data {
-    margin: 0.5%;
-    max-height: fit-content;
+    margin-top: 1%;
+    max-height: max-content;
     max-width: fit-content;
     flex-wrap: wrap;
     word-wrap: break-word;
 }
 
 .data input {
+    border-radius: 5px;
+    font-size: 15px;
     width: auto;
     height: auto;
     word-wrap: break-word;
@@ -71,7 +72,11 @@ body {
 }
 
 .submit {
-    margin: 6% 0 1% 0;
+    margin-top: 6%;
+}
+
+.submit button{
+    font-size: 16px;
 }
 
 .file-select {

@@ -4,7 +4,7 @@ body {
     text-align: center;
 }
 
-#hidden {  
+#hidden {
     display: none;
 }
 
@@ -17,15 +17,18 @@ body {
     top: 10%;
     left: 33%;
     background-color: #d0d0d0;
-    border-radius: 10%;
+    border-radius: 20px;
     padding: 0;
 }
 
 .container #title {
-    margin-top: 2%;
     width: auto;
     height: auto;
     word-wrap: break-word;
+}
+
+.container #title h2 {
+    margin-bottom: 0;
 }
 
 .contents {
@@ -55,40 +58,46 @@ body {
 }
 
 .data input {
-    width: auto;
+    border-radius: 5px;
+    font-size: 15px;
     height: auto;
     word-wrap: break-word;
 }
 
 .data label {
+    font-size: 20px;
     margin: 0;
     display: flex;
     justify-content: left;
 }
 
-#edit{
-    border-color:steelblue;
+#edit {
+    border-color: steelblue;
 }
 
 .data textarea {
+    border-radius: 5px;
     font-size: small;
-    width: 187px;
-    height: 90px;
+    width: 192px;
+    height: 73px;
     word-wrap: break-word;
     resize: none;
 }
 
-#textEdit{
+#textEdit {
     border-width: 2px;
-    border-color:steelblue;
+    border-radius: 5px;
+    border-color: steelblue;
     font-size: small;
-    width: 187px;
-    height: 90px;
+    width: 192px;
+    height: 73px;
     word-wrap: break-word;
     resize: none;
 }
 
 .data select {
+    border-radius: 5px;
+    font-size: 15px;
     width: 100%;
 }
 
@@ -107,14 +116,13 @@ body {
     padding: 0 6%;
     background-color: #6f6f6f;
     color: white;
+    font-size: 15px;
 }
 
 .options #save {
     margin-right: 7%;
     float: right;
-}
-
-.options #save {
+    font-size: 15px;
     border: 1px black solid;
     padding: 0 6%;
     background-color: #093faa;
@@ -122,12 +130,13 @@ body {
 }
 
 .submit {
-    margin: 4% 9.5% 4% 0;
+    margin: 4% 11% 4% 0;
     display: flex;
     justify-content: right;
 }
 
 .submit button {
+    font-size: 15px;
     border: 1px black solid;
     padding: 0 6%;
     background-color: #093faa;
@@ -136,12 +145,13 @@ body {
 
 .cancel {
     position: absolute;
-    margin: -10% 0 2% 9.5%;
+    margin: -8% 0 2% 11%;
     display: flex;
     justify-content: left;
 }
 
 .cancel button {
+    font-size: 15px;
     border: 1px black solid;
     background-color: #6f6f6f;
     color: white;
