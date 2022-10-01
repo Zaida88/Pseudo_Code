@@ -1,0 +1,258 @@
+.none {
+  display: none;
+}
+.div_hide {
+opacity: 0;
+display: none;
+}
+.title{
+margin-top: 15px;
+}
+.icon{
+height: 25px;
+width: 25px;
+}
+input {
+  width: 97%;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  height: 35px;
+  border-radius: 8px;
+  transition: 0.3s;
+  background-color: #B8B9BB;
+}
+textarea{
+  width: 97%;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  height: 35px;
+  border-radius: 8px;
+  transition: 0.3s;
+  background-color: #B8B9BB;
+}
+label {
+  margin-left: 5px;
+  font-size: 18px;
+  font-weight: 100;
+}
+.frame{
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #D9D9D9;
+  justify-content: center;
+  align-items: center;
+  margin-top: 160px;
+  margin-left: 250px;
+  margin-right: 250px; 
+  margin-bottom: 15px;
+}
+.forms{
+  border-radius: 20px;
+  background-color: #D9D9D9;
+  justify-content: center;
+  align-items: center;
+  margin-left: 350px;
+  margin-right: 340px; 
+  padding: 75px;
+}
+
+#id{
+  display: none;
+}
+#list-form {
+margin-top: 20px;
+}
+#list-form p{
+  width: 97%;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  height: 35px;
+  border-radius: 8px;
+  transition: 0.3s;
+  background-color: #B8B9BB;
+  padding: 6px;
+}
+#update input{
+width: 270px;
+height: 32px;
+}
+#update textarea{
+width: 270px;
+height: 32px;
+}
+.icon-top icon{
+margin-top: 155px;
+}
+
+.submit1 {
+  position: absolute;
+  margin: 35% -35% 4% 0;
+  display: flex;
+  justify-content: right;
+}
+
+.submit1 button {
+  padding: 2 6%;
+  background-color: #093faa;
+  color: white;
+}
+
+.cancel {
+  position: absolute;
+  margin: -4% 0 2% 30.5%;
+  display: flex;
+  justify-content: left;
+}
+
+.cancel button {
+  border: 1px #6f6f6f solid;
+  background-color: #6f6f6f;
+  color: white;
+}
+
+.file-select {
+  position: relative;
+  display: inline-block;
+}
+
+.file-select::before {
+  background-color: #5678EF;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  content: 'Seleccionar Archivo'; /* testo por defecto */
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0px;
+}
+
+.file-select input[type="file"] {
+  opacity: 0;
+  width: 280px;
+  height: 32px;
+  display: inline-block;
+}
+
+#src-file1::before {
+  content: 'Seleccionar';
+}
+
+#src-file2::before {
+  content: 'Seleccionar';
+}
+
+
+#changeImage img{
+  margin-bottom: 4%;
+}
+
+#changeImage img{
+  width: 30%;
+  word-wrap: break-word;
+  height: 50px;
+  width: 50px;
+}
+@media only screen and (max-width: 1199px) {
+
+.frame{
+  width: 85%;
+  margin-left: 45px; 
+}
+.forms{
+  width: 85%;
+  margin-left: 45px; 
+  padding: 35px;
+}
+input {
+  width: 97%;
+  margin: 0px 0px 10px 5px;
+  height: 50px;
+  border-radius: 8px;
+  transition: 0.3s;
+  background-color: #B8B9BB;
+}
+textarea{
+  width: 87%;
+  margin: 0px 0px 10px 5px;
+  height: 50px;
+}
+.icon{
+ display: none;
+}
+}
+@media only screen and (max-width: 1000px) {
+.container{
+  width: 90%;
+  align-items: center;
+}
+.frame{
+  width: 85%;
+  margin-left: 45px; 
+}
+.forms{
+  width: 85%;
+  margin-left: 45px; 
+  padding: 35px;
+}
+#update input {
+  width: 97%;
+  margin: 0px 0px 10px 5px;
+  height: 50px;
+  border-radius: 8px;
+  transition: 0.3s;
+  background-color: #B8B9BB;
+}
+#update textarea{
+  width: 87%;
+  margin: 0px 0px 10px 5px;
+  height: 50px;
+}
+.icon{
+ display: none;
+}
+}
+@media only screen and (max-width: 570px) {
+.container{
+  width: 95%;
+  align-items: center;
+}
+.frame{
+  width: 85%;
+  margin-left: 35px; 
+}
+.forms{
+  width: 85%;
+  margin-left: 35px; 
+  padding: 35px;
+}
+}
+@media only screen and (max-width: 370px) {
+.container{
+  width: 100%;
+  align-items: center;
+}
+input {
+  width: 99%;
+}
+textarea{
+  width: 99%;
+}
+label {
+  margin-left: 5px;
+  font-size: 18px;
+  font-weight: 100;
+}
+.frame{
+  width: 95%;
+  margin-left: 13px; 
+}
+.forms{
+  width: 95%;
+  margin-left: 13px; 
+  padding: 35px;
+}
+}
