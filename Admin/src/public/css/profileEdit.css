@@ -2,6 +2,50 @@ button {
     color: white;
 }
 
+.title {
+    color: black;
+}
+
+.backGround {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.55);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    visibility: hidden;
+}
+
+.photoIcon img {
+    position: absolute;
+
+}
+
+.Icon img {
+    border-radius: 50%;
+}
+
+.Icon {
+    position: absolute;
+
+    opacity: 0.2;
+
+
+}
+
+.Icon:hover {
+    opacity: 0.7;
+}
+
+.userPhoto {
+    height: 220px;
+    position: relative;
+}
+
+.photoIconPrimary {
+    position: relative;
+    left: 30px;
+}
+
 
 @media (min-width: 900px) {
 
@@ -10,18 +54,25 @@ button {
     }
 
     .profileTwo {
-
+        background-color: aliceblue;
         visibility: hidden;
 
         position: absolute;
         z-index: 1;
-        top: -205px;
-        height: 250px;
+        left: -150px;
+        top: -206px;
+        height: 260px;
         width: 600px;
         border: 2px solid transparent;
         border-color: black;
         border-radius: 25px;
         display: block;
+    }
+
+    td {
+
+        padding: 5px;
+
     }
 
     .changeImage {
@@ -33,14 +84,19 @@ button {
         visibility: visible;
     }
 
+    .displasmen {
+        visibility: visible;
+    }
+
+
     .profileUser {
 
         display: block;
-        position: absolute;
-        top: 50px;
-        left: 30%;
+        position: relative;
+        top: 30px;
+        left: 40%;
         border-radius: 50%;
-
+        border: none;
     }
 
     .userImage {
@@ -48,14 +104,14 @@ button {
     }
 
     .userImage img {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
         box-shadow: 2px 3px rgba(0, 0, 0, 0.299);
     }
 
     .userData {
-        padding-left: 50px;
+
         display: inline-block;
     }
 
@@ -70,16 +126,10 @@ button {
         color: black;
     }
 
-    .toEdit {
-        position: relative;
-
-        left: 30%;
-    }
-
     .toEditOne {
-        position: relative;
+        position: absolute;
         top: 250px;
-        left: 30%;
+        left: px;
     }
 
     .toEditOne button {
@@ -116,7 +166,7 @@ button {
     }
 
     #cancel {
-        background-color: red;
+        background-color: #6f6f6f;
     }
 
     .buttonsView {
@@ -133,45 +183,36 @@ button {
         height: 200px;
         width: 200px;
         border-radius: 120px;
+        padding: 5px;
+
     }
 
     #imageview {
-        height: 200px;
-        width: 200px;
-        border-radius: 120px;
-        position: absolute;
-    }
-
-    .borderTable p {
-        border: 2px solid transparent;
-        border-radius: 15px;
-        color: black;
-        border-color: black;
-        width: 110%;
-        padding-left: 5px;
+        height: 203px;
+        width: 203px;
+        border-radius: 50%;
 
     }
+
 
     .borderTableTitle p {
-
+        position: relative;
+        top: 8px;
         border: 2px solid transparent;
         width: 110%;
-        border-radius: 11px;
+        border-radius: 10px;
         color: black;
         border-color: black;
         background-color: #D0D3D4;
-        padding-left: 5px;
+
 
     }
 
-    td {
-        padding: 5px;
-    }
 
     .texting {
         border: 2px solid transparent;
         width: 110%;
-        border-radius: 11px;
+        border-radius: 10px;
         color: black;
         border-color: black;
 
@@ -179,68 +220,77 @@ button {
     }
 }
 
-/*---------------------------------------------------------------------------------------------------*/
-
 @media (max-width: 900px) {
-
-    .title {
-        position: absolute;
-        left: 33%;
-
-    }
-
-    .userImageEdit img {
-        width: 100px;
-        height: 100px;
-    }
-
-
     .toEdit button:hover {
         background-color: #002a61;
     }
 
+    .profileTwo {
+        background-color: aliceblue;
+        visibility: hidden;
+
+        position: absolute;
+        z-index: 1;
+        top: -205px;
+        height: 250px;
+        width: 400px;
+        border: 2px solid transparent;
+        border-color: black;
+        border-radius: 25px;
+        display: block;
+    }
+
+    .changeImage {
+        display: inline-block;
+    }
+
+
+    .displasment {
+        visibility: visible;
+    }
 
     .profileUser {
 
         display: block;
-        position: absolute;
-        top: 200px;
-        left: 5%;
-        z-index: -2;
+        position: relative;
+        top: 40px;
+        left: auto;
+        border-radius: 50%;
 
     }
 
-    .userImage {
-        display: block
-    }
 
     .userImage img {
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
         box-shadow: 2px 3px rgba(0, 0, 0, 0.299);
     }
 
     .userData {
-        padding-left: 15px;
+
         display: inline-block;
     }
 
+    .aju h1 {
+        text-align: center;
+        color: black;
+    }
 
     .toEdit {
         position: relative;
-
+        top: 150px;
         left: 30%;
     }
 
     .toEditOne {
-        position: relative;
+        position: absolute;
         top: 250px;
-        left: 30%;
+        left: 35%;
     }
 
     .toEditOne button {
-        color: black;
+
         width: 100px;
         height: 40px;
         background-color: #093faa;
@@ -249,7 +299,7 @@ button {
     }
 
     .toEdit button {
-        color: black;
+
         width: 100px;
         height: 40px;
         background-color: #093faa;
@@ -257,21 +307,50 @@ button {
         border: none;
     }
 
+    .toEditTree {
+        display: block;
+    }
 
+    .toEditTree button {
+
+
+        width: 100px;
+        height: 40px;
+        background-color: #093faa;
+        border-radius: 10px;
+        border: none;
+        display: inline-block;
+    }
+
+    #cancel {
+        background-color: red;
+    }
+
+    .buttonsView {
+        position: relative;
+        left: 50%;
+        bottom: 70px;
+    }
 
     .texting {
         color: black;
     }
 
     #imagePreview {
-        height: 350px;
-        width: 350px;
-        border-radius: 50%;
+        height: 200px;
+        width: 200px;
+        border-radius: 120px;
+    }
+
+    #imageview {
+        height: 200px;
+        width: 200px;
+        border-radius: 120px;
     }
 
     .borderTable p {
         border: 2px solid transparent;
-        border-radius: 15px;
+        border-radius: 5px;
         color: black;
         border-color: black;
         width: 110%;
@@ -280,28 +359,35 @@ button {
     }
 
     .borderTableTitle p {
-
+        position: relative;
+        top: 8px;
         border: 2px solid transparent;
         width: 110%;
-        border-radius: 11px;
+        border-radius: 5px;
         color: black;
         border-color: black;
         background-color: #D0D3D4;
-        padding-left: 5px;
+
 
     }
 
     td {
+
         padding: 5px;
+
     }
 
     .texting {
         border: 2px solid transparent;
         width: 110%;
-        border-radius: 11px;
+        border-radius: 5px;
         color: black;
         border-color: black;
 
         padding-left: 5px;
+
     }
+
+
+
 }
