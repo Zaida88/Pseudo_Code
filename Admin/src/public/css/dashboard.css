@@ -35,8 +35,8 @@ body {
     background-color: rgb(224, 230, 239);
     margin: 1%;
     padding: 2%;
-    border: solid black 1px;
-    border-radius: 10%;
+    border: solid black 3px;
+    border-radius: 20px;
 }
 
 .contents label {
