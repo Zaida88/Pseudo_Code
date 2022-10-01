@@ -15,7 +15,7 @@
                         aria-checked="true">
                     <img class="icon" src="https://cdn-icons-png.flaticon.com/512/3597/3597075.png" alt="edit">
                 </div>
-                
+
             </div>
 
             <div id="description" class="form-group col-md-6">
@@ -73,11 +73,11 @@
 
     </form>
     {{/each}}
-    <div id="next">
-        <form action="/project/list/{{user.idUser}}" method="get">
+    <form action="/project/list/{{user.idUser}}" method="get">
+        <div id="next" class="form-group col">
             <button class="btn btn-primary button" type="submit">Cancelar</button>
-        </form>
-    </div>
+        </div>
+    </form>
 
 </div>
 <script src="/js/project/logo.project.js"></script>

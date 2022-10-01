@@ -1,9 +1,8 @@
+body{
+  overflow-x: hidden;
+}
 .none {
     display: none;
-}
-.div_hide {
-  opacity: 0;
-  display: none;
 }
 .title{
   margin-top: 15px;
@@ -83,23 +82,34 @@ label {
 .icon-top icon{
   margin-top: 155px;
 }
+#next button{
+  background-color: #6f6f6f;
+  border: #6f6f6f;
+}
+#next{
+  left: -440px;
+}
+#save{
+  left: 440px;
+}
+#edit{
+  left: 480px;
+}
+#edit button{
+  background-color: #7ED957;
+  border: #7ED957;
+  color: black;
+  font-weight: bolder;
+}
 .button {
-    background: #fff; /* color de fondo */
-    color: #004AAD; /* color de fuente */
+    background: #004AAD; /* color de fondo */
+    color: #fff; /* color de fuente */
     border: 2px solid #004AAD; /* tamaño y color de borde */
-    position: relative;
     z-index: 1;
     overflow: hidden;
     display: inline-block;
-  }
-  .button:before, .button:after {
-    content: "";
-    z-index: -1;
-    position: absolute;
-    background-color: #004AAD; /* color de fondo hover */
-    -webkit-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    padding: 8px 35px;
+    
   }
   .button:after {
     left: 100%;
