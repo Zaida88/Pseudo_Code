@@ -18,7 +18,8 @@ const test = (sequelize, type) => {
             defaultValue: type.literal('CURRENT_TIMESTAMP '),
             allowNull: false
         }
-    }, {
+    
+    },{
         timesTamps: false,
     })
 }

@@ -3,7 +3,7 @@
 
 <form action="/answer/list/{{user.idUser}}" method="get"></form>
 <div id="createAnswer">
-    <a href="/answer/create/{{idTests}}">
+    <a href="/answer/create/{{user.idUser}}">
         <button id="btnAdd" type="button">Agregar Respuesta</button>
     </a>
 </div>
@@ -35,9 +35,9 @@
             </div>
         </div>
     </div>
-    {{/each}}
+    
 </div>
-
+{{else}}
 <div class='center-block frame text-center' id="content">
         <div class='card-body'>
             <h5 class='card-title'>

@@ -5,7 +5,7 @@
     <h3>Prueba</h3>
 </div>
 <div id="createTest">
-    <a href="/answer/create/{{idTest}}">
+    <a href="/answer/create/{{user.idUser}}">
         <button id="btnAdd" type="button">Agregar Prueba</button>
     </a>
 </div>
@@ -29,28 +29,9 @@
                 </a>
             </div>
         </div>
+        {{else}}
         {{/each}}
     </div>
 </div>
 
-<div class='center-block frame text-center' id="content">
-        <div class='card-body'>
-            <h5 class='card-title'>
-                No tienes pruebas registradas actualmente.
-            </h5>
-            <p class='card-text'>
-                Desea agregar una.
-            </p>
-
-        {{/each}}
-            <div class="text-center">
-                <a href="/project/create/{{idProject}}">
-                    <button class='btn btn-primary button' id="button">
-                        <b>Agregar Prueba</b>
-                    </button>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="/src/views/test/hidden.test.js"></script>
+ 
