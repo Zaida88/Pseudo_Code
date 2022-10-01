@@ -30,8 +30,27 @@
             </div>
         </div>
         {{else}}
+        <div class='center-block frame text-center' id="content">
+        <div class='card-body'>
+            <h5 class='card-title'>
+                No tienes Pruebas registradas actualmente.
+            </h5>
+            <p class='card-text'>
+                Desea agregar una.
+            </p>
+
         {{/each}}
+            <div class="text-center">
+                <a href="/project/create/{{idProject}}">
+                    <button class='btn btn-primary button' id="button">
+                        <b>Agregar Prueba</b>
+                    </button>
+                </a>
+            </div>
+        </div>
     </div>
+</div>
+</div>
 </div>
 
  
