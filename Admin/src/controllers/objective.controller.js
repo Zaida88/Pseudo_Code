@@ -4,7 +4,7 @@ const sql = require("../databaseConfiguration/db_sql")
 
 objetiveCtl.showO = async (req, res) => {
     const max = await sql.query("select max(idObjective) from objectives")
-    res.render("project/createObjetive", {max})
+    res.render("project/createObjective", {max})
 };
 
 objetiveCtl.sendO = async (req, res) => {
@@ -22,13 +22,13 @@ objetiveCtl.sendO = async (req, res) => {
 
 objetiveCtl.listO = async (req, res) => {
     const id = req.params.id
-    const listObjetive = await sql.query("select * from objetives where userIdUser=?", [id])
+    const listObjetive = await sql.query("select * from objectives where userIdUser=?", [id])
     res.render("project/list", { listObjetive})
 }
 
 objetiveCtl.bringO = async (req, res) => {
     const id = req.params.id
-    const listObjetive = await sql.query("select * from objetives where idObjective=?", [id])
+    const listObjetive = await sql.query("select * from objectives where idObjective=?", [id])
     res.render("project/update", { listObjetive})
 }
 
