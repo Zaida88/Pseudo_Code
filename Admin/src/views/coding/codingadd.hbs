@@ -1,30 +1,39 @@
-<link rel="stylesheet" href="/CSS/clasificacion.css"  />
+<link rel="stylesheet" href="/CSS/clasificacion.css" />
 
-<form action="/codificacion/agregar/{{user.idusuario}}" method="post">
+<form action="/codign/add/{{user.iduser}}" method="post">
    <div class="fondo">
-    <div class="contenido" id="contenido">
-     <h1 class="titulo">Agregar lenguaje</h1>
-        <div class="contenido__nombre" id="nombre">
-            <label class="label-nombre">Lenguaje</label>
-            <input class="input" type="text" name="nombre" id="codificacion" checked aria-checked="true" />
-        </div>
-        <div class="" id="descripcion">
-            <label class="label-nombre">Descripcion</label>
-            <textarea class="descripcion__textarea"type="text" name="descripcion" id="descripcion_css" checked aria-checked="true"></textarea>
-        </div>
-        <div id="clasificacion">
-            <p class="label-nombre">Clasificación:</p>
-            <select  class="select" name="clasificacion" id="">
-                {{#each clasificacion}}
-                <option value="{{idclasificacion}}">{{nombre_clasificacion}}</option>
-                {{/each}}
-            </select>
-        </div>
-        <div id="guardar">
-            <button  class="boton" type="submit"><b>Guardar</b></button>
+    <div class="contenido contenido--small">
+        <div class="titulo"><b>Agregar Codigo</b></div><br>
+        <div class="conten" id="contenido">
+
+            <div class="contenido__nombre" id="nameCode">
+                <label class="label-nombre">Nombre:</label>
+                <input class="input" type="text" name="nameCode" id="nameCode" checked
+                    aria-checked="true" />
+            </div>
+
+            <div class="contenido__nombre" id="nombre">
+                <label class="label-nombre">Descripcion:</label>
+                <input class="input" type="text" name="descriptionCode" id="descriptionCode" checked
+                    aria-checked="true" />
+            </div>
+
+            <div class="contenido__nombre" id="nombre">
+                <label class="label-nombre">codigo</label>
+                <input class="input" type="text" name="code" id="code" checked
+                    aria-checked="true" />
+            </div>
+
+            <div class="contenido__nombre" id="nombre">
+                <label class="label-nombre">video</label>
+                <input class="input" type="video" name="video" id="video" checked
+                    aria-checked="true" />
+            </div>
+
+            <div id="guardar">
+                <button class="boton" type="submit"><b>Guardar</b></button>
+            </div>
         </div>
     </div>
     </div>
 </form>
-
-<script src="/JS/objetivos.js"></script>

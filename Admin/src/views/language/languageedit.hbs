@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="/CSS/clasificacion.css" />
+<form action="/language/edit/{{user.iduser}}" method="post">
+    <div class="fondo">
+        <div class="contenido contenido--small" id="contenido">
+            {{#each list}}
+            <h1 class="titulo">Editar lenguaje</h1>
+            <div id="oculto">
+                <input class="input" type="text" name="idclasificacion" id="clasificacion" checked aria-checked="true"
+                    value="{{idLanguage}}" readonly>
+            </div>
+            <div class="nameLanguage" id="nameLanguage">
+                <label class="label-nombre">Nombre: </label>
+                <input class="input" type="text" name="nameLanguage" id="nombre" checked aria-checked="true"
+                    value="{{nameLanguage}}" />
+            </div>
+            <div class="descriptionLanguage" id="descriptionLanguage">
+                <label class="label-nombre">Descrpcion: </label>
+                <input class="input" type="text" name="descriptionLanguage" id="nombre" checked aria-checked="true"
+                value="{{descriptionLanguage}}" />
+            </div>
+
+            <div class="nombre-clasificacion" id="imageLanguage">
+                <label class="label-nombre">Imagen: </label>
+                <input class="input" type="img" name="imageLanguage" id="nombre" checked aria-checked="true"
+                    value="{{imageLanguage}}" />
+            </div>
+
+            {{/each}}
+            <div id="guardar">
+                <button type="submit" class="boton"><b>Guardar</b></button>
+            </div>
+        </div>
+    </div>
+</form>

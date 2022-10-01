@@ -77,6 +77,7 @@ app.use('/answers', require('./routes/answer.routes'))
 app.use('/question', require('./routes/question.routes'))
 app.use('/project', require('./routes/project.route'))
 app.use('/classification',require('./routes/classification.routes'))
-
+app.use('/coding',require('./routes/coding.routes'))
+app.use('/language',require('./routes/languages.routes'))
 
 module.exports = app;

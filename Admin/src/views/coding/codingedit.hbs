@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="/CSS/clasificacion.css" />
+<form action="/codign/edit/{{user.iduser}}" method="post">
+    <div class="fondo">
+        <div class="contenido contenido--small" id="contenido">
+            {{#each list}}
+            <h1 class="titulo">Editar clasificacion</h1>
+            <div id="oculto">
+                <input class="input" type="text" name="idclasificacion" id="clasificacion" checked aria-checked="true"
+                    value="{{idCode}}" readonly>
+            </div>
+            <div class="nameCode" id="nameCode">
+                <label class="label-nombre">Nombre: </label>
+                <input class="input" type="text" name="nameCode" id="nombre" checked aria-checked="true"
+                    value="{{nameCode}}" />
+            </div>
+            <div class="descriptionCode" id="descriptionCode">
+                <label class="label-nombre">Descrpcion: </label>
+                <input class="input" type="text" name="descriptionCode" id="nombre" checked aria-checked="true"
+                value="{{descriptionCode}}" />
+            </div>
+
+              <div class="code" id="code">
+                <label class="label-nombre">Codigo: </label>
+                <input class="input" type="text" name="code" id="nombre" checked aria-checked="true"
+                value="{{code}}" />
+            </div>
+
+            <div class="nombre-clasificacion" id="video">
+                <label class="label-nombre">Imagen: </label>
+                <input class="input" type="video" name="video" id="nombre" checked aria-checked="true"
+                    value="{{video}}" />
+            </div>
+
+            {{/each}}
+            <div id="guardar">
+                <button type="submit" class="boton"><b>Guardar</b></button>
+            </div>
+        </div>
+    </div>
+</form>
