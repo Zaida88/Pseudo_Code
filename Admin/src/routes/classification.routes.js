@@ -16,5 +16,4 @@ router.post("/add/:id", isLoggedIn, send)
 router.post("/edit/:id", isLoggedIn, update)
 
 router.get("/remove/:id", isLoggedIn, remove)
-
 module.exports = router

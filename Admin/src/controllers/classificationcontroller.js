@@ -20,7 +20,7 @@ classificationCtl.send = async(req,res) =>{
     await orm.classifications.create(newClassification)
     .then(() => {
     req.flash("success","Exito al guardar")
-     res.redirect('/classification/list/'+id);
+     res.redirect('/classification/add/'+id);
     })
 }
 
@@ -40,9 +40,9 @@ classificationCtl.bring = async(req,res) =>{
 //DELETE
 classificationCtl.remove = async (req, res) => {
     const id = req.params.id
-    await sql.query('DELETE FROM classifications WHERE idclasificacion = ?', [id])
+    await sql.query('DELETE FROM classifications WHERE idClassification = ?', [id])
     req.flash('success', 'Se eliminó exitosamente')
-    res.redirect('/classification/list');
+    res.redirect('/classification/remove/');
 }
 
 

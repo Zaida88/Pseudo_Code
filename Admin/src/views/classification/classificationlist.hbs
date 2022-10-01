@@ -1,6 +1,6 @@
 <link rel="stylesheet"  href="/CSS/clasificacion.css" />
 
-<form action="/classification/list/{{user.iduser}}" method="get"></form>
+<form action="/classification/add/{{user.iduser}}" method="get"></form>
 <div class="contenedor" id="contenedor">
   {{#each list}}
   <div class="contenedor__contenido">
@@ -15,18 +15,19 @@
     <div class="nombre" id="nombre">
       <h1>{{imageClassification}}</h1>
     </div>
-    <div id="editar"> 
+    <div id="edit"> 
       <a href="/classification/edit/{{idClassification}}"><button class="boton"><b>Editar</b></button></a>
     </div>
-    <div class="codificacion" id="codificacion">
-      <a href="/classification/add/{{idClassification}}"><button class="boton"><b>Agregar lenguaje</b></button></a>
+    <div class="add" id="add">
+      <a href="/classification/list/{{idClassification}}"><button class="boton"><b>Eliminar</b></button></a>
     </div>
   </div>
   {{else}}
-  <div class="mensaje">
+  <div class="container">
+    
     <h2>No tiene ninguna clasificacion</h2>
     <h3>¿Desea agregar?</h3>
-    <a href="/classification/add/{{user.iduser}}"><button class="boton"><b>Agregar</b></button></a>
+    <a href="/classification/list/{{user.Iduser}}"><button class="boton"><b>Agregar</b></button></a>
   </div>
   {{/each}}
 </div>

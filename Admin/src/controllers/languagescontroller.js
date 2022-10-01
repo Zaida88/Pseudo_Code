@@ -1,61 +1,67 @@
-const languagesCtl = {};
-const orm = require("../databaseConfiguration/bd_orm")
-const sql = require("../databaseConfiguration/bd_sql");
+const languageCtl = {};
+const orm = require("../databaseConfiguration/db_orm")
+const sql = require("../databaseConfiguration/db_sql");
 
 //mostrar
-languagesCtl.show = async(req, res) => {
-    const id = req.params.id
-    const languages = await sql.query("select * from languages where idLanguage = ?",[id])
-    res.render("language/languageadd",{languages})
+languageCtl.show = (req, res) => {
+    res.render("language/languagelist")
 };
 
 //ingresar
-languagesCtl.Send = async(req,res) =>{
+languageCtl.send = async(req,res) =>{
     const id = req.user.iduser
-    const {nameLanguage, descriptionLanguage, imageLanguage} = req.body
-    const newlanguages= {
+    const {nameLanguage, descriptionLanguage,imageLanguage} = req.body
+    const newLanguage= {
         nameLanguage, 
-        descriptionLanguage, 
-        imageLanguage,
-        userIduser: id,
+        descriptionLanguage,
+        imageLanguage, 
+        userIduser: id
     }
-    await orm.languages.create(newlanguages)
+    await orm.languages.create(newLanguage)
     .then(() => {
-    req.flash("success","Save success")
+    req.flash("success","Exito al guardar")
      res.redirect('/language/list/'+id);
     })
 }
 
-//list
-languagesCtl.list = async(req,res) =>{
-    const id = req.params.id
+//listar
+languageCtl.list = async(req,res) =>{
     const list = await sql.query("select * from languages")
     res.render("language/languagelist",{list})
 }
 
 //traer datos
-languagesCtl.traer = async(req,res) =>{
+languageCtl.bring = async(req,res) =>{
     const id = req.params.id
     const list = await sql.query("select * from languages where idLanguage=?",[id])
     res.render("language/languageedit",{list})
 }
 
-//update
-languagesCtl.update = async(req,res) =>{
+//DELETE
+languageCtl.remove = async (req, res) => {
+    const id = req.params.id
+    await sql.query('DELETE * FROM languages WHERE idLanguage = ?', [id])
+    req.flash('success', 'Se eliminó exitosamente')
+    res.redirect('/language/list/');
+}
+
+
+//actualizar
+languageCtl.update = async(req,res) =>{
     const id = req.user.iduser
     const ids = req.params.id
-    const {nameLanguage, descriptionLanguage, imageLanguage} = req.body
-    const newlanguages = {
+    const {nameLanguage, descriptionLanguage,imageLanguage} = req.body
+    const newLanguage = {
         nameLanguage, 
-        descriptionLanguage, 
-        imageLanguage,
+        descriptionLanguage,
+        imageLanguage, 
     }
-    await orm.languages.findOne({where:{idlanguages:idlanguages}})
+    await orm.languages.findOne({where:{idLanguage:idLanguage}})
     .then(update=>{
-        update.update(newlanguages)
+        update.update(newLanguage)
     })
-    req.flash("success","Save success")
+    req.flash("success","Exito al guardar")
      res.redirect('/language/list/'+id);
 }
 
-module.exports = languagesCtl
+module.exports = languageCtl
