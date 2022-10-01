@@ -13,18 +13,16 @@ body {
 .container {
     padding: 1%;
     position: absolute;
-    width: 100%;
     height: fit-content;
-    max-width: 25%;
+    max-width: 20%;
     max-height: fit-content;
-    top: 20%;
+    top: 18%;
     left: 38%;
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 10%;
 }
 
 .container #title {
-    margin: 1% 0 3% 0;
     color: white;
     width: auto;
     height: auto;
@@ -42,6 +40,8 @@ body {
 }
 
 .data {
+    margin: 1%;
+    justify-content: center;
     padding: 2%;
     margin-bottom: 5%;
     text-align: left;
@@ -55,7 +55,10 @@ body {
 }
 
 .data input {
-    width: 90%;
     height: auto;
     word-wrap: break-word;
+}
+
+#block{
+    margin: 0 0 5% 16%;
 }

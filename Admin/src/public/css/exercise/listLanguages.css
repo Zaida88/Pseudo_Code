@@ -4,11 +4,10 @@ body {
 }
 
 .container {
+    padding: 0 5%;
     text-align: center;
-    max-width: auto;
-    width: 100%;
     height: fit-content;
-    max-width: auto;
+    max-width: 100%;
     max-height: fit-content;
 }
 
@@ -19,6 +18,10 @@ body {
     height: auto;
     word-wrap: break-word;
     margin: 1% 0 0 0;
+}
+
+#description {
+    font-size: 20px;
 }
 
 .contents {
@@ -32,9 +35,9 @@ body {
 #data {
     background-color: rgb(240, 249, 253);
     margin: 1%;
-    padding: 2% 2% 1% 2%;
+    padding: 0 2% 1% 2%;
     border: solid black 1px;
-    border-radius: 10%;
+    border-radius: 20px;
 }
 
 .optionCreate {
@@ -45,12 +48,14 @@ body {
     border: 1px black solid;
     background-color: #d39539;
     color: white;
+    font-size: 17px;
 }
 
 .optionCreate #create {
     border: 1px black solid;
     background-color: #093faa;
     color: white;
+    font-size: 17px;
 }
 
 .message {
@@ -58,5 +63,11 @@ body {
     background-color: rgb(224, 230, 239);
     padding: 10%;
     border: solid black 1px;
-    border-radius: 11%;
+    border-radius: 20px;
+}
+
+.message button {
+    background-color: #093faa;
+    color: white;
+    font-size: 17px;
 }
