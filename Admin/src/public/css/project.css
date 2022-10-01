@@ -1,185 +1,221 @@
-body{
+body {
   overflow-x: hidden;
 }
+
 .none {
-    display: none;
+  display: none;
 }
-.title{
+
+.title {
   margin-top: 15px;
 }
-.icon{
+
+.icon {
   height: 25px;
   width: 25px;
 }
-input {
-    width: 97%;
-    margin-left: 5px;
-    margin-bottom: 10px;
-    height: 35px;
-    border-radius: 8px;
-    transition: 0.3s;
-    background-color: #B8B9BB;
-}
-textarea{
-    width: 97%;
-    margin-left: 5px;
-    margin-bottom: 10px;
-    height: 35px;
-    border-radius: 8px;
-    transition: 0.3s;
-    background-color: #B8B9BB;
-}
-label {
-    margin-left: 5px;
-    font-size: 18px;
-    font-weight: 100;
-}
-.frame{
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: #D9D9D9;
-    justify-content: center;
-    align-items: center;
-    margin-top: 160px;
-    margin-left: 250px;
-    margin-right: 250px; 
-    margin-bottom: 15px;
-}
-.forms{
-    border-radius: 20px;
-    background-color: #D9D9D9;
-    justify-content: center;
-    align-items: center;
-    margin-left: 200px;
-    margin-right: 200px; 
-    padding: 35px;
+.logo{
+  margin-top: -100px;
 }
 
-#id{
-    display: none;
+input {
+  width: 97%;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  height: 35px;
+  border-radius: 8px;
+  transition: 0.3s;
+  background-color: #B8B9BB;
 }
+
+textarea {
+  width: 97%;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  height: 35px;
+  border-radius: 8px;
+  transition: 0.3s;
+  background-color: #B8B9BB;
+}
+
+label {
+  margin-left: 5px;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.frame {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #D9D9D9;
+  justify-content: center;
+  align-items: center;
+  margin-top: 160px;
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-bottom: 15px;
+}
+
+.forms {
+  border-radius: 20px;
+  background-color: #D9D9D9;
+  justify-content: center;
+  align-items: center;
+  margin-left: 200px;
+  margin-right: 200px;
+  padding: 35px;
+}
+
+#id {
+  display: none;
+}
+
 #list-form {
   margin-top: 20px;
 }
-#list-form p{
-    width: 97%;
-    margin-left: 5px;
-    margin-bottom: 10px;
-    height: 35px;
-    border-radius: 8px;
-    transition: 0.3s;
-    background-color: #B8B9BB;
-    padding: 6px;
+
+#list-form p {
+  width: 97%;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  height: 35px;
+  border-radius: 8px;
+  transition: 0.3s;
+  background-color: #B8B9BB;
+  padding: 6px;
 }
-#update input{
+
+#update input {
   width: 270px;
   height: 32px;
 }
-#update textarea{
+
+#update textarea {
   width: 270px;
   height: 32px;
 }
-.icon-top icon{
-  margin-top: 155px;
+
+.icon-top icon {
+  margin-top: -155px;
 }
-#next button{
+
+#next button {
   background-color: #6f6f6f;
   border: #6f6f6f;
 }
-#next{
+
+#next {
   left: -440px;
+  margin-top: 200px;
 }
-#save{
-  left: 440px;
+
+#save {
+  left: 140px;
+  margin-top: 200px;
 }
-#edit{
+
+#edit {
   left: 480px;
 }
-#edit button{
+
+#edit button {
   background-color: #7ED957;
   border: #7ED957;
   color: black;
   font-weight: bolder;
 }
+
 .button {
-    background: #004AAD; /* color de fondo */
-    color: #fff; /* color de fuente */
-    border: 2px solid #004AAD; /* tamaño y color de borde */
-    z-index: 1;
-    overflow: hidden;
-    display: inline-block;
-    padding: 8px 35px;
-    
-  }
-  .button:after {
-    left: 100%;
-  }
-  .button:hover {
-    color: #fff; /* color de fuente hover */
-  }
-  .button:hover:before {
-    left: 0;
-  }
-  .button:hover:after {
-    left: 50%;
-  }
-  .file-select {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .file-select::before {
-    background-color: #5678EF;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3px;
-    content: 'Seleccionar Archivo'; /* testo por defecto */
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
-  
-  .file-select input[type="file"] {
-    opacity: 0;
-    width: 280px;
-    height: 32px;
-    display: inline-block;
-  }
-  
-  #src-file1::before {
-    content: 'Seleccionar';
-  }
-  
-  #src-file2::before {
-    content: 'Seleccionar';
-  }
+  background: #004AAD;
+  /* color de fondo */
+  color: #fff;
+  /* color de fuente */
+  border: 2px solid #004AAD;
+  /* tamaño y color de borde */
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+  padding: 8px 35px;
 
-
-#changeImage img{
-    margin-bottom: 4%;
 }
 
-#changeImage img{
-    width: 30%;
-    word-wrap: break-word;
-    height: 50px;
-    width: 50px;
+.button:after {
+  left: 100%;
 }
+
+.button:hover {
+  color: #fff;
+  /* color de fuente hover */
+}
+
+.button:hover:before {
+  left: 0;
+}
+
+.button:hover:after {
+  left: 50%;
+}
+
+.file-select {
+  position: relative;
+  display: inline-block;
+}
+
+.file-select::before {
+  background-color: #5678EF;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  content: 'Seleccionar Archivo';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.file-select input[type="file"] {
+  opacity: 0;
+  width: 280px;
+  height: 32px;
+  display: inline-block;
+}
+
+#src-file1::before {
+  content: 'Seleccionar';
+}
+
+#src-file2::before {
+  content: 'Seleccionar';
+}
+
+
+#changeImage img {
+  margin-bottom: 4%;
+}
+
+#changeImage img {
+  width: 30%;
+  word-wrap: break-word;
+  height: 50px;
+  width: 50px;
+}
+
 @media only screen and (max-width: 1199px) {
 
-  .frame{
+  .frame {
     width: 85%;
-    margin-left: 45px; 
+    margin-left: 45px;
   }
-  .forms{
+
+  .forms {
     width: 85%;
-    margin-left: 45px; 
+    margin-left: 45px;
     padding: 35px;
   }
+
   input {
     width: 97%;
     margin: 0px 0px 10px 5px;
@@ -188,29 +224,35 @@ label {
     transition: 0.3s;
     background-color: #B8B9BB;
   }
-  textarea{
+
+  textarea {
     width: 87%;
     margin: 0px 0px 10px 5px;
     height: 50px;
   }
-  .icon{
-   display: none;
+
+  .icon {
+    display: none;
   }
 }
+
 @media only screen and (max-width: 1000px) {
-  .container{
+  .container {
     width: 90%;
     align-items: center;
   }
-  .frame{
+
+  .frame {
     width: 85%;
-    margin-left: 45px; 
+    margin-left: 45px;
   }
-  .forms{
+
+  .forms {
     width: 85%;
-    margin-left: 45px; 
+    margin-left: 45px;
     padding: 35px;
   }
+
   #update input {
     width: 97%;
     margin: 0px 0px 10px 5px;
@@ -219,57 +261,75 @@ label {
     transition: 0.3s;
     background-color: #B8B9BB;
   }
-  #update textarea{
+
+  #update textarea {
     width: 87%;
     margin: 0px 0px 10px 5px;
     height: 50px;
   }
-  .icon{
-   display: none;
+
+  .icon {
+    display: none;
   }
 }
+@media only screen and (max-width: 911px) {
+  #next{
+    left: 30px;
+    margin-top: -58px;
+  }
+}
+
 @media only screen and (max-width: 570px) {
-  .container{
+  .container {
     width: 95%;
     align-items: center;
   }
-  .frame{
+
+  .frame {
     width: 85%;
-    margin-left: 35px; 
+    margin-left: 35px;
   }
-  .forms{
+
+  .forms {
     width: 85%;
-    margin-left: 35px; 
+    margin-left: 35px;
     padding: 35px;
   }
 }
-@media only screen and (max-width: 370px) {
-  .container{
+
+@media only screen and (max-width: 400px) {
+  .container {
     width: 100%;
     align-items: center;
   }
+
   input {
     width: 99%;
   }
-  textarea{
+
+  textarea {
     width: 99%;
   }
+
   label {
     margin-left: 5px;
     font-size: 18px;
     font-weight: 100;
   }
-  .frame{
+
+  .frame {
     width: 95%;
-    margin-left: 13px; 
+    margin-left: 13px;
   }
-  .forms{
+
+  .forms {
     width: 95%;
-    margin-left: 13px; 
+    margin-left: 13px;
     padding: 35px;
   }
 }
-#button{
+
+#button {
   margin-top: 35px;
   margin-bottom: 35px;
 

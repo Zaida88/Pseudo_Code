@@ -34,10 +34,18 @@
                     <textarea name="vision" id="vision" required aria-checked="true"></textarea>
                 </div>
             </div>
-            
-            <div id="logo" class="form-group col-md-6">
+            {{#each max}}
+                <input class="none" type="text" name="idObjective" id="idProject" value="{{'max(idObjective)'}}" readonly />
+            {{/each}}
+            <div id="Objetives" class="form-group col-md-6">
+                <label class="title">Objetivos:</label>
+                <textarea name="objetive" id="objetive" required aria-checked="true"></textarea>
+            </div>
+            <div class="form-group col-md-6">
+            </div>
+
+            <div id="logo" class="form-group col-md-6 logo">
                 <label>Logo:</label>
-                <br>
                 <div id="changeImage">
                     <img src="/img/NoImage.jpg" id="imagePreview">
                 </div>
@@ -52,22 +60,16 @@
                 </svg>
             </div>
 
-            
-            <div id="Objetives" class="form-group col-md-6">
-                <label class="title">Objetivos:</label>
-                <textarea name="objetive" id="objetive" required aria-checked="true"></textarea>
-            </div>
-            
             <div id="save" class="form-group col">
                 <button type="submit" class="btn btn-primary button ">Crear</button>
             </div>
-        
+
     </form>
-                <form action="/project/list/{{user.idUser}}" method="get">
-                    <div id="next" class="form-group col">
-                        <button class="btn btn-primary button" type="submit">Cancelar</button>
-                    </div>
-                </form>
-            
+    <form action="/project/list/{{user.idUser}}" method="get">
+        <div id="next" class="form-group col cancel">
+            <button class="btn btn-primary button" type="submit">Cancelar</button>
+        </div>
+    </form>
+
 </div>
 <script src="/js/project/logo.project.js"></script>
