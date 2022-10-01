@@ -5,7 +5,7 @@
     <h3>Prueba</h3>
 </div>
 <div id="createTest">
-    <a href="/answer/create/{{idTest}}">
+    <a href="/test/create/{{user.idUser}}">
         <button id="btnAdd" type="button">Agregar Prueba</button>
     </a>
 </div>
@@ -29,7 +29,7 @@
                 </a>
             </div>
         </div>
-        {{/each}}
+        {{else}}
     </div>
 </div>
 
@@ -43,13 +43,7 @@
             </p>
 
         {{/each}}
-            <div class="text-center">
-                <a href="/project/create/{{idProject}}">
-                    <button class='btn btn-primary button' id="button">
-                        <b>Agregar Prueba</b>
-                    </button>
-                </a>
-            </div>
+            
         </div>
     </div>
 </div>
