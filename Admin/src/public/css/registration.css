@@ -1,0 +1,107 @@
+body {
+    background-image: url(/img/backgound-index.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#hidden {
+    display: none;
+}
+
+.container {
+    padding: 2% 3% 3% 3%;
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    max-width: 35%;
+    max-height: fit-content;
+    top: 4%;
+    left: 34%;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 10%;
+}
+
+.container #title {
+    margin-bottom: 3%;
+    color: white;
+    width: auto;
+    height: auto;
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+.contents {
+    text-align: left;
+    display: flex;
+    max-height: fit-content;
+    max-width: fit-content;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.data {
+    margin: 0.5%;
+    max-height: fit-content;
+    max-width: fit-content;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.data input {
+    width: auto;
+    height: auto;
+    word-wrap: break-word;
+}
+
+.data label {
+    color: white;
+}
+
+.changeImage #imagePreview {
+    margin-bottom: 2%;
+    width: 30%;
+    height: 30%;
+    word-wrap: break-word;
+}
+
+.submit {
+    margin: 6% 0 1% 0;
+}
+
+.file-select {
+    position: relative;
+    display: inline-block;
+}
+
+.file-select::before {
+    background-color: #5f6886;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    content: 'Seleccionar archivo';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.file-select input[type="file"] {
+    opacity: 0;
+    width: 200px;
+    height: auto;
+    word-wrap: break-word;
+    display: inline-block;
+}
+
+#src-file1::before {
+    content: 'Seleccionar archivo';
+}

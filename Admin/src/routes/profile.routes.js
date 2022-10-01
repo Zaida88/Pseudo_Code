@@ -1,15 +1,13 @@
 const express = require('express');
 const routes = express.Router();
 
-const {showUserProfile ,showUserProfileEdit,toUpdate,} = require('../controllers/profile.controller')
+const { showUserProfile, showUserProfileEdit, toUpdate, } = require('../controllers/profile.controller')
 
-routes.get('/profileView/:id', showUserProfile);
+const { isLoggedIn } = require('../lib/auth')
 
-
-
-
-routes.get('/profileEdit/:id',  showUserProfileEdit);
-routes.post('/profileEdit/:id', toUpdate);
+routes.get('/profileView/:id', isLoggedIn, showUserProfile);
+routes.get('/profileEdit/:id', isLoggedIn, showUserProfileEdit);
+routes.post('/profileEdit/:id', isLoggedIn, toUpdate);
 
 
 

@@ -17,7 +17,7 @@ const questions = (Sequelize, type) => {
             allowNull: false
         }
     }, {
-        timestamps: false,
+        timesTamps: false,
     })
 }
 module.exports = questions

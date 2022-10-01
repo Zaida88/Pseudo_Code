@@ -1,0 +1,48 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    max-width: auto;
+    width: 100%;
+    height: fit-content;
+    max-width: auto;
+    max-height: fit-content;
+}
+
+.container #title {
+    text-align: center;
+    width: auto;
+    height: auto;
+    word-wrap: break-word;
+    margin: 1% 0 0 0;
+}
+
+.contents {
+    display: flex;
+    justify-content: center;
+    max-width: auto;
+    display: flex;
+    height: fit-content;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.contents #data {
+    background-color: rgb(224, 230, 239);
+    margin: 1%;
+    padding: 2%;
+    border: solid black 1px;
+    border-radius: 10%;
+}
+
+.contents label {
+    font-size: 20px;
+}
+
+.contents p {
+    text-align: center;
+}
