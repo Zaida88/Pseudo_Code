@@ -4,7 +4,7 @@ $imagePreview = document.querySelector("#imagePreview");
 $filePicker.addEventListener("change", () => {
 const files = $filePicker.files;
 if (!files || !files.length) {
-    $imagePreview.src = "";
+    $imagePreview.src = "default.jpg";
     return;
 }
 const firstFile = files[0];
