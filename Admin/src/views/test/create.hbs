@@ -5,21 +5,23 @@
         <p>Nueva Prueba</p>
     </div>
     <div id="container">
-        <div id="nameTest">
-            <label>Nombre:</label>
-            <input type="text" name="nameTest" id="textElement" required aria-checked="true">
+        <div id="textGroup">
+            <div class="inputText">
+                <label>Nombre</label>
+                <input type="text" name="nameTest" id="textElement" required aria-checked="true" />
+            </div>
+            <div class="inputText">      
+                <label>Descripcion</label>
+                <textarea name="descriptionTest" id="textElement" required aria-checked="true"></textarea>
+                </textarea>
+            </div>
         </div>
-        <div id="descriptionTest">
-            <label>Descripcion</label>
-            <textarea name="descriptionTest" id="textElement" required aria-checked="true">
-
-            </textarea>
-        </div>
-        <div id="buttonGroup">
-            <div id="buttonCancel">
-               
+        <div id="buttonGroup"> 
             <div id="button">
-                <button id="btnSubmit" type="submit">Crear</button>
+                <button type="submit" id="buttonCancel">Cancelar</button>
+            </div>
+            <div id="button">
+                <button type="submit" id="btnCreate">Crear</button>
             </div>
         </div>
     </div>

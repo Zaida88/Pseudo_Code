@@ -16,93 +16,97 @@ body{
     width: 100%;
     height: 100%;
     max-width: 50%;
-    max-height: 60%;
+    max-height: 25%;
     top: 20%;
     left: 25%;
-    text-align: center;
     background-color:#d3d4d6;
     display: flex;
     color: rgb(255, 255, 255);
     flex-direction: column;
-    margin:30px;
+    margin: 30px;
     margin-left: auto;
     margin-right: auto; 
     width: 70%;
-    padding: 15px;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     border-radius:20px;
 }
-#title{
-  
-   margin-top: 10px;
-   top: 5%;
-   font-size: 30px;
-   width: 100%;
-   position: fixed;
-   height: 50px;
-   
-}
-#nameTest{
-    position: absolute;
-    top: 20%;
+
+#title {
+    top: 15%;
+    font-size: 30px;
     width: 100%;
-}
-#textElement {
-    border-radius: 5px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    margin-left: 10px;
+ }
+
+ #inputText > * {
+    display: inline-block; 
 }
 
-#descriptionTest{
-    position: absolute;
-    top: 40%;
+button {
     width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#textGroup {
+    position: absolute;
+    top: 10%;
+    gap: 25%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #buttonGroup {
     position: absolute;
+    display: flex;
     top: 65%;
-    left: 37%;
-    gap: 200px;
+    width: 100%;
+    justify-content: space-around; 
+    flex-direction: row;
+}
+
+#descriptionTest label {
+    float: left;
+}
+
+#buttonColumn {
     display: flex;
     flex-direction: row;
 }
-#buttonCancel{
-    top: 80%;
-    width: 100%;
-    background-color: #b0b0b0;
-}
 
-
-#button{
-    width: 100%;
-    border: none;
-}
-#btnSubmit{
+#textElement {
     border-radius: 5px;
-    border: none;
-    padding-left: 5px;
-    padding-right: 5px;
+    width: 10px;
+}
+
+#btnCreate{
+    background-color: #004AAD;
+    color: #FFF;
 }
 
 #container label{
     position: absolute;
     left: 2%;
-
 }
+
 #container input{
     position: absolute;
     width: 70%;
     left: 20%;
 }
+
 #container textarea{
     position: absolute;
     width: 70%;
     left: 20%;
-}
-#button button{
-    position: absolute;
-    width: 40%;
-    left: 30%;
-    background-color: #004AAD;
-
 }
