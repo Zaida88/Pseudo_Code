@@ -1,38 +1,36 @@
 <link rel="stylesheet" href="/css/userAssignment/userAssignment.css">
 
 <form action="/userAssignment/createAssignment" method="post" enctype="multipart/form-data">
-  <div class="tit">
-    <center>
-      <h2>Nueva asignacion</h2>
-    </center>
+  <div  id="title">
+      <h1>Nueva asignacion</h1>
   </div><br><br>
-  <div class="conten">
-    <table class="content-table1 content--small" id="content-table1">
+  <div id="conten">
+    <table id="content-table1">
       <thead>
         <tr>
-          <th><label><button class="bot">Usuarios</button></label></th>
-          <th><label><button class="bot">Roles</button></label></th>
-          <th><label><button class="bot">Permisos</button></label></th>
+          <th><label><button id="bot">Usuarios</button></label></th>
+          <th><label><button id="bot">Roles</button></label></th>
+          <th><label><button id="bot">Permisos</button></label></th>
         </tr>
       </thead>
     </table>
     <div>
       <table>
-        <tbody class="fields">
+        <tbody id="fields">
           <tr>
-            <td class="t">
+            <td id="t">
               {{#each users}}
               <input type="checkbox" id="cbox1" name="userIdUser" value="{{idUser}}"> {{firstName}}</label><br>
               {{/each}}
             </td>
 
-            <td class="t">
+            <td id="t">
               {{#each roles}}
               <input type="checkbox" id="cbox1" name="roleIdRol" value="{{idRol}}"> {{nameRol}}</label><br>
               {{/each}}
             </td>
 
-            <td class="t">
+            <td id="t">
               {{#each permissions}}
               <input type="checkbox" id="cbox1" name="permissionIdPermission" value="{{idPermission}}">
               {{namePermission}}</label><br>
@@ -44,9 +42,9 @@
     </div>
   </div>
   <div>
-    <button class="butt1" type="submit">Guardar</button>
+    <button id="butt1" type="submit">Guardar</button>
   </div>
 </form>
 <div>
-  <a href="/userAssignment/list"><button class="but">Cancelar</button></a>
+  <a href="/userAssignment/list"><button id="but">Cancelar</button></a>
 </div>

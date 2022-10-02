@@ -1,10 +1,12 @@
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+#title {
+  text-align: center;
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+  margin: -1% 0 0 0;
 }
 
-.conten{
+#conten{
   height: 200px;
   display: flex;
   color: black;
@@ -16,121 +18,32 @@ body {
   border-radius: 20px;
 }
 
-.containerCre {
-  padding: 2%;
+#content-table1 {
   position: absolute;
   width: 100%;
   height: fit-content;
   max-width: 50%;
   max-height: fit-content;
-  top: 20%;
-  left: 28%;
-  background-color: #D0D3D4;
-  border-radius: 13px;
-  text-align: justify;
-}
-
-.res{
-  padding: 2%;
-  position: absolute;
-  width: 100%;
-  height: fit-content;
-  max-width: 50%;
-  max-height: fit-content;
-  top: 20%;
-  left: 28%;
-}
-
-.center{
-  padding: 7%;
-  position: absolute;
-  width: 100%;
-  height: fit-content;
-  max-width: 100%;
-  max-height: fit-content;
-  top: 20%;
-  left: 1px;
-}
-
-.container {
-  max-width: 90%;
-  max-height: fit-content;
-  width: 100%;
-  height: fit-content;
-}
-
-.containe {
-  max-width: 5%;
-  max-height: fit-content;
-  width: 100%;
-  height: fit-content;
-}
-
-.content-table {
-  position: absolute;
-  width: 100%;
-  height: fit-content;
-  max-width: 100%;
-  max-height: fit-content;
-  top: 20%;
-  left: 0px;
-  border: 3px solid black;
-  text-align: center;
-}
-
-.content-table1 {
-  position: absolute;
-  width: 100%;
-  height: fit-content;
-  max-width: 50%;
-  max-height: fit-content;
-  top: 20%;
+  top: 32%;
   left: 355px;
   text-align: center;
+  font-size: 16px;
 }
 
-.container {
-  height: 20%;
-}
-
-.update{
-  position: absolute;
-  width: 100%;
-  height: fit-content;
-  max-width: 40%;
-  max-height: fit-content;
-  top: 19%;
-  left: 30%;
-  text-align: center;
-}
-
-.title {
-  margin: 3% 0 50% 0;
-  color: black;
-  width: auto;
-  height: auto;
-  word-wrap: break-word;
-  overflow: auto;
-}
-
-.butt {
-  background-color: #093faa;
-  text-align: center;
-  color: white;
-  width: auto;
-}
-
-.butt1 {
-  background-color: #093faa;
-  text-align: center;
-  color: white;
-  width: auto;
-  position: absolute;
+#butt1 {
+  position:absolute;
+  background: #004AAD;/* color de fondo */
+  color: #fff; /* color de fuente */
+  border: 2px solid #004AAD;/* tamaño y color de borde */
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+  padding: 8px 35px;
   top: 56%;
   left: 70%;
 }
 
-.bot {
+#bot {
   background-color: #b8b9bb;
   text-align: center;
   color: black;
@@ -138,82 +51,37 @@ body {
   border: none;
   border-radius: 8px;
   width: 150px;
+  font-size: 17px;
 }
 
-.but {
-  background-color: #6f6f6f;
-  text-align: center;
-  color: white;
-  width: auto;
-  position: absolute;
+#but {
+  position:absolute;
+  background: #6f6f6f;/* color de fondo */
+  color: #fff; /* color de fuente */
+  border: 2px solid #6f6f6f;/* tamaño y color de borde */
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+  padding: 8px 35px;
   top: 57%;
   left: 30%;
 }
 
-.butto {
-  background-color: white;
-  border: none;
-  transition: 0.3s;
-}
-
-.tr {
-  position: absolute;
-  width: 100%;
-  height: fit-content;
-  max-width: 50%;
-  max-height: fit-content;
-  top: 28%;
-  left: 28%;
-  border: 3px solid black;
-  text-align: center;
-}
-
-.updatetr {
-  position: absolute;
-  width: 100%;
-  height: fit-content;
-  max-width: 20%;
-  max-height: fit-content;
-  top: 28%;
-  left: 33%;
-  text-align: center;
-  background-color: white;
-}
-
-.t {
+#t {
   border-collapse: collapse;
   font-size: 1em;
   font-family: sans-serif;
-  min-width: 250px;
+  min-width: 220px;
   text-align: center;
 }
 
-.ta {
-  border-collapse: collapse;
-  font-size: 1em;
-  font-family: sans-serif;
-  min-width: 250px;
-  text-align: center;
-}
-
-.fields {
-  padding-top: 30px;
-  padding-bottom: 40px;
+#fields {
+  padding-top: -50%;
+  padding-bottom: 10%;
   float: left;
   width: auto;
-  margin: 4px;
-  margin: 6px 0px 0px 750px;
-  font-size: 1em;
-  font-family: sans-serif;
-}
-
-.field {
-  padding-top: 10px;
-  padding-bottom: 40px;
-  float: left;
-  width: auto;
-  margin: 45px;
-  margin: 6px 0px 0px 500px;
+  margin: 0px;
+  margin: 7px 5px 4px 720px;
   font-size: 1em;
   font-family: sans-serif;
 }

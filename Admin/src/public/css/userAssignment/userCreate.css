@@ -1,121 +1,74 @@
-.none {
-  display: none;
+#title {
+  text-align: center;
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+  margin: -2% 0 0 0;
 }
-.div_hide {
-opacity: 0;
-display: none;
+
+#forms{
+  border-radius: 20px;
+  background-color: #D9D9D9;
+  justify-content: center;
+  align-items: center;
+  margin-left: 390px;
+  margin-right: 390px; 
+  padding: 70px;
 }
-.title{
-margin-top: 15px;
-}
-.icon{
-height: 25px;
-width: 25px;
-}
-input {
-  width: 97%;
+
+#input {
+  width: 61%;
   margin-left: 5px;
-  margin-bottom: 10px;
-  height: 35px;
+  margin-bottom: 7px;
+  height: 25px;
   border-radius: 8px;
   transition: 0.3s;
-  background-color: #B8B9BB;
 }
-textarea{
-  width: 97%;
-  margin-left: 5px;
-  margin-bottom: 10px;
-  height: 35px;
-  border-radius: 8px;
-  transition: 0.3s;
-  background-color: #B8B9BB;
-}
+
 label {
   margin-left: 5px;
   font-size: 18px;
   font-weight: 100;
 }
-.frame{
-  border: 1px solid black;
-  border-radius: 10px;
-  background-color: #D9D9D9;
-  justify-content: center;
-  align-items: center;
-  margin-top: 160px;
-  margin-left: 250px;
-  margin-right: 250px; 
-  margin-bottom: 15px;
-}
-.forms{
-  border-radius: 20px;
-  background-color: #D9D9D9;
-  justify-content: center;
-  align-items: center;
-  margin-left: 350px;
-  margin-right: 340px; 
-  padding: 75px;
-}
 
 #id{
   display: none;
 }
-#list-form {
-margin-top: 20px;
-}
-#list-form p{
-  width: 97%;
-  margin-left: 5px;
-  margin-bottom: 10px;
-  height: 35px;
-  border-radius: 8px;
-  transition: 0.3s;
-  background-color: #B8B9BB;
-  padding: 6px;
-}
-#update input{
-width: 270px;
-height: 32px;
-}
-#update textarea{
-width: 270px;
-height: 32px;
-}
-.icon-top icon{
-margin-top: 155px;
-}
 
-.submit1 {
+#butt1 {
   position: absolute;
-  margin: 35% -35% 4% 0;
-  display: flex;
-  justify-content: right;
-}
-
-.submit1 button {
-  padding: 2 6%;
-  background-color: #093faa;
-  color: white;
-}
-
-.cancel {
-  position: absolute;
-  margin: -4% 0 2% 30.5%;
+  margin: 1% 0 20% 25.5%;
   display: flex;
   justify-content: left;
 }
 
-.cancel button {
+#butt1 button{
+  border: 1px #004AAD solid;
+  background-color: #004AAD;
+  color: white;
+  padding: 8px 35px;
+}
+
+#cancel {
+  position: absolute;
+  margin: -4% 0 2% 31.5%;
+  display: flex;
+  justify-content: left;
+}
+
+#cancel button {
   border: 1px #6f6f6f solid;
   background-color: #6f6f6f;
   color: white;
+  padding: 8px 35px;
 }
 
-.file-select {
+#file-select {
   position: relative;
   display: inline-block;
 }
 
-.file-select::before {
+#file-select::before {
   background-color: #5678EF;
   color: white;
   display: flex;
@@ -130,21 +83,12 @@ margin-top: 155px;
   bottom: 0px;
 }
 
-.file-select input[type="file"] {
+#file-select input[type="file"] {
   opacity: 0;
   width: 280px;
   height: 32px;
   display: inline-block;
 }
-
-#src-file1::before {
-  content: 'Seleccionar';
-}
-
-#src-file2::before {
-  content: 'Seleccionar';
-}
-
 
 #changeImage img{
   margin-bottom: 4%;
@@ -155,104 +99,4 @@ margin-top: 155px;
   word-wrap: break-word;
   height: 50px;
   width: 50px;
-}
-@media only screen and (max-width: 1199px) {
-
-.frame{
-  width: 85%;
-  margin-left: 45px; 
-}
-.forms{
-  width: 85%;
-  margin-left: 45px; 
-  padding: 35px;
-}
-input {
-  width: 97%;
-  margin: 0px 0px 10px 5px;
-  height: 50px;
-  border-radius: 8px;
-  transition: 0.3s;
-  background-color: #B8B9BB;
-}
-textarea{
-  width: 87%;
-  margin: 0px 0px 10px 5px;
-  height: 50px;
-}
-.icon{
- display: none;
-}
-}
-@media only screen and (max-width: 1000px) {
-.container{
-  width: 90%;
-  align-items: center;
-}
-.frame{
-  width: 85%;
-  margin-left: 45px; 
-}
-.forms{
-  width: 85%;
-  margin-left: 45px; 
-  padding: 35px;
-}
-#update input {
-  width: 97%;
-  margin: 0px 0px 10px 5px;
-  height: 50px;
-  border-radius: 8px;
-  transition: 0.3s;
-  background-color: #B8B9BB;
-}
-#update textarea{
-  width: 87%;
-  margin: 0px 0px 10px 5px;
-  height: 50px;
-}
-.icon{
- display: none;
-}
-}
-@media only screen and (max-width: 570px) {
-.container{
-  width: 95%;
-  align-items: center;
-}
-.frame{
-  width: 85%;
-  margin-left: 35px; 
-}
-.forms{
-  width: 85%;
-  margin-left: 35px; 
-  padding: 35px;
-}
-}
-@media only screen and (max-width: 370px) {
-.container{
-  width: 100%;
-  align-items: center;
-}
-input {
-  width: 99%;
-}
-textarea{
-  width: 99%;
-}
-label {
-  margin-left: 5px;
-  font-size: 18px;
-  font-weight: 100;
-}
-.frame{
-  width: 95%;
-  margin-left: 13px; 
-}
-.forms{
-  width: 95%;
-  margin-left: 13px; 
-  padding: 35px;
-}
 }
