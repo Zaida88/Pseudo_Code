@@ -11,17 +11,17 @@
   background-color: #D9D9D9;
   justify-content: center;
   align-items: center;
-  margin-left: 390px;
-  margin-right: 390px; 
-  padding: 70px;
+  margin-left: 430px;
+  margin-right: 430px;  
+  padding: 22px;
 }
 
 #input {
-  width: 61%;
+  width: 50%;
   margin-left: 5px;
   margin-bottom: 7px;
-  height: 25px;
-  border-radius: 8px;
+  height: 20px;
+  border-radius: 5px;
   transition: 0.3s;
 }
 
@@ -37,7 +37,7 @@ label {
 
 #butt1 {
   position: absolute;
-  margin: 1% 0 20% 25.5%;
+  margin: -1% 0 20% 25.5%;
   display: flex;
   justify-content: left;
 }
@@ -46,12 +46,12 @@ label {
   border: 1px #004AAD solid;
   background-color: #004AAD;
   color: white;
-  padding: 8px 35px;
+  padding: 5px 25px;
 }
 
 #cancel {
   position: absolute;
-  margin: -4% 0 2% 31.5%;
+  margin: -3% 0 1% 32.5%;
   display: flex;
   justify-content: left;
 }
@@ -60,12 +60,14 @@ label {
   border: 1px #6f6f6f solid;
   background-color: #6f6f6f;
   color: white;
-  padding: 8px 35px;
+  padding: 5px 15px;
 }
 
 #file-select {
-  position: relative;
-  display: inline-block;
+  position: absolute;
+  margin: -5% 0 2% 7.5%;
+  display: flex;
+  justify-content: left;
 }
 
 #file-select::before {
