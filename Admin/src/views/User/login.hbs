@@ -3,7 +3,7 @@
     {{#each User}}
     <form action="/login/{{idUser}}" method="POST" id="login">
         <div id="title">
-            <h2>Inicio de sesión</h2>
+            <h1>Inicio de sesión</h1>
         </div>
         <div class="photo">
             <img src="/img/user/{{photo}}" id="image">
@@ -11,11 +11,15 @@
         {{/each}}
         {{#each User}}
         <div class="data">
-            <label>Nombre de usuario:</label>
-            <input type="text" id="name" name="username" value="{{username}}" readonly>
-            {{/each}}
-            <label>Contraseña:</label>
-            <input type="password" id="password" name="password" required>
+            <div id="block">
+                <label>Nombre de usuario:</label>
+                <input type="text" id="name" name="username" value="{{username}}" readonly>
+                {{/each}}
+            </div>
+            <div id="block">
+                <label>Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
         </div>
         <div id="button">
             <button type="submit">Ingresar</button>

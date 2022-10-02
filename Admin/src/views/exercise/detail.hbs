@@ -4,7 +4,7 @@
     {{#each exercise}}
     <form action="/exercise/detail/{{idExercise}}" method="get"></form>
     <div id="title">
-        <h3>Detalle del ejercicio</h3>
+        <h2>Detalle del ejercicio</h2>
     </div>
     <div class="contents">
         <div id="hidden">
@@ -18,8 +18,8 @@
             </div>
             <div class="data">
                 <label>Puntaje</label>
-                <input type="number" name="punctuationExercise" aria-checked="true" placeholder="{{punctuationExercise}}"
-                    readonly>
+                <input type="number" name="punctuationExercise" aria-checked="true"
+                    placeholder="{{punctuationExercise}}" readonly>
             </div>
             <div class="data">
                 <label>Lenguaje</label>
@@ -30,7 +30,8 @@
         <div class="block">
             <div class="data">
                 <label>Descripción</label>
-                <textarea name="descriptionExercise" id="" aria-checked="true" placeholder="{{descriptionExercise}}" readonly></textarea>
+                <textarea name="descriptionExercise" id="" aria-checked="true" placeholder="{{descriptionExercise}}"
+                    readonly></textarea>
             </div>
             <div class="data">
                 <label>Código</label>

@@ -11,4 +11,12 @@ $asaid.classList.toggle("desplegar")
 })
 
 
+const $openclo = document.getElementById("lpen-close"),
+$asai = document.getElementById("profileTwo")
+$openclose.addEventListener("click",()=>{
+$asaid.classList.toggle("displasment")
+})
+
+
+
  

@@ -7,7 +7,7 @@ const { showO, bringO, listO, sendO, updateO } = require('../controllers/objecti
 
 const { isLoggedIn } = require('../lib/auth')
 
-routes.get("/createObjetive/", isLoggedIn, showO)
+routes.get("/createObjective/", isLoggedIn, showO)
 
 routes.get("/update/:id", isLoggedIn, bringO)
 
