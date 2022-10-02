@@ -1,159 +1,110 @@
 body {
   overflow-x: hidden;
-}
-
-.none {
-  display: none;
-}
-
-.title {
-  margin-top: 15px;
-}
-
-.icon {
-  height: 25px;
-  width: 25px;
-}
-.logo{
-  margin-top: -100px;
-}
-
-input {
-  width: 97%;
-  margin-left: 5px;
-  margin-bottom: 10px;
-  height: 35px;
-  border-radius: 8px;
-  transition: 0.3s;
-  background-color: #B8B9BB;
-}
-
-textarea {
-  width: 97%;
-  margin-left: 5px;
-  margin-bottom: 10px;
-  height: 35px;
-  border-radius: 8px;
-  transition: 0.3s;
-  background-color: #B8B9BB;
-}
-
-label {
-  margin-left: 5px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
-  font-weight: 100;
 }
-
+.container {
+  text-align: center;
+  max-width: auto;
+  width: 100%;
+  height: fit-content;
+  max-width: auto;
+  max-height: fit-content;
+  justify-content: center;
+}
+#content{
+  justify-content: center;
+  max-width: auto;
+}
 .frame {
-  border: 1px solid black;
-  border-radius: 10px;
+  border-radius: 25px;
   background-color: #D9D9D9;
-  justify-content: center;
-  align-items: center;
-  margin-top: 160px;
-  margin-left: 250px;
-  margin-right: 250px;
-  margin-bottom: 15px;
+  text-align: center;
 }
-
-.forms {
-  border-radius: 20px;
-  background-color: #D9D9D9;
-  justify-content: center;
-  align-items: center;
-  margin-left: 200px;
-  margin-right: 200px;
-  padding: 35px;
-}
-
-#id {
-  display: none;
-}
-
-#list-form {
-  margin-top: 20px;
-}
-
-#list-form p {
-  width: 97%;
-  margin-left: 5px;
-  margin-bottom: 10px;
-  height: 35px;
-  border-radius: 8px;
-  transition: 0.3s;
-  background-color: #B8B9BB;
-  padding: 6px;
-}
-
-#update input {
-  width: 270px;
-  height: 32px;
-}
-
-#update textarea {
-  width: 270px;
-  height: 32px;
-}
-
-.icon-top icon {
-  margin-top: -155px;
-}
-
-#next button {
-  background-color: #6f6f6f;
-  border: #6f6f6f;
-}
-
-#next {
-  left: -440px;
-  margin-top: 200px;
-}
-
-#save {
-  left: 140px;
-  margin-top: 200px;
-}
-
-#edit {
-  left: 480px;
-}
-
-#edit button {
-  background-color: #7ED957;
-  border: #7ED957;
-  color: black;
-  font-weight: bolder;
-}
-
 .button {
   background: #004AAD;
-  /* color de fondo */
   color: #fff;
-  /* color de fuente */
   border: 2px solid #004AAD;
-  /* tamaño y color de borde */
   z-index: 1;
   overflow: hidden;
   display: inline-block;
   padding: 8px 35px;
-
+  border-radius: 5px;
 }
-
-.button:after {
-  left: 100%;
-}
-
 .button:hover {
-  color: #fff;
-  /* color de fuente hover */
+  background-color: #093faa;
+  transition: 3s;
+  border-radius: 50px;
+}
+.none {
+  display: none;
 }
 
-.button:hover:before {
-  left: 0;
+.containerCreate{
+  max-width: 700px;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 10px;
+  background-color: #D9D9D9;
+}
+.formsProject{
+  display: flex;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.containerCreate form .userDetail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+.containerCreate .form .userDetail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+  columns: 2;
+}
+.containerCreate .title{
+  font-weight: 500;
+  text-align: center;
 }
 
-.button:hover:after {
-  left: 50%;
+form .userDetail .inputBox{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+.userDetail .inputBox span,label{
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+.userDetail .inputBox input,textarea{
+  height: 35px;
+  width: 100%;
+  background-color: #B8B9BB;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+}
+.userDetail .inputBox input,textarea:focus,
+.userDetail .inputBox input,textarea:valid{
+  border-color: #B8B9BB;
+
+}
+
+#changeImage img {
+  width: 30%;
+  height: 50px;
+  width: 50px;
 }
 
 .file-select {
@@ -182,25 +133,20 @@ label {
   height: 32px;
   display: inline-block;
 }
-
-#src-file1::before {
-  content: 'Seleccionar';
+#save {
+  position: absolute;
+  margin-top: 390px;
+  right: 298px;
 }
 
-#src-file2::before {
-  content: 'Seleccionar';
+.icon {
+  position: relative;
+  height: 25px;
+  width: 25px;
+  float: left;
 }
-
-
-#changeImage img {
-  margin-bottom: 4%;
-}
-
-#changeImage img {
-  width: 30%;
-  word-wrap: break-word;
-  height: 50px;
-  width: 50px;
+#edit{
+  margin-top: 90px;
 }
 
 @media only screen and (max-width: 1199px) {
@@ -209,28 +155,6 @@ label {
     width: 85%;
     margin-left: 45px;
   }
-
-  .forms {
-    width: 85%;
-    margin-left: 45px;
-    padding: 35px;
-  }
-
-  input {
-    width: 97%;
-    margin: 0px 0px 10px 5px;
-    height: 50px;
-    border-radius: 8px;
-    transition: 0.3s;
-    background-color: #B8B9BB;
-  }
-
-  textarea {
-    width: 87%;
-    margin: 0px 0px 10px 5px;
-    height: 50px;
-  }
-
   .icon {
     display: none;
   }
@@ -247,53 +171,18 @@ label {
     margin-left: 45px;
   }
 
-  .forms {
-    width: 85%;
-    margin-left: 45px;
-    padding: 35px;
-  }
-
-  #update input {
-    width: 97%;
-    margin: 0px 0px 10px 5px;
-    height: 50px;
-    border-radius: 8px;
-    transition: 0.3s;
-    background-color: #B8B9BB;
-  }
-
-  #update textarea {
-    width: 87%;
-    margin: 0px 0px 10px 5px;
-    height: 50px;
-  }
-
-  .icon {
-    display: none;
-  }
 }
-@media only screen and (max-width: 911px) {
-  #next{
-    left: 30px;
-    margin-top: -58px;
-  }
-}
+
 
 @media only screen and (max-width: 570px) {
   .container {
     width: 95%;
     align-items: center;
   }
-
   .frame {
-    width: 85%;
-    margin-left: 35px;
-  }
-
-  .forms {
-    width: 85%;
-    margin-left: 35px;
-    padding: 35px;
+    max-height: fit-content;
+    margin: auto;
+    max-width: auto;
   }
 }
 
@@ -302,31 +191,11 @@ label {
     width: 100%;
     align-items: center;
   }
-
-  input {
-    width: 99%;
-  }
-
-  textarea {
-    width: 99%;
-  }
-
-  label {
-    margin-left: 5px;
-    font-size: 18px;
-    font-weight: 100;
-  }
-
   .frame {
     width: 95%;
     margin-left: 13px;
   }
 
-  .forms {
-    width: 95%;
-    margin-left: 13px;
-    padding: 35px;
-  }
 }
 
 #button {
