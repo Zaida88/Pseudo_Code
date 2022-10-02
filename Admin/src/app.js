@@ -73,5 +73,6 @@ app.use('/test', require('./routes/test.routes'))
 app.use('/answer', require('./routes/answer.routes'))
 app.use('/question', require('./routes/question.routes'))
 app.use('/project', require('./routes/project.routes'))
+app.use('/objectives', require('./routes/objective.routes'))
 
 module.exports = app;

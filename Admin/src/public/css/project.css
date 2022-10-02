@@ -23,6 +23,11 @@ body {
   border-radius: 25px;
   background-color: #D9D9D9;
   text-align: center;
+  padding: 10px;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .button {
   background: #004AAD;
@@ -41,6 +46,17 @@ body {
 }
 .none {
   display: none;
+}
+.hide{
+  opacity: 0;
+}
+
+.buttonObjective{
+  background-color: #FFBD59;
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
 }
 
 .containerCreate{
@@ -70,7 +86,7 @@ body {
   margin: 20px 0 12px 0;
   columns: 2;
 }
-.containerCreate .title{
+.title{
   font-weight: 500;
   text-align: center;
 }
@@ -95,11 +111,6 @@ form .userDetail .inputBox{
   font-size: 16px;
   border-bottom-width: 2px;
 }
-.userDetail .inputBox input,textarea:focus,
-.userDetail .inputBox input,textarea:valid{
-  border-color: #B8B9BB;
-
-}
 
 #changeImage img {
   width: 30%;
@@ -107,12 +118,12 @@ form .userDetail .inputBox{
   width: 50px;
 }
 
-.file-select {
+.file {
   position: relative;
   display: inline-block;
 }
 
-.file-select::before {
+.file::before {
   background-color: #5678EF;
   color: white;
   display: flex;
@@ -127,7 +138,7 @@ form .userDetail .inputBox{
   bottom: 0;
 }
 
-.file-select input[type="file"] {
+.file input[type="file"] {
   opacity: 0;
   width: 280px;
   height: 32px;
@@ -135,7 +146,7 @@ form .userDetail .inputBox{
 }
 #save {
   position: absolute;
-  margin-top: 390px;
+  margin-top: 290px;
   right: 298px;
 }
 

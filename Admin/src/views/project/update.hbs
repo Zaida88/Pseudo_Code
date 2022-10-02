@@ -5,7 +5,7 @@
         <form action="/project/update/{{idProject}}" method="post">
             {{/each}}
             {{#each list}}
-            <div id="title" class="title text-center">
+            <div id="title" class="title">
                 <h1>EDITAR PROYECTO</h1>
             </div>
             <div id="update" class="userDetail">
@@ -32,12 +32,6 @@
                         <textarea name="vision" id="vision" required aria-checked="true">{{vision}}</textarea>
                         <img class="icon" src="https://cdn-icons-png.flaticon.com/512/3597/3597075.png" alt="edit">
                 </div>
-                {{#each listO}}
-                <div id="Objectives" class="inputBox">
-                    <label class="title">Objetivos:</label>
-                    <textarea>{{objectives}}</textarea>
-                </div>
-                {{/each}}
                 <!--    
             <div id="logo" class="form-group col-md-6">
                 <label>Logo:</label>
@@ -45,7 +39,7 @@
                 <div id="changeImage">
                     <img src="/img/NoImage.jpg" id="imagePreview">
                 </div>
-                <div class="file-select" id="src-file2">
+                <div class="file" id="file">
                     <input type="file" name="logoProject" id="filePicker" accept="image/*" required>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17"

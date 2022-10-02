@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/CSS/project.css">
+<form action="/objectives/list/{{idProject}}" method="get"></form>
+<div class="container" id="container">
+    <a href="/project/list/{{user.idUser}}"><button class="button"><b>Lista de Proyecto </b></button></a>
+    <br>
+    {{#each list}}
+    <div class="frame">
+        <div class="name" id="name">
+            <h3>Objetivo:{{idObjective}}</h3>
+            <p>{{objective}}</p>
+        </div>
+        <br>
+        <div id="editar">
+            <a href="/objectives/edit/{{idObjective}}"><button class="button"><b>Editar</b></button></a>
+        </div>
+        <br>
+
+    </div>
+    {{else}}
+    <br>
+    <div class="mensaje frame">
+        <h2>No tiene ningun objetivo</h2>
+    </div>
+    {{/each}}
+</div>

@@ -32,23 +32,13 @@
                     <textarea placeholder="Ingresa la vision" name="vision" id="vision" required
                         aria-checked="true"></textarea>
                 </div>
-                {{#each max}}
-                <input class="none" type="text" name="idObjective" id="idProject" value="{{'max(idObjective)'}}"
-                    readonly />
-                {{/each}}
-                <div id="Objetives" class="inputBox">
-                    <label>Objetivos:</label>
-                    <textarea placeholder="Ingresa los objetivos" name="objetive" id="objetive" required
-                        aria-checked="true"></textarea>
-                </div>
-                <div class="inputBox">
-                </div>
+                
                 <div id="logo" class="logo">
                     <label>Logo:</label>
                     <div id="changeImage">
                         <img src="/img/NoImage.jpg" id="imagePreview">
                     </div>
-                    <div class="file-select" id="src-file2">
+                    <div class="file" id="file">
                         <input type="file" name="logoProject" id="filePicker" accept="image/*" required>
                     </div>
                     <svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17"
@@ -60,16 +50,17 @@
                 </div>
 
                 <div id="save">
-                    <button type="submit" class="button ">Crear</button>
+                    <button type="submit" class="button">Crear</button>
                 </div>
             </div>
         </form>
         <form action="/project/list/{{user.idUser}}" method="get">
             <div id="next">
-                <button class="btn btn-primary button" type="submit">Cancelar</button>
+                <button class="button" type="submit">Cancelar</button>
             </div>
         </form>
 
     </div>
 </div>
 <script src="/js/project/logo.project.js"></script>
+<script src="/js/project/objective.project.js"></script>

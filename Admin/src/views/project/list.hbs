@@ -1,14 +1,16 @@
 <link rel='stylesheet' href='/CSS/project.css' />
+
+<form action="/project/list/{{user.idUser}}" method='get'></form>
+<div id="title" class="title">
+    <h1>PROYECTO</h1>
+</div>
+<link rel="stylesheet" href="/CSS/project.css">
+
+{{#each list}}
 <div class="formsProject">
     <div class='containerCreate'>
-        <form action="/project/list/{{user.idUser}}" method='get'></form>
-            <div id="title" class="title text-center">
-                <h1>PROYECTO</h1>
-            </div>
-
-            {{#each list}}
-            <form>
-            <div id="list-form" class="userDetail">
+        <form>
+            <div id="listform" class="userDetail">
                 <div id="name" class="inputBox">
                     <label>Nombre proyecto:</label>
                     <textarea>{{nameProject}}</textarea>
@@ -28,12 +30,13 @@
                     <label>Vision:</label>
                     <textarea>{{vision}}</textarea>
                 </div>
-                {{#each listObjetive}}
-                <div id="Objetives" class="inputBox">
+                <div class="inputBox">
                     <label>Objetivos:</label>
-                    <textarea>{{objective}}</textarea>
+                    <a class="buttonObjective" href="/objectives/add/{{idProject}}">Crear Objetivos</a>
                 </div>
-                {{/each}}
+                <div class="inputBox">
+                    <a class="button" href="/objectives/list/{{idProject}}">Ver Objetivos</a>
+                </div>
                 <div id="logo" class="logo">
                     <label>Logo:</label> <br>
                     <div id="changeImage">
@@ -43,16 +46,17 @@
                 <div class="inputBox">
                     <div></div>
                 </div>
-                <div id='edit' class="form-group col">
+                <div id='edit'>
                     <a href="/project/update/{{idProject}}">
-                        <button type='button' class='btn btn-primary button'>
+                        <button type='button' class='button'>
                             Editar
                         </button>
                     </a>
                 </div>
+
             </div>
-            </form>
-        
+        </form>
+
     </div>
 </div>
 <div class="container">
