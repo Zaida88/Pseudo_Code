@@ -44,6 +44,8 @@
     </div>
   </form>
   <div class="cancel">
-    <a href="/exercise/listLanguages"><button>Cancelar</button></a>
+    {{#each language}}
+    <a href="/exercise/listExercises/{{idLanguage}}"><button>Cancelar</button></a>
+    {{/each}}
   </div>
 </div>

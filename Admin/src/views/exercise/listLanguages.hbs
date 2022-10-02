@@ -1,9 +1,9 @@
-<link rel="stylesheet" href="/css/exercise/listLanguages.css" />
+<link rel="stylesheet" href="/css/exercise/list.css" />
 
 <div class="container">
     <form action="/exercise/listLanguages" method="get"></form>
     <div id="title"><br>
-        <h2>Lenguajes</h2>
+        <h1>Lenguajes</h1>
     </div>
     <div id="description">
         <p>Lenguajes disponibles para asignar ejercicios</p>
@@ -13,10 +13,7 @@
         <div id="data">
             <h2>{{nameLanguage}}</h2>
             <div class="optionList">
-                <a href="/exercise/listExercises/{{idLanguage}}"><button id="list" type="button">Visualizar ejercicios</button></a>
-            </div>
-            <div class="optionCreate">
-                <a href="/exercise/create/{{idLanguage}}"><button id="create" type="button">Crear ejercicio</button></a>
+                <a href="/exercise/listExercises/{{idLanguage}}"><button id="list" type="button">Ejercicios</button></a>
             </div>
         </div>
         {{else}}

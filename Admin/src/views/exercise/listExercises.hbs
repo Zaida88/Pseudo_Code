@@ -1,14 +1,14 @@
-<link rel="stylesheet" href="/css/exercise/listExercises.css" />
+<link rel="stylesheet" href="/css/exercise/list.css" />
 
 <div class="container">
-  <div class="back">
-    <a href="/exercise/listLanguages"><button class="button">Lista de lenguajes</button></a>
+  <div class="create">
+    {{#each language}}
+    <a href="/exercise/listLanguages"><button id="back" class="type">Regresar</button></a>
+    <a href="/exercise/create/{{idLanguage}}"><button class="type">Crear ejercicio</button></a>
+    {{/each}}
   </div>
-  <div id="title"><br>
+  <div id="title">
     <h1>Ejercicios</h1>
-  </div>
-  <div id="description">
-    <p>Lista de ejercicios</p>
   </div>
   <form action="/exercise/listExercises/{{idLanguage}}" method="get"></form>
   <div class="contents">

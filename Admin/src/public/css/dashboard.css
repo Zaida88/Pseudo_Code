@@ -24,9 +24,8 @@ body {
 .contents {
     display: flex;
     justify-content: center;
-    max-width: auto;
-    display: flex;
-    height: fit-content;
+    align-items: center;
+    flex-flow: row wrap;
     flex-wrap: wrap;
     word-wrap: break-word;
 }
@@ -35,14 +34,11 @@ body {
     background-color: rgb(224, 230, 239);
     margin: 1%;
     padding: 2%;
+    padding-bottom: 0;
+    max-height: max-content;
+    max-width: fit-content;
+    flex-wrap: wrap;
+    word-wrap: break-word;
     border: solid black 3px;
     border-radius: 20px;
-}
-
-.contents label {
-    font-size: 20px;
-}
-
-.contents p {
-    text-align: center;
 }
