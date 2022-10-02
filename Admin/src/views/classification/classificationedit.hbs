@@ -1,11 +1,11 @@
 <link rel="stylesheet" href="/CSS/clasificacion.css" />
-<form action="/classification/edit/{{user.iduser}}" method="post">
+{{#each list}}
+<form action="/classification/edit/{{idClassification}}" method="post">
     <div class="fondo">
         <div class="contenido contenido--small" id="contenido">
-            {{#each list}}
             <h1 class="titulo">Editar clasificacion</h1>
             <div id="oculto">
-                <input class="input" type="text" name="idclasificacion" id="clasificacion" checked aria-checked="true"
+                <input class="input" type="text" name="idClassification" id="clasificacion" checked aria-checked="true"
                     value="{{idClassification}}" readonly>
             </div>
             <div class="nameClassification" id="nameClassification">
@@ -15,8 +15,8 @@
             </div>
             <div class="descriptionClassification" id="descriptionClassification">
                 <label class="label-nombre">Descrpcion: </label>
-                <input class="input" type="text" name="descriptionClassification" id="nombre" checked aria-checked="true"
-                value="{{descriptionClassification}}" />
+                <input class="input" type="text" name="descriptionClassification" id="nombre" checked
+                    aria-checked="true" value="{{descriptionClassification}}" />
             </div>
 
             <div class="nombre-clasificacion" id="imageClassification">
@@ -24,11 +24,10 @@
                 <input class="input" type="img" name="imageClassification" id="nombre" checked aria-checked="true"
                     value="{{imageClassification}}" />
             </div>
-
-            {{/each}}
             <div id="guardar">
-                <button type="submit" class="boton"><b>Guardar</b></button>
+                <button type="submit"><b>Guardar</b></button>
             </div>
+            {{/each}}
         </div>
     </div>
 </form>

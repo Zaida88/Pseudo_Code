@@ -1,4 +1,4 @@
-{{#each User}}
+
 <link rel="stylesheet" href="/css/menuUser.css">
 
 <div class="menu desplegar " id="menu">
@@ -23,7 +23,7 @@
     </div>
 
     <div class="OPO">
-        <a href="#">Clasificaciones</a>
+        <a href="/classification/list/{{user.idUser}}">Clasificaciones</a>
     </div>
     <div class="OPO">
         <a href="#">Pruebas</a>
@@ -59,7 +59,7 @@
 </div>
 
 </div>
- {{/each}}
+ 
 <script>
     const $openclos = document.getElementById("Close-open"),
 $user_close = document.getElementById("closeSecion")

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { show, send, list, bring, update } = require("../controllers/question.Controller")
+const { show, send, list, bring, update } = require("../controllers/question.controller")
 
 const { isLoggedIn } = require('../lib/auth')
 

@@ -1,25 +1,26 @@
 <link rel="stylesheet" href="/CSS/clasificacion.css" />
-
-<form action="/language/add/{{user.iduser}}" method="post">
+{{#each classification}}
+<form action="/language/add/{{idClassification}}" method="post">
+{{/each}}
    <div class="fondo">
     <div class="contenido contenido--small">
         <div class="titulo"><b>Nuevo Lenguaje</b></div><br>
         <div class="conten" id="contenido">
             <div class="contenido__nombre" id="nombre">
                 <label class="label-nombre">Nombre de lenguaje</label>
-                <input class="input" type="text" name="nameClassification" id="nameClassification" checked
+                <input class="input" type="text" name="nameLanguage" id="nameClassification" checked
                     aria-checked="true" />
             </div>
 
             <div class="contenido__nombre" id="nombre">
                 <label class="label-nombre">Descpcion</label>
-                <input class="input" type="text" name="descriptionClassification" id="descriptionClassification" checked
+                <input class="input" type="text" name="descriptionLanguage" id="descriptionClassification" checked
                     aria-checked="true" />
             </div>
 
             <div class="contenido__nombre" id="nombre">
                 <label class="label-nombre">imagen</label>
-                <input class="input" type="img" name="imageClassification" id="imageClassification" checked
+                <input class="input" type="img" name="imageLanguage" id="imageClassification" checked
                     aria-checked="true" />
             </div>
 

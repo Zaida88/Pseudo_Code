@@ -4,64 +4,66 @@ const sql = require("../databaseConfiguration/db_sql");
 
 //mostrar
 classificationCtl.show = (req, res) => {
-    res.render("classification/classificationlist")
+    res.render("classification/classificationadd")
 };
 
 //ingresar
-classificationCtl.send = async(req,res) =>{
-    const id = req.user.iduser
-    const {nameClassification, descriptionClassification,imageClassification} = req.body
-    const newClassification= {
-        nameClassification, 
+classificationCtl.send = async (req, res) => {
+    const id = req.user.idUser
+    const { nameClassification, descriptionClassification, imageClassification } = req.body
+    const newClassification = {
+        nameClassification,
         descriptionClassification,
-        imageClassification, 
-        userIduser: id
+        imageClassification,
+        userIdUser: id
     }
     await orm.classifications.create(newClassification)
-    .then(() => {
-    req.flash("success","Exito al guardar")
-     res.redirect('/classification/add/'+id);
-    })
+        .then(() => {
+            req.flash("success", "Exito al guardar")
+            res.redirect('/classification/list/' + id);
+        })
 }
 
 //listar
-classificationCtl.list = async(req,res) =>{
+classificationCtl.list = async (req, res) => {
     const list = await sql.query("select * from classifications")
-    res.render("classification/classificationlist",{list})
+    res.render("classification/classificationlist", { list })
 }
 
 //traer datos
-classificationCtl.bring = async(req,res) =>{
+classificationCtl.bring = async (req, res) => {
     const id = req.params.id
-    const list = await sql.query("select * from classifications where idClassification=?",[id])
-    res.render("classification/classificationedit",{list})
+    const list = await sql.query("select * from classifications where idClassification=?", [id])
+    res.render("classification/classificationedit", { list })
 }
 
 //DELETE
 classificationCtl.remove = async (req, res) => {
     const id = req.params.id
+    const ids = req.user.idUser
+    console.log(ids)
     await sql.query('DELETE FROM classifications WHERE idClassification = ?', [id])
     req.flash('success', 'Se eliminó exitosamente')
-    res.redirect('/classification/remove/');
+    res.redirect('/classification/list/'+ids);
 }
 
 
 //actualizar
-classificationCtl.update = async(req,res) =>{
-    const id = req.user.iduser
-    const ids = req.params.id
-    const {nameClassification, descriptionClassification,imageClassification} = req.body
+classificationCtl.update = async (req, res) => {
+    const id = req.params.id
+    const ids = req.user.idUser
+    const { nameClassification, descriptionClassification, imageClassification } = req.body
     const newClassification = {
-        nameClassification, 
+        nameClassification,
         descriptionClassification,
-        imageClassification, 
+        imageClassification,
     }
-    await orm.classifications.findOne({where:{idClassification:idClassification}})
-    .then(update=>{
-        update.update(newClassification)
-    })
-    req.flash("success","Exito al guardar")
-     res.redirect('/classification/list/'+id);
+    await orm.classifications.findOne({ where: { idClassification: id } })
+        .then(update => {
+            update.update(newClassification)
+        })
+    req.flash("success", "Exito al guardar")
+    res.redirect('/classification/list/' + ids);
 }
 
 module.exports = classificationCtl

@@ -1,22 +1,23 @@
 <link rel="stylesheet" href="/css/question/update.css">
-{{#each list}} 
-<form action="/question/update/{{idQuestions}}" method="post">
- <div id="container">
-    <div id="title">
-        <p>Agregar Prueba</p>
+<link rel="stylesheet" href="http://www.w3.org/2000/svg">
+{{#each list}}
+<form action="/question/update/{{idQuestion}}" method="post">
+     <div id="title">
+            <p>Editar Pregunta </p>
+        </div>
+    <div id="container">
+        <div id="nameQuestion">
+            <label>Pregunta:</label>
+            <input type="text" name="nameQuestion" id="icon" required aria-checked="true" value="{{nameQuestion}}">
+            <i class="bi bi-pencil-square"></i>
+        </div>
+        <div id="button">
+            <button type="submit">Guardar</button>
+        </div>
+        <div id="buttonCancel">
+            <button type="submit">Cancelar</button>
+        </div>
     </div>
-    <div id="nameQuestion">
-        <label>Nombre:</label>
-        <input type="text" name="nameQuestions" id="" required aria-checked="true" value="{{nameQuestions}}">
-    </div>
-    <div id="descriptionQuestion">
-        <label>Descripcion</label>
-        <textarea name="descriptionQuestions" id="" required aria-checked="true">{{descriptionQuestions}}</textarea>
-    </div>
-    <div id="button">
-        <button type="submit">Guardar</button>
-    </div>
- </div>
- 
+
 </form>
 {{/each}}

@@ -65,19 +65,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(require('./routes/index.routes'))
 app.use(require('./routes/login.routes'))
-
-app.use('/dashboard',require('./routes/dashboard.routes'))
-
 app.use('/dashboard', require('./routes/dashboard.routes'))
 app.use('/exercise', require('./routes/exercise.routes'))
 app.use('/userProfile', require('./routes/profile.routes'))
 app.use('/userAssignment', require('./routes/userAssignment.routes'))
-app.use('/tests', require('./routes/test.routes'))
-app.use('/answers', require('./routes/answer.routes'))
+app.use('/test', require('./routes/test.routes'))
+app.use('/answer', require('./routes/answer.routes'))
 app.use('/question', require('./routes/question.routes'))
-app.use('/project', require('./routes/project.route'))
-app.use('/classification',require('./routes/classification.routes'))
-app.use('/coding',require('./routes/coding.routes'))
-app.use('/language',require('./routes/languages.routes'))
+app.use('/project', require('./routes/project.routes'))
+app.use('/classification', require('./routes/classification.routes'))
+app.use('/coding', require('./routes/coding.routes'))
+app.use('/language', require('./routes/languages.routes'))
 
 module.exports = app;

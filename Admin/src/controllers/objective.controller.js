@@ -2,12 +2,12 @@ const objetiveCtl = {};
 const orm = require("../databaseConfiguration/db_orm")
 const sql = require("../databaseConfiguration/db_sql")
 
-objetiveCtl.showO = async (req, res) => {
+objetiveCtl.showOjective = async (req, res) => {
     const max = await sql.query("select max(idObjective) from objectives")
-    res.render("project/createObjetive", {max})
+    res.render("project/create", {max})
 };
 
-objetiveCtl.sendO = async (req, res) => {
+objetiveCtl.sendOjective = async (req, res) => {
     const id = req.user.idUser
     const { objective } = req.body;
     const newObjective = {
@@ -20,19 +20,19 @@ objetiveCtl.sendO = async (req, res) => {
 }
 
 
-objetiveCtl.listO = async (req, res) => {
+objetiveCtl.listOjective = async (req, res) => {
     const id = req.params.id
-    const listObjetive = await sql.query("select * from objetives where userIdUser=?", [id])
-    res.render("project/list", { listObjetive})
+    const listObjective = await sql.query("select * from objectives where userIdUser=?", [id])
+    res.render("project/list", { listObjective})
 }
 
-objetiveCtl.bringO = async (req, res) => {
+objetiveCtl.bringOjective = async (req, res) => {
     const id = req.params.id
-    const listObjetive = await sql.query("select * from objetives where idObjective=?", [id])
-    res.render("project/update", { listObjetive})
+    const listObjective = await sql.query("select * from objectives where idObjective=?", [id])
+    res.render("project/update", { listObjective})
 }
 
-objetiveCtl.updateO = async (req, res) => {
+objetiveCtl.updateOjective = async (req, res) => {
     const id = req.user.idusuario
     const ids = req.params.id
     const {objective} = req.body
@@ -47,7 +47,7 @@ objetiveCtl.updateO = async (req, res) => {
     res.redirect('/project/list/' + id);
     
 }
-objetiveCtl.remove = async (req, res) => {
+objetiveCtl.removeOjective = async (req, res) => {
     const id =  req.params.id
     await orm.objectives.destroy({where: {idObjective: ids}})
     .then(() => {
