@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/CSS/clasificacion.css" />
+{{#each list}}
+<form action="/classification/edit/{{idClassification}}" method="post">
+    <div class="fondo">
+        <div class="contenido contenido--small" id="contenido">
+            <h1 class="titulo">Editar clasificacion</h1>
+            <div id="oculto">
+                <input class="input" type="text" name="idClassification" id="clasificacion" checked aria-checked="true"
+                    value="{{idClassification}}" readonly>
+            </div>
+            <div class="nameClassification" id="nameClassification">
+                <label class="label-nombre">Nombre: </label>
+                <input class="input" type="text" name="nameClassification" id="nombre" checked aria-checked="true"
+                    value="{{nameClassification}}" />
+            </div>
+            <div class="descriptionClassification" id="descriptionClassification">
+                <label class="label-nombre">Descrpcion: </label>
+                <input class="input" type="text" name="descriptionClassification" id="nombre" checked
+                    aria-checked="true" value="{{descriptionClassification}}" />
+            </div>
+
+            <div class="nombre-clasificacion" id="imageClassification">
+                <label class="label-nombre">Imagen: </label>
+                <input class="input" type="img" name="imageClassification" id="nombre" checked aria-checked="true"
+                    value="{{imageClassification}}" />
+            </div>
+            <div id="guardar">
+                <button type="submit"><b>Guardar</b></button>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</form>

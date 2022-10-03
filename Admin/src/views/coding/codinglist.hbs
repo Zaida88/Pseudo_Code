@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="/CSS/clasificacion.css" />
+
+<form action="/coding/list/{{idLanguage}}" method="get"></form>
+<div class="contenedor" id="contenedor">
+  <a href="/classification/list/{{user.idUser}}"><button class="boton"><b>Lista de Clasificaciones </b></button></a>
+  {{#each list}}
+  <div class="contenedor__contenido">
+    <div class="nombre" id="nombre">
+      <h1>{{nameCode}}</h1>
+    </div>
+    <div class="contenedor__contenido">
+      <div class="nombre" id="nombre">
+        <h1>{{descriptionCode}}</h1>
+      </div>
+      <div class="contenedor__contenido">
+        <div class="nombre" id="nombre">
+          <h1>{{code}}</h1>
+        </div>
+        <div class="contenedor__contenido">
+          <div class="nombre" id="nombre">
+            <h1>{{video}}</h1>
+          </div>
+          <div id="editar">
+            <a href="/coding/edit/{{idCode}}"><button class="boton"><b>Editar</b></button></a>
+          </div>
+          <div class="add" id="add">
+            <a href="/coding/remove/{{idCode}}"><button class="boton"><b>Eliminar</b></button></a>
+          </div>
+        </div>
+        {{else}}
+        <div class="mensaje">
+          <h2>No tienes ningun codigo</h2>
+        </div>
+        {{/each}}
+      </div>

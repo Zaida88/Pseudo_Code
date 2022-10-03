@@ -1,3 +1,4 @@
+
 const objectives = (sequelize, type) => {
     return sequelize.define("objectives", {
         idObjective: {
