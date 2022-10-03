@@ -15,8 +15,9 @@ testCtl.send=async(req,res)=>{
     }
     await  orm.tests.create(newTest)
     req.flash("success","Guardado exitosamente")
-    res.redirect("/tests/list/"+ids)
+    res.redirect("/test/list/"+ids)
 }
+
 
 testCtl.list=async(req,res)=>{
     const list=await sql.query("select*from tests")

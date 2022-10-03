@@ -1,114 +1,129 @@
-*{
-    margin: 0;
-    padding: 0;
-    color: rgb(0, 0, 0);
-    outline: none;
-    text-decoration: none;
-
-}
-
-body{
-    background-color: rgb(249, 242, 242);
-}
-
-#container{
+#container {
     position: absolute;
     width: 100%;
     height: 100%;
-    max-width: 50%;
-    max-height: 60%;
-    top: 20%;
-    left: 25%;
+    max-width: 57%;
+    max-height: 33%;
+    top: 30%;
+    left: 20%;
     text-align: center;
-    background-color: rgb(200, 204, 208);
-    display: flex;
-    color: rgb(255, 255, 255);
-    flex-direction: column;
-    margin:30px;
-    margin-left: auto;
-    margin-right: auto; 
-    width: 70%;
-    padding: 15px;
-    align-items: center;
-    justify-content: center;
-    border-radius:20px;
+    background-color: #d0d3d4;
+    border-radius: 20px;
 }
-#title{
-  
-   margin-top: 10px;
-   top: 5%;
-   font-size: 30px;
-   width: 100%;
-   position: fixed;
-   height: 50px;
-   
-}
-#nameTest{
+
+#title {
     position: absolute;
+    width: 100%;
     top: 20%;
-    width: 100%;
-}
-#textElement {
-    border-radius: 5px;
+    font-size: 25px;
+    text-align: center;
 }
 
-#descriptionTest{
+#name {
     position: absolute;
-    top: 40%;
     width: 100%;
+    max-width: 50%;
+    top: 30%;
+    height: 100%;
+    max-height: 10%;
+
 }
 
-#buttonGroup {
+#description {
     position: absolute;
-    top: 65%;
-    left: 37%;
-    gap: 200px;
-    display: flex;
-    flex-direction: row;
+    width: 100%;
+    max-width: 50%;
+    top: 30%;
+    left: 50%;
+    height: 100%;
+    max-height: 10%;
 }
 
-#btnCancel{
-    border-radius: 5px;
+#buttonCancel {
+    position: absolute;
+    width: 100%;
+    max-width: 50%;
+    top: 70%;
+    height: 100%;
+    max-height: 10%;
+}
+
+#buttonCreate {
+    position: absolute;
+    width: 100%;
+    max-width: 50%;
+    top: 70%;
+    left: 50%;
+    height: 100%;
+    max-height: 10%;
+}
+
+#buttonCancel button {
+    border: 1px #6f6f6f solid;
+    background-color: #6f6f6f;
+    color: white;
+    width: 25%;
+    border-radius: 10px;
+    height: 100%;
     border: none;
-    padding-left: 5px;
-    padding-right: 5px;
+    font-size: 15px;
 }
 
-#button{
+#buttonCreate button {
+    padding: 2 6%;
+    background-color: #093faa;
+    color: white;
+    width: 25%;
+    border-radius: 10px;
+    height: 100%;
+    border: none;
+    font-size: 15px;
+}
+
+label {
+    position: absolute;
     width: 100%;
+    left: 5%;
+}
+
+input {
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    width: 90%;
+    height: 130%;
+    border-radius: 7px;
     border: none;
 }
 
-#buttonCancel{
-    top: 80%;
-    width: 100%;
+textarea {
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    width: 80%;
+    border-radius: 7px;
+    border: none;
 }
 
-#container label{
-    position: absolute;
-    left: 2%;
+@media only screen and (orientation: portrait) and (max-width: 1000px) and (min-width: 667px) {
+    #container {
+        max-width: 100%;
+        left: 0%;
+    }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 667px) and (min-width: 384px) {
+    #container {
+        max-width: 100%;
+        left: 0%;
+    }
 
 }
-#container input{
-    position: absolute;
-    width: 70%;
-    left: 20%;
-}
-#container textarea{
-    position: absolute;
-    width: 70%;
-    left: 20%;
-}
-#button button{
-    position: absolute;
-    width: 40%;
-    left: 30%;
-    background-color: #004AAD;
 
-}
-#button buttonCancel{
-    position: absolute;
-    width: 50%;
-    left: 25%;
-   
+@media only screen and (orientation: portrait) and (max-width: 384px) and (min-width: 150px) {
+    #container {
+        max-width: 100%;
+        left: 0%;
+    }
+
 }

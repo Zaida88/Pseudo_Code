@@ -1,123 +1,123 @@
-
-
-*{
-    margin: 0;
-    padding: 0;
-    color: rgb(0, 0, 0);
-    outline: none;
-    text-decoration: none;
-
-}
-
-body{
-    background-color: rgb(249, 242, 242);
-}
-#container{
+#container {
     position: absolute;
     width: 100%;
     height: 100%;
-    max-width: 50%;
-    max-height: 50%;
-    top: 20%;
-    left: 25%;
+    max-width: 57%;
+    max-height: 28%;
+    top: 30%;
+    left: 20%;
     text-align: center;
-    background-color: rgb(200, 204, 208);
-    display: flex;
-    color: rgb(255, 255, 255);
-    flex-direction: column;
-    margin:30px;
-    margin-left: auto;
-    margin-right: auto; 
-    width: 70%;
-    padding: 15px;
-    align-items: center;
-    justify-content: center;
-    border-radius:20px;
+    background-color: #d0d3d4;
+    border-radius: 20px;
 }
 
-#title{
-    margin-top: 5%;
-    top: 10%;
-    font-size: 25px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
- }
-
-#answers{
+#title {
     position: absolute;
+    width: 100%;
+    top: 15%;
+    font-size: 30px;
+    text-align: center;
+}
+
+#name {
+    position: absolute;
+    width: 100%;
+    max-width: 50%;
     top: 20%;
+    height: 100%;
+    max-height: 10%;
+    left:25%;
+    font-size: 17px;
+
+}
+
+
+#buttonCancel {
+    position: absolute;
     width: 100%;
+    max-width: 50%;
+    top: 70%;
+    height: 100%;
+    max-height: 10%;
 }
 
-#buttonGroup1 {
+#buttonCreate {
     position: absolute;
-    top: 65%;
-    left: 23%;
-    gap: 85%;
-    width: 55%;
-    display: flex;
-    flex-direction: row;
-}
-
-#nameAnswers{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    top: 20%;
     width: 100%;
+    max-width: 50%;
+    top: 70%;
+    left: 50%;
+    height: 100%;
+    max-height: 10%;
 }
 
-#button-cancel{
-    border-radius: 5px;
+#buttonCancel button {
+    border: 1px #6f6f6f solid;
+    background-color: #6f6f6f;
+    color: white;
+    width: 30%;
+    border-radius: 7px;
+    height: 130%;
     border: none;
-    background-color: #004AAD;
+    font-size: 15px;
 }
 
-#button{
-    border-radius: 5px;
+#buttonCreate button {
+    padding: 2 6%;
+    background-color: #093faa;
+    color: white;
+    width: 30%;
+    border-radius: 7px;
+    height: 130%;
     border: none;
+    font-size: 15px;
 }
 
-#btnCreate{
-    border-radius: 5px;
-    border: none;
-    background-color: #004AAD;
-    color: #FFFFFF;
-}
-
-#btnCancel{
-    border-radius: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border: none;
-}
-
-#container label{
+label {
     position: absolute;
-    left: 2%;
-
+    width: 100%;
+    left: 5%;
 }
-#container input{
+
+input {
     position: absolute;
-    width: 70%;
+    top: 100%;
+    left:10%;
+    width: 85%;
+    height: 125%;
+    border-radius: 7px;
+    border: none;
+}
+
+textarea {
+    position: absolute;
+    top: 100%;
     left: 20%;
+    width: 80%;
+    border-radius: 7px;
+    background-color: #9e9e9e;
+    border: none;
 }
-#container textarea{
-    position: absolute;
-    width: 70%;
-    left: 20%;
+
+@media only screen and (orientation: portrait) and (max-width: 1000px) and (min-width: 667px) {
+    #container {
+        max-width: 100%;
+        left: 0%;
+    }
 }
-#button button{
-    position: absolute;
-    width: 40%;
-    left: 30%;
-    background-color: #004AAD;
+
+@media only screen and (orientation: portrait) and (max-width: 667px) and (min-width: 384px) {
+    #container {
+        max-width: 100%;
+        left: 0%;
+    }
 
 }
-#button button_cancel{
-    position: absolute;
-    width: 50%;
-    left: 25%;
-   
+
+@media only screen and (orientation: portrait) and (max-width: 384px) and (min-width: 150px) {
+    #container {
+        max-width: 100%;
+        left: 0%;
+    }
+
 }

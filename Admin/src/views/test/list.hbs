@@ -13,9 +13,6 @@
     <div class="row">
         {{#each list}}
         <div id="card">
-            <div id="id">
-                <p>{{idTest}}</p>
-            </div>
             <div id="name">
                 <p>{{nameTest}}</p>
             </div>
@@ -28,12 +25,15 @@
                     <button type="button" id="btnEdit">Editar Prueba</button>
                 </a>
             </div>
+             <div id="create">
+                <a href="/question/create/{{idTest}}">
+                    <button type="button" id="btnCreate">Crear Pregunta</button>
+                </a>
+            </div>
         </div>
-        {{else}}
-    </div>
-</div>
+       {{else}}
 
-<div class='center-block frame text-center' id="content">
+    <div class='center-block frame text-center' id="content">
         <div class='card-body'>
             <h5 class='card-title'>
                 No tienes pruebas registradas actualmente.
@@ -41,10 +41,15 @@
             <p class='card-text'>
                 Desea agregar una.
             </p>
-
-        {{/each}}
-            
+            <div class="text-center">
+                <a href="/test/create/{{user.idUser}}">
+                    <button class='btn btn-primary button' id="button">
+                        <b>Agregar Prueba</b>
+                    </button>
+                {{/each}}
+                </a>
+            </div>
         </div>
     </div>
 </div>
-<script src="/src/views/test/hidden.test.js"></script>
+<script src="/views/test/hidden.test.js"></script>

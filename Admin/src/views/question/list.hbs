@@ -1,61 +1,48 @@
 <link rel="stylesheet" href="/css/question/list.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<form action="/question/list" method="get"></form>
+<form action="/question/list/{{idQuestion}}" method="get"></form>
 <div id="createQuestion">
-    <a href="/answer/create/{{idTest}}">
+    <a href="/question/create/{{user.idUser}}">
         <button id="btnAdd" type="button">Agregar Pregunta</button>
     </a>
 </div>
-<div id="miniContainer">
-    <div id="elementsTitle">
-        <div id="sideOne">
-            <p id="blacked">Pregunta</p>
-        </div>
-        <div id="sideTwo">
-            <p id="blacked">Ver</p>
-            <p id="blacked">Eliminar</p>
-        </div>
-    </div>
+<div id="title">
+    <h3>Preguntas</h3>
 </div>
-<div id="containerIterator">
-    {{#each list}}
-    <div id="elementContainer">
-        <div id="description">
-            <p>Pregunta 1</p>
-        </div>
-        <div id="actions">
-            <div id="edit">
-                <button class="btn" id="icon" onclick="location.href='/question/update/{{idQuestion}}'"><i
-                        class="fa fa-eye"></i></button>
+<div id="container">
+    <div class="row">
+        {{#each list}}
+        <div id="card">
+           <div id="description">
+                <p>{{descriptionTest}}</p>
             </div>
             <div id="edit">
-                <button class="btn" id="icon" onclick="location.href='/question/update/{{idQuestion}}'"><i
-                        class="fa fa-trash"></i></button>
+                <button class="btn"  onclick="location.href='/question/update/{{idQuestion}}'"><img
+                    src="https://cdn-icons-png.flaticon.com/512/3597/3597075.png" height="25" width="25" /></button>
             </div>
-        </div>
-    </div>
-    {{else}}
+            <div id="createanswer">
+            <a href="/answer/create/{{user.idUser}}">
+            <button id="btnAdd" type="button">Agregar Respuesta</button>
+             </a>
+       </div>  
 </div>
-
-<div class='center-block frame text-center' id="content">
+{{else}}
+<div class=' frame ' id="content">
         <div class='card-body'>
             <h5 class='card-title'>
-                No tienes preguntas registradas actualmente.
+                No tienes pruebas registradas actualmente.
             </h5>
             <p class='card-text'>
                 Desea agregar una.
             </p>
-
-        {{/each}}
-            <div class="text-center">
-                <a href="/project/create/{{idProject}}">
+            <div>
+                <a href="/question/create/{{user.idUser}}">
                     <button class='btn btn-primary button' id="button">
-                        <b>Agregar Pregunta</b>
+                        <b>Agregar Prueba</b>
                     </button>
+                {{/each}}
                 </a>
             </div>
         </div>
     </div>
 </div>
-<script src="/src/views/question/hidden.question.js"></script>
+<script src="/views/question/hidden.question.js"></script>

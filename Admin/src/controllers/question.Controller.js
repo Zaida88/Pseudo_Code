@@ -8,10 +8,9 @@ questionCtl.show=(req,res)=>{
 }
 questionCtl.send=async(req,res)=>{
     const ids=req.user.idUser
-    const{nameQuestion , descriptionQuestion}=req.body
+    const{question }=req.body
     const newQuestion={
-        nameQuestion ,
-         descriptionQuestion
+        question
     }
     await  orm.questions.create(newQuestion)
     req.flash("success","guardado exitosamente")
