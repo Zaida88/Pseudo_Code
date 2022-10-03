@@ -29,6 +29,14 @@ body {
   margin-top: 15px;
   margin-bottom: 15px;
 }
+.frameObjective{
+  border-radius: 25px;
+  background-color: #D9D9D9;
+  text-align: center;
+  padding: 10px;
+  margin: 15px 470px;
+  padding-bottom: 50px;
+}
 .button {
   background: #004AAD;
   color: #fff;
@@ -103,7 +111,6 @@ form .userDetail .inputBox{
 .userDetail .inputBox input,textarea{
   height: 35px;
   width: 100%;
-  background-color: #B8B9BB;
   outline: none;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -111,7 +118,23 @@ form .userDetail .inputBox{
   font-size: 16px;
   border-bottom-width: 2px;
 }
-
+.cancel{
+  background-color: #919191;
+  border: #000000;
+  text-decoration: none;
+}
+.left{
+  float: left;
+  right: 10px;
+}
+.righ{
+  float: right;
+}
+.saveCreate{
+  margin-top: 300px;
+  position: absolute;
+  right: 385px;
+}
 #changeImage img {
   width: 30%;
   height: 50px;
@@ -158,6 +181,10 @@ form .userDetail .inputBox{
 }
 #edit{
   margin-top: 90px;
+}
+.edit{
+  background-color: #128907;
+  border: #128907;
 }
 
 @media only screen and (max-width: 1199px) {

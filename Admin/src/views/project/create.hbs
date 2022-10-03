@@ -12,7 +12,7 @@
                 <div id="name" class="inputBox">
                     <span>Nombre:</span>
                     <input type="text" name="nameProject" id="nameProject" required aria-checked="true"
-                        placeholder="Ingresa el Nombre">
+                        placeholder="Nombre del proyecto">
                 </div>
 
                 <div id="description" class="inputBox">
@@ -49,14 +49,14 @@
                     </svg>
                 </div>
 
-                <div id="save">
+                <div id="saved" class="saveCreate">
                     <button type="submit" class="button">Crear</button>
                 </div>
             </div>
         </form>
         <form action="/project/list/{{user.idUser}}" method="get">
             <div id="next">
-                <button class="button" type="submit">Cancelar</button>
+                <button class="button cancel" type="submit">Cancelar</button>
             </div>
         </form>
 

@@ -2,7 +2,7 @@
 {{#each list}}
 <form action="/objectives/edit/{{idObjective}}" method="post">
     <div class="container">
-        <div class="frame" id="updateObjective">
+        <div class="frameObjective" id="updateObjective">
            
             <h1 class="title">Editar Objetivo</h1>
             <div class="none">
@@ -16,8 +16,11 @@
             </div>
             {{/each}}
             <br>
-            <div>
+            <div class="righ">
                 <button type="submit" class="button"><a href="/project/list"></a><b>Guardar</b></button>
+            </div>
+            <div class="inputBox left">
+                <a class="button cancel" href="/project/list/{{user.idUser}}">Cancelar</a>
             </div>
         </div>
     </div>
