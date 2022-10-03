@@ -52,7 +52,7 @@ margin: 0%;
     padding-left: 35%;
 }
 .settings:hover{
-    background-color: black;
+    background-color:rgb(33, 38, 79);
 }
 .MenuSlider img{
     transition: 0.2s;
