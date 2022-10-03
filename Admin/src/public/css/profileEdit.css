@@ -1,9 +1,12 @@
 button {
     color: white;
 }
-
+body{
+    overflow: hidden;
+}
 .title {
     color: black;
+    height: 10px;
 }
 .inputfile {
 	width: 0.1px;
@@ -14,6 +17,8 @@ button {
 	z-index: -1;
 }
 .inputfile + label {
+    position: relative;
+    bottom: 80px;
     text-align: center;
     font-size: 1.25em;
     font-weight: 700;
@@ -115,8 +120,8 @@ button {
 
 
     .profileUser {
-
-        display: block;
+       
+      
         position: relative;
         top: 30px;
         left: 40%;
@@ -256,7 +261,7 @@ button {
         visibility: hidden;
 
         position: absolute;
-        z-index: 1;
+        z-index: 2;
         top: -205px;
         height: 250px;
         width: 400px;

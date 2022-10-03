@@ -1,8 +1,15 @@
 .btn-cerrar-popup img{
 border-radius: 50%;
 }
+body{
+    margin: 0;
+}
 .menu{
-    border-radius: 5px;
+    z-index: 5;
+   
+}
+.user_primariInterfaz{
+    height: 50px;
 }
 .menuClose button{
     position: relative;
@@ -21,6 +28,7 @@ border-radius: 50%;
 }
 .MenuSlider p {
     color: white;
+    height: 20px;
 }
 @media (min-width: 900px){
 
@@ -75,8 +83,10 @@ margin: 0%;
     background-color: rgb(33, 38, 79);
 }
 .MenuSlider p{
-    display: inline-block;
+    display: inline;
+    height: 1px;
     position: relative;
+    text-align:center ;
     font-size: 25px;
 
 }
