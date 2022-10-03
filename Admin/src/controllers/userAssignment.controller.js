@@ -2,6 +2,8 @@ const userAssignmentCtl = {}
 
 const orm = require('../databaseConfiguration/db_orm')
 const sql = require('../databaseConfiguration/db_sql')
+const helpers = require("../lib/helpers");
+
 
 userAssignmentCtl.showUser = (req, res) => {
     res.render('userAssignment/createUser')
@@ -25,6 +27,7 @@ userAssignmentCtl.createUser = async (req, res) => {
         photo,
         email,
     }
+    newUserAssignment.password = await helpers.encryptPassword(password);
     await orm.users.create(newUserAssignment)
     req.flash('success', 'Se creó exitosamente')
     res.redirect('/userAssignment/list');
