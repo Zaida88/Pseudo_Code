@@ -5,7 +5,7 @@ const sql = require("../databaseConfiguration/db_sql")
 objectiveCtl.show = async (req, res) => {
     const id = req.params.id
     const project = await sql.query("select * from projects where idProject", [id])
-    res.render("objectives/objectivesadd", {project})
+    res.render("objectives/create", {project})
 };
 
 objectiveCtl.send = async (req, res) => {
@@ -19,8 +19,7 @@ objectiveCtl.send = async (req, res) => {
     .then(() => {
         req.flash("success", "Exito al guardar")
         res.redirect('/objectives/list/' + id);
-    })
-    
+    }) 
 }
 
 
@@ -28,13 +27,13 @@ objectiveCtl.list = async (req, res) => {
     const id = req.params.id
     const list = await sql.query("select * from objectives where projectIdProject=?", [id]) 
     const project = await sql.query("select * from projects where idProject=?", [id])
-    res.render("objectives/objectiveslist", {list, project})
+    res.render("objectives/list", {list, project})
 }
 
 objectiveCtl.bring = async (req, res) => {
     const id = req.params.id
     const list = await sql.query("select * from objectives where idObjective=?", [id])
-    res.render("objectives/objectivesedit", { list})
+    res.render("objectives/update", { list})
 }
 
 objectiveCtl.update = async (req, res) => {
