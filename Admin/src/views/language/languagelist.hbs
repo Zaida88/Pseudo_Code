@@ -1,10 +1,16 @@
-<link rel="stylesheet" href="/CSS/clasificacion.css" />
+<link rel="stylesheet" href="/css/language/lenguagecard.css" />
+<link rel="stylesheet" href="/css/language/lenguage.css" />
 
 <form action="/language/list/{{idClassification}}" method="get"></form>
+{{#each list}}
+  <a href="/coding/add/{{idLanguage}}"><button class="button agregar-interno"><b>Agregar Codificacion</b></button></a>
+        </div> 
 <div class="contenedor" id="contenedor">
-  <a href="/classification/list/{{user.idUser}}"><button class="boton"><b>Lista de Clasificaciones </b></button></a>
-  {{#each list}}
-  <div class="contenedor__contenido">
+  
+          <a href="/coding/list/{{idLanguage}}"><button class="agregar-lenguaje"><b>Listar Codificaciones</b></button></a>
+        </div>
+        <div id="editar">
+  <div class="contenido">
     <div class="nombre" id="nombre">
       <h1>{{nameLanguage}}</h1>
     </div>
@@ -12,27 +18,28 @@
       <div class="nombre" id="nombre">
         <h1>{{descriptionLanguage}}</h1>
       </div>
-      <div class="contenedor__contenido">
-        <div class="nombre" id="nombre">
-          <h1>{{imageLanguage}}</h1>
-        </div>
-        <div>
-          <a href="/coding/add/{{idLanguage}}"><button class="boton"><b>Agregar Codificacion</b></button></a>
-        </div>
-        <div>
-          <a href="/coding/list/{{idLanguage}}"><button class="boton"><b>Listar Codificaciones</b></button></a>
-        </div>
+
+<div id="logo" class="form-group col-md-6">
+                <label>Imagen:</label> <br>
+                <div id="changeImage">
+                    <img src="/img/user/{{imageLanguage}}" id="image" />
+                </div>
+            </div>
+       
         <div id="editar">
-          <a href="/language/edit/{{idLanguage}}"><button class="boton"><b>Editar</b></button></a>
+          <a href="/language/edit/{{idLanguage}}"><button class="button-editar"><b>Editar</b></button></a>
         </div>
         <div class="add" id="add">
-          <a href="/language/remove/{{idLanguage}}"><button class="boton"><b>Eliminar</b></button></a>
+          <a href="/language/remove/{{idLanguage}}"><button class="button-eliminar"><b>Eliminar</b></button></a>
         </div>
 
       </div>
       {{else}}
-      <div class="mensaje">
-        <h2>No tiene ningun lenguaje</h2>
+  <div class="container">
+        <div class="sec">
+        <h2>No tiene ningun lenguaje<br>¿desea agregar uno?</h2>
+          <a href="/language/add/{{user.idUser}}"><button class="button"><b>Agregar lenguaje</b></button></a>
+      </div>
       </div>
       {{/each}}
     </div>

@@ -1,33 +1,41 @@
-<link rel="stylesheet" href="/CSS/clasificacion.css" />
+<link rel="stylesheet" href="/CSS/classification/clasificacion.css" />
+<link rel="stylesheet" href="/css/classsification/classificationFrom.css" />
 {{#each list}}
 <form action="/classification/edit/{{idClassification}}" method="post">
-    <div class="fondo">
-        <div class="contenido contenido--small" id="contenido">
+  <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-3">
+      <div class="form-group two-fields"> <div class="fondo">
+    <div class="contenido">
             <h1 class="titulo">Editar clasificacion</h1>
+            <label class="label-nombre">ID: </label><br>
             <div id="oculto">
                 <input class="input" type="text" name="idClassification" id="clasificacion" checked aria-checked="true"
                     value="{{idClassification}}" readonly>
             </div>
             <div class="nameClassification" id="nameClassification">
-                <label class="label-nombre">Nombre: </label>
+                <label class="label-nombre">Nombre: </label><br>
                 <input class="input" type="text" name="nameClassification" id="nombre" checked aria-checked="true"
                     value="{{nameClassification}}" />
             </div>
             <div class="descriptionClassification" id="descriptionClassification">
-                <label class="label-nombre">Descrpcion: </label>
+                <label class="label-nombre">Descripcion: </label><br>
                 <input class="input" type="text" name="descriptionClassification" id="nombre" checked
                     aria-checked="true" value="{{descriptionClassification}}" />
             </div>
 
-            <div class="nombre-clasificacion" id="imageClassification">
-                <label class="label-nombre">Imagen: </label>
-                <input class="input" type="img" name="imageClassification" id="nombre" checked aria-checked="true"
-                    value="{{imageClassification}}" />
-            </div>
+            <label>Imagen::</label>
+                <div id="changeImage">
+                    <img src="/img/NoImage.jpg" id="imagePreview">
+                </div>
+                <div class="file-select" id="src-file2">
+                    <input type="file" name="logoProject" id="filePicker" accept="image/*" required value="{{imageClassification}}">
+                </div>
             <div id="guardar">
-                <button type="submit"><b>Guardar</b></button>
+                <button class="guardar-btn" type="submit"><b>Guardar</b></button>
             </div>
             {{/each}}
         </div>
     </div>
 </form>
+<script src="/js/classification/classification.js"></script>

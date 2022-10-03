@@ -1,32 +1,50 @@
-<link rel="stylesheet" href="/CSS/clasificacion.css" />
+<link rel="stylesheet" href="/css/classsification/classificationFrom.css" />
 
 <form action="/classification/add/{{user.idUser}}" method="post">
-   <div class="fondo">
-    <div class="contenido contenido--small">
+  <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-3">
+      <div class="form-group two-fields"> <div class="fondo">
+    <div class="contenido">
         <div class="titulo"><b>Nueva clasificacion</b></div><br>
         <div class="conten" id="contenido">
-            <div class="contenido__nombre" id="nombre">
-                <label class="label-nombre">Nombre de clasificacion</label>
+            <div class="input-group" id="nombre">
+                <label class="label-nombre">Nombre de clasificacion</label><br>
                 <input class="input" type="text" name="nameClassification" id="nameClassification" checked
                     aria-checked="true" />
             </div>
 
-            <div class="contenido__nombre" id="nombre">
-                <label class="label-nombre">Descpcion</label>
+            <div class="input-group" id="nombre">
+                <label class="label-clasificacion">Descripcion</label><br>
                 <input class="input" type="text" name="descriptionClassification" id="descriptionClassification" checked
                     aria-checked="true" />
             </div>
-
-            <div class="contenido__nombre" id="nombre">
-                <label class="label-nombre">imagen</label>
-                <input class="input" type="img" name="imageClassification" id="imageClassification" checked
-                    aria-checked="true" />
+            <!--photjo--->
+            <div id="logo" class="form-group col-md-6 logo">
+                <label>Imagen:</label>
+                <div id="changeImage">
+                    <img src="/img/NoImage.jpg" id="imagePreview">
+                </div>
+                <div class="file-select" id="src-file2">
+                    <input type="file" name="logoProject" id="filePicker" accept="image/*" required>
+                </div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="iborrainputfile" width="20" height="17"
+                    viewBox="0 0 20 17">
+                    <path
+                        d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z">
+                    </path>
+                </svg>
             </div>
-
-            <div id="guardar">
-                <button class="boton" type="submit"><b>Guardar</b></button>
-            </div>
-        </div>
-    </div>
-    </div>
+                <button type="submit" class="guardar-btn"><b>Guardar</b></button>
+           
 </form>
+        <form action="/classification/list/{{user.idUser}}" method="get">
+            <div id="next" class="cancelar-btn">
+                <button type="submit" class="cancelar-btn" >Cancelar</button>
+            </div>
+        </form>
+           </div>
+           </div>
+           
+        
+<script src="/js/classification/classification.js"></script>
