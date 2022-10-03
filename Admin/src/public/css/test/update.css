@@ -1,119 +1,129 @@
-*{
-    margin: 0;
-    padding: 0;
-    color: rgb(0, 0, 0);
-    outline: none;
-    text-decoration: none;
-
-}
-
-body{
-    background-color: rgb(249, 242, 242);
-}
-
-#elementGroup {
-    position: absolute;
-    display: flex;
-    gap: 20%; 
-}
-
-#buttonGroup1 {
-    position: absolute;
-    top: 65%;
-    left: 23%;
-    gap: 15px;
-    display: flex;
-    flex-direction: row;
-}
-
-#buttonGroup2 {
-    position: absolute;
-    top: 80%;
-    left: 24%;
-    width: 65%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#btnSave {
-    border-radius: 5px;
-    border: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: #004AAD;
-    color: #FFFFFF;
-}
-#btnEdit {
-    border-radius: 5px;
-    border: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color:#66d248;
-    color: #FFFFFF;
-}
-#btnCancel {
-    border-radius: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border: none;
-    background-color:#6f6f6f;
-    color:#000 ;
-}
-
-#textBox{
-    border-radius: 5px;
-}
-
-#btnSee {
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    border-radius: 5px;
-    border: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color:#22d1ef;
-    color:#000 ;
-}
-
-#nameTests {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#descriptionTests {
-    display: flex;
-    flex-direction: column;
-}
-
-#title {
-    display: flex;
-    justify-content: center;
-    font-size: 25px;
-    margin-top: 8%;
-}
-
-#container{
+#container {
     position: absolute;
     width: 100%;
     height: 100%;
-    max-width: 50%;
-    max-height: 40%;
-    top: 20%;
-    left: 25%;
+    max-width: 57%;
+    max-height: 33%;
+    top: 30%;
+    left: 20%;
     text-align: center;
     background-color: #d0d3d4;
-    display: flex;
-    color: rgb(255, 255, 255);
-    flex-direction: column;
-    margin:30px;
-    margin-left: auto;
-    margin-right: auto; 
-    width: 70%;
-    padding: 15px;
-    align-items: center;
-    justify-content: center;
-    border-radius:20px;
+    border-radius: 20px;
+}
+
+#title {
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    font-size: 25px;
+    text-align: center;
+}
+
+#name {
+    position: absolute;
+    width: 100%;
+    max-width: 50%;
+    top: 30%;
+    height: 100%;
+    max-height: 10%;
+
+}
+
+#description {
+    position: absolute;
+    width: 100%;
+    max-width: 50%;
+    top: 30%;
+    left: 50%;
+    height: 100%;
+    max-height: 10%;
+}
+
+#buttonCancel {
+    position: absolute;
+    width: 100%;
+    max-width: 50%;
+    top: 70%;
+    height: 100%;
+    max-height: 10%;
+}
+
+#buttonCreate {
+    position: absolute;
+    width: 100%;
+    max-width: 50%;
+    top: 70%;
+    left: 50%;
+    height: 100%;
+    max-height: 10%;
+}
+
+#buttonCancel button {
+    border: 1px #6f6f6f solid;
+    background-color: #6f6f6f;
+    color: white;
+    width: 25%;
+    border-radius: 10px;
+    height: 100%;
+    border: none;
+    font-size: 15px;
+}
+
+#buttonCreate button {
+    padding: 2 6%;
+    background-color: #093faa;
+    color: white;
+    width: 25%;
+    border-radius: 10px;
+    height: 100%;
+    border: none;
+    font-size: 15px;
+}
+
+label {
+    position: absolute;
+    width: 100%;
+    left: 5%;
+}
+
+input {
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    width: 90%;
+    height: 130%;
+    border-radius: 7px;
+    border: none;
+}
+
+textarea {
+    position: absolute;
+    top: 100%;
+    left: 10%;
+    width: 80%;
+    border-radius: 7px;
+    border: none;
+}
+
+@media only screen and (orientation: portrait) and (max-width: 1000px) and (min-width: 667px) {
+    #container {
+        max-width: 100%;
+        left: 0%;
+    }
+}
+
+@media only screen and (orientation: portrait) and (max-width: 667px) and (min-width: 384px) {
+    #container {
+        max-width: 100%;
+        left: 0%;
+    }
+
+}
+
+@media only screen and (orientation: portrait) and (max-width: 384px) and (min-width: 150px) {
+    #container {
+        max-width: 100%;
+        left: 0%;
+    }
+
 }

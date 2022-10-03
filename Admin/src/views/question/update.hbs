@@ -1,22 +1,21 @@
-<link rel="stylesheet" href="/css/question/update.css">
+<link rel="stylesheet" href="/css/question/create.css">
 {{#each list}}
-<form action="/question/update/{{idQuestion}}" method="post">
-     <div id="title">
-            <p>Editar Pregunta </p>
-        </div>
+<form action="/question/create/{{user.idUser}}" method="post">
+    <div id="title">
+        <p>Editar Pregunta</p>
+    </div>
     <div id="container">
-        <div id="nameQuestion">
+
+        <div id="name">
             <label>Pregunta:</label>
-            <input type="text" name="nameQuestion" id="icon" required aria-checked="true" value="{{nameQuestion}}">
-            <i class="bi bi-pencil-square"></i>
-        </div>
-        <div id="button">
-            <button type="submit">Guardar</button>
+            <input type="text" name="nameTest" id="textElement" required aria-checked="true" />
         </div>
         <div id="buttonCancel">
-            <button type="submit">Cancelar</button>
+            <a href="/question/list/{{user.idUser}}"><button type="button">Cancelar</button></a>
+        </div>
+        <div id="buttonCreate">
+            <button type="submit">Guardar</button>
         </div>
     </div>
-
 </form>
 {{/each}}

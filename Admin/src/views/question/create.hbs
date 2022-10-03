@@ -5,17 +5,16 @@
         <p>Nueva Pregunta</p>
     </div>
     <div id="container">
-        <div id="nameQuestion" style="display:block;">
+
+        <div id="name">
             <label>Pregunta:</label>
-            <input type="text" name="nameQuestion" id="t" id="" required aria-checked="true">
+            <input type="text" name="nameTest" id="textElement" required aria-checked="true" />
         </div>
-        <div id="buttonGroup1">
-            <div id="button-cancel">
-                <button type="submit" id="btnCancel">Cancelar</button>
-            </div>
-            <div id="button">
-                <button type="submit" id="btnCreate">Crear</button>
-            </div>
+        <div id="buttonCancel">
+            <a href="/question/list/{{user.idUser}}"><button type="button">Cancelar</button></a>
+        </div>
+        <div id="buttonCreate">
+            <button type="submit">Crear</button>
         </div>
     </div>
 </form>
