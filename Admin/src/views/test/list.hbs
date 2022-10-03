@@ -21,12 +21,12 @@
             </div>
 
             <div id="edit">
-                <a href="/test/update/{{idTest}}">
-                    <button type="button" id="btnEdit">Editar Prueba</button>
-                </a>
-            </div>
+                    <button class="btn" onclick="location.href='/question/update/{{idQuestion}}'"><img
+                            src="https://cdn-icons-png.flaticon.com/512/3597/3597075.png" height="25"
+                            width="25" /></button>
+                </div>
              <div id="create">
-                <a href="/question/create/{{idTest}}">
+                <a href="/question/create/{{user.idUser}}">
                     <button type="button" id="btnCreate">Crear Pregunta</button>
                 </a>
             </div>

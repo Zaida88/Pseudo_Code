@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/css/question/list.css">
-<form action="/question/list/{{idQuestion}}" method="get">
+<form action="/question/list/{{user.idUser}}" method="get">
     <div id="createAnswer">
         <a href="/question/create/{{user.idUser}}">
             <button id="btnAdd" type="button">Agregar Pregunta</button>
@@ -19,11 +19,6 @@
                     <button class="btn" onclick="location.href='/question/update/{{idQuestion}}'"><img
                             src="https://cdn-icons-png.flaticon.com/512/3597/3597075.png" height="25"
                             width="25" /></button>
-                </div>
-                <div id="createAnswer">
-                    <a href="/answer/create/{{user.idUser}}">
-                        <button id="btnAdd" type="button">Agregar Respuesta</button>
-                    </a>
                 </div>
             </div>
             {{else}}

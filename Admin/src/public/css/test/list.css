@@ -30,6 +30,16 @@
     color: white;
     height: 5%;
 }
+#button {
+    margin-top: 45px;
+    margin-bottom: 45px;
+    padding: 2 6%;
+    background-color: #093faa;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 20%;
+  }
 .card #title,
 #description {
     text-align: justify;
