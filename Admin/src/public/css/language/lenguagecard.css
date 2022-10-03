@@ -5,12 +5,13 @@
         background-color: #B8B9BB;
         text-align: center;
     flex-wrap: wrap;
+    border-radius: 20px;
 }
 
 .button-editar{
-    background: #004AAD;
+    background: #128907;
     color: #fff;
-    border: 2px solid #004AAD;
+    border: 2px solid #128907;
     z-index: 1;
     overflow: hidden;
     display: inline-block;
@@ -18,12 +19,13 @@
     margin: 0 auto;
     flex-wrap: wrap;
     max-width: 100%;
+    border-radius: 20px;
 }
 
 .button-eliminar{
-    background: #004AAD;
+    background: #f92b2b;
     color: #fff;
-    border: 2px solid #004AAD;
+    border: 2px solid #f92b2b;
     z-index: 1;
     overflow: hidden;
     display: inline-block;
@@ -32,6 +34,7 @@
     margin-bottom: 5%;
     flex-wrap: wrap;
     max-width: 100%;
+    border-radius: 20px;
 }
 
 .agregar-interno{
@@ -43,6 +46,7 @@
     max-width: 100%;
     margin-bottom: 1%;
     padding: 8px 20px;
+    border-radius: 20px;
 
 
 }
@@ -59,6 +63,7 @@
     padding: 8px 35px;
     flex-wrap: wrap;
     max-width: 100%;
+    border-radius: 20px;
    
 
 
@@ -74,6 +79,7 @@
     padding: 8px 35px;
     flex-wrap: wrap;
     max-width: 100%;
+    border-radius: 20px;
     
 
 }
