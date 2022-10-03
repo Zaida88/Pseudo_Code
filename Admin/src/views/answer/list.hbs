@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/answer/list.css">
 
-<form action="/answer/list/{{user.idUser}}" method="get"></form>
+<form action="/answer/list/{{dUser}}" method="get"></form>
 <div id="title">
     <h3>Respuestas</h3>
 </div>
@@ -13,36 +13,30 @@
     <div class="row">
         {{#each list}}
         <div id="card">
-           <div id="nameAnswer">
+            <div id="nameAnswer">
                 <p>{{nameAnswer}}</p>
-            <div id="edit">
-                <a href="/answer/update/{{idAnswer}}">
-                    <button type="button" id="btnEdit">Editar Prueba</button>
-                </a>
+                <div id="edit">
+                    <a href="/answer/update/{{idAnswer}}">
+                        <button type="button" id="btnEdit">Editar Prueba</button>
+                    </a>
+                </div>
+                <div id="create">
+                    <a href="/question/create/{{user.idUser}}">
+                        <button type="button" id="btnCreate">Crear Pregunta</button>
+                    </a>
+                </div>
             </div>
-             <div id="create">
-                <a href="/question/create/{{user.idUser}}">
-                    <button type="button" id="btnCreate">Crear Pregunta</button>
-                </a>
+        </div>
+        {{else}}
+        <div class='center-block frame text-center' id="content">
+            <div class='card-body'>
+                <h5 class='card-title'>
+                    No tienes respuestas registradas actualmente.
+                </h5>
+                <p class='card-text'>
+                    Desea agregar una.
+                </p>
+                {{/each}}
             </div>
-       </div>  
-</div>
-{{else}}
-<div class='center-block frame text-center' id="content">
-    <div class='card-body'>
-        <h5 class='card-title'>
-            No tienes respuestas registradas actualmente.
-        </h5>
-        <p class='card-text'>
-            Desea agregar una.
-        </p>
-<div id="createAnswer">
-    <a href="/answer/create/{{user.idUser}}">
-        <button id="btnAdd" type="button">Agregar Respuesta</button>
-    </a>
-</div>
-        {{/each}}
-
+        </div>
     </div>
-</div>
-</div>
