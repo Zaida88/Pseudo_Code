@@ -1,0 +1,79 @@
+.contenido{
+	max-width:200px /*-- cambiar esto para conseguir el ancho de la forma deseada --*/;
+    margin-left: 15%;
+        width:100%;
+        background-color: #B8B9BB;
+        text-align: center;
+    flex-wrap: wrap;
+}
+
+.button-editar{
+    background: #004AAD;
+    color: #fff;
+    border: 2px solid #004AAD;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    padding: 8px 35px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.button-eliminar{
+    background: #004AAD;
+    color: #fff;
+    border: 2px solid #004AAD;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    padding: 8px 35px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.agregar-interno{
+    background: #004AAD;
+    color: #fff;
+    border: 2px solid #004AAD;
+    margin-left: 50%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin-bottom: 1%;
+    padding: 8px 20px;
+
+
+}
+
+.agregar-lenguaje{
+
+    background: #004AAD;
+    color: #fff;
+    border: 2px solid #004AAD;
+    margin-left: 50%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin-bottom: 1%;
+    padding: 8px 35px;
+    flex-wrap: wrap;
+    max-width: 100%;
+   
+
+
+}
+
+.agregar-listar-lenguaje{
+    background: #004AAD;
+    color: #fff;
+    border: 2px solid #004AAD;
+    margin-left: 50%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 8px 35px;
+    flex-wrap: wrap;
+    max-width: 100%;
+    
+
+}

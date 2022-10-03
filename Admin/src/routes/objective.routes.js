@@ -3,18 +3,18 @@ const express = require('express');
 const routes = express.Router()
 
 
-const { showO, bringO, listO, sendO, updateO } = require('../controllers/objective.controller');
+const {show, bring, list, send, update } = require('../controllers/objective.controller');
 
 const { isLoggedIn } = require('../lib/auth')
 
-routes.get("/createObjective/", isLoggedIn, showO)
+routes.get("/add/:id", isLoggedIn, show)
 
-routes.get("/update/:id", isLoggedIn, bringO)
+routes.get("/edit/:id", isLoggedIn, bring)
 
-routes.get("/list/:id", isLoggedIn, listO)
+routes.get("/list/:id", isLoggedIn, list)
 
-routes.post("/create/", isLoggedIn, sendO)
+routes.post("/add/:id", isLoggedIn, send)
 
-routes.post("/update/:id", isLoggedIn, updateO)
+routes.post("/edit/:id", isLoggedIn, update)
 
 module.exports = routes

@@ -1,0 +1,113 @@
+.titulo{
+  padding-left: 30%;
+  font-size: 20px;
+ }
+ 
+ .contenido{
+   max-width:600px;
+   margin:0 auto;
+   width:100%;
+   background-color: #D0D3D4;
+   border-radius: 20px;
+   padding-left: 5%;
+ 
+ }
+ .cancelar-btn{
+   padding-left: 60%;
+   padding-bottom: 5%;
+  margin-bottom: 15%;
+  background: #004AAD;
+  border: 2px solid #004AAD;
+  color: #fff;
+  border-radius: 10px;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+  padding: 1px 15px;
+ }
+ 
+ .guardar-btn{
+   margin-top: 5%;
+   background: #004AAD;
+   color: #fff;
+   border-radius: 10px;
+   border: 2px solid #004AAD;
+   z-index: 1;
+   overflow: hidden;
+   display: inline-block;
+   padding: 8px 35px;
+   margin-bottom: 5%;
+ }
+ 
+ 
+ .guardar-btn{
+   padding-top: 1%;
+   padding-left: 5%;
+   
+ }
+ 
+ 
+ .two-fields {
+   width:100%;
+ }
+ .two-fields .input-group {
+   width:100%;
+ }
+ .two-fields input {
+   width:50% !important;
+ }
+ .nombre{
+   padding-left: 100px;
+ }
+ /**---------------- Media query ----------------**/
+ @media only screen and (min-width: 48em) { 
+   .column-half{
+     width: 50%;
+   }
+ }
+ .file-select {
+   position: relative;
+   display: inline-block;
+ }
+ 
+ .file-select::before {
+   background-color: #5678EF;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 3px;
+   content: 'Seleccionar Archivo';
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+ }
+ 
+ .file-select input[type="file"] {
+   opacity: 0;
+   width: 280px;
+   height: 32px;
+   display: inline-block;
+ }
+ 
+ #src-file1::before {
+   content: 'Seleccionar';
+ }
+ 
+ #src-file2::before {
+   content: 'Seleccionar';
+ }
+ 
+ 
+ #changeImage img {
+   margin-bottom: 4%;
+ }
+ 
+ #changeImage img {
+   width: 30%;
+   word-wrap: break-word;
+   height: 50px;
+   width: 50px;
+ }

@@ -1,7 +1,27 @@
 .btn-cerrar-popup img{
 border-radius: 50%;
 }
-
+.menu{
+    border-radius: 5px;
+}
+.menuClose button{
+    position: relative;
+    width: 0.1px;
+    height: 0.1px;
+  border: hidden;
+ background-color: #ffffff01;
+   
+}
+.OPO a {
+    position: relative;
+    top: 30%;
+    color: white;
+    text-decoration: underline;
+    text-decoration: none;
+}
+.MenuSlider p {
+    color: white;
+}
 @media (min-width: 900px){
 
 
@@ -13,18 +33,18 @@ border-radius: 50%;
     background-color: rgb(0, 5, 58);
     position: absolute;
     width: 150px;
-    height: 750px;
+    height: 100%;
    font-family:Georgia, 'Times New Roman', Times, serif ;
- 
+margin: 0%;
     
 }
 .settings{
-    background-color: rgb(39, 39, 39);
-    height: 80px;
+    background-color: rgb(0, 5, 58) ;
+    height: 70px;
    font-size: 25px;
     position: relative;
   
-  bottom: -37%;
+  bottom: -30%;
    
 }
 .settings div{
@@ -39,7 +59,7 @@ border-radius: 50%;
   
   }
 .desplegar{
-    transform: translateX(-100%);
+    transform: translateX(-120%);
     
 }
 
@@ -154,7 +174,7 @@ width: 120px;
       
       }
     .desplegar{
-        transform: translateX(-100%);
+        transform: translateX(-120%);
         
     }
     

@@ -1,6 +1,6 @@
 
 <link rel="stylesheet" href="/css/menuUser.css">
-
+{{#if user}}
 <div class="menu desplegar " id="menu">
 
     <g class="MenuSlider">
@@ -8,7 +8,7 @@
         <div class="menuClose">
             <button type="" class="btn-cerrar-popup" id="open-close"> <img
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2MgbOmjW5XamxCqhYpYU4cUJBoR5tCErAnA&usqp=CAU"
-                    alt="user"  width="40px"></button>
+                    alt="user"  width="35px"></button>
 
 
 
@@ -19,24 +19,24 @@
     <hr>
 
     <div class="OPO">
-        <a href="#">Proyecto</a>
+        <a href="/project/list/{{user.idUser}}">Proyecto</a>
     </div>
 
     <div class="OPO">
-        <a href="#">Clasificaciones</a>
+        <a href="/classification/list/{{user.idUser}}">Clasificaciones</a>
     </div>
     <div class="OPO">
         <a href="/test/list/{{user.idUser}}">Pruebas</a>
     </div>
     <div class="OPO">
-        <a href="#">Usuarios</a>
+        <a href="/userAssignment/list">Usuarios</a>
     </div>
     <div class="OPO">
-        <a href="#">Ejercicios</a>
+        <a href="/exercise/listLanguages">Ejercicios</a>
     </div>
-    <div class="settings">
+    <div class="OPO">
         <div>
-             <a href="/userProfile/profileView/{{idUser}}">Perfil</a>
+             <a href="/userProfile/profileView/{{user.idUser}}">Perfil</a>
         </div>
 
     </div>
@@ -47,8 +47,8 @@
 
 <div class="userInterfaz">
     <p>{{username}}</p>
-    <div class="userIImage">
-     <button type="" class="btn-cerrar-popup"  id="Close-open">  <img src="/img/user/{{photo}}"
+    <div class="userIImage photo">
+     <button type="" class="btn-cerrar-popup"  id="Close-open" id="image"> <img src="/img/user/{{photo}}"
             width="45px" height="45px"   alt="">
         </button> 
     </div>
@@ -77,3 +77,4 @@ $asaid.classList.toggle("desplegar")
 </script>
 
 
+{{/if}}

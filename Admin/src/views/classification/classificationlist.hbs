@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="/css/classsification/classificationCard.css" />
+<link rel="stylesheet" href="/css/classsification/classification.css" />
+<form action="/classification/list/{{user.idUser}}" method="get"></form>
+<div class="contenedor" id="contenedor">
+  <a href="/classification/add/{{user.idUser}}"><button class="button agregar-interno"><b>Agregar clasificacion</b></button></a>
+  {{#each list}}
+  <a href="/language/add/{{idClassification}}"><button class="agregar-lenguaje" ><b>Agregar Lenguaje</b></button></a>
+        </div>
+        <div>
+          <a href="/language/list/{{idClassification}}"><button class="agregar-listar-lenguaje"><b>Listar Lenguajes</b></button></a>
+        </div>
+        
+  
+  <div class="contenido">
+    <div class="nombre" id="nombre">
+      <h1>{{nameClassification}}</h1>
+    </div>
+    <div class="contenedor__contenido">
+      <div class="nombre" id="nombre">
+        <h1>{{descriptionClassification}}</h1>
+
+      </div>
+      <div id="logo" class="form-group col-md-6">
+                <label>Imagen:</label> <br>
+                <div id="changeImage">
+                    <img src="/img/user/{{imageClassification}}" id="image" />
+                </div>
+            </div>
+            <div id="edit">
+          <a href="/classification/edit/{{idClassification}}"><button class="button-editar"><b>Editar</b></button></a>
+        </div>
+        <div class="add" id="add">
+          <a href="/classification/remove/{{idClassification}}"><button class="button-eliminar"><b>Eliminar</b></button></a>
+        </div>
+        <div>
+        </div>
+        </div>
+  </div>
+</div>
+          
+      </div>
+      {{else}}
+      <div class="container">
+        <div class="sec">
+        <h2>No tiene ninguna clasificacion<br>¿desea agregar una?</h2>
+          <a href="/classification/add/{{user.idUser}}"><button class="button"><b>Agregar clasificacion</b></button></a>
+      </div>
+      </div>
+      {{/each}}
+    </div>
+ 

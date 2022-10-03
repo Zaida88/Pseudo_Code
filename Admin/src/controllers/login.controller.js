@@ -12,7 +12,7 @@ login.showRegistration = async (req, res) => {
     if (user[0].total === 0) {
         res.render('user/registration', { user });
     } else {
-        res.render('user/registration');
+        res.render('/');
     }
 };
 

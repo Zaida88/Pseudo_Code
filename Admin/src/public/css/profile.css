@@ -36,8 +36,8 @@ button {
     .profileUser {
 
         display: block;
-        position: absolute;
-        top: 50px;
+        position: relative;
+        top: 25px;
         left: 30%;
         border-radius: 50%;
 
@@ -73,7 +73,7 @@ button {
     .toEdit {
         position: relative;
 
-        left: 30%;
+        left: 16%;
     }
 
     .toEditOne {
@@ -165,7 +165,8 @@ button {
     }
 
     td {
-        padding: 5px;
+        padding-left: 15px;
+        padding-top: -5px;
     }
 
     .texting {
@@ -292,7 +293,8 @@ button {
     }
 
     td {
-        padding: 5px;
+        padding-left: 15px;
+        padding-top: -5px;
     }
 
     .texting {
