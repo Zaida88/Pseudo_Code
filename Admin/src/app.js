@@ -76,5 +76,6 @@ app.use('/project', require('./routes/project.routes'))
 app.use('/classification', require('./routes/classification.routes'))
 app.use('/coding', require('./routes/coding.routes'))
 app.use('/language', require('./routes/languages.routes'))
+app.use('/objectives', require('./routes/objective.routes'))
 
 module.exports = app;
