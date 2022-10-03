@@ -1,29 +1,32 @@
 .titulo{
- padding-left: 30%;
+ padding-left: 20%;
  font-size: 20px;
 }
 
 .contenido{
-	max-width:600px;
+	max-width:400px;
 	margin:0 auto;
   width:100%;
   background-color: #D0D3D4;
   border-radius: 20px;
   padding-left: 5%;
+  border-radius: 20px;
+  
 
 }
 .cancelar-btn{
   padding-left: 60%;
   padding-bottom: 5%;
  margin-bottom: 15%;
- background: #004AAD;
- border: 2px solid #004AAD;
+ background: #4c4d4e;
+ border: 2px solid #4c4d4e;
  color: #fff;
  border-radius: 10px;
  z-index: 1;
  overflow: hidden;
  display: inline-block;
- padding: 1px 15px;
+ padding: 0px 13px;
+ border-radius: 20px;
 }
 
 .guardar-btn{
@@ -37,6 +40,7 @@
   display: inline-block;
   padding: 8px 35px;
   margin-bottom: 5%;
+  border-radius: 20px;
 }
 
 
