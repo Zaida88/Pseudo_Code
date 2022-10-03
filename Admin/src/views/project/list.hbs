@@ -35,7 +35,7 @@
                     <a class="buttonObjective" href="/objectives/add/{{idProject}}">Crear Objetivos</a>
                 </div>
                 <div class="inputBox">
-                    
+
                 </div>
                 <div id="logo" class="logo">
                     <label>Logo:</label> <br>
@@ -47,13 +47,14 @@
                     <div></div>
                 </div>
                 <div id='edit'>
-                    <a class="buttonObjective button" href="/objectives/list/{{idProject}}" style="background-color: #004AAD">
+                    <a class="buttonObjective button" href="/objectives/list/{{idProject}}"
+                        style="background-color: #004AAD">
                         Ver objetivos
                     </a>
                 </div>
                 <div id='edit'>
                     <a href="/project/update/{{idProject}}">
-                        <button type='button' class='button'>
+                        <button type='button' class='button edit'>
                             Editar
                         </button>
                     </a>
@@ -75,16 +76,16 @@
             <p>
                 Desea agregar uno.
             </p>
+            {{/each}}
+            <a href="/project/create/{{idProject}}">
+                <button class='button' id="button">
+                    <b>Agregar proyecto</b>
+                </button>
 
-                <a href="/project/create/{{idProject}}">
-                    <button class='button' id="button">
-                        <b>Agregar proyecto</b>
-                    </button>
-                {{/each}}
-                </a>
-            </div>
+            </a>
         </div>
     </div>
+</div>
 </div>
 
 <script src="/js/project/hidden.project.js"></script>
