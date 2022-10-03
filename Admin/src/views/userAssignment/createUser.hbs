@@ -1,61 +1,60 @@
 <link rel="stylesheet" href="/css/userAssignment/userCreate.css">
 
 <form action="/userAssignment/createUser" method="post" enctype="multipart/form-data">
-  <div id="title" class="title text-center">
-    <center>
-      <h2>Nuevo usuario</h2>
-    </center>
+  <div id="title">
+    <h1>Nuevo usuario</h1>
   </div>
-  <div id="create" class="forms form-row">
+  
+  <div id="forms">
 
-    <div id="name" class="form-group col-md-6">
+    <div id="name">
       <label>Nombre</label>
-      <input class="input" type="text" name="firstName" aria-checked="true" required />
+      <input id="input" type="text" name="firstName" aria-checked="true" required />
     </div>
 
-    <div id="description" class="form-group col-md-6">
+    <div id="description">
       <label>Apellido</label>
-      <input class="input" type="text" name="lastName" aria-checked="true" required />
+      <input id="input" type="text" name="lastName" aria-checked="true" required />
     </div>
 
-    <div id="mission" class="form-group col-md-6">
+    <div id="mission">
       <label>Nombre de usuario</label>
-      <input class="input" type="text" name="username" aria-checked="true" required />
+      <input id="input" type="text" name="username" aria-checked="true" required />
     </div>
 
-    <div id="vision" class="form-group col-md-6">
+    <div id="vision" >
       <label>Correo</label>
-      <input class="input" type="text" name="email" aria-checked="true" required />
+      <input id="input" type="text" name="email" aria-checked="true" required />
     </div>
 
-    <div id="vision" class="form-group col-md-6">
+    <div id="vision">
       <div class="data">
         <label>Contraseña:</label>
-        <input type="password" id="password" name="password" required>
+        <input id="input" type="password" id="password" name="password" required>
       </div>
     </div>
 
-    <div id="logo" class="form-group col-md-6">
+    <div id="logo" >
       <div id="changeImage">
         <div class="data">
           <label>Foto:</label>
           <div class="changeImage">
             <img src="/img/NoImage.jpg" id="imagePreview">
           </div>
-          <div class="file-select" id="src-file2">
+          <div id="file-select" id="src-file2">
             <input type="file" name="photo" id="filePicker" accept="image/*" aria-label="Archivo" aria-checked="true"
               required>
           </div>
         </div>
       </div>
-    </div>
+    </div><br>
 
-    <div class="submit1">
-      <button class="btn btn-primary button" type="submit">Crear</button>
+    <div id="butt1">
+      <button type="submit">Crear</button>
     </div>
   </div>
   </div>
 </form>
-<div class="cancel">
-  <a href="/userAssignment/list"><button class="btn btn-primary button">Cancelar</button></a>
+<div id="cancel">
+  <a href="/userAssignment/list"><button>Cancelar</button></a>
 </div>

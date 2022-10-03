@@ -12,7 +12,7 @@ body {
 
 .container {
     position: absolute;
-    padding: 4%;
+    padding: 3%;
     max-width: 30%;
     max-height: 50%;
     top: 25%;
@@ -42,7 +42,8 @@ body {
     word-wrap: break-word;
 }
 
-.btnValidation #button {
+.btnValidation button {
+    background-color: 005B8F;
     font-size: 17px;
     margin-top: 3%;
     width: auto;

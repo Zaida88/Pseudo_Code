@@ -1,9 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
 #hidden {
     display: none;
 }
@@ -14,7 +8,7 @@ body {
     height: fit-content;
     max-width: 35%;
     max-height: fit-content;
-    top: 10%;
+    top: 20%;
     left: 33%;
     background-color: #d0d0d0;
     border-radius: 20px;
@@ -22,17 +16,13 @@ body {
 }
 
 .container #title {
+    text-align: center;
     width: auto;
     height: auto;
     word-wrap: break-word;
 }
 
-.container #title h2 {
-    margin-bottom: 0;
-}
-
 .contents {
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,6 +116,16 @@ body {
     border: 1px black solid;
     padding: 0 6%;
     background-color: #093faa;
+    color: white;
+}
+
+.options #update {
+    margin-right: 7%;
+    float: right;
+    font-size: 15px;
+    border: 1px black solid;
+    padding: 0 6%;
+    background-color: #128907;
     color: white;
 }
 

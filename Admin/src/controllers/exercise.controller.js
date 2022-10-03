@@ -33,7 +33,8 @@ exerciseCtl.create = async (req, res) => {
 exerciseCtl.listExercises = async (req, res) => {
     const id = req.params.id
     const listExercises = await sql.query('select * from exercise WHERE idLanguage = ?', [id])
-    res.render('exercise/listExercises', { listExercises })
+    const language = await sql.query('select idLanguage from languages where idLanguage = ?', [id])
+    res.render('exercise/listExercises', { listExercises, language })
 }
 
 exerciseCtl.listLanguages = async (req, res) => {
@@ -53,12 +54,11 @@ exerciseCtl.remove = async (req, res) => {
     await orm.exercises.destroy({ where: { idExercise: id } })
         .then(() => {
             req.flash('success', 'Eliminado con éxito')
-            res.redirect('/exercise/listExercises/'+Object.values(language[0]));
+            res.redirect('/exercise/listExercises/' + Object.values(language[0]));
         })
 }
 
 exerciseCtl.update = async (req, res) => {
-    const language = req.body.idLanguage
     const id = req.params.id
     const { nameExercise, descriptionExercise, punctuationExercise } = req.body
     const updatedExercise = {
@@ -70,7 +70,7 @@ exerciseCtl.update = async (req, res) => {
         .then(update => {
             update.update(updatedExercise)
             req.flash('success', 'Se actualizó exitosamente')
-            res.redirect('/exercise/listExercises/' + language)
+            res.redirect('/exercise/detail/' + id)
         })
 }
 
