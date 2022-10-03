@@ -1,0 +1,31 @@
+.container{
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.sec{
+    flex-wrap: wrap;
+    position: relative;
+    text-align: center;
+    background-color: #D0D3D4;
+    top: 50px;
+    width: 300px;
+    height: 200px;
+    margin: 0% auto;
+    padding: 5%;
+    border-radius: 20px;  
+}
+
+
+
+
+.button{
+    background: #004AAD;
+    color: #fff;
+    border: 2px solid #004AAD;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    padding: 8px 35px;
+}
+

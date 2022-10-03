@@ -1,35 +1,39 @@
-<link rel="stylesheet" href="/CSS/clasificacion.css" />
+<link rel="stylesheet" href="/css/language/lenguage.css" />
+<link rel="stylesheet" href="/css/language/lenguagecard.css" />
 
 <form action="/coding/list/{{idLanguage}}" method="get"></form>
 <div class="contenedor" id="contenedor">
-  <a href="/classification/list/{{user.idUser}}"><button class="boton"><b>Lista de Clasificaciones </b></button></a>
+  <a href="/classification/list/{{user.idUser}}"><button class="agregar-listar-lenguaje"><b>Lista de Clasificaciones </b></button></a>
   {{#each list}}
-  <div class="contenedor__contenido">
+   <div class="contenido">
     <div class="nombre" id="nombre">
       <h1>{{nameCode}}</h1>
     </div>
-    <div class="contenedor__contenido">
+        <div class="contenedor__contenido">
       <div class="nombre" id="nombre">
         <h1>{{descriptionCode}}</h1>
       </div>
-      <div class="contenedor__contenido">
-        <div class="nombre" id="nombre">
+         <div class="contenedor__contenido">
+      <div class="nombre" id="nombre">
           <h1>{{code}}</h1>
         </div>
         <div class="contenedor__contenido">
-          <div class="nombre" id="nombre">
+      <div class="nombre" id="nombre">
             <h1>{{video}}</h1>
           </div>
           <div id="editar">
-            <a href="/coding/edit/{{idCode}}"><button class="boton"><b>Editar</b></button></a>
+            <a href="/coding/edit/{{idCode}}"><button class="button-editar"><b>Editar</b></button></a>
           </div>
           <div class="add" id="add">
-            <a href="/coding/remove/{{idCode}}"><button class="boton"><b>Eliminar</b></button></a>
+            <a href="/coding/remove/{{idCode}}"><button class="button-eliminar"><b>Eliminar</b></button></a>
           </div>
         </div>
         {{else}}
-        <div class="mensaje">
-          <h2>No tienes ningun codigo</h2>
-        </div>
+      <div class="container">
+        <div class="sec">
+        <h2>No tiene ningun codigo<br>¿desea agregar uno?</h2>
+          <a href="/coding/add/{{user.idUser}}"><button class="button"><b>Agregar codigo</b></button></a>
+      </div>
+      </div>
         {{/each}}
       </div>

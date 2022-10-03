@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/CSS/clasificacion.css" />
+<link rel="stylesheet" href="/public/css/coding/" />
        {{#each list}}
 <form action="/coding/edit/{{idCode}}" method="post">
     <div class="fondo">
@@ -31,11 +31,11 @@
                 <input class="input" type="video" name="video" id="nombre" checked aria-checked="true"
                     value="{{video}}" />
             </div>
-
-            {{/each}}
             <div id="guardar">
                 <button type="submit" class="boton"><b>Guardar</b></button>
             </div>
+            {{/each}}
+           
         </div>
     </div>
 </form>

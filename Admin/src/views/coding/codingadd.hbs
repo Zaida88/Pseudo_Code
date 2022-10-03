@@ -1,38 +1,41 @@
-<link rel="stylesheet" href="/CSS/clasificacion.css" />
+<link rel="stylesheet" href="/css/coding/codingfrom.css" />
 {{#each language}}
 <form action="/coding/add/{{idLanguage}}" method="post">
 {{/each}}
-   <div class="fondo">
-    <div class="contenido contenido--small">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-3">
+      <div class="form-group two-fields"> <div class="fondo">
+    <div class="contenido">
         <div class="titulo"><b>Agregar Codigo</b></div><br>
         <div class="conten" id="contenido">
 
             <div class="contenido__nombre" id="nameCode">
-                <label class="label-nombre">Nombre:</label>
+                <label class="label-nombre">Nombre:</label><br>
                 <input class="input" type="text" name="nameCode" id="nameCode" checked
                     aria-checked="true" />
             </div>
 
             <div class="contenido__nombre" id="nombre">
-                <label class="label-nombre">Descripcion:</label>
+                <label class="label-nombre">Descripcion:</label><br>
                 <input class="input" type="text" name="descriptionCode" id="descriptionCode" checked
                     aria-checked="true" />
             </div>
 
             <div class="contenido__nombre" id="nombre">
-                <label class="label-nombre">codigo</label>
+                <label class="label-nombre">codigo</label><br>
                 <input class="input" type="text" name="code" id="code" checked
                     aria-checked="true" />
             </div>
 
             <div class="contenido__nombre" id="nombre">
-                <label class="label-nombre">video</label>
+                <label class="label-nombre">video</label><br>
                 <input class="input" type="video" name="video" id="video" checked
                     aria-checked="true" />
             </div>
 
             <div id="guardar">
-                <button class="boton" type="submit"><b>Guardar</b></button>
+                <button class="guardar-btn" type="submit"><b>Guardar</b></button>
             </div>
         </div>
     </div>

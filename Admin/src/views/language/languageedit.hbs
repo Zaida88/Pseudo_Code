@@ -1,34 +1,42 @@
-<link rel="stylesheet" href="/CSS/clasificacion.css" />
+<link rel="stylesheet" href="/css/language/lenguage.css" />
+<link rel="stylesheet" href="/css/language/lenguagefrom.css" />
+
  {{#each list}}
 <form action="/language/edit/{{idLanguage}}" method="post">
-    <div class="fondo">
-        <div class="contenido contenido--small" id="contenido">
-           
+     <div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-3">
+      <div class="form-group two-fields"> <div class="fondo">
+    <div class="contenido">
             <h1 class="titulo">Editar lenguaje</h1>
             <div id="oculto">
+                <label class="label-nombre">ID: </label><br>
                 <input class="input" type="text" name="idclasificacion" id="clasificacion" checked aria-checked="true"
                     value="{{idLanguage}}" readonly>
             </div>
             <div class="nameLanguage" id="nameLanguage">
-                <label class="label-nombre">Nombre: </label>
+                <label class="label-nombre">Nombre: </label><br>
                 <input class="input" type="text" name="nameLanguage" id="nombre" checked aria-checked="true"
                     value="{{nameLanguage}}" />
             </div>
             <div class="descriptionLanguage" id="descriptionLanguage">
-                <label class="label-nombre">Descrpcion: </label>
+                <label class="label-nombre">Descrpcion: </label><br>
                 <input class="input" type="text" name="descriptionLanguage" id="nombre" checked aria-checked="true"
                 value="{{descriptionLanguage}}" />
             </div>
 
-            <div class="nombre-clasificacion" id="imageLanguage">
-                <label class="label-nombre">Imagen: </label>
-                <input class="input" type="img" name="imageLanguage" id="nombre" checked aria-checked="true"
-                    value="{{imageLanguage}}" />
-            </div>
+
+               <label>Imagen:</label>
+                <div id="changeImage">
+                    <img src="/img/NoImage.jpg" id="imagePreview">
+                </div>
+                <div class="file-select" id="src-file2">
+                    <input type="file" name="logoProject" id="filePicker" accept="image/*" required value="{{imageLanguage}}">
+                </div>
 
             {{/each}}
             <div id="guardar">
-                <button type="submit" class="boton"><b>Guardar</b></button>
+                <button type="submit" class="guardar-btn"><b>Guardar</b></button>
             </div>
         </div>
     </div>
