@@ -3,12 +3,13 @@
 
 <form action="/language/list/{{idClassification}}" method="get"></form>
 {{#each list}}
+<div>
   <a href="/coding/add/{{idLanguage}}"><button class="button agregar-interno"><b>Agregar Codificacion</b></button></a>
-        </div> 
 <div class="contenedor" id="contenedor">
-  
-          <a href="/coding/list/{{idLanguage}}"><button class="agregar-lenguaje"><b>Listar Codificaciones</b></button></a>
+          <a href="/coding/list/{{idLanguage}}"><button class="autton agregar-interno"><b>Listar Codificaciones</b></button></a>
         </div>
+</div>
+</div>
         <div id="editar">
   <div class="contenido">
     <div class="nombre" id="nombre">

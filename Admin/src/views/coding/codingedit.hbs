@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/public/css/coding/" />
+<link rel="stylesheet" href="/css/coding/codingfrom.css" />
        {{#each list}}
 <form action="/coding/edit/{{idCode}}" method="post">
     <div class="fondo">
@@ -10,29 +10,29 @@
                     value="{{idCode}}" readonly>
             </div>
             <div class="nameCode" id="nameCode">
-                <label class="label-nombre">Nombre: </label>
+                <label class="label-nombre">Nombre: </label><br>
                 <input class="input" type="text" name="nameCode" id="nombre" checked aria-checked="true"
                     value="{{nameCode}}" />
             </div>
             <div class="descriptionCode" id="descriptionCode">
-                <label class="label-nombre">Descrpcion: </label>
+                <label class="label-nombre">Descrpcion: </label><br>
                 <input class="input" type="text" name="descriptionCode" id="nombre" checked aria-checked="true"
                 value="{{descriptionCode}}" />
             </div>
 
               <div class="code" id="code">
-                <label class="label-nombre">Codigo: </label>
+                <label class="label-nombre">Codigo: </label><br>
                 <input class="input" type="text" name="code" id="nombre" checked aria-checked="true"
                 value="{{code}}" />
             </div>
 
             <div class="nombre-clasificacion" id="video">
-                <label class="label-nombre">Imagen: </label>
+                <label class="label-nombre">Video: </label><br>
                 <input class="input" type="video" name="video" id="nombre" checked aria-checked="true"
                     value="{{video}}" />
             </div>
             <div id="guardar">
-                <button type="submit" class="boton"><b>Guardar</b></button>
+                <button type="submit" class="guardar-btn"><b>Guardar</b></button>
             </div>
             {{/each}}
            
