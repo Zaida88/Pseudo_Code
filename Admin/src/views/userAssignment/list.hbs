@@ -1,0 +1,50 @@
+<div align="right">
+  <a href="/userAssignment/createUser"><button id="butt"><b>Agregar usuario</b></button></a>
+  <a href="/userAssignment/createAssignment"><button id="butt"><b>Agregar asignacion</b></button></a>
+</div>
+<div id="title">
+  <h1>Usuarios</h1>
+</div>
+<link rel="stylesheet" href="/css/userAssignment/listUsers.css">
+
+<div id="container">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Rol</th>
+          <th>Permisos</th>
+          <th>Editar</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+    </table>
+  {{#each list}}
+  <form action="/userAssignment/list" method="POST" enctype="multipart/form-data"> </form>
+
+    <tbody>
+      <table>
+        <tr>
+          <td>
+            {{firstName}}
+          </td>
+          <td>
+            {{nameRol}}
+          </td>
+          <td>
+            {{namePermission}}
+          </td>
+          <td>
+            <a href="/userAssignment/update/{{userIdUser}}"><button type="button" id="butto"><img
+                  src="https://cdn-icons-png.flaticon.com/512/3597/3597075.png" height="25" width="25" /></button></a>
+          </td>
+          <td>
+            <a href="/userAssignment/remove/{{userIdUser}}"><button id="butto"><img
+                  src="https://cdn-icons-png.flaticon.com/512/216/216658.png" height="25" width="25" /></button></a>
+          </td>
+        </tr>
+      </table>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,56 @@
+#title {
+    text-align: center;
+    width: auto;
+    height: auto;
+    word-wrap: break-word;
+    margin: -1% 0 0 0;
+}
+
+#container{
+    margin: 90px auto;
+    width: 600px;
+}
+
+#butto {
+    background-color: white;
+    border: none;
+    transition: 0.3s;
+}
+
+#butt {
+    border: 2px solid #004AAD;
+    background: #093faa;
+    color: white;
+    text-align: center;
+    width: auto;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    padding: 3px 25px;
+}
+
+table{
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td{
+    padding: 10px;
+}
+
+thead{
+    background-color: white;
+    border: solid 3px black;
+    border-bottom: solid 5px black;
+    color: black;
+}
+
+tr{
+    border: solid 2px black;
+}
+
+tr:hover td{
+    background-color: #6f6f6f41;
+    color: black;
+}

@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="/css/userAssignment/update.css">
+{{#each assignment}}
+<form action="/userAssignment/update/{{userIdUser}}" method="post" enctype="multipart/form-data">
+
+  <div id="title">
+    <h1>Editar</h1>
+  </div><br><br>
+  <div id="container">
+    <div id="edit">
+      <table id="update">
+        <thead>
+          <tr>
+            <th><label><button id="bot">Usuarios</button></th>
+            <th><label><button id="bot">Roles</button></th>
+            <th><label><button id="bot">Permisos</button></label></th>
+          </tr>
+        </thead>
+      </table>
+      <table id="updateTr">
+        <tbody>
+          <tr>
+            <td>
+              <input type="text" style="border: 0;" name="userIdUser" value="{{firstName}}" readonly>
+            </td>
+            <td>
+              <input type="text" style="border: 0;" name="roleIdRol" value="{{idRol}}" readonly>
+            </td>
+            <td>
+              <div>
+                {{/each}}
+                <select name="permissionIdPermission">
+                  {{#each permission}}
+                  <option value="{{idPermission}}">{{namePermission}}</option>
+                  {{/each}}
+                </select>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div>
+    <button id="butt1" type="submit">Guardar</button>
+  </div>
+</form>
+<div>
+  <a href="/userAssignment/list"><button id="but">Cancelar</button></a>
+</div>

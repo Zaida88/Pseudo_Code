@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/css/exercise/list.css" />
+
+<div class="container">
+    <form action="/exercise/listLanguages" method="get"></form>
+    <div id="title"><br>
+        <h1>Lenguajes</h1>
+    </div>
+    <div id="description">
+        <p>Lenguajes disponibles para asignar ejercicios</p>
+    </div>
+    <div class="contents">
+        {{#each listLanguages}}
+        <div id="data">
+            <h2>{{nameLanguage}}</h2>
+            <div class="optionList">
+                <a href="/exercise/listExercises/{{idLanguage}}"><button id="list" type="button">Ejercicios</button></a>
+            </div>
+        </div>
+        {{else}}
+        <div class="message">
+            <h2>No tiene Lenguajes registrados</h2>
+            <h3>¿Desea agregar?</h3>
+            <a href="/classification/list/{{user.idUser}}"><button class="button">Agregar</button></a>
+        </div>
+        {{/each}}
+    </div>
+</div>

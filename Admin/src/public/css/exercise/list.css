@@ -1,0 +1,108 @@
+.container {
+    padding: 0 10%;
+    text-align: center;
+    height: fit-content;
+    max-width: 100%;
+    max-height: fit-content;
+}
+
+.container #title,
+#description {
+    text-align: center;
+    word-wrap: break-word;
+}
+
+#description {
+    font-size: 20px;
+}
+
+.contents {
+    display: flex;
+    justify-content: left;
+    height: fit-content;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+#data {
+    max-width: 40%;
+    background-color: rgb(240, 249, 253);
+    margin: 1% 1% 0 1%;
+    padding: 0 2% 1% 2%;
+    border: solid black 1px;
+    border-radius: 20px;
+}
+
+#data  h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.optionDelete {
+    margin-top: 5px;
+}
+
+.optionDetail #detail {
+    border: none;
+    background-color: #093faa;
+    color: white;
+    font-size: 15px;
+}
+
+.optionDelete #delete {
+    border: none;
+    background-color: #f92b2b;
+    color: white;
+    font-size: 15px;
+}
+
+.message {
+    margin: 0 25%;
+    background-color: rgb(240, 249, 253);
+    padding: 10%;
+    border: 1px black solid ;
+    border-radius: 20px;
+}
+
+.message button {
+    background-color: #093faa;
+    color: white;
+    font-size: 17px;
+}
+
+.create {
+    width: 23%;
+    position: absolute;
+    top: 27%;
+    right: 5%;
+}
+
+.create button {
+    margin-left: 1%;
+    font-size: 17px;
+    color: white;
+    background-color: #3b8eed;
+}
+
+#back {
+    background-color: #6f6f6f;
+    color: white;
+}
+
+.optionCreate {
+    margin-top: 5px;
+}
+
+.optionList #list {
+    border: none;
+    background-color: #093faa;
+    color: white;
+    font-size: 17px;
+}
+
+.optionCreate #create {
+    border: none;
+    background-color: #093faa;
+    color: white;
+    font-size: 17px;
+}

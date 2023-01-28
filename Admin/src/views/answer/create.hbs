@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/css/answer/create.css">
+{{#each list}}
+<form action="/answer/create{{user.idUser}}" method="post">
+   <div id="title">
+        <p>Nueva Respuesta</p>
+    </div>
+    <div id="container">
+
+        <div id="name">
+            <label>Respuesta</label>
+            <input type="text" name="nameTest" id="textElement" required aria-checked="true" />
+        </div>
+        <div id="buttonCancel">
+            <a href="/answer/list/{{user.idUser}}"><button type="button">Cancelar</button></a>
+        </div>
+        <div id="buttonCreate">
+            <button type="submit">Crear</button>
+        </div>
+    </div>
+</form>
+{{/each}}

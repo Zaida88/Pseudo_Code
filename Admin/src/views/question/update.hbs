@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/css/question/create.css">
+{{#each list}}
+<form action="/question/create/{{user.idUser}}" method="post">
+    <div id="title">
+        <p>Editar Pregunta</p>
+    </div>
+    <div id="container">
+
+        <div id="name">
+            <label>Pregunta:</label>
+            <input type="text" name="nameTest" id="textElement" required aria-checked="true" />
+        </div>
+        <div id="buttonCancel">
+            <a href="/question/list/{{idQuestion}}"><button type="button">Cancelar</button></a>
+        </div>
+        <div id="buttonCreate">
+            <button type="submit">Guardar</button>
+        </div>
+    </div>
+</form>
+{{/each}}

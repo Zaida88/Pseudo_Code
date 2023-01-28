@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="/css/registration.css">
+
+<form action="/registration" method="post" enctype="multipart/form-data">
+  <div class="container">
+    <div id="title">
+      <h1>Registro</h1>
+    </div>
+    <div id="hidden">
+      {{#each user}}
+      <input type="text" name="idUser" id="number" value="{{max}}" readonly>
+      {{/each}}
+    </div>
+    <div class="contents">
+      <div class="data">
+        <label>Nombre de usuario:</label>
+        <input type="text" id="username" name="username" aria-checked="true" required>
+      </div>
+      <div class="data">
+        <label>Contraseña:</label>
+        <input type="password" id="password" name="password" aria-checked="true" required>
+      </div>
+      <div class="data">
+        <label>Nombre:</label>
+        <input type="text" name="firstName" id="firstName" aria-checked="true" required>
+      </div>
+      <div class="data">
+        <label>Apellido:</label>
+        <input type="text" name="lastName" id="lastName" aria-checked="true" required>
+      </div>
+      <div class="data">
+        <label>Correo electrónico:</label>
+        <input type="email" name="email" id="email" aria-checked="true">
+      </div>
+      <div class="data">
+        <label>Foto:</label>
+        <div class="changeImage">
+          <img src="/img/NoImage.jpg" id="imagePreview">
+        </div>
+        <div class="file-select" id="src-file2">
+          <input type="file" name="photo" id="filePicker" accept="image/*" aria-label="Archivo" aria-checked="true" required>
+        </div>
+      </div>
+    </div>
+    <div class="submit">
+      <div>
+        <button type="submit">Registrar</button>
+      </div>
+    </div>
+  </div>
+</form>
+<script src="/js/number.js"></script>
+<script src="/js/preview.js"></script>

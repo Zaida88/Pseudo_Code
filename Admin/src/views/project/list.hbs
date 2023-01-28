@@ -1,0 +1,90 @@
+<link rel='stylesheet' href='/CSS/project.css' />
+
+<form action="/project/list/{{user.idUser}}" method='get'></form>
+<div id="title" class="title">
+    <h1>PROYECTO</h1>
+</div>
+<link rel="stylesheet" href="/CSS/project.css">
+
+{{#each list}}
+<div class="formsProject">
+    <div class='containerCreate'>
+        <form>
+            <div id="listform" class="userDetail">
+                <div id="name" class="inputBox">
+                    <label>Nombre proyecto:</label>
+                    <textarea>{{nameProject}}</textarea>
+                </div>
+
+                <div id="description" class="inputBox">
+                    <label>Descripcion:</label>
+                    <textarea>{{descriptionProject}}</textarea>
+                </div>
+
+                <div id="mission" class="inputBox">
+                    <label>Mision:</label>
+                    <textarea>{{mission}}</textarea>
+                </div>
+
+                <div id="vision" class="inputBox">
+                    <label>Vision:</label>
+                    <textarea>{{vision}}</textarea>
+                </div>
+                <div class="inputBox">
+                    <label>Objetivos:</label>
+                    <a class="buttonObjective" href="/objectives/add/{{idProject}}">Crear Objetivos</a>
+                </div>
+                <div class="inputBox">
+                    
+                </div>
+                <div id="logo" class="logo">
+                    <label>Logo:</label> <br>
+                    <div id="changeImage">
+                        <img src="/img/user/{{logoProject}}" id="image" />
+                    </div>
+                </div>
+                <div class="inputBox">
+                    <div></div>
+                </div>
+                <div id='edit'>
+                    <a class="buttonObjective button" href="/objectives/list/{{idProject}}" style="background-color: #004AAD">
+                        Ver objetivos
+                    </a>
+                </div>
+                <div id='edit'>
+                    <a href="/project/update/{{idProject}}">
+                        <button type='button' class='button'>
+                            Editar
+                        </button>
+                    </a>
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+</div>
+<div class="container">
+    {{else}}
+
+    <div class="frame" id="content">
+        <div>
+            <h5>
+                No tienes proyectos registrados actualmente.
+            </h5>
+            <p>
+                Desea agregar uno.
+            </p>
+
+                <a href="/project/create/{{idProject}}">
+                    <button class='button' id="button">
+                        <b>Agregar proyecto</b>
+                    </button>
+                {{/each}}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/project/hidden.project.js"></script>

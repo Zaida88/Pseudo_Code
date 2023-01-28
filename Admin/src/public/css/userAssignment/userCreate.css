@@ -1,0 +1,104 @@
+#title {
+  text-align: center;
+  width: auto;
+  height: auto;
+  word-wrap: break-word;
+  margin: -2% 0 0 0;
+}
+
+#forms{
+  border-radius: 20px;
+  background-color: #D9D9D9;
+  justify-content: center;
+  align-items: center;
+  margin-left: 430px;
+  margin-right: 430px;  
+  padding: 22px;
+}
+
+#input {
+  width: 50%;
+  margin-left: 5px;
+  margin-bottom: 7px;
+  height: 20px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+label {
+  margin-left: 5px;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+#id{
+  display: none;
+}
+
+#butt1 {
+  position: absolute;
+  margin: -1.5% 0 20% 25.5%;
+  display: flex;
+  justify-content: left;
+}
+
+#butt1 button{
+  border: 1px #004AAD solid;
+  background-color: #004AAD;
+  color: white;
+  padding: 5px 25px;
+}
+
+#cancel {
+  position: absolute;
+  margin: -3% 0 1% 32.5%;
+  display: flex;
+  justify-content: left;
+}
+
+#cancel button {
+  border: 1px #6f6f6f solid;
+  background-color: #6f6f6f;
+  color: white;
+  padding: 5px 15px;
+}
+
+#file-select {
+  position: absolute;
+  margin: -5% 0 2% 7.5%;
+  display: flex;
+  justify-content: left;
+}
+
+#file-select::before {
+  background-color: #5678EF;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  content: 'Seleccionar Archivo'; /* testo por defecto */
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0px;
+}
+
+#file-select input[type="file"] {
+  opacity: 0;
+  width: 280px;
+  height: 32px;
+  display: inline-block;
+}
+
+#changeImage img{
+  margin-bottom: 4%;
+}
+
+#changeImage img{
+  width: 30%;
+  word-wrap: break-word;
+  height: 50px;
+  width: 50px;
+}

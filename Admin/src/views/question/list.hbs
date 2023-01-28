@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="/css/question/list.css">
+<form action="/question/list/{{idQuestion}}" method="get"></form>
+<div id="createQuestion">
+    <a href="/question/create/{{user.idUser}}">
+        <button id="btnAdd" type="button">Agregar Pregunta</button>
+    </a>
+</div>
+<div id="title">
+    <h3>Preguntas</h3>
+</div>
+<div id="container">
+    <div class="row">
+        {{#each list}}
+        <div id="card">
+           <div id="description">
+                <p>{{descriptionTest}}</p>
+            </div>
+            <div id="edit">
+                <button class="btn"  onclick="location.href='/question/update/{{idQuestion}}'"><img
+                    src="https://cdn-icons-png.flaticon.com/512/3597/3597075.png" height="25" width="25" /></button>
+            </div>
+            <div id="createanswer">
+            <a href="/answer/create/{{user.idUser}}">
+            <button id="btnAdd" type="button">Agregar Respuesta</button>
+             </a>
+       </div>  
+</div>
+{{else}}
+<div class=' frame ' id="content">
+        <div class='card-body'>
+            <h5 class='card-title'>
+                No tienes pruebas registradas actualmente.
+            </h5>
+            <p class='card-text'>
+                Desea agregar una.
+            </p>
+            <div>
+                <a href="/question/create/{{user.idUser}}">
+                    <button class='btn btn-primary button' id="button">
+                        <b>Agregar Prueba</b>
+                    </button>
+                {{/each}}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/views/question/hidden.question.js"></script>

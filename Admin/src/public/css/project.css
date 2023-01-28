@@ -1,0 +1,216 @@
+body {
+  overflow-x: hidden;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+.container {
+  text-align: center;
+  max-width: auto;
+  width: 100%;
+  height: fit-content;
+  max-width: auto;
+  max-height: fit-content;
+  justify-content: center;
+}
+#content{
+  justify-content: center;
+  max-width: auto;
+}
+.frame {
+  border-radius: 25px;
+  background-color: #D9D9D9;
+  text-align: center;
+  padding: 10px;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.button {
+  background: #004AAD;
+  color: #fff;
+  border: 2px solid #004AAD;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+  padding: 8px 35px;
+  border-radius: 5px;
+}
+.button:hover {
+  background-color: #093faa;
+  transition: 3s;
+  border-radius: 50px;
+}
+.none {
+  display: none;
+}
+.hide{
+  opacity: 0;
+}
+
+.buttonObjective{
+  background-color: #FFBD59;
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.containerCreate{
+  max-width: 700px;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 10px;
+  background-color: #D9D9D9;
+}
+.formsProject{
+  display: flex;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.containerCreate form .userDetail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+.containerCreate .form .userDetail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+  columns: 2;
+}
+.title{
+  font-weight: 500;
+  text-align: center;
+}
+
+form .userDetail .inputBox{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+.userDetail .inputBox span,label{
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+.userDetail .inputBox input,textarea{
+  height: 35px;
+  width: 100%;
+  background-color: #B8B9BB;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+}
+
+#changeImage img {
+  width: 30%;
+  height: 50px;
+  width: 50px;
+}
+
+.file {
+  position: relative;
+  display: inline-block;
+}
+
+.file::before {
+  background-color: #5678EF;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  content: 'Seleccionar Archivo';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.file input[type="file"] {
+  opacity: 0;
+  width: 280px;
+  height: 32px;
+  display: inline-block;
+}
+#save {
+  position: absolute;
+  margin-top: 290px;
+  right: 298px;
+}
+
+.icon {
+  position: relative;
+  height: 25px;
+  width: 25px;
+  float: left;
+}
+#edit{
+  margin-top: 90px;
+}
+
+@media only screen and (max-width: 1199px) {
+
+  .frame {
+    width: 85%;
+    margin-left: 45px;
+  }
+  .icon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .container {
+    width: 90%;
+    align-items: center;
+  }
+
+  .frame {
+    width: 85%;
+    margin-left: 45px;
+  }
+
+}
+
+
+@media only screen and (max-width: 570px) {
+  .container {
+    width: 95%;
+    align-items: center;
+  }
+  .frame {
+    max-height: fit-content;
+    margin: auto;
+    max-width: auto;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    width: 100%;
+    align-items: center;
+  }
+  .frame {
+    width: 95%;
+    margin-left: 13px;
+  }
+
+}
+
+#button {
+  margin-top: 35px;
+  margin-bottom: 35px;
+
+}

@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/css/question/create.css">
+
+<form action="/question/create/{{user.idUser}}" method="post">
+    <div id="title">
+        <p>Nueva Pregunta</p>
+    </div>
+    <div id="container">
+
+        <div id="name">
+            <label>Pregunta:</label>
+            <input type="text" name="question" id="textElement" required aria-checked="true" />
+        </div>
+        <div id="buttonCancel">
+            <a href="/question/list/{{user.idUser}}"><button type="button">Cancelar</button></a>
+        </div>
+        <div id="buttonCreate">
+            <button type="submit">Crear</button>
+        </div>
+    </div>
+</form>

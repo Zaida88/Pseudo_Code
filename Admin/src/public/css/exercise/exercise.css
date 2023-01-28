@@ -1,0 +1,158 @@
+#hidden {
+    display: none;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: fit-content;
+    max-width: 35%;
+    max-height: fit-content;
+    top: 20%;
+    left: 33%;
+    background-color: #d0d0d0;
+    border-radius: 20px;
+    padding: 0;
+}
+
+.container #title {
+    text-align: center;
+    width: auto;
+    height: auto;
+    word-wrap: break-word;
+}
+
+.contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.block {
+    margin: 1%;
+    max-height: fit-content;
+    max-width: fit-content;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.data {
+    margin-top: 7%;
+    max-height: max-content;
+    max-width: fit-content;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.data input {
+    border-radius: 5px;
+    font-size: 15px;
+    height: auto;
+    word-wrap: break-word;
+}
+
+.data label {
+    font-size: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: left;
+}
+
+#edit {
+    border-color: steelblue;
+}
+
+.data textarea {
+    border-radius: 5px;
+    font-size: small;
+    width: 192px;
+    height: 73px;
+    word-wrap: break-word;
+    resize: none;
+}
+
+#textEdit {
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: steelblue;
+    font-size: small;
+    width: 192px;
+    height: 73px;
+    word-wrap: break-word;
+    resize: none;
+}
+
+.data select {
+    border-radius: 5px;
+    font-size: 15px;
+    width: 100%;
+}
+
+.options {
+    margin: 3%;
+}
+
+.options #back {
+    float: left;
+    margin-left: 7%;
+    margin-bottom: 3%;
+}
+
+.options #back {
+    border: 1px black solid;
+    padding: 0 6%;
+    background-color: #6f6f6f;
+    color: white;
+    font-size: 15px;
+}
+
+.options #save {
+    margin-right: 7%;
+    float: right;
+    font-size: 15px;
+    border: 1px black solid;
+    padding: 0 6%;
+    background-color: #093faa;
+    color: white;
+}
+
+.options #update {
+    margin-right: 7%;
+    float: right;
+    font-size: 15px;
+    border: 1px black solid;
+    padding: 0 6%;
+    background-color: #128907;
+    color: white;
+}
+
+.submit {
+    margin: 4% 11% 4% 0;
+    display: flex;
+    justify-content: right;
+}
+
+.submit button {
+    font-size: 15px;
+    border: 1px black solid;
+    padding: 0 6%;
+    background-color: #093faa;
+    color: white;
+}
+
+.cancel {
+    position: absolute;
+    margin: -8% 0 2% 11%;
+    display: flex;
+    justify-content: left;
+}
+
+.cancel button {
+    font-size: 15px;
+    border: 1px black solid;
+    background-color: #6f6f6f;
+    color: white;
+}

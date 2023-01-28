@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="/css/exercise/exercise.css" />
+
+<div class="container">
+  {{#each language}}
+  <form action="/exercise/create/{{idLanguage}}" method="post">
+    {{/each}}
+    <div id="title">
+      <h2>Nuevo ejercicio</h2>
+    </div>
+    <div class="contents">
+      <div class="block">
+        <div class="data">
+          <label>Nombre</label>
+          <input class="input" type="text" name="nameExercise" aria-checked="true" required />
+        </div>
+        <div class="data">
+          <label>Puntaje</label>
+          <input type="number" name="punctuationExercise" aria-checked="true" required>
+        </div>
+        <div class="data">
+          <label>Lenguaje</label>
+          {{#each language}}
+          <input class="input" type="text" name="nameLanguage" aria-checked="true" value="{{nameLanguage}}" readonly />
+          {{/each}}
+        </div>
+      </div>
+      <div class="block">
+        <div class="data">
+          <label>Descripción</label>
+          <textarea name="descriptionExercise" id="" aria-checked="true" required></textarea>
+        </div>
+        <div class="data">
+          <label>Código</label>
+          <select name="codeIdCode">
+            {{#each codes}}
+            <option value="{{idCode}}">{{nameCode}}</option>
+            {{/each}}
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="submit">
+      <button type="submit">Crear</button>
+    </div>
+  </form>
+  <div class="cancel">
+    {{#each language}}
+    <a href="/exercise/listExercises/{{idLanguage}}"><button>Cancelar</button></a>
+    {{/each}}
+  </div>
+</div>
